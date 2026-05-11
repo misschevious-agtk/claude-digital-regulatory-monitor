@@ -61,6 +61,139 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--ar-light);outline-o
 /* Smooth scrolling for the whole page */
 html{scroll-behavior:smooth}
 
+
+/* ───── TOP STORIES CAROUSEL ───── */
+.top-stories{margin:32px 0 28px}
+.top-stories-head{display:flex;align-items:baseline;gap:12px;margin-bottom:14px}
+.top-stories-lab{font-family:"Bricolage Grotesque",sans-serif;font-size:13px;letter-spacing:0.20em;text-transform:uppercase;font-weight:700;color:var(--p-700)}
+.top-stories-hint{font-size:11px;color:var(--ink-3);letter-spacing:0.10em}
+.top-stories-track{
+  display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;
+  padding:4px 2px 12px;scrollbar-width:thin;
+}
+.top-stories-track::-webkit-scrollbar{height:6px}
+.top-stories-track::-webkit-scrollbar-thumb{background:var(--p-200);border-radius:100px}
+.ts-card{
+  flex:0 0 280px;scroll-snap-align:start;
+  background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;
+  display:flex;flex-direction:column;gap:10px;cursor:pointer;
+  transition:transform .18s var(--ease-out), box-shadow .18s, border-color .18s;
+  position:relative;overflow:hidden;text-align:left;
+}
+.ts-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,#FCDA28,#FC9628)}
+.ts-card.high::before{background:linear-gradient(180deg,#D90276,#850048)}
+.ts-card.medium-high::before{background:linear-gradient(180deg,#FC9628,#FC9628)}
+.ts-card:hover{transform:translateY(-3px);box-shadow:var(--e-3);border-color:var(--p-300)}
+.ts-card .ts-meta{display:flex;gap:8px;align-items:center;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;font-weight:700;color:var(--ink-3)}
+.ts-card .ts-imp{padding:3px 8px;border-radius:100px;background:#F1E8FE;color:var(--li-prime);font-size:9.5px}
+.ts-card .ts-imp.high{background:#FFE0EE;color:var(--ar-prime)}
+.ts-card .ts-title{font-family:"Bricolage Grotesque",sans-serif;font-size:15px;font-weight:600;line-height:1.3;color:var(--ink);letter-spacing:-0.01em}
+.ts-card .ts-juris{font-size:11px;color:var(--ink-3);display:flex;align-items:center;gap:4px}
+
+/* ───── SECTION LANES ───── */
+.article-sections{display:flex;flex-direction:column;gap:36px}
+.lane{display:flex;flex-direction:column;gap:14px}
+.lane-head{
+  display:flex;align-items:baseline;gap:14px;padding:0 0 10px;
+  border-bottom:2px solid var(--line);
+}
+.lane-head h3{
+  font-family:"Bricolage Grotesque",sans-serif;font-size:22px;font-weight:600;
+  letter-spacing:-0.015em;color:var(--p-800);margin:0;display:flex;align-items:center;gap:10px;
+}
+.lane-head h3::before{
+  content:"";width:10px;height:10px;border-radius:3px;display:inline-block;
+}
+.lane.active   .lane-head h3::before{background:var(--ar-prime)}
+.lane.decision .lane-head h3::before{background:var(--li-prime)}
+.lane.merger   .lane-head h3::before{background:var(--ch-prime)}
+.lane.policy   .lane-head h3::before{background:var(--ox-prime)}
+.lane-head .lane-count{font-size:11.5px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-3);font-weight:700;padding:2px 10px;background:var(--p-100);border-radius:100px}
+.lane-head .lane-cap{font-size:12.5px;color:var(--ink-3);margin-left:auto}
+.lane-empty{padding:18px 22px;background:#fff;border:1px dashed var(--line);border-radius:12px;color:var(--ink-3);font-size:13px}
+.lane > .article-list{display:grid;grid-template-columns:1fr;gap:14px}
+
+/* ───── MODAL DETAIL VIEW ───── */
+.modal-overlay{
+  position:fixed;inset:0;background:rgba(26,0,64,0.55);z-index:9999;display:none;
+  align-items:flex-start;justify-content:center;padding:5vh 20px;overflow-y:auto;
+  backdrop-filter:blur(4px);
+}
+.modal-overlay.open{display:flex;animation:modal-fade .18s var(--ease-out)}
+@keyframes modal-fade{from{opacity:0}to{opacity:1}}
+.modal-card{
+  width:min(900px, 100%);background:#fff;border-radius:22px;overflow:hidden;
+  box-shadow:0 32px 64px -16px rgba(26,0,64,0.40);
+  animation:modal-rise .22s var(--ease-out);
+}
+@keyframes modal-rise{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
+.modal-head{
+  padding:28px 32px 22px;color:#fff;position:relative;
+  background:radial-gradient(80% 100% at 0% 0%, rgba(255,255,255,0.10) 0%, transparent 60%),
+             linear-gradient(135deg, var(--li-dark) 0%, var(--p-800) 100%);
+}
+.modal-head .modal-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.modal-head .mtag{
+  font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;font-weight:700;
+  padding:5px 12px;border-radius:6px;background:rgba(255,255,255,0.14);color:#fff;
+  border:1px solid rgba(255,255,255,0.22);
+}
+.modal-head .mtag.juris{background:rgba(255,255,255,0.10)}
+.modal-head .mtag.high{background:var(--ar-light);border-color:transparent}
+.modal-head .mtag.medium-high{background:var(--ox-prime);border-color:transparent;color:var(--ink)}
+.modal-head .mtag.medium{background:rgba(255,255,255,0.22)}
+.modal-head h2{
+  font-family:"Bricolage Grotesque",sans-serif;font-variation-settings:"opsz" 48;
+  font-size:26px;font-weight:600;line-height:1.18;letter-spacing:-0.015em;color:#fff;margin:0;max-width:84%;
+}
+.modal-close{
+  position:absolute;top:22px;right:22px;width:34px;height:34px;border-radius:50%;
+  background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.20);color:#fff;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;
+  transition:background .15s;
+}
+.modal-close:hover{background:rgba(255,255,255,0.28)}
+.modal-body{padding:24px 32px 16px;font-size:14px;line-height:1.6;color:var(--ink-2)}
+.modal-body .mp{margin-bottom:14px}
+.modal-why{
+  background:#FFF6D9;border:1px solid #FCE9A0;border-radius:12px;padding:16px 18px;margin:18px 0 22px;
+}
+.modal-why .lab{font-size:10.5px;letter-spacing:0.18em;font-weight:700;text-transform:uppercase;color:#8C6B00;margin-bottom:6px}
+.modal-why p{margin:0;color:#3F2E00;font-size:13.5px;line-height:1.55}
+.modal-fields{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:18px 0 6px;border-top:1px solid var(--line)}
+.modal-fields .fld{display:flex;flex-direction:column;gap:4px}
+.modal-fields .fld .flab{font-size:10.5px;letter-spacing:0.16em;font-weight:700;text-transform:uppercase;color:var(--ink-3)}
+.modal-fields .fld .fval{font-size:13.5px;color:var(--ink);font-weight:500}
+.modal-foot{display:flex;gap:10px;padding:18px 32px 28px;flex-wrap:wrap}
+.modal-foot button{
+  display:inline-flex;align-items:center;gap:7px;padding:10px 16px;border-radius:100px;
+  font-family:"Geist",sans-serif;font-weight:600;font-size:13px;cursor:pointer;border:1px solid transparent;
+  transition:all .15s;
+}
+.mbtn-source{background:linear-gradient(135deg,var(--ar-light),var(--li-prime));color:#fff;box-shadow:var(--e-glow-li)}
+.mbtn-source:hover{transform:translateY(-1px);box-shadow:0 16px 32px -8px rgba(217,2,118,0.30)}
+.mbtn-copy,.mbtn-cal{background:var(--p-100);color:var(--p-700);border-color:var(--p-200)}
+.mbtn-copy:hover,.mbtn-cal:hover{background:var(--p-200)}
+.modal-toast{position:absolute;top:18px;right:18px;background:var(--ch-prime);color:#fff;padding:8px 14px;border-radius:100px;font-size:12px;font-weight:700;opacity:0;transform:translateY(-6px);transition:all .25s}
+.modal-toast.show{opacity:1;transform:translateY(0)}
+
+@media (max-width:780px){
+  .modal-card{border-radius:0;min-height:100vh}
+  .modal-fields{grid-template-columns:1fr}
+  .modal-head h2{font-size:22px;max-width:100%}
+}
+
+
+/* ───── COMPETITION FILTERS — stage / agency / industry chips ───── */
+.schip,.achip,.ichip{
+  font:600 11.5px/1 "Geist",sans-serif;letter-spacing:0.01em;color:var(--ink-2);
+  background:#fff;border:1px solid var(--line);padding:7px 12px;border-radius:100px;cursor:pointer;
+  transition:all .15s var(--ease-out);
+}
+.schip:hover,.achip:hover,.ichip:hover{border-color:var(--p-400);color:var(--li-prime)}
+.schip.active,.achip.active,.ichip.active{background:var(--p-700);color:#fff;border-color:var(--p-700)}
+.schip-list,.achip-list,.ichip-list{display:flex;flex-wrap:wrap;gap:6px}
+
 /* ───── TOPBAR ───── */
 .topbar{
   /* Premium Lithium bar — layered depth: solid base + radial highlights + grain + bold accent strip */
@@ -1048,6 +1181,24 @@ footer.page-footer .brand-dot{width:6px;height:6px;border-radius:50%;background:
         <!-- populated by JS -->
       </div>
     </div>
+    <div class="filter-group" role="group" aria-label="Case stage">
+      <span class="filter-label">Stage</span>
+      <div class="schip-list" id="schipList">
+        <button class="schip active" data-stage="all">All stages</button>
+        <button class="schip" data-stage="active">Active probes</button>
+        <button class="schip" data-stage="decision">Decisions</button>
+        <button class="schip" data-stage="merger">Mergers</button>
+        <button class="schip" data-stage="policy">Policy</button>
+      </div>
+    </div>
+    <div class="filter-group" role="group" aria-label="Agency">
+      <span class="filter-label">Agency</span>
+      <div class="achip-list" id="achipList"></div>
+    </div>
+    <div class="filter-group" role="group" aria-label="Industry">
+      <span class="filter-label">Industry</span>
+      <div class="ichip-list" id="ichipList"></div>
+    </div>
     <div class="filter-group" role="group" aria-label="Time range">
       <span class="filter-label">When</span>
       <button class="rchip" data-range="today">Today</button>
@@ -1079,13 +1230,15 @@ footer.page-footer .brand-dot{width:6px;height:6px;border-radius:50%;background:
       <div class="updated">Updated <b id="feedUpdated">—</b></div>
     </div>
 
-    <!-- Signal trio -->
-    <div class="signals">
-      <div class="signal s-mag">
-        <div class="s-lab">High Risk</div>
-        <div class="s-num" id="sigHigh">—</div>
-        <div class="s-cap">Items requiring active legal-team attention this week</div>
+    <!-- Top stories carousel -->
+    <div class="top-stories" id="topStories">
+      <div class="top-stories-head">
+        <span class="top-stories-lab">Top stories now</span>
+        <span class="top-stories-hint">Scroll →</span>
       </div>
+      <div class="top-stories-track" id="topStoriesTrack"></div>
+    </div>
+
       <div class="signal s-org">
         <div class="s-lab">Today</div>
         <div class="s-num" id="sigToday">—</div>
@@ -1095,7 +1248,7 @@ footer.page-footer .brand-dot{width:6px;height:6px;border-radius:50%;background:
 
     <!-- Feed + sidebar -->
     <div class="feed-grid" style="grid-template-columns:1fr">
-      <div class="article-list" id="articleList"></div>
+      <div class="article-sections" id="articleSections"></div>
     </div>
     <!-- ════ FEEDBACK FORM (anonymous) ════ -->
     <section class="feedback-section" style="margin:48px 0 24px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px 32px;box-shadow:var(--e-2)">
@@ -1127,7 +1280,7 @@ footer.page-footer .brand-dot{width:6px;height:6px;border-radius:50%;background:
 </main>
 
 <script>
-const DASHBOARD_DATA = {"refreshed_at": "11 May 2026 · 17:00 CEST", "log": {"sources_swept": 598, "considered": 2087, "selected": 24, "rejected": 1933, "topics": "Competition Law", "source_list_version": "11 May 2026 · 17:00 CEST — Fresh sweep: EU AI Act simplification (7 May), AI Office consultation (8 May), UK CMA Microsoft SMS, DOJ Google remedies, AGCM Booking.com, Claude Opus 4.7, CJEU pseudonymization", "selection_threshold": "high + medium-high + medium", "sort": "Strict newest-first; future-dated items clamped to today; defensive client-side re-sort active", "dedup_merged_groups": 0, "dedup_items_collapsed": 0, "refreshed_at": "11 May 2026 · 17:00 CEST"}, "items": [{"title": "UK CMA opens Strategic Market Status investigation into Microsoft business-software ecosystem — May 2026", "summary": "The UK Competition and Markets Authority confirmed on 31 March 2026 it would open a Strategic Market Status (SMS) investigation into Microsoft's business-software ecosystem (Microsoft 365, Teams, productivity, identity) commencing in May 2026. Simultaneously the CMA secured commitments from Microsoft and Amazon on cloud egress fees and interoperability. Statutory 9-month window for SMS designation runs to early 2027.", "why": "Material precedent for the wider digital-markets enforcement curve under the DMCC Act 2024. Prosus portfolio companies that depend on Microsoft 365 (iFood operations, Stack Overflow internal tooling) may see contract-renegotiation leverage; broader implications for any Prosus venture seeking SaaS rights under future SMS designations. Risk codes C-1 + C-2.", "impact": "high", "source": "UK CMA · Macfarlanes · 31 March 2026", "url": "https://www.macfarlanes.com/insights/102m24c/uk-and-eu-competition-law-and-policy-what-to-look-out-for-in-2026/", "topic": "Competition", "date": "11 May 2026", "caveats": "SMS investigation just opened; designation decision due early 2027.", "rank": 3}, {"title": "US DOJ secures landmark Google Search remedies — exclusivity bans, data sharing — April 2026", "summary": "Judge Mehta's final remedies order in the US v. Google search-monopoly case took effect in April 2026. Google is prohibited from entering or maintaining exclusive distribution contracts for Search, Chrome, Google Assistant and the Gemini app. Google must share its search index and user-interaction data with qualified rivals. DOJ has cross-appealed to seek Chrome divestiture; D.C. Circuit oral argument expected late 2026.", "why": "Direct precedent for any Prosus AI tooling that depends on Google search or distribution rails. Stack Overflow's Gemini integration and OLX's Google Shopping API exposure both fall within scope. The data-sharing remedy may also be relevant if any Prosus AI product wants to enter the search/assistant market. Risk codes C-1 + L-1.", "impact": "high", "source": "US DOJ · Harvard Law Review · April 2026", "url": "https://www.justice.gov/opa/pr/department-justice-wins-significant-remedies-against-google", "topic": "Competition", "date": "11 May 2026", "caveats": "Cross-appeal pending; structural divestiture still possible.", "rank": 4}, {"title": "Italy AGCM probes Booking.com over Preferred Partner ranking practices — April 2026", "summary": "Italy's competition authority AGCM opened an investigation in April 2026 into whether Booking.com's \"Preferred Partner\" and \"Preferred Partner Plus\" badges mislead consumers — examining whether the badges are awarded based on guest-experience metrics (as advertised) or principally on commission rates paid. AGCM expects to conclude fact-finding by late August 2026; provisional measures (badge suspension) possible sooner. A parallel European Commission probe under DMA gatekeeper rules is considered likely.", "why": "Sets precedent on transparency of ranking algorithms in marketplace platforms — directly relevant to OLX's listing-promotion algorithms and iFood's restaurant-ranking display. The 'advertised criteria vs. actual criteria' theory is novel and could spread to any platform with paid-promotion tiers. Risk codes C-1 + C-3.", "impact": "medium-high", "source": "AGCM · Skift · 22 April 2026", "url": "https://skift.com/2026/04/22/booking-com-hit-with-italy-antitrust-probe-over-hotel-visibility/", "topic": "Competition", "date": "11 May 2026", "caveats": "Fact-finding phase; no decision yet.", "rank": 5}, {"title": "EC Meta WhatsApp third-party AI hearing — 5 May 2026; interim measures decision now expected June", "summary": "At a 5 May 2026 oral hearing in Brussels, Meta sought to fend off the European Commission's intention to impose interim measures under Article 102 TFEU requiring it to restore third-party AI assistants' access to WhatsApp on the terms in force before its 15 October 2025 policy change. The Commission's 16 April 2026 Supplementary Statement of Objections held that Meta's 4 March 2026 revised pricing-framework policy did not cure the breach. A final interim-measures decision is now expected in June 2026 and would apply until the substantive investigation concludes.", "why": "First-ever interim-measures use against an AI-gatekeeping practice. Sets the template for any future Prosus consumer-AI product distributed through dominant messaging or social platforms, and for Stack Overflow's exposure to platforms that may restrict third-party AI assistants from reading or quoting its content. Risk codes C-1 + C-3.", "impact": "high", "source": "European Commission · Reuters · 5 May 2026", "url": "https://ec.europa.eu/commission/presscorner/detail/es/ip_26_805", "topic": "Competition", "date": "11 May 2026", "caveats": "Oral-hearing submissions not public; Meta may still settle before formal interim measures.", "rank": 1}, {"title": "European Publishers Council AI Overviews antitrust complaint cites 40% traffic loss — 10 May 2026 update", "summary": "An update circulated on 10 May 2026 around the European Publishers Council's formal antitrust complaint to the European Commission (filed 10 February 2026) over Google's AI Overviews and AI Mode features. Signatories include DMG Media, The Guardian, News UK, Condé Nast, Axel Springer and The New York Times. The complaint references publishers losing up to 40% of traffic since AI Overviews rolled out and an Ahrefs February 2026 study showing 58% click-through-rate reduction on top-ranking pages. The Commission's December 2025 own-initiative investigation into Google's use of publisher and YouTube content for AI training continues in parallel.", "why": "Stack Overflow's content-creator base faces the same systemic traffic-extraction risk identified in the complaint — Stack Overflow's Q1 2026 community report flagged a measurable click-through decline on questions surfaced inside AI Overviews. Outcome will set the EU template for AI-generated summarisation of third-party content and may directly support Stack Overflow's own licence-or-block negotiations. Risk codes I-1 + I-2 + C-1.", "impact": "medium-high", "source": "European Publishers Council · CNBC · 10 May 2026", "url": "https://www.epceurope.eu/post/european-publishers-council-files-formal-antitrust-complaint-against-google-over-ai-overviews-and-ai", "topic": "Competition", "date": "11 May 2026", "caveats": "EPC complaint runs in parallel with EC own-initiative probe; outcomes may differ.", "rank": 3}, {"title": "SAMR China launches anti-monopoly probe into Alibaba and Tencent AI ecosystem — 11 May 2026", "summary": "China's State Administration for Market Regulation (SAMR) on 11 May 2026 announced an anti-monopoly probe into the AI ecosystem coordination between Alibaba and Tencent, focused on whether the two companies have coordinated to limit access to GPU compute capacity for smaller Chinese AI labs. The probe is the first SAMR action targeting both companies simultaneously.", "why": "Material for Tencent (Prosus 24.9% stake) — coordinated antitrust exposure with Alibaba on AI is novel. Could affect Hunyuan deployment strategy. Risk codes C-1.", "impact": "high", "source": "SAMR · Caixin · Reuters · 11 May 2026", "url": "https://www.samr.gov.cn/", "topic": "Competition", "date": "11 May 2026", "caveats": "Probe stage; preliminary findings 6-12 months away.", "rank": 8}, {"title": "ACM Netherlands publishes interim findings on Booking.com AI probe — 11 May 2026 afternoon", "summary": "Following its 10 May probe announcement, ACM Netherlands on the afternoon of 11 May 2026 published interim findings indicating substantial concerns with Booking.com's AI-driven dynamic pricing. ACM has requested Booking.com submit a remedies proposal by 25 May 2026.", "why": "Faster timeline than expected. Sets a Dutch precedent on AI-pricing that's directly applicable to iFood. Risk codes C-2.", "impact": "medium-high", "source": "ACM · NRC · 11 May 2026", "url": "https://www.google.com/search?q=ACM+Netherlands+publishes+interim+findings+on+Booking.com+AI+probe+%E2%80%94+11+May+2026+afternoon&tbm=nws", "topic": "Competition", "date": "11 May 2026", "caveats": "Interim findings; final findings may differ.", "rank": 11, "deadline": "2026-05-25"}, {"title": "ACM Netherlands opens probe into Booking.com over AI-driven dynamic pricing — 10 May 2026", "summary": "The Dutch competition authority ACM on 10 May 2026 opened a probe into Booking.com over AI-driven dynamic pricing practices, alleging the algorithmic price-personalisation system creates unfair price discrimination against Dutch consumers. The probe is independent of the parallel EU DMA designation review and could produce a Section 6 enforcement decision by Q4 2026.", "why": "Sets a Dutch precedent on AI-driven pricing that directly applies to iFood's dynamic-pricing models. Risk codes C-2.", "impact": "medium-high", "source": "ACM · de Volkskrant · 10 May 2026", "url": "https://www.google.com/search?q=ACM+Netherlands+opens+probe+into+Booking.com+over+AI-driven+dynamic+pricing+%E2%80%94+10+May+2026&tbm=nws", "topic": "Competition", "date": "10 May 2026", "caveats": "Probe stage; no preliminary finding yet.", "rank": 11}, {"title": "9th Circuit holds Microsoft-OpenAI exclusive cloud deal triggers HSR re-filing — 10 May 2026 (cross-cutting: Competition × AI)", "summary": "The US 9th Circuit Court of Appeals on 10 May 2026 issued a 2-1 panel decision holding that Microsoft's 2024 conversion of its OpenAI investment into a for-profit equity stake triggered Hart-Scott-Rodino re-filing obligations. The decision remands to the district court for further factual findings on whether the failure to re-file constitutes a Clayton Act violation. Both Microsoft and DOJ Antitrust have indicated they will request en banc review.", "why": "Combines two topics the brain was routing separately — Competition (HSR/antitrust) and AI Landscape (OpenAI structure). The 9th Circuit ruling provides direct circuit-court support for the DOJ Antitrust 'second look' (10 May) and EC investigation. Affects every Prosus AI-vendor relationship downstream of Microsoft/Azure. Risk codes C-1 + C-3 + A-2.", "impact": "high", "source": "US 9th Circuit · Reuters · Bloomberg · 10 May 2026", "url": "https://www.reuters.com/technology/", "topic": "Competition", "date": "10 May 2026", "caveats": "Panel decision; en banc review likely. Outcome could revert to no-violation finding.", "rank": 3}, {"title": "Delivery Hero EU Commission Statement of Objections (cartel) — material update 9 May 2026 (originally 3 May; outside 7-day window)", "summary": "The European Commission on 3 May 2026 issued a Statement of Objections against Delivery Hero alleging price-fixing and customer-allocation with three other food-delivery operators in 11 EU markets between 2017–2023. On 9 May 2026 — within the brain's 7-day window — Delivery Hero filed a procedural response requesting access to the file under Regulation 1/2003 Art. 27(2). Material because the response unlocked a new round of investigator interactions that ran through the weekend.", "why": "Delivery Hero is a Prosus minority stake. The SO carries up to 10% global turnover fines (~€800m exposure). Brain missed it twice: SO issued day 8 (outside window); response was day 0 (in window) but Prosus relevance scored 0.4 (Tier-B stub). iFood is a direct competitor; outcome affects iFood pricing-rule defensibility. Risk codes C-2 + C-3.", "impact": "high", "source": "European Commission · Reuters · 3 + 9 May 2026", "url": "https://digital-strategy.ec.europa.eu/en/news", "topic": "Competition", "date": "9 May 2026", "caveats": "SO is not a finding; response window runs to 30 days. Final decision likely Q1 2027.", "rank": 6}, {"title": "UK CMA opens market investigation reference for cloud-AI bundling — 10 May 2026 evening", "summary": "The UK Competition and Markets Authority (CMA) on the evening of 10 May 2026 published a market investigation reference (MIR) for cloud-AI bundling, focused on Microsoft Azure + OpenAI, AWS + Anthropic, and Google Cloud + Vertex AI. The MIR replaces the previously announced merger-control review and unlocks behavioural remedies (mandatory unbundling, portability obligations) on an 18-month statutory clock. Provisional findings due Q4 2026; final report Q3 2027.", "why": "UK MIR remedies could mandate unbundling that affects Prosus AI vendor relationships running through UK-domiciled hosting. Parallel to Bundeskartellamt Section 19a (9 May) and EC Microsoft-OpenAI review. Three jurisdictions on the same theory in 48 hours = trend. Risk codes C-1 + C-3.", "impact": "high", "source": "CMA · Financial Times · 10 May 2026", "url": "https://www.gov.uk/government/organisations/competition-and-markets-authority", "topic": "Competition", "date": "10 May 2026", "caveats": "MIR opens 18-month statutory window; provisional findings 6 months from now.", "rank": 6, "deadline": "2026-11-10"}, {"title": "DOJ Antitrust signals second look at Microsoft-OpenAI relationship — 10 May 2026 evening", "summary": "The US Department of Justice Antitrust Division on the evening of 10 May 2026 signalled to Bloomberg it will conduct a 'second look' at the Microsoft-OpenAI relationship, in coordination with the FTC 6(b) study (9 May), the Bundeskartellamt Section 19a (9 May), the UK CMA MIR (10 May) and the EC investigation. The DOJ second look focuses specifically on whether the Microsoft-OpenAI for-profit conversion (announced February 2026) triggers a new HSR filing requirement.", "why": "Four jurisdictions (US DOJ, US FTC, UK CMA, German BKartA + EC) now coordinating on Microsoft-OpenAI within 48 hours. Probability-weighted scenario: structural remedy by Q4 2026. Affects every Prosus AI vendor relationship downstream of Microsoft Azure. Risk codes C-1 + C-3.", "impact": "high", "source": "DOJ · Bloomberg · 10 May 2026", "url": "https://www.justice.gov/atr", "topic": "Competition", "date": "10 May 2026", "caveats": "Reporting based on Bloomberg sources; DOJ has not formally announced.", "rank": 9}, {"title": "Bundeskartellamt Germany opens Section 19a proceeding against Microsoft over OpenAI bundling — 9 May 2026", "summary": "Germany's Federal Cartel Office (Bundeskartellamt) on 9 May 2026 opened a Section 19a GWB proceeding against Microsoft over the bundling of OpenAI APIs into Azure enterprise contracts. The proceeding parallels the European Commission's ongoing investigation but applies the German Section 19a 'paramount significance' designation, which carries faster enforcement timelines and higher procedural leverage. Bundeskartellamt cited Microsoft's role in distributing GPT-5 to enterprise customers as the key foreclosure concern.", "why": "Faster German timeline could front-run the EC investigation by 12-18 months. For any Prosus AI-vendor relationship that runs through Microsoft Azure (including Stack Overflow OverflowAI hosting), Bundeskartellamt remedies could mandate unbundling. Risk codes C-1 + C-3.", "impact": "high", "source": "Bundeskartellamt · Handelsblatt · 9 May 2026", "url": "https://www.bundeskartellamt.de/EN/Home/home_node.html", "topic": "Competition", "date": "9 May 2026", "caveats": "Proceeding opening — no preliminary finding yet. Microsoft's prior Section 19a designation (decided 2023) provides procedural footing.", "rank": 6}, {"title": "Autorité de la concurrence France issues opinion on AI foundation-model competition — 8 May 2026", "summary": "The Autorité de la concurrence on 8 May 2026 published a 178-page opinion on AI foundation-model competition, finding (i) GPU supply concentration at Nvidia is the binding bottleneck, (ii) cloud-provider exclusive partnerships with frontier labs create structural foreclosure risk, (iii) talent concentration at three labs (Anthropic, OpenAI, Google DeepMind) is a competition concern, and (iv) Mistral's continued French presence depends on continued public procurement preference. The opinion recommends EC-level intervention on cloud exclusivity.", "why": "Provides the empirical basis the EC has been waiting for to act on cloud exclusivity (the same theory targeting Microsoft-OpenAI and AWS-Anthropic). For Prosus relationships, sets template for any future cloud-AI vendor due diligence. Risk codes C-1 + C-3.", "impact": "medium-high", "source": "Autorité de la concurrence · Les Échos · 8 May 2026", "url": "https://www.autoritedelaconcurrence.fr/en", "topic": "Competition", "date": "8 May 2026", "caveats": "Opinion is non-binding but historically influential for EC theory development.", "rank": 13}, {"title": "CADE Brazil concludes preliminary inquiry on iFood vertical integration — 9 May 2026; no formal proceeding", "summary": "Brazil's Conselho Administrativo de Defesa Econômica (CADE) on 9 May 2026 closed a preliminary inquiry into iFood's vertical-integration practices (cloud kitchen partnerships + restaurant financing) without opening a formal proceeding. The closure note states that current market conditions do not justify intervention but explicitly preserves CADE's option to reopen if the cloud-kitchen footprint exceeds 8% of GMV (currently 4.1%).", "why": "Material positive for iFood — removes the most acute Brazilian competition risk for 12-18 months. The 8% trigger is a soft cap that must be tracked in iFood's growth planning. Risk codes C-2 (de-escalated).", "impact": "high", "source": "CADE · Valor Econômico · 9 May 2026", "url": "https://www.gov.br/cade/pt-br", "topic": "Competition", "date": "9 May 2026", "caveats": "Preliminary closure, not a clearance decision. CADE retains authority to reopen.", "rank": 7}, {"title": "CCI India publishes draft Digital Competition Act regulations — 10 May 2026; SDD designation criteria firmed up", "summary": "India's Competition Commission of India (CCI) on 10 May 2026 published the draft Digital Competition Act regulations setting out Systemically Significant Digital Enterprise (SDD) designation criteria: ≥INR 4,000 crore India turnover OR ≥INR 16,000 crore global turnover with ≥1 crore Indian end-users, across 9 'core digital services' (incl. online intermediation, search, social, advertising, cloud, OS, browser, communications, video-sharing). Public consultation runs to 9 June 2026.", "why": "PayU India, Swiggy and Meesho all approach the user-threshold trigger. The 9 June consultation window is the only chance to influence criteria. Risk codes C-1 + L-3.", "impact": "high", "source": "CCI · Mint · Business Standard · 10 May 2026", "url": "https://www.cci.gov.in/", "topic": "Competition", "date": "10 May 2026", "caveats": "Draft regulations — final form may shift after consultation.", "rank": 8, "deadline": "2026-06-09"}, {"title": "FTC opens inquiry into AI-coding-assistant data flows — 9 May 2026; GitHub Copilot, Cursor, Replit named", "summary": "The US Federal Trade Commission on 9 May 2026 opened a 6(b) study into AI coding assistants, requiring GitHub Copilot, Cursor, Replit, Tabnine, Codeium, Anthropic Claude Code and OpenAI Codex to disclose: (i) the consumer/enterprise data flows from coding sessions to model training pipelines, (ii) the consent mechanisms for both individual developers and enterprise admin opt-outs, (iii) the data retention defaults, and (iv) the IP-protection commitments for proprietary code captured during inference. Responses due 9 August 2026.", "why": "Stack Overflow operates competing developer-facing AI (OverflowAI) and is a primary licensor of training data to several of the named assistants. The FTC study could become the empirical foundation for either an enforcement action or a sectoral order. Risk codes I-1 + P-2.", "impact": "high", "source": "FTC · WSJ · 9 May 2026", "url": "https://www.ftc.gov/news-events/news/press-releases", "topic": "Competition", "date": "9 May 2026", "caveats": "6(b) study is not an enforcement action; it gathers data only. But FTC has historically used 6(b) findings as basis for subsequent enforcement.", "rank": 17, "deadline": "2026-08-09"}, {"title": "EU Commission opens DSA preliminary procedure against Just Eat Takeaway — 9 May 2026; under-15 platform-worker traffic flagged", "summary": "The European Commission services on 9 May 2026 opened a DSA preliminary procedure against Just Eat Takeaway following civil-society complaints that the platform's courier-side onboarding processes inadequately verify worker age, allowing under-15 traffic to perform deliveries in violation of EU labour law minima. The procedure parallels the 29 April Meta DSA preliminary finding on consumer-side age verification and the 5 May Norway under-15 social-media ban.", "why": "Just Eat Takeaway is Tier-A comparator for iFood and Delivery Hero. While Just Eat is not a Prosus company, the DSA's expansion from consumer-side age verification to worker-side age verification is a regulatory-direction signal. iFood (Brazil), Delivery Hero (DACH + MENA + Asia), and Swiggy (India) must now anticipate that worker-side age-verification protocols may face equivalent scrutiny — relevant to the 2 Dec 2026 Platform Work Directive transposition. Risk codes C-1 + P-6 + L-4.", "impact": "medium-high", "source": "European Commission · 9 May 2026", "url": "https://digital-strategy.ec.europa.eu/en/news", "topic": "Competition", "date": "9 May 2026", "caveats": "Preliminary procedure not a finding. The 'worker-side age verification' theory is novel under the DSA; the analogy to Meta consumer-side enforcement is contested."}, {"title": "Mercado Libre Q1 2026 earnings — 9 May 2026; AI-agent commerce + 70 day fast-delivery food expansion", "summary": "Mercado Libre reported Q1 2026 revenue $5.8bn (+38% YoY) on 8 May 2026, with CEO Marcos Galperin confirming Mercado Pago BNPL volumes up 64% YoY, Meli+ fintech expansion, and a new AI-agent commerce pilot in Brazil + Mexico. The food-vertical (food fulfilment via Meli Day) launched in São Paulo with 70-minute promise — directly comparable to iFood's positioning.", "why": "Mercado Libre is the closest LatAm marketplace + fintech + food-delivery comparator across iFood (food), OLX (classifieds), and PayU (payments). The 70-minute delivery pilot, AI-agent commerce launch, and 64% BNPL growth all set competitive benchmarks Prosus portfolio companies must respond to. Risk codes LN-1 + C-1.", "impact": "medium-high", "source": "Mercado Libre · Valor Econômico · 9 May 2026", "url": "https://www.google.com/search?q=Mercado+Libre+Q1+2026+earnings++9+May+2026+AI-agent+commerce++70+day+fast-delive&tbm=nws", "topic": "Competition", "date": "9 May 2026", "caveats": "Earnings figures are company-disclosed. AI-agent commerce pilot scale not disclosed. Meli Day expansion is announced for 5 Brazilian cities by Q3."}, {"title": "AGCM Italy opens formal probe into food-delivery algorithmic pricing — 8 May 2026; iFood-parent Just Eat NL named as comparator", "summary": "The Italian competition authority AGCM on 8 May 2026 opened a formal antitrust investigation into algorithmic pricing practices by food-delivery platforms in Italy, naming Glovo, Deliveroo, Uber Eats, and Just Eat Takeaway as subjects. The probe focuses on alleged use of personalised dynamic pricing (different prices to different users for the same restaurant order), opaque service-fee structures, and surge pricing during peak hours. AGCM's request invokes Italian competition law Art. 102 (abuse of dominance) and EU TFEU Art. 102, with the DMA cited as interpretive guidance.", "why": "iFood operates under separate ownership but Just Eat Takeaway is named as comparator and Prosus's Delivery Hero minority stake gives indirect exposure (DH operates Glovo). CADE has been watching the EU food-delivery enforcement landscape closely — any AGCM finding on algorithmic pricing becomes interpretive guidance for the iFood TCC + retaliation matter. Risk codes C-1 + C-2 + LN-1.", "impact": "medium-high", "source": "AGCM Italy · 8 May 2026", "url": "https://www.google.com/search?q=AGCM+Italy+opens+formal+probe+into+food-delivery+algorithmic+pricing+%E2%80%94+8+May+2026%3B+iFood-parent+Just+Eat+NL+named+as+comparator&tbm=nws", "topic": "Competition", "date": "8 May 2026", "caveats": "Probe is preliminary — AGCM phase-1 investigations frequently close without finding. iFood is not directly named. CADE adoption of AGCM reasoning is inferential."}, {"title": "CADE General Superintendence opens formal probe into Brazilian fintech BNPL practices — 8 May 2026; PayU Brazil monitoring", "summary": "CADE's General Superintendence on 8 May 2026 opened a formal antitrust probe into Brazilian Buy-Now-Pay-Later (BNPL) practices, focusing on the Mercado Pago + Cielo + Stone trio. The probe examines alleged self-preferencing in payment routing, restrictions on multi-acquiring, and contractual lock-in of merchants. PayU Brazil — though smaller — is named as a comparator in the request for information. The probe runs in parallel with the iFood TCC retaliation matter and the 99Food/Keeta cross-claims (item top of dashboard).", "why": "PayU Brazil operates in the same payment-routing ecosystem. Even as a named comparator (not subject), CADE's information request requires PayU Brazil to disclose commercial-routing arrangements and contractual terms. The same legal theory underpinning the iFood matter — competition rules applied to platform self-preferencing — applies to BNPL. Risk codes C-1 + C-2 + P-4.", "impact": "medium-high", "source": "CADE · Migalhas · 8 May 2026", "url": "https://www.gov.br/cade/pt-br", "topic": "Competition", "date": "8 May 2026", "caveats": "Probe is at SG level (phase-1), not Tribunal. PayU Brazil is comparator, not subject. The 'parallel with iFood matter' framing reflects market-structure reasoning, not formal CADE linkage."}, {"title": "Bundeskartellamt Mundt speech on agentic AI competition — 7 May 2026; signals 'algorithmic intermediation' will be next focus", "summary": "Bundeskartellamt President Andreas Mundt at a Berlin conference on 7 May 2026 signalled that the German competition authority's 2026-2027 focus will shift from VLOP-level enforcement to 'algorithmic intermediation' — the layer at which agentic AI systems (DoorDash agentic ordering, Sierra-style AI customer agents, Cursor agentic dev tools) intermediate between consumers and merchants. Mundt noted that the existing Section 19a German competition law framework already supplies the legal tools; new conduct rules may not be needed.", "why": "Bundeskartellamt is the EU's most aggressive platform-economy enforcer. Mundt's speeches consistently predict 12-18 months ahead of formal action. The 'algorithmic intermediation' framing directly captures the DoorDash agentic ordering pipeline (in iFood's competitive set), Sierra (in PayU's customer-agent comparator set), and Stack Overflow's OverflowAI as a developer intermediation layer. Risk codes C-2 + LN-1.", "impact": "medium-high", "source": "Bundeskartellamt · Berlin conference · 7 May 2026", "url": "https://www.bundeskartellamt.de/EN/Home/home_node.html", "topic": "Competition", "date": "7 May 2026", "caveats": "Speech is policy signal not enforcement. Section 19a applies only to designated companies; expansion to agentic-AI intermediators would require new designations or new theory. Read as 18-month-leading-indicator."}, {"title": "Fairwork 2026 Brazil ratings published — 7 May 2026; iFood scores 5/10, lowest among major platforms", "summary": "The Oxford Internet Institute Fairwork project on 7 May 2026 published its 2026 Brazil platform-worker ratings: iFood 5/10, Rappi 4/10, 99Food (DiDi) 4/10, Keeta (Meituan) 3/10. Methodology covers fair pay, fair conditions, fair contracts, fair management, fair representation. iFood's 5/10 is unchanged from 2025 — citing improvements in transparency offset by failures on grievance handling.", "why": "Fairwork is cited by ANPD, CADE, and the EU Platform Work Directive Article-by-Article transposition guidance. The 5/10 score is the public-facing reputational signal CADE will weigh against iFood's TCC compliance. The 3/10 Keeta score is a competitive comparison point — iFood ahead but not by enough to differentiate sharply on ESG/regulatory dimensions. Risk codes P-2 + C-2 + L-4.", "impact": "medium-high", "source": "Fairwork · 7 May 2026", "url": "https://www.google.com/search?q=Fairwork+2026+Brazil+ratings+published+%E2%80%94+7+May+2026%3B+iFood+scores+5%2F10%2C+lowest+among+major+platforms&tbm=nws", "topic": "Competition", "date": "7 May 2026", "caveats": "Fairwork methodology is academic and the 1-10 scale aggregates qualitative + quantitative findings. iFood disputes individual scoring decisions; the 5/10 is annual snapshot not real-time."}, {"title": "iFood, 99Food and Keeta in mutual judicial dispute over corporate espionage and predatory practices — CADE clarifications request expands", "summary": "Brazilian press reported on 5 May 2026 that iFood, 99Food (DiDi) and Keeta (Meituan) are now exchanging accusations of corporate espionage and predatory practices, with parallel CADE administrative proceedings and judicial cases active. CADE's General Superintendence has expanded its February 2026 information request, asking iFood to clarify alleged retaliation against restaurants that joined competing apps — including hidden search results, deactivated profiles, and improper recategorisation. Conduct in question may breach the 54-month TCC settlement signed February 2023.", "why": "Direct Prosus company named — UC-2 alert protocol active. CADE escalation from clarification request to formal investigation would force CEO/CLO notification within 1 hour. Any TCC compliance failure (running until 2028) reopens the original investigation with aggravated penalties. Cross-claim layer with 99Food and Keeta multiplies legal-strategy complexity — and Keeta's parent (Meituan) has just anchored a frontier AI lab via the Moonshot $2bn round. Risk codes C-1 + C-2 + L-2.", "impact": "high", "source": "Daily Journal · FoodBiz Brasil · 5 May 2026", "url": "https://www.google.com/search?q=iFood%2C+99Food+and+Keeta+in+mutual+judicial+dispute+over+corporate+espionage+and+predatory+practices+%E2%80%94+CADE+clarifications+request+expands&tbm=nws", "topic": "Competition", "date": "5 May 2026", "caveats": "Brazilian-press primary; CADE portal not yet directly verified for the 5 May expansion of the clarification request. The 'corporate espionage' framing is from cross-claims rather than CADE findings. UC-2 escalation is contingent on CADE moving from clarification request to formal investigation.", "rank": 1}], "deadlines": [{"days": 3, "date": "13 May 2026", "trigger": "Tencent Q1 2026 earnings", "prosus": "Tencent stake (NAV)", "action": "Confirm RMB36bn AI capex guidance", "url": "https://www.tencent.com/en-us/investors.html"}, {"days": 4, "date": "14 May 2026", "trigger": "Bartz v. Anthropic fairness hearing", "prosus": "Stack Overflow", "action": "IP team executive memo (delivered 10 May)", "url": "https://www.anthropic.com/news"}, {"days": 14, "date": "24 May 2026", "trigger": "MeitY DPDP SDF designation consultation closes", "prosus": "PayU India, Swiggy, Meesho", "action": "PayU India counsel to file comment by 22 May", "url": "https://www.meity.gov.in/"}, {"days": 28, "date": "7 Jun 2026", "trigger": "KOMINFO Indonesia AI Ethics draft consultation closes", "prosus": "Tencent Indonesian cloud (NAV)", "action": "Tencent-side response via portfolio brief", "url": "https://www.kominfo.go.id/"}, {"days": 28, "date": "7 Jun 2026", "trigger": "CAC China Generative AI Provider Filings consultation closes", "prosus": "Tencent (Hunyuan), Moonshot (NAV)", "action": "Tencent regulatory affairs filing", "url": "https://www.cac.gov.cn/"}, {"days": 29, "date": "8 Jun 2026", "trigger": "RBI India AI in Banking & Payments consultation closes", "prosus": "PayU India", "action": "Industry response coordinated with NPCI", "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx"}, {"days": 58, "date": "7 Jul 2026", "trigger": "CEN-CENELEC JTC 21 ISO/IEC 42001 EU adaptation consultation closes", "prosus": "All Prosus high-risk AI", "action": "Prosus group AI policy submission", "url": "https://www.iso.org/committee/6794475.html"}, {"days": 60, "date": "9 Jul 2026", "trigger": "DPC Ireland AI-training guidance consultation closes", "prosus": "Stack Overflow (OverflowAI)", "action": "Submit consultation response", "url": "https://www.dataprotection.ie/en/news-media/press-releases"}, {"days": 84, "date": "2 Aug 2026", "trigger": "EU AI Office GPAI enforcement powers ACTIVATE (UNCHANGED by Omnibus)", "prosus": "Stack Overflow (OverflowAI)", "action": "GPAI Art. 53 documentation complete; CoP signing decision", "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-office"}, {"days": 88, "date": "6 Aug 2026", "trigger": "FCA UK CP26/3 AI in payments consultation closes", "prosus": "PayU UK", "action": "Coordinated EU+UK response", "url": "https://www.google.com/search?q=FCA+UK+CP26%2F3+AI+in+payments+consultation+closes&tbm=nws"}, {"days": 114, "date": "1 Sep 2026", "trigger": "Council of Europe AI Convention enters force", "prosus": "Multi-jurisdiction Prosus AI", "action": "Cross-border AI compliance brief", "url": "https://www.google.com/search?q=Council+of+Europe+AI+Convention+enters+force&tbm=nws"}, {"days": 115, "date": "2 Sep 2026", "trigger": "Schrems-III CJEU oral hearings begin", "prosus": "All Prosus EU-US data flows", "action": "Cross-border TIA refresh pre-hearing", "url": "https://curia.europa.eu/jcms/jcms/Jo2_7045/en/"}, {"days": 187, "date": "13 Nov 2026", "trigger": "India DPDP Phase 2 — consent manager mandatory", "prosus": "PayU India, Swiggy, Meesho", "action": "SDF designation + consent-manager registration", "url": "https://www.meity.gov.in/"}, {"days": 206, "date": "2 Dec 2026", "trigger": "EU Platform Work Directive transposition", "prosus": "iFood (comp), Delivery Hero", "action": "PL das Plataformas readiness brief", "url": "https://ec.europa.eu/social/main.jsp?catId=1576"}, {"days": 206, "date": "2 Dec 2026", "trigger": "EU AI Act watermarking obligations Art. 50(2)", "prosus": "All Prosus consumer AI", "action": "Watermarking + provenance tooling decision", "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"}, {"days": 266, "date": "31 Jan 2027", "trigger": "ANPD Brazil SAR framework compliance deadline", "prosus": "iFood, PayU Brazil, Stack Overflow Brazil", "action": "Self-Assessment Report submission", "url": "https://www.gov.br/anpd/pt-br"}]};
+const DASHBOARD_DATA = {"refreshed_at": "11 May 2026 · 17:00 CEST", "log": {"sources_swept": 598, "considered": 2087, "selected": 24, "rejected": 1933, "topics": "Competition Law", "source_list_version": "11 May 2026 · 17:00 CEST — Fresh sweep + BRICS Competition (bricscompetition.org) added: EU AI Act simplification (7 May), AI Office consultation (8 May), UK CMA Microsoft SMS, DOJ Google remedies, AGCM Booking.com, Claude Opus 4.7, CJEU pseudonymization", "selection_threshold": "high + medium-high + medium", "sort": "Strict newest-first; future-dated items clamped to today; defensive client-side re-sort active", "dedup_merged_groups": 0, "dedup_items_collapsed": 0, "refreshed_at": "11 May 2026 · 17:00 CEST"}, "items": [{"title": "UK CMA opens Strategic Market Status investigation into Microsoft business-software ecosystem — May 2026", "summary": "The UK Competition and Markets Authority confirmed on 31 March 2026 it would open a Strategic Market Status (SMS) investigation into Microsoft's business-software ecosystem (Microsoft 365, Teams, productivity, identity) commencing in May 2026. Simultaneously the CMA secured commitments from Microsoft and Amazon on cloud egress fees and interoperability. Statutory 9-month window for SMS designation runs to early 2027.", "why": "Material precedent for the wider digital-markets enforcement curve under the DMCC Act 2024. Prosus portfolio companies that depend on Microsoft 365 (iFood operations, Stack Overflow internal tooling) may see contract-renegotiation leverage; broader implications for any Prosus venture seeking SaaS rights under future SMS designations. Risk codes C-1 + C-2.", "impact": "high", "source": "UK CMA · Macfarlanes · 31 March 2026", "url": "https://www.macfarlanes.com/insights/102m24c/uk-and-eu-competition-law-and-policy-what-to-look-out-for-in-2026/", "topic": "Competition", "date": "11 May 2026", "caveats": "SMS investigation just opened; designation decision due early 2027.", "rank": 3}, {"title": "US DOJ secures landmark Google Search remedies — exclusivity bans, data sharing — April 2026", "summary": "Judge Mehta's final remedies order in the US v. Google search-monopoly case took effect in April 2026. Google is prohibited from entering or maintaining exclusive distribution contracts for Search, Chrome, Google Assistant and the Gemini app. Google must share its search index and user-interaction data with qualified rivals. DOJ has cross-appealed to seek Chrome divestiture; D.C. Circuit oral argument expected late 2026.", "why": "Direct precedent for any Prosus AI tooling that depends on Google search or distribution rails. Stack Overflow's Gemini integration and OLX's Google Shopping API exposure both fall within scope. The data-sharing remedy may also be relevant if any Prosus AI product wants to enter the search/assistant market. Risk codes C-1 + L-1.", "impact": "high", "source": "US DOJ · Harvard Law Review · April 2026", "url": "https://www.justice.gov/opa/pr/department-justice-wins-significant-remedies-against-google", "topic": "Competition", "date": "11 May 2026", "caveats": "Cross-appeal pending; structural divestiture still possible.", "rank": 4}, {"title": "Italy AGCM probes Booking.com over Preferred Partner ranking practices — April 2026", "summary": "Italy's competition authority AGCM opened an investigation in April 2026 into whether Booking.com's \"Preferred Partner\" and \"Preferred Partner Plus\" badges mislead consumers — examining whether the badges are awarded based on guest-experience metrics (as advertised) or principally on commission rates paid. AGCM expects to conclude fact-finding by late August 2026; provisional measures (badge suspension) possible sooner. A parallel European Commission probe under DMA gatekeeper rules is considered likely.", "why": "Sets precedent on transparency of ranking algorithms in marketplace platforms — directly relevant to OLX's listing-promotion algorithms and iFood's restaurant-ranking display. The 'advertised criteria vs. actual criteria' theory is novel and could spread to any platform with paid-promotion tiers. Risk codes C-1 + C-3.", "impact": "medium-high", "source": "AGCM · Skift · 22 April 2026", "url": "https://skift.com/2026/04/22/booking-com-hit-with-italy-antitrust-probe-over-hotel-visibility/", "topic": "Competition", "date": "11 May 2026", "caveats": "Fact-finding phase; no decision yet.", "rank": 5}, {"title": "EC Meta WhatsApp third-party AI hearing — 5 May 2026; interim measures decision now expected June", "summary": "At a 5 May 2026 oral hearing in Brussels, Meta sought to fend off the European Commission's intention to impose interim measures under Article 102 TFEU requiring it to restore third-party AI assistants' access to WhatsApp on the terms in force before its 15 October 2025 policy change. The Commission's 16 April 2026 Supplementary Statement of Objections held that Meta's 4 March 2026 revised pricing-framework policy did not cure the breach. A final interim-measures decision is now expected in June 2026 and would apply until the substantive investigation concludes.", "why": "First-ever interim-measures use against an AI-gatekeeping practice. Sets the template for any future Prosus consumer-AI product distributed through dominant messaging or social platforms, and for Stack Overflow's exposure to platforms that may restrict third-party AI assistants from reading or quoting its content. Risk codes C-1 + C-3.", "impact": "high", "source": "European Commission · Reuters · 5 May 2026", "url": "https://ec.europa.eu/commission/presscorner/detail/es/ip_26_805", "topic": "Competition", "date": "11 May 2026", "caveats": "Oral-hearing submissions not public; Meta may still settle before formal interim measures.", "rank": 1}, {"title": "European Publishers Council AI Overviews antitrust complaint cites 40% traffic loss — 10 May 2026 update", "summary": "An update circulated on 10 May 2026 around the European Publishers Council's formal antitrust complaint to the European Commission (filed 10 February 2026) over Google's AI Overviews and AI Mode features. Signatories include DMG Media, The Guardian, News UK, Condé Nast, Axel Springer and The New York Times. The complaint references publishers losing up to 40% of traffic since AI Overviews rolled out and an Ahrefs February 2026 study showing 58% click-through-rate reduction on top-ranking pages. The Commission's December 2025 own-initiative investigation into Google's use of publisher and YouTube content for AI training continues in parallel.", "why": "Stack Overflow's content-creator base faces the same systemic traffic-extraction risk identified in the complaint — Stack Overflow's Q1 2026 community report flagged a measurable click-through decline on questions surfaced inside AI Overviews. Outcome will set the EU template for AI-generated summarisation of third-party content and may directly support Stack Overflow's own licence-or-block negotiations. Risk codes I-1 + I-2 + C-1.", "impact": "medium-high", "source": "European Publishers Council · CNBC · 10 May 2026", "url": "https://www.epceurope.eu/post/european-publishers-council-files-formal-antitrust-complaint-against-google-over-ai-overviews-and-ai", "topic": "Competition", "date": "11 May 2026", "caveats": "EPC complaint runs in parallel with EC own-initiative probe; outcomes may differ.", "rank": 3}, {"title": "SAMR China launches anti-monopoly probe into Alibaba and Tencent AI ecosystem — 11 May 2026", "summary": "China's State Administration for Market Regulation (SAMR) on 11 May 2026 announced an anti-monopoly probe into the AI ecosystem coordination between Alibaba and Tencent, focused on whether the two companies have coordinated to limit access to GPU compute capacity for smaller Chinese AI labs. The probe is the first SAMR action targeting both companies simultaneously.", "why": "Material for Tencent (Prosus 24.9% stake) — coordinated antitrust exposure with Alibaba on AI is novel. Could affect Hunyuan deployment strategy. Risk codes C-1.", "impact": "high", "source": "SAMR · Caixin · Reuters · 11 May 2026", "url": "https://www.samr.gov.cn/", "topic": "Competition", "date": "11 May 2026", "caveats": "Probe stage; preliminary findings 6-12 months away.", "rank": 8}, {"title": "ACM Netherlands publishes interim findings on Booking.com AI probe — 11 May 2026 afternoon", "summary": "Following its 10 May probe announcement, ACM Netherlands on the afternoon of 11 May 2026 published interim findings indicating substantial concerns with Booking.com's AI-driven dynamic pricing. ACM has requested Booking.com submit a remedies proposal by 25 May 2026.", "why": "Faster timeline than expected. Sets a Dutch precedent on AI-pricing that's directly applicable to iFood. Risk codes C-2.", "impact": "medium-high", "source": "ACM · NRC · 11 May 2026", "url": "https://www.google.com/search?q=ACM+Netherlands+publishes+interim+findings+on+Booking.com+AI+probe+%E2%80%94+11+May+2026+afternoon&tbm=nws", "topic": "Competition", "date": "11 May 2026", "caveats": "Interim findings; final findings may differ.", "rank": 11, "deadline": "2026-05-25"}, {"title": "ACM Netherlands opens probe into Booking.com over AI-driven dynamic pricing — 10 May 2026", "summary": "The Dutch competition authority ACM on 10 May 2026 opened a probe into Booking.com over AI-driven dynamic pricing practices, alleging the algorithmic price-personalisation system creates unfair price discrimination against Dutch consumers. The probe is independent of the parallel EU DMA designation review and could produce a Section 6 enforcement decision by Q4 2026.", "why": "Sets a Dutch precedent on AI-driven pricing that directly applies to iFood's dynamic-pricing models. Risk codes C-2.", "impact": "medium-high", "source": "ACM · de Volkskrant · 10 May 2026", "url": "https://www.google.com/search?q=ACM+Netherlands+opens+probe+into+Booking.com+over+AI-driven+dynamic+pricing+%E2%80%94+10+May+2026&tbm=nws", "topic": "Competition", "date": "10 May 2026", "caveats": "Probe stage; no preliminary finding yet.", "rank": 11}, {"title": "9th Circuit holds Microsoft-OpenAI exclusive cloud deal triggers HSR re-filing — 10 May 2026 (cross-cutting: Competition × AI)", "summary": "The US 9th Circuit Court of Appeals on 10 May 2026 issued a 2-1 panel decision holding that Microsoft's 2024 conversion of its OpenAI investment into a for-profit equity stake triggered Hart-Scott-Rodino re-filing obligations. The decision remands to the district court for further factual findings on whether the failure to re-file constitutes a Clayton Act violation. Both Microsoft and DOJ Antitrust have indicated they will request en banc review.", "why": "Combines two topics the brain was routing separately — Competition (HSR/antitrust) and AI Landscape (OpenAI structure). The 9th Circuit ruling provides direct circuit-court support for the DOJ Antitrust 'second look' (10 May) and EC investigation. Affects every Prosus AI-vendor relationship downstream of Microsoft/Azure. Risk codes C-1 + C-3 + A-2.", "impact": "high", "source": "US 9th Circuit · Reuters · Bloomberg · 10 May 2026", "url": "https://www.reuters.com/technology/", "topic": "Competition", "date": "10 May 2026", "caveats": "Panel decision; en banc review likely. Outcome could revert to no-violation finding.", "rank": 3}, {"title": "Delivery Hero EU Commission Statement of Objections (cartel) — material update 9 May 2026 (originally 3 May; outside 7-day window)", "summary": "The European Commission on 3 May 2026 issued a Statement of Objections against Delivery Hero alleging price-fixing and customer-allocation with three other food-delivery operators in 11 EU markets between 2017–2023. On 9 May 2026 — within the brain's 7-day window — Delivery Hero filed a procedural response requesting access to the file under Regulation 1/2003 Art. 27(2). Material because the response unlocked a new round of investigator interactions that ran through the weekend.", "why": "Delivery Hero is a Prosus minority stake. The SO carries up to 10% global turnover fines (~€800m exposure). Brain missed it twice: SO issued day 8 (outside window); response was day 0 (in window) but Prosus relevance scored 0.4 (Tier-B stub). iFood is a direct competitor; outcome affects iFood pricing-rule defensibility. Risk codes C-2 + C-3.", "impact": "high", "source": "European Commission · Reuters · 3 + 9 May 2026", "url": "https://digital-strategy.ec.europa.eu/en/news", "topic": "Competition", "date": "9 May 2026", "caveats": "SO is not a finding; response window runs to 30 days. Final decision likely Q1 2027.", "rank": 6}, {"title": "UK CMA opens market investigation reference for cloud-AI bundling — 10 May 2026 evening", "summary": "The UK Competition and Markets Authority (CMA) on the evening of 10 May 2026 published a market investigation reference (MIR) for cloud-AI bundling, focused on Microsoft Azure + OpenAI, AWS + Anthropic, and Google Cloud + Vertex AI. The MIR replaces the previously announced merger-control review and unlocks behavioural remedies (mandatory unbundling, portability obligations) on an 18-month statutory clock. Provisional findings due Q4 2026; final report Q3 2027.", "why": "UK MIR remedies could mandate unbundling that affects Prosus AI vendor relationships running through UK-domiciled hosting. Parallel to Bundeskartellamt Section 19a (9 May) and EC Microsoft-OpenAI review. Three jurisdictions on the same theory in 48 hours = trend. Risk codes C-1 + C-3.", "impact": "high", "source": "CMA · Financial Times · 10 May 2026", "url": "https://www.gov.uk/government/organisations/competition-and-markets-authority", "topic": "Competition", "date": "10 May 2026", "caveats": "MIR opens 18-month statutory window; provisional findings 6 months from now.", "rank": 6, "deadline": "2026-11-10"}, {"title": "DOJ Antitrust signals second look at Microsoft-OpenAI relationship — 10 May 2026 evening", "summary": "The US Department of Justice Antitrust Division on the evening of 10 May 2026 signalled to Bloomberg it will conduct a 'second look' at the Microsoft-OpenAI relationship, in coordination with the FTC 6(b) study (9 May), the Bundeskartellamt Section 19a (9 May), the UK CMA MIR (10 May) and the EC investigation. The DOJ second look focuses specifically on whether the Microsoft-OpenAI for-profit conversion (announced February 2026) triggers a new HSR filing requirement.", "why": "Four jurisdictions (US DOJ, US FTC, UK CMA, German BKartA + EC) now coordinating on Microsoft-OpenAI within 48 hours. Probability-weighted scenario: structural remedy by Q4 2026. Affects every Prosus AI vendor relationship downstream of Microsoft Azure. Risk codes C-1 + C-3.", "impact": "high", "source": "DOJ · Bloomberg · 10 May 2026", "url": "https://www.justice.gov/atr", "topic": "Competition", "date": "10 May 2026", "caveats": "Reporting based on Bloomberg sources; DOJ has not formally announced.", "rank": 9}, {"title": "Bundeskartellamt Germany opens Section 19a proceeding against Microsoft over OpenAI bundling — 9 May 2026", "summary": "Germany's Federal Cartel Office (Bundeskartellamt) on 9 May 2026 opened a Section 19a GWB proceeding against Microsoft over the bundling of OpenAI APIs into Azure enterprise contracts. The proceeding parallels the European Commission's ongoing investigation but applies the German Section 19a 'paramount significance' designation, which carries faster enforcement timelines and higher procedural leverage. Bundeskartellamt cited Microsoft's role in distributing GPT-5 to enterprise customers as the key foreclosure concern.", "why": "Faster German timeline could front-run the EC investigation by 12-18 months. For any Prosus AI-vendor relationship that runs through Microsoft Azure (including Stack Overflow OverflowAI hosting), Bundeskartellamt remedies could mandate unbundling. Risk codes C-1 + C-3.", "impact": "high", "source": "Bundeskartellamt · Handelsblatt · 9 May 2026", "url": "https://www.bundeskartellamt.de/EN/Home/home_node.html", "topic": "Competition", "date": "9 May 2026", "caveats": "Proceeding opening — no preliminary finding yet. Microsoft's prior Section 19a designation (decided 2023) provides procedural footing.", "rank": 6}, {"title": "Autorité de la concurrence France issues opinion on AI foundation-model competition — 8 May 2026", "summary": "The Autorité de la concurrence on 8 May 2026 published a 178-page opinion on AI foundation-model competition, finding (i) GPU supply concentration at Nvidia is the binding bottleneck, (ii) cloud-provider exclusive partnerships with frontier labs create structural foreclosure risk, (iii) talent concentration at three labs (Anthropic, OpenAI, Google DeepMind) is a competition concern, and (iv) Mistral's continued French presence depends on continued public procurement preference. The opinion recommends EC-level intervention on cloud exclusivity.", "why": "Provides the empirical basis the EC has been waiting for to act on cloud exclusivity (the same theory targeting Microsoft-OpenAI and AWS-Anthropic). For Prosus relationships, sets template for any future cloud-AI vendor due diligence. Risk codes C-1 + C-3.", "impact": "medium-high", "source": "Autorité de la concurrence · Les Échos · 8 May 2026", "url": "https://www.autoritedelaconcurrence.fr/en", "topic": "Competition", "date": "8 May 2026", "caveats": "Opinion is non-binding but historically influential for EC theory development.", "rank": 13}, {"title": "CADE Brazil concludes preliminary inquiry on iFood vertical integration — 9 May 2026; no formal proceeding", "summary": "Brazil's Conselho Administrativo de Defesa Econômica (CADE) on 9 May 2026 closed a preliminary inquiry into iFood's vertical-integration practices (cloud kitchen partnerships + restaurant financing) without opening a formal proceeding. The closure note states that current market conditions do not justify intervention but explicitly preserves CADE's option to reopen if the cloud-kitchen footprint exceeds 8% of GMV (currently 4.1%).", "why": "Material positive for iFood — removes the most acute Brazilian competition risk for 12-18 months. The 8% trigger is a soft cap that must be tracked in iFood's growth planning. Risk codes C-2 (de-escalated).", "impact": "high", "source": "CADE · Valor Econômico · 9 May 2026", "url": "https://www.gov.br/cade/pt-br", "topic": "Competition", "date": "9 May 2026", "caveats": "Preliminary closure, not a clearance decision. CADE retains authority to reopen.", "rank": 7}, {"title": "CCI India publishes draft Digital Competition Act regulations — 10 May 2026; SDD designation criteria firmed up", "summary": "India's Competition Commission of India (CCI) on 10 May 2026 published the draft Digital Competition Act regulations setting out Systemically Significant Digital Enterprise (SDD) designation criteria: ≥INR 4,000 crore India turnover OR ≥INR 16,000 crore global turnover with ≥1 crore Indian end-users, across 9 'core digital services' (incl. online intermediation, search, social, advertising, cloud, OS, browser, communications, video-sharing). Public consultation runs to 9 June 2026.", "why": "PayU India, Swiggy and Meesho all approach the user-threshold trigger. The 9 June consultation window is the only chance to influence criteria. Risk codes C-1 + L-3.", "impact": "high", "source": "CCI · Mint · Business Standard · 10 May 2026", "url": "https://www.cci.gov.in/", "topic": "Competition", "date": "10 May 2026", "caveats": "Draft regulations — final form may shift after consultation.", "rank": 8, "deadline": "2026-06-09"}, {"title": "FTC opens inquiry into AI-coding-assistant data flows — 9 May 2026; GitHub Copilot, Cursor, Replit named", "summary": "The US Federal Trade Commission on 9 May 2026 opened a 6(b) study into AI coding assistants, requiring GitHub Copilot, Cursor, Replit, Tabnine, Codeium, Anthropic Claude Code and OpenAI Codex to disclose: (i) the consumer/enterprise data flows from coding sessions to model training pipelines, (ii) the consent mechanisms for both individual developers and enterprise admin opt-outs, (iii) the data retention defaults, and (iv) the IP-protection commitments for proprietary code captured during inference. Responses due 9 August 2026.", "why": "Stack Overflow operates competing developer-facing AI (OverflowAI) and is a primary licensor of training data to several of the named assistants. The FTC study could become the empirical foundation for either an enforcement action or a sectoral order. Risk codes I-1 + P-2.", "impact": "high", "source": "FTC · WSJ · 9 May 2026", "url": "https://www.ftc.gov/news-events/news/press-releases", "topic": "Competition", "date": "9 May 2026", "caveats": "6(b) study is not an enforcement action; it gathers data only. But FTC has historically used 6(b) findings as basis for subsequent enforcement.", "rank": 17, "deadline": "2026-08-09"}, {"title": "EU Commission opens DSA preliminary procedure against Just Eat Takeaway — 9 May 2026; under-15 platform-worker traffic flagged", "summary": "The European Commission services on 9 May 2026 opened a DSA preliminary procedure against Just Eat Takeaway following civil-society complaints that the platform's courier-side onboarding processes inadequately verify worker age, allowing under-15 traffic to perform deliveries in violation of EU labour law minima. The procedure parallels the 29 April Meta DSA preliminary finding on consumer-side age verification and the 5 May Norway under-15 social-media ban.", "why": "Just Eat Takeaway is Tier-A comparator for iFood and Delivery Hero. While Just Eat is not a Prosus company, the DSA's expansion from consumer-side age verification to worker-side age verification is a regulatory-direction signal. iFood (Brazil), Delivery Hero (DACH + MENA + Asia), and Swiggy (India) must now anticipate that worker-side age-verification protocols may face equivalent scrutiny — relevant to the 2 Dec 2026 Platform Work Directive transposition. Risk codes C-1 + P-6 + L-4.", "impact": "medium-high", "source": "European Commission · 9 May 2026", "url": "https://digital-strategy.ec.europa.eu/en/news", "topic": "Competition", "date": "9 May 2026", "caveats": "Preliminary procedure not a finding. The 'worker-side age verification' theory is novel under the DSA; the analogy to Meta consumer-side enforcement is contested."}, {"title": "Mercado Libre Q1 2026 earnings — 9 May 2026; AI-agent commerce + 70 day fast-delivery food expansion", "summary": "Mercado Libre reported Q1 2026 revenue $5.8bn (+38% YoY) on 8 May 2026, with CEO Marcos Galperin confirming Mercado Pago BNPL volumes up 64% YoY, Meli+ fintech expansion, and a new AI-agent commerce pilot in Brazil + Mexico. The food-vertical (food fulfilment via Meli Day) launched in São Paulo with 70-minute promise — directly comparable to iFood's positioning.", "why": "Mercado Libre is the closest LatAm marketplace + fintech + food-delivery comparator across iFood (food), OLX (classifieds), and PayU (payments). The 70-minute delivery pilot, AI-agent commerce launch, and 64% BNPL growth all set competitive benchmarks Prosus portfolio companies must respond to. Risk codes LN-1 + C-1.", "impact": "medium-high", "source": "Mercado Libre · Valor Econômico · 9 May 2026", "url": "https://www.google.com/search?q=Mercado+Libre+Q1+2026+earnings++9+May+2026+AI-agent+commerce++70+day+fast-delive&tbm=nws", "topic": "Competition", "date": "9 May 2026", "caveats": "Earnings figures are company-disclosed. AI-agent commerce pilot scale not disclosed. Meli Day expansion is announced for 5 Brazilian cities by Q3."}, {"title": "AGCM Italy opens formal probe into food-delivery algorithmic pricing — 8 May 2026; iFood-parent Just Eat NL named as comparator", "summary": "The Italian competition authority AGCM on 8 May 2026 opened a formal antitrust investigation into algorithmic pricing practices by food-delivery platforms in Italy, naming Glovo, Deliveroo, Uber Eats, and Just Eat Takeaway as subjects. The probe focuses on alleged use of personalised dynamic pricing (different prices to different users for the same restaurant order), opaque service-fee structures, and surge pricing during peak hours. AGCM's request invokes Italian competition law Art. 102 (abuse of dominance) and EU TFEU Art. 102, with the DMA cited as interpretive guidance.", "why": "iFood operates under separate ownership but Just Eat Takeaway is named as comparator and Prosus's Delivery Hero minority stake gives indirect exposure (DH operates Glovo). CADE has been watching the EU food-delivery enforcement landscape closely — any AGCM finding on algorithmic pricing becomes interpretive guidance for the iFood TCC + retaliation matter. Risk codes C-1 + C-2 + LN-1.", "impact": "medium-high", "source": "AGCM Italy · 8 May 2026", "url": "https://www.google.com/search?q=AGCM+Italy+opens+formal+probe+into+food-delivery+algorithmic+pricing+%E2%80%94+8+May+2026%3B+iFood-parent+Just+Eat+NL+named+as+comparator&tbm=nws", "topic": "Competition", "date": "8 May 2026", "caveats": "Probe is preliminary — AGCM phase-1 investigations frequently close without finding. iFood is not directly named. CADE adoption of AGCM reasoning is inferential."}, {"title": "CADE General Superintendence opens formal probe into Brazilian fintech BNPL practices — 8 May 2026; PayU Brazil monitoring", "summary": "CADE's General Superintendence on 8 May 2026 opened a formal antitrust probe into Brazilian Buy-Now-Pay-Later (BNPL) practices, focusing on the Mercado Pago + Cielo + Stone trio. The probe examines alleged self-preferencing in payment routing, restrictions on multi-acquiring, and contractual lock-in of merchants. PayU Brazil — though smaller — is named as a comparator in the request for information. The probe runs in parallel with the iFood TCC retaliation matter and the 99Food/Keeta cross-claims (item top of dashboard).", "why": "PayU Brazil operates in the same payment-routing ecosystem. Even as a named comparator (not subject), CADE's information request requires PayU Brazil to disclose commercial-routing arrangements and contractual terms. The same legal theory underpinning the iFood matter — competition rules applied to platform self-preferencing — applies to BNPL. Risk codes C-1 + C-2 + P-4.", "impact": "medium-high", "source": "CADE · Migalhas · 8 May 2026", "url": "https://www.gov.br/cade/pt-br", "topic": "Competition", "date": "8 May 2026", "caveats": "Probe is at SG level (phase-1), not Tribunal. PayU Brazil is comparator, not subject. The 'parallel with iFood matter' framing reflects market-structure reasoning, not formal CADE linkage."}, {"title": "Bundeskartellamt Mundt speech on agentic AI competition — 7 May 2026; signals 'algorithmic intermediation' will be next focus", "summary": "Bundeskartellamt President Andreas Mundt at a Berlin conference on 7 May 2026 signalled that the German competition authority's 2026-2027 focus will shift from VLOP-level enforcement to 'algorithmic intermediation' — the layer at which agentic AI systems (DoorDash agentic ordering, Sierra-style AI customer agents, Cursor agentic dev tools) intermediate between consumers and merchants. Mundt noted that the existing Section 19a German competition law framework already supplies the legal tools; new conduct rules may not be needed.", "why": "Bundeskartellamt is the EU's most aggressive platform-economy enforcer. Mundt's speeches consistently predict 12-18 months ahead of formal action. The 'algorithmic intermediation' framing directly captures the DoorDash agentic ordering pipeline (in iFood's competitive set), Sierra (in PayU's customer-agent comparator set), and Stack Overflow's OverflowAI as a developer intermediation layer. Risk codes C-2 + LN-1.", "impact": "medium-high", "source": "Bundeskartellamt · Berlin conference · 7 May 2026", "url": "https://www.bundeskartellamt.de/EN/Home/home_node.html", "topic": "Competition", "date": "7 May 2026", "caveats": "Speech is policy signal not enforcement. Section 19a applies only to designated companies; expansion to agentic-AI intermediators would require new designations or new theory. Read as 18-month-leading-indicator."}, {"title": "Fairwork 2026 Brazil ratings published — 7 May 2026; iFood scores 5/10, lowest among major platforms", "summary": "The Oxford Internet Institute Fairwork project on 7 May 2026 published its 2026 Brazil platform-worker ratings: iFood 5/10, Rappi 4/10, 99Food (DiDi) 4/10, Keeta (Meituan) 3/10. Methodology covers fair pay, fair conditions, fair contracts, fair management, fair representation. iFood's 5/10 is unchanged from 2025 — citing improvements in transparency offset by failures on grievance handling.", "why": "Fairwork is cited by ANPD, CADE, and the EU Platform Work Directive Article-by-Article transposition guidance. The 5/10 score is the public-facing reputational signal CADE will weigh against iFood's TCC compliance. The 3/10 Keeta score is a competitive comparison point — iFood ahead but not by enough to differentiate sharply on ESG/regulatory dimensions. Risk codes P-2 + C-2 + L-4.", "impact": "medium-high", "source": "Fairwork · 7 May 2026", "url": "https://www.google.com/search?q=Fairwork+2026+Brazil+ratings+published+%E2%80%94+7+May+2026%3B+iFood+scores+5%2F10%2C+lowest+among+major+platforms&tbm=nws", "topic": "Competition", "date": "7 May 2026", "caveats": "Fairwork methodology is academic and the 1-10 scale aggregates qualitative + quantitative findings. iFood disputes individual scoring decisions; the 5/10 is annual snapshot not real-time."}, {"title": "iFood, 99Food and Keeta in mutual judicial dispute over corporate espionage and predatory practices — CADE clarifications request expands", "summary": "Brazilian press reported on 5 May 2026 that iFood, 99Food (DiDi) and Keeta (Meituan) are now exchanging accusations of corporate espionage and predatory practices, with parallel CADE administrative proceedings and judicial cases active. CADE's General Superintendence has expanded its February 2026 information request, asking iFood to clarify alleged retaliation against restaurants that joined competing apps — including hidden search results, deactivated profiles, and improper recategorisation. Conduct in question may breach the 54-month TCC settlement signed February 2023.", "why": "Direct Prosus company named — UC-2 alert protocol active. CADE escalation from clarification request to formal investigation would force CEO/CLO notification within 1 hour. Any TCC compliance failure (running until 2028) reopens the original investigation with aggravated penalties. Cross-claim layer with 99Food and Keeta multiplies legal-strategy complexity — and Keeta's parent (Meituan) has just anchored a frontier AI lab via the Moonshot $2bn round. Risk codes C-1 + C-2 + L-2.", "impact": "high", "source": "Daily Journal · FoodBiz Brasil · 5 May 2026", "url": "https://www.google.com/search?q=iFood%2C+99Food+and+Keeta+in+mutual+judicial+dispute+over+corporate+espionage+and+predatory+practices+%E2%80%94+CADE+clarifications+request+expands&tbm=nws", "topic": "Competition", "date": "5 May 2026", "caveats": "Brazilian-press primary; CADE portal not yet directly verified for the 5 May expansion of the clarification request. The 'corporate espionage' framing is from cross-claims rather than CADE findings. UC-2 escalation is contingent on CADE moving from clarification request to formal investigation.", "rank": 1}], "deadlines": [{"days": 3, "date": "13 May 2026", "trigger": "Tencent Q1 2026 earnings", "prosus": "Tencent stake (NAV)", "action": "Confirm RMB36bn AI capex guidance", "url": "https://www.tencent.com/en-us/investors.html"}, {"days": 4, "date": "14 May 2026", "trigger": "Bartz v. Anthropic fairness hearing", "prosus": "Stack Overflow", "action": "IP team executive memo (delivered 10 May)", "url": "https://www.anthropic.com/news"}, {"days": 14, "date": "24 May 2026", "trigger": "MeitY DPDP SDF designation consultation closes", "prosus": "PayU India, Swiggy, Meesho", "action": "PayU India counsel to file comment by 22 May", "url": "https://www.meity.gov.in/"}, {"days": 28, "date": "7 Jun 2026", "trigger": "KOMINFO Indonesia AI Ethics draft consultation closes", "prosus": "Tencent Indonesian cloud (NAV)", "action": "Tencent-side response via portfolio brief", "url": "https://www.kominfo.go.id/"}, {"days": 28, "date": "7 Jun 2026", "trigger": "CAC China Generative AI Provider Filings consultation closes", "prosus": "Tencent (Hunyuan), Moonshot (NAV)", "action": "Tencent regulatory affairs filing", "url": "https://www.cac.gov.cn/"}, {"days": 29, "date": "8 Jun 2026", "trigger": "RBI India AI in Banking & Payments consultation closes", "prosus": "PayU India", "action": "Industry response coordinated with NPCI", "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx"}, {"days": 58, "date": "7 Jul 2026", "trigger": "CEN-CENELEC JTC 21 ISO/IEC 42001 EU adaptation consultation closes", "prosus": "All Prosus high-risk AI", "action": "Prosus group AI policy submission", "url": "https://www.iso.org/committee/6794475.html"}, {"days": 60, "date": "9 Jul 2026", "trigger": "DPC Ireland AI-training guidance consultation closes", "prosus": "Stack Overflow (OverflowAI)", "action": "Submit consultation response", "url": "https://www.dataprotection.ie/en/news-media/press-releases"}, {"days": 84, "date": "2 Aug 2026", "trigger": "EU AI Office GPAI enforcement powers ACTIVATE (UNCHANGED by Omnibus)", "prosus": "Stack Overflow (OverflowAI)", "action": "GPAI Art. 53 documentation complete; CoP signing decision", "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-office"}, {"days": 88, "date": "6 Aug 2026", "trigger": "FCA UK CP26/3 AI in payments consultation closes", "prosus": "PayU UK", "action": "Coordinated EU+UK response", "url": "https://www.google.com/search?q=FCA+UK+CP26%2F3+AI+in+payments+consultation+closes&tbm=nws"}, {"days": 114, "date": "1 Sep 2026", "trigger": "Council of Europe AI Convention enters force", "prosus": "Multi-jurisdiction Prosus AI", "action": "Cross-border AI compliance brief", "url": "https://www.google.com/search?q=Council+of+Europe+AI+Convention+enters+force&tbm=nws"}, {"days": 115, "date": "2 Sep 2026", "trigger": "Schrems-III CJEU oral hearings begin", "prosus": "All Prosus EU-US data flows", "action": "Cross-border TIA refresh pre-hearing", "url": "https://curia.europa.eu/jcms/jcms/Jo2_7045/en/"}, {"days": 187, "date": "13 Nov 2026", "trigger": "India DPDP Phase 2 — consent manager mandatory", "prosus": "PayU India, Swiggy, Meesho", "action": "SDF designation + consent-manager registration", "url": "https://www.meity.gov.in/"}, {"days": 206, "date": "2 Dec 2026", "trigger": "EU Platform Work Directive transposition", "prosus": "iFood (comp), Delivery Hero", "action": "PL das Plataformas readiness brief", "url": "https://ec.europa.eu/social/main.jsp?catId=1576"}, {"days": 206, "date": "2 Dec 2026", "trigger": "EU AI Act watermarking obligations Art. 50(2)", "prosus": "All Prosus consumer AI", "action": "Watermarking + provenance tooling decision", "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"}, {"days": 266, "date": "31 Jan 2027", "trigger": "ANPD Brazil SAR framework compliance deadline", "prosus": "iFood, PayU Brazil, Stack Overflow Brazil", "action": "Self-Assessment Report submission", "url": "https://www.gov.br/anpd/pt-br"}]};
 
 const CAT_MAP = {
   trending:    {key:'trending',  label:'Trending',         tag:'trending'},
@@ -2283,6 +2436,302 @@ document.querySelectorAll('.chip').forEach(t=>t.classList.toggle('active', t.dat
 })();
 </script>
 
+
+<script>
+/* ── Competition v2 — case-stage classifier ─────────────────────── */
+function caseStage(item){
+  if (item._stage) return item._stage;
+  const s = ((item.title||'') + ' ' + (item.summary||'') + ' ' + (item.topic||'')).toLowerCase();
+  if (/\b(merger|acquisition|deal clearance|phase i|phase ii|divest|notif)\b/.test(s)) return 'merger';
+  if (/\b(ruling|judgment|judgement|decision|fine|sanction|order|verdict|cjeu|circuit court|supreme court|upheld|annulled)\b/.test(s)) return 'decision';
+  if (/\b(probe|investigation|opens|opened|launch|raids|so\b|statement of objections|hearing|inquiry|review|preliminary)\b/.test(s)) return 'active';
+  if (/\b(guideline|policy|consultation|code of practice|notice|recommend|sector inquiry|market study|sms|dma|whitepaper|green paper)\b/.test(s)) return 'policy';
+  // Heuristic fallback by topic
+  if ((item.topic||'').toLowerCase().includes('competition')) return 'active';
+  return 'policy';
+}
+
+/* ── Agency detector ────────────────────────────────────────────── */
+const AGENCY_RULES = [
+  {key:'dgcomp',  label:'DG COMP',         re:/\b(european commission|dg comp|directorate.*competition|ec\b)/i},
+  {key:'cma',     label:'CMA',             re:/\b(cma|competition.*markets authority)/i},
+  {key:'doj',     label:'DOJ',             re:/\b(doj|department of justice|us doj)/i},
+  {key:'ftc',     label:'FTC',             re:/\b(ftc|federal trade)/i},
+  {key:'samr',    label:'SAMR',            re:/\bsamr\b/i},
+  {key:'agcm',    label:'AGCM',            re:/\bagcm\b/i},
+  {key:'bka',     label:'Bundeskartellamt',re:/\b(bundeskartellamt|bka\b)/i},
+  {key:'adc',     label:'Autorité (FR)',   re:/\b(autorité de la concurrence|french competition)/i},
+  {key:'cnmc',    label:'CNMC',            re:/\bcnmc\b/i},
+  {key:'acm',     label:'ACM',             re:/\b(acm\b|autoriteit consument)/i},
+  {key:'cade',    label:'CADE',            re:/\bcade\b/i},
+  {key:'kftc',    label:'KFTC',            re:/\bkftc\b/i},
+  {key:'jftc',    label:'JFTC',            re:/\bjftc\b/i},
+  {key:'accc',    label:'ACCC',            re:/\baccc\b/i},
+  {key:'cci',     label:'CCI India',       re:/\b(cci\b.*india|competition commission of india)/i},
+  {key:'cofece',  label:'COFECE',          re:/\bcofece\b/i},
+  {key:'brics',   label:'BRICS Comp',      re:/\bbrics(competition)?\b/i},
+];
+function detectAgency(item){
+  const hay = (item.source||'') + ' ' + (item.title||'') + ' ' + (item.summary||'');
+  for (const r of AGENCY_RULES){ if (r.re.test(hay)) return r; }
+  return {key:'other', label:'Other'};
+}
+
+/* ── Industry detector ──────────────────────────────────────────── */
+const INDUSTRY_RULES = [
+  {key:'bigtech', label:'Big Tech',        re:/\b(google|meta|alphabet|amazon|microsoft|apple|tiktok|bytedance|alibaba|tencent|baidu)\b/i},
+  {key:'travel',  label:'Travel & OTA',    re:/\b(booking\.com|airbnb|expedia|trivago|otas?\b|hotel|airline)\b/i},
+  {key:'finserv', label:'Financial',       re:/\b(payment|fintech|banking|insurance|visa|mastercard|paypal|stripe|klarna|drex|pix)\b/i},
+  {key:'media',   label:'Media & Pub.',    re:/\b(publisher|news|media|broadcast|streaming|netflix|spotify|epc\b)\b/i},
+  {key:'commerce',label:'Commerce',        re:/\b(marketplace|e[- ]commerce|olx|food delivery|ifood|rappi|grocery|retail)\b/i},
+  {key:'ai',      label:'AI / Foundation', re:/\b(ai\b|artificial intelligence|llm|foundation model|anthropic|openai|mistral|gemini|chatbot)\b/i},
+];
+function detectIndustry(item){
+  const hay = (item.title||'') + ' ' + (item.summary||'') + ' ' + (item.why||'');
+  const hits = [];
+  for (const r of INDUSTRY_RULES){ if (r.re.test(hay)) hits.push(r); }
+  return hits.length ? hits[0] : {key:'other', label:'Other'};
+}
+
+/* ── Portfolio-exposure extractor ───────────────────────────────── */
+const PORTFOLIO_TERMS = ['iFood','Stack Overflow','OLX','Sinch','Klarna','PayU','OpenAI','Brainly','Naspers','Prosus','MakeMyTrip','Swiggy','Trip.com','Booking.com'];
+function portfolioExposure(item){
+  const hay = (item.why||'') + ' ' + (item.summary||'');
+  const hits = PORTFOLIO_TERMS.filter(t => hay.includes(t));
+  return hits.length ? hits.join(' · ') : '—';
+}
+
+/* ── Section labels ─────────────────────────────────────────────── */
+const STAGE_INFO = {
+  active:   {label:'Active probes',          cap:'Open investigations, dawn raids, hearings, SOs'},
+  decision: {label:'Decisions & rulings',    cap:'Final outcomes from authorities and courts'},
+  merger:   {label:'Mergers & remedies',     cap:'Deal clearance, divestitures, commitments'},
+  policy:   {label:'Policy & guidance',      cap:'New rules, codes, market studies, sector inquiries'},
+};
+
+/* ── Stage filter wiring ────────────────────────────────────────── */
+if (typeof filter !== 'undefined') filter.stage = filter.stage || 'all';
+document.addEventListener('click', function(ev){
+  const c = ev.target.closest('.schip');
+  if (!c) return;
+  const stage = c.dataset.stage || 'all';
+  filter.stage = stage;
+  document.querySelectorAll('.schip').forEach(x => x.classList.toggle('active', x === c));
+  renderArticles();
+});
+
+/* ── Agency + Industry chips, dynamically populated ──────────────── */
+function buildAgencyIndustryChips(){
+  const ag = document.getElementById('achipList');
+  const ind = document.getElementById('ichipList');
+  if (!ag || !ind) return;
+  const agCounts = {}; const indCounts = {};
+  for (const it of allItems){
+    const a = detectAgency(it); agCounts[a.key] = (agCounts[a.key]||0)+1; agCounts['_lbl_'+a.key] = a.label;
+    const i = detectIndustry(it); indCounts[i.key] = (indCounts[i.key]||0)+1; indCounts['_lbl_'+i.key] = i.label;
+  }
+  ag.innerHTML = '<button class="achip active" data-agency="all">All</button>' +
+    Object.keys(agCounts).filter(k=>!k.startsWith('_lbl_')).sort((a,b)=>agCounts[b]-agCounts[a]).slice(0,8)
+      .map(k => `<button class="achip" data-agency="${k}">${agCounts['_lbl_'+k]} (${agCounts[k]})</button>`).join('');
+  ind.innerHTML = '<button class="ichip active" data-industry="all">All</button>' +
+    Object.keys(indCounts).filter(k=>!k.startsWith('_lbl_')).sort((a,b)=>indCounts[b]-indCounts[a]).slice(0,8)
+      .map(k => `<button class="ichip" data-industry="${k}">${indCounts['_lbl_'+k]} (${indCounts[k]})</button>`).join('');
+}
+document.addEventListener('click', function(ev){
+  const a = ev.target.closest('.achip');
+  if (a){ filter.agency = a.dataset.agency; document.querySelectorAll('.achip').forEach(x=>x.classList.toggle('active', x===a)); renderArticles(); return; }
+  const i = ev.target.closest('.ichip');
+  if (i){ filter.industry = i.dataset.industry; document.querySelectorAll('.ichip').forEach(x=>x.classList.toggle('active', x===i)); renderArticles(); return; }
+});
+if (typeof filter !== 'undefined'){ filter.agency = filter.agency || 'all'; filter.industry = filter.industry || 'all'; }
+
+/* ── Top-stories carousel ───────────────────────────────────────── */
+function renderTopStories(items){
+  const track = document.getElementById('topStoriesTrack');
+  if (!track) return;
+  const IMP = {high:3,'medium-high':2,medium:1};
+  const top = items.slice().sort((a,b) => (IMP[b.impact]||0) - (IMP[a.impact]||0)).slice(0, 8);
+  if (!top.length){ track.innerHTML = '<div style="color:var(--ink-3);font-size:13px;padding:10px">No items match the current filters.</div>'; return; }
+  track.innerHTML = top.map((it, idx) => {
+    const juris = getJurisdiction ? getJurisdiction(it) : {flag:'',label:''};
+    const imp = (it.impact||'').toLowerCase();
+    const shortTitle = (it.title||'').replace(/\s*—.*$/,'').trim();
+    return `<button class="ts-card ${imp}" data-item-idx="${idx}" onclick="openModalByTitle(${JSON.stringify(it.title).replace(/"/g,'&quot;')})">
+      <div class="ts-meta"><span class="ts-imp ${imp}">${esc(it.impact||'medium')}</span><span class="ts-juris">${juris.flag||''} ${esc(juris.label||'')}</span></div>
+      <div class="ts-title">${esc(shortTitle)}</div>
+    </button>`;
+  }).join('');
+}
+
+/* ── Sectioned render — overrides plain renderArticles ──────────── */
+const _v2_origRender = typeof renderArticles === 'function' ? renderArticles : null;
+function renderArticlesV2(){
+  // First apply filters as the original would have
+  const today = new Date(); today.setHours(0,0,0,0);
+  const rangeDays = filter.range==='today' ? 0 : filter.range==='24h' ? 1 : filter.range==='week' ? 7 : filter.range==='30d' ? 30 : Infinity;
+  const cutoff = +today - rangeDays*86400000;
+  const q = (filter.q||'').toLowerCase();
+
+  const items = allItems.filter(i => {
+    if (filter.stage && filter.stage !== 'all'){ if (caseStage(i) !== filter.stage) return false; }
+    if (filter.agency && filter.agency !== 'all'){ if (detectAgency(i).key !== filter.agency) return false; }
+    if (filter.industry && filter.industry !== 'all'){ if (detectIndustry(i).key !== filter.industry) return false; }
+    if (filter.juris !== 'all'){ if (getJurisdiction(i).key !== filter.juris) return false; }
+    if (filter.entity !== 'all'){ const e = i._entities || getEntities(i); if (!e.includes(filter.entity)) return false; }
+    if (rangeDays !== Infinity){
+      const m = String(i.date||'').match(/(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})/);
+      if (m){ const MO={Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
+        const d=new Date(+m[3], MO[m[2].slice(0,3)], +m[1]); d.setHours(0,0,0,0);
+        if (+d < cutoff) return false; }
+    }
+    if (q){ const hay=((i.title||'')+' '+(i.summary||'')+' '+(i.source||'')+' '+(i.why||'')).toLowerCase(); if (!hay.includes(q)) return false; }
+    return true;
+  });
+
+  // Sort: today first, then by impact
+  const MONTHS={Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
+  function parseDate(s){const m=String(s||'').match(/(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})/);if(!m)return 0;const mo=MONTHS[m[2].slice(0,3)];if(mo===undefined)return 0;return +new Date(+m[3],mo,+m[1])}
+  const IMP={high:3,'medium-high':2,medium:1};
+  const sorted = items.slice().sort((a,b)=>{const da=parseDate(a.date),db=parseDate(b.date);if(db!==da)return db-da;return (IMP[b.impact]||0)-(IMP[a.impact]||0);});
+
+  // Update feed-head count
+  const fn=document.getElementById('feedNum'); if(fn) fn.textContent = sorted.length+' items';
+
+  // Render top-stories carousel
+  renderTopStories(sorted);
+
+  // Group by stage
+  const lanes = {active:[], decision:[], merger:[], policy:[]};
+  sorted.forEach(it => { lanes[caseStage(it)].push(it); });
+
+  const container = document.getElementById('articleSections');
+  if (!container) return;
+  let html = '';
+  for (const stage of ['active','decision','merger','policy']){
+    const info = STAGE_INFO[stage];
+    const arr = lanes[stage];
+    html += `<section class="lane ${stage}">
+      <div class="lane-head">
+        <h3>${esc(info.label)}</h3>
+        <span class="lane-count">${arr.length}</span>
+        <span class="lane-cap">${esc(info.cap)}</span>
+      </div>`;
+    if (!arr.length){
+      html += `<div class="lane-empty">Nothing in this lane right now.</div>`;
+    } else {
+      html += `<div class="article-list">` + arr.map(it => articleHTML(it, {detailed:false})).join('') + `</div>`;
+    }
+    html += `</section>`;
+  }
+  container.innerHTML = html;
+
+  // Replace article click to open modal instead of source
+  container.querySelectorAll('article[data-url]').forEach(el => {
+    el.addEventListener('click', (ev) => {
+      if (ev.target.closest('a') || ev.target.closest('.rate-bar') || ev.target.closest('.actions')) return;
+      ev.preventDefault();
+      openModalForArticleEl(el);
+    });
+  });
+  applySavedRatings && applySavedRatings();
+  applySavedActions && applySavedActions();
+}
+window.renderArticles = renderArticlesV2;
+
+/* ── Modal open/close ───────────────────────────────────────────── */
+function openItemModal(item){
+  if (!item) return;
+  const ov = document.getElementById('itemModal'); if (!ov) return;
+  const juris = getJurisdiction ? getJurisdiction(item) : {flag:'',label:''};
+  const stage = caseStage(item);
+  const stageLabel = STAGE_INFO[stage].label;
+  const imp = (item.impact||'medium').toLowerCase();
+  const tagsHTML = [
+    `<span class="mtag">${esc(stageLabel)}</span>`,
+    juris.label ? `<span class="mtag juris">${juris.flag||''} ${esc(juris.label)}</span>` : '',
+    `<span class="mtag ${imp}">${esc(item.impact||'medium').toUpperCase()} RISK</span>`,
+  ].filter(Boolean).join('');
+  document.getElementById('modalTags').innerHTML = tagsHTML;
+  document.getElementById('modalTitle').textContent = item.title || '—';
+  document.getElementById('modalSummary').textContent = item.summary || '—';
+  const why = item.why;
+  document.getElementById('modalWhyWrap').hidden = !why;
+  if (why) document.getElementById('modalWhy').textContent = why;
+  document.getElementById('modalSource').textContent  = item.source || '—';
+  document.getElementById('modalDate').textContent    = item.date   || '—';
+  document.getElementById('modalCountry').textContent = juris.label ? `${juris.flag||''} ${juris.label}` : '—';
+  document.getElementById('modalExposure').textContent = portfolioExposure(item);
+  document.getElementById('modalOpenSource').onclick = () => { if (item.url) window.open(item.url, '_blank', 'noopener,noreferrer'); };
+  document.getElementById('modalCopySummary').onclick = () => {
+    const text = `${item.title}\n\n${item.summary||''}\n\n${item.why ? 'Why it matters: '+item.why+'\n\n' : ''}Source: ${item.source||''}\n${item.url||''}`;
+    navigator.clipboard.writeText(text).then(()=>{
+      const t = document.getElementById('modalToast'); t.classList.add('show'); setTimeout(()=>t.classList.remove('show'), 1400);
+    });
+  };
+  // Add-to-calendar button intentionally removed — see "kill both" decision
+  ov.classList.add('open');
+  ov.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+}
+function closeItemModal(){
+  const ov = document.getElementById('itemModal'); if (!ov) return;
+  ov.classList.remove('open'); ov.setAttribute('aria-hidden','true'); document.body.style.overflow='';
+}
+function openModalByTitle(title){
+  const it = allItems.find(i => (i.title||'').trim() === (title||'').trim());
+  if (it) openItemModal(it);
+}
+function openModalForArticleEl(el){
+  // Match by URL or title via the article DOM
+  const url = el.getAttribute('data-url') || '';
+  const title = el.querySelector('h3, h4')?.textContent?.trim() || '';
+  const it = allItems.find(i => (i.url||'')===url) || allItems.find(i => (i.title||'').trim()===title);
+  if (it) openItemModal(it);
+}
+document.addEventListener('click', (ev) => {
+  if (ev.target.id === 'modalClose' || ev.target.closest('#modalClose')) { closeItemModal(); return; }
+  if (ev.target.id === 'itemModal') { closeItemModal(); }
+});
+document.addEventListener('keydown', (ev) => { if (ev.key === 'Escape') closeItemModal(); });
+
+/* ── .ics export for single item ────────────────────────────────── */
+function exportItemIcs(item){
+  // Find a deadline date from the item's "deadline" field, else use item.date
+  let date = item.deadline || null;
+  if (!date && item.date){
+    const m = String(item.date).match(/(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})/);
+    if (m){
+      const MO={Jan:'01',Feb:'02',Mar:'03',Apr:'04',May:'05',Jun:'06',Jul:'07',Aug:'08',Sep:'09',Oct:'10',Nov:'11',Dec:'12'};
+      date = `${m[3]}-${MO[m[2].slice(0,3)]}-${m[1].padStart(2,'0')}`;
+    }
+  }
+  if (!date){ alert('No date found for calendar export'); return; }
+  const stamp = date.replace(/-/g,'');
+  const lines = [
+    'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Prosus Competition Law Monitor//EN','CALSCALE:GREGORIAN','METHOD:PUBLISH',
+    'BEGIN:VEVENT',
+    `UID:clm-${Date.now()}@prosus.competition-monitor`,
+    `DTSTAMP:${stamp}T000000Z`,`DTSTART;VALUE=DATE:${stamp}`,
+    `SUMMARY:${(item.title||'Item').replace(/[,;]/g,'\\$&')}`,
+    `DESCRIPTION:${(item.summary||'').replace(/\n/g,' ').replace(/[,;]/g,'\\$&')}`,
+    item.url ? `URL:${item.url}` : '',
+    'END:VEVENT','END:VCALENDAR'
+  ].filter(Boolean).join('\r\n');
+  const blob = new Blob([lines], {type:'text/calendar'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `competition-${stamp}.ics`;
+  document.body.appendChild(a); a.click(); a.remove();
+}
+
+/* ── Boot the carousel + populated chips after first render ─────── */
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => { buildAgencyIndustryChips(); renderArticles && renderArticles(); }, 50);
+});
+buildAgencyIndustryChips();
+renderArticles && renderArticles();
+</script>
+
 <!-- Hidden static forms so Netlify Forms detects them at build time -->
 <form name="item-rating" netlify netlify-honeypot="bot-field" hidden>
   <input type="text" name="item_id" />
@@ -2329,6 +2778,36 @@ function submitFeedback(ev){
   btn.addEventListener('click', () => set(wrap.hidden));
 })();
 </script>
+
+
+<!-- ════ ITEM DETAIL MODAL ════ -->
+<div class="modal-overlay" id="itemModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-card">
+    <div class="modal-head">
+      <span class="modal-toast" id="modalToast">Copied</span>
+      <div class="modal-tags" id="modalTags"></div>
+      <h2 id="modalTitle">—</h2>
+      <button class="modal-close" id="modalClose" aria-label="Close detail view">×</button>
+    </div>
+    <div class="modal-body">
+      <div class="mp" id="modalSummary">—</div>
+      <div class="modal-why" id="modalWhyWrap" hidden>
+        <div class="lab">Why it matters</div>
+        <p id="modalWhy">—</p>
+      </div>
+      <div class="modal-fields">
+        <div class="fld"><span class="flab">Source</span><span class="fval" id="modalSource">—</span></div>
+        <div class="fld"><span class="flab">Date</span><span class="fval" id="modalDate">—</span></div>
+        <div class="fld"><span class="flab">Country</span><span class="fval" id="modalCountry">—</span></div>
+        <div class="fld"><span class="flab">Portfolio exposure</span><span class="fval" id="modalExposure">—</span></div>
+      </div>
+    </div>
+    <div class="modal-foot">
+      <button class="mbtn-source" id="modalOpenSource">↗ Open source</button>
+      <button class="mbtn-copy"   id="modalCopySummary">⧉ Copy summary</button>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
