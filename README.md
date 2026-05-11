@@ -16,3 +16,6 @@ flow into Netlify Forms (no PII collected). Updates are live within ~30 s of
 a push to `main`.
 
 Strictly confidential · Internal use only.
+
+
+_Last automated update: 11 May 2026 — by Claude via Cowork._
