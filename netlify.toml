@@ -1,0 +1,27 @@
+# Netlify deploy config for Prosus Digital Monitor
+# Docs: https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  # The repo root contains both Python source and static HTML.
+  # Netlify just needs to serve the static files — no build step.
+  publish = "."
+
+# ── Clean URLs ────────────────────────────────────────────────────────
+# Visitors can use /competition or /digital instead of full filenames.
+[[redirects]]
+  from = "/competition"
+  to   = "/competition-law-monitor.html"
+  status = 200
+
+[[redirects]]
+  from = "/digital"
+  to   = "/dashboard.html"
+  status = 200
+
+# ── Security headers ─────────────────────────────────────────────────
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

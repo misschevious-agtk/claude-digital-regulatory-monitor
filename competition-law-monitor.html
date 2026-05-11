@@ -1,0 +1,2334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prosus · Competition Law Monitor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Geist:wght@300..700&family=Geist+Mono&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* ── PROSUS BRAND — only the 4 official gradients ── */
+  --li-dark:#370180;  --li-prime:#571580;  --li-light:#7729E0;        /* Lithium */
+  --ar-dark:#850048;  --ar-prime:#AF015F;  --ar-light:#D90276;        /* Argon  */
+  --ch-dark:#00856E;  --ch-prime:#00AC8E;  --ch-light:#00D3AF;        /* Chloride */
+  --ox-dark:#FC9628;  --ox-prime:#FCB828;  --ox-light:#FCDA28;        /* Oxide */
+
+  --p-900:#1A0040; --p-800:#270063; --p-700:var(--li-dark); --p-600:var(--li-prime);
+  --p-500:var(--li-light); --p-400:#9656F0; --p-300:#C2A1F7; --p-200:#E5D5FB;
+  --p-100:#F1E8FE; --p-050:#F9F4FF;
+
+  --teal:var(--ch-light); --amber:var(--ox-prime); --rose:var(--ar-prime); --green:var(--ch-prime);
+  --ink:#1A0040; --ink-2:var(--li-dark); --ink-3:#7B6BA0;
+  --line:#ECE3F7; --bg:#F9F4FF; --card:#FFFFFF;
+
+  /* Elevation tokens — consistent depth scale (premium feel via subtle layered shadows) */
+  --e-1:0 1px 2px rgba(26,0,64,0.04), 0 1px 1px rgba(26,0,64,0.03);
+  --e-2:0 4px 12px -4px rgba(55,1,128,0.10), 0 2px 4px -2px rgba(26,0,64,0.04);
+  --e-3:0 12px 24px -8px rgba(55,1,128,0.16), 0 4px 8px -4px rgba(26,0,64,0.06);
+  --e-4:0 24px 48px -16px rgba(55,1,128,0.22), 0 8px 16px -8px rgba(26,0,64,0.08);
+  --e-glow-li:0 0 0 1px rgba(119,41,224,0.18), 0 8px 24px -8px rgba(119,41,224,0.30);
+  --e-glow-ar:0 0 0 1px rgba(217,2,118,0.18), 0 8px 24px -8px rgba(217,2,118,0.30);
+  --e-glow-ch:0 0 0 1px rgba(0,211,175,0.20), 0 8px 24px -8px rgba(0,211,175,0.28);
+
+  /* Radius scale */
+  --r-1:6px; --r-2:10px; --r-3:14px; --r-4:18px; --r-5:24px;
+
+  /* Motion */
+  --ease-out:cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:cubic-bezier(0.65, 0, 0.35, 1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{margin:0;padding:0}
+body{
+  font-family:"Geist",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:var(--bg);color:var(--ink);
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  font-size:15px;line-height:1.55;
+  font-feature-settings:"ss01","cv11";
+}
+a{color:inherit;text-decoration:none}
+.shell{max-width:1240px;margin:0 auto;padding:0 28px}
+
+/* Accessible focus rings — premium feel */
+:focus-visible{outline:2px solid var(--ar-light);outline-offset:3px;border-radius:4px}
+button:focus-visible,a:focus-visible{outline:2px solid var(--ar-light);outline-offset:3px}
+
+/* Selection color stays on-brand */
+::selection{background:var(--li-light);color:#fff}
+
+/* Smooth scrolling for the whole page */
+html{scroll-behavior:smooth}
+
+/* ───── TOPBAR ───── */
+.topbar{
+  /* Premium Lithium bar — layered depth: solid base + radial highlights + grain + bold accent strip */
+  background:
+    /* Soft radial highlights that anchor each side of the bar */
+    radial-gradient(60% 200% at 0% 50%, rgba(217,2,118,0.22) 0%, transparent 55%),
+    radial-gradient(50% 180% at 100% 50%, rgba(0,211,175,0.18) 0%, transparent 50%),
+    radial-gradient(80% 300% at 50% 110%, rgba(119,41,224,0.30) 0%, transparent 60%),
+    /* Solid Lithium-dark base */
+    linear-gradient(180deg, #2D0166 0%, #1A0040 100%);
+  color:#fff;
+  position:relative;
+  isolation:isolate;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.14),
+    inset 0 -1px 0 rgba(0,0,0,0.30),
+    0 1px 0 rgba(0,0,0,0.05),
+    0 18px 40px -22px rgba(55,1,128,0.65);
+  overflow:hidden;
+}
+/* Grain / noise overlay — gives the bar a tactile, premium quality */
+.topbar::before{
+  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-image:url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.10 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  background-size:200px 200px;
+  opacity:.45;
+  mix-blend-mode:overlay;
+}
+/* Bottom accent — bolder, brand-coloured */
+.topbar::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:3px;
+  background:linear-gradient(90deg,
+    var(--ch-light) 0%,
+    var(--li-light) 30%,
+    var(--ar-light) 60%,
+    var(--ox-prime) 100%);
+  box-shadow:0 0 14px rgba(217,2,118,0.45);
+}
+.topbar > .shell{position:relative;z-index:2}
+.topbar-inner{
+  display:flex;align-items:center;gap:24px;
+  padding:22px 0 24px;
+}
+
+/* ── LEFT: logo + breadcrumb ── */
+.logo-link{
+  display:inline-flex;align-items:center;line-height:1;
+  position:relative;
+}
+.logo-link::after{
+  /* Soft halo behind the wordmark to make it really pop on the dark bar */
+  content:"";position:absolute;inset:-12px -16px;z-index:-1;
+  background:radial-gradient(60% 80% at 50% 50%, rgba(217,2,118,0.20) 0%, transparent 70%);
+  filter:blur(8px);opacity:.8;
+}
+.prosus-wordmark{
+  font-family:"Outfit","Inter",-apple-system,sans-serif;
+  font-weight:700;font-size:32px;letter-spacing:-0.045em;
+  color:#fff;line-height:1;
+  text-shadow:0 1px 0 rgba(0,0,0,0.20);
+}
+.crumbs{
+  display:flex;align-items:center;gap:10px;
+  font-size:12.5px;letter-spacing:0.01em;color:rgba(255,255,255,0.62);
+  white-space:nowrap;
+  padding-left:8px;
+  border-left:1px solid rgba(255,255,255,0.14);
+  height:32px;
+  align-self:center;
+  padding-top:0;
+  padding-bottom:0;
+  display:flex;align-items:center;
+}
+.crumb-sep{color:rgba(255,255,255,0.30);font-weight:300}
+.crumb{transition:color .15s var(--ease-out)}
+.crumb-current{color:#fff;font-weight:600;letter-spacing:-0.005em}
+
+/* ── CENTER: status chip + command-K search ── */
+.topbar-mid{
+  flex:1;
+  display:flex;align-items:center;gap:12px;
+  justify-content:flex-end;
+}
+.status-chip{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:7px 12px 7px 10px;
+  background:rgba(0,211,175,0.10);
+  border:1px solid rgba(0,211,175,0.28);
+  border-radius:100px;
+  font-size:11.5px;font-weight:600;
+  color:rgba(255,255,255,0.92);
+}
+.status-dot{
+  width:7px;height:7px;border-radius:50%;
+  background:var(--ch-light);
+  box-shadow:0 0 0 3px rgba(0,211,175,0.20),0 0 8px var(--ch-light);
+  animation:dot-pulse 2.2s ease-in-out infinite;
+}
+@keyframes dot-pulse{0%,100%{box-shadow:0 0 0 3px rgba(0,211,175,0.20),0 0 8px var(--ch-light)}50%{box-shadow:0 0 0 5px rgba(0,211,175,0.10),0 0 12px var(--ch-light)}}
+.status-text{color:var(--ch-light);font-weight:700;letter-spacing:0.06em;text-transform:uppercase;font-size:10.5px}
+.status-sep{width:1px;height:12px;background:rgba(255,255,255,0.22)}
+.status-stamp{color:rgba(255,255,255,0.78);font-variant-numeric:tabular-nums}
+
+.cmdk{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:8px 8px 8px 14px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.10);
+  border-radius:100px;
+  color:rgba(255,255,255,0.78);
+  font-family:inherit;font-size:13px;
+  cursor:pointer;width:min(320px, 32vw);
+  transition:background .2s var(--ease-out),border-color .2s var(--ease-out),width .25s var(--ease-out);
+}
+.cmdk:hover{background:rgba(255,255,255,0.10);border-color:rgba(255,255,255,0.20);width:min(360px, 36vw)}
+.cmdk svg{flex-shrink:0;opacity:.7}
+.cmdk-placeholder{flex:1;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cmdk-key{
+  font-family:"Geist Mono",ui-monospace,monospace;
+  font-size:10.5px;font-weight:600;
+  background:rgba(255,255,255,0.10);
+  padding:3px 7px;border-radius:6px;
+  color:rgba(255,255,255,0.85);
+  letter-spacing:0.04em;
+}
+
+/* ── RIGHT: metrics + avatar ── */
+.topbar-right{display:flex;align-items:center;gap:18px}
+.topbar-metric{display:flex;flex-direction:column;align-items:flex-end;gap:1px;line-height:1.1}
+.topbar-metric-n{
+  font-family:"Bricolage Grotesque",sans-serif;font-variation-settings:"opsz" 24;
+  font-weight:700;font-size:18px;color:#fff;letter-spacing:-0.03em;
+  font-variant-numeric:tabular-nums;
+}
+.topbar-metric-l{
+  font-size:9.5px;font-weight:600;color:rgba(255,255,255,0.55);
+  letter-spacing:0.12em;text-transform:uppercase;
+}
+.avatar{
+  display:grid;place-items:center;
+  width:34px;height:34px;border-radius:50%;
+  background:linear-gradient(135deg,var(--ar-prime),var(--li-light));
+  color:#fff;font-weight:700;font-size:12px;letter-spacing:0.02em;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.20),var(--e-2);
+  cursor:pointer;
+  transition:transform .2s var(--ease-out),box-shadow .2s var(--ease-out);
+}
+.avatar:hover{transform:scale(1.05);box-shadow:inset 0 1px 0 rgba(255,255,255,0.20),var(--e-glow-ar)}
+
+/* ───── NAV ───── */
+.nav{
+  /* Glassmorphic sticky nav — frosted, premium, lighter than the topbar */
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,255,255,0.82);
+  backdrop-filter:saturate(180%) blur(16px);
+  -webkit-backdrop-filter:saturate(180%) blur(16px);
+  color:var(--ink-2);
+  box-shadow:var(--e-1);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  display:flex;gap:8px;align-items:center;
+  overflow-x:auto;scrollbar-width:none;
+  padding:12px 0;
+}
+.nav-inner::-webkit-scrollbar{display:none}
+
+/* ── Chip — pill-style category filter ── */
+.chip{
+  position:relative;
+  display:inline-flex;align-items:center;gap:8px;
+  padding:8px 14px;
+  font-family:inherit;font-size:12.5px;font-weight:600;
+  color:var(--ink-2);
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:100px;
+  cursor:pointer;white-space:nowrap;user-select:none;
+  transition:transform .2s var(--ease-out),
+             border-color .2s var(--ease-out),
+             background .2s var(--ease-out),
+             color .2s var(--ease-out),
+             box-shadow .2s var(--ease-out);
+  box-shadow:var(--e-1);
+}
+.chip:hover{transform:translateY(-1px);border-color:var(--p-300);box-shadow:var(--e-2)}
+.chip-dot{
+  width:7px;height:7px;border-radius:50%;
+  background:var(--p-500);
+  transition:transform .2s var(--ease-out),box-shadow .2s var(--ease-out);
+}
+.chip-label{letter-spacing:-0.005em}
+.chip-count{
+  font-family:"Geist Mono",ui-monospace,monospace;
+  font-size:11px;font-weight:600;
+  padding:1px 7px;border-radius:100px;
+  background:var(--p-050);color:var(--p-700);
+  font-variant-numeric:tabular-nums;
+  transition:background .2s var(--ease-out),color .2s var(--ease-out);
+}
+
+/* Per-category dot colors */
+.chip[data-cat=all]      .chip-dot{background:linear-gradient(135deg,var(--li-light),var(--ar-light),var(--ox-prime),var(--ch-light))}
+.chip-ai      .chip-dot  {background:var(--li-light)}
+.chip-privacy .chip-dot  {background:var(--ch-prime)}
+.chip-comp    .chip-dot  {background:var(--ox-dark)}
+.chip-ip      .chip-dot  {background:var(--ar-light)}
+.chip-launches .chip-dot {background:var(--ox-prime)}
+.chip-legalops .chip-dot {background:var(--li-prime)}
+.chip-trending .chip-dot {background:var(--ar-prime)}
+
+/* Active state — filled with category brand color */
+.chip.active{color:#fff;border-color:transparent}
+.chip.active .chip-dot{background:#fff;box-shadow:0 0 0 4px rgba(255,255,255,0.25)}
+.chip.active .chip-count{background:rgba(255,255,255,0.18);color:#fff}
+.chip[data-cat=all].active   {background:var(--li-dark);box-shadow:var(--e-glow-li)}
+.chip-ai.active              {background:var(--li-light);box-shadow:var(--e-glow-li)}
+.chip-privacy.active         {background:var(--ch-prime);box-shadow:var(--e-glow-ch)}
+.chip-comp.active            {background:var(--ox-dark);box-shadow:0 0 0 1px rgba(252,150,40,0.20),0 8px 24px -8px rgba(252,150,40,0.32)}
+.chip-ip.active              {background:var(--ar-prime);box-shadow:var(--e-glow-ar)}
+.chip-launches.active        {background:var(--ox-prime);box-shadow:0 0 0 1px rgba(252,184,40,0.22),0 8px 24px -8px rgba(252,184,40,0.32)}
+.chip-legalops.active        {background:var(--li-prime);box-shadow:var(--e-glow-li)}
+.chip-trending.active        {background:var(--ar-light);box-shadow:var(--e-glow-ar)}
+
+/* ───── STATS STRIP ───── */
+.stats{background:#fff;border-bottom:1px solid var(--line)}
+.stats-inner{display:flex;align-items:stretch;justify-content:flex-start;flex-wrap:wrap}
+.stat-block{
+  display:flex;flex-direction:column;justify-content:center;gap:4px;
+  padding:18px 32px 16px;
+  border-right:1px solid var(--line);
+  flex:1;min-width:140px;
+}
+.stat-block:last-of-type{border-right:none}
+.stat-n{
+  font-family:"Bricolage Grotesque","Geist",sans-serif;
+  font-variation-settings:"opsz" 36;
+  font-weight:700;font-size:28px;
+  background:linear-gradient(180deg,var(--li-light),var(--li-prime));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  letter-spacing:-0.04em;line-height:1;
+  font-variant-numeric:tabular-nums;
+  transition:transform .3s ease;
+}
+.stat-block:hover .stat-n{transform:translateY(-2px)}
+.stat-label{
+  font-size:10px;font-weight:700;letter-spacing:0.18em;
+  text-transform:uppercase;color:var(--ink-3);
+}
+/* Info button sits in the stats strip at the right; popover holds the long text */
+.stats-info{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:10px 16px;margin-left:auto;
+  background:transparent;border:none;color:var(--ink-3);
+  font:inherit;font-size:11.5px;font-weight:600;
+  letter-spacing:0.04em;cursor:pointer;
+  border-left:1px solid var(--line);align-self:stretch;
+  transition:color .15s var(--ease-out),background .15s var(--ease-out);
+}
+.stats-info:hover{color:var(--li-prime);background:var(--p-050)}
+.stats-info svg{flex-shrink:0;opacity:.7}
+.stats-pop{
+  border-top:1px solid var(--line);
+  background:linear-gradient(180deg,var(--p-050) 0%,#fff 100%);
+  animation:pop-in .25s var(--ease-out);
+}
+.stats-pop[hidden]{display:none}
+@keyframes pop-in{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+.stats-pop-inner{
+  position:relative;
+  padding:18px 56px 18px 32px;
+  font-size:12.5px;color:var(--ink-2);line-height:1.65;
+  max-width:1024px;
+}
+.stats-pop-close{
+  position:absolute;top:10px;right:18px;
+  width:28px;height:28px;border-radius:50%;
+  border:1px solid var(--line);background:#fff;
+  font-size:18px;line-height:1;color:var(--ink-3);
+  cursor:pointer;display:grid;place-items:center;
+  transition:all .15s var(--ease-out);
+}
+.stats-pop-close:hover{border-color:var(--ar-light);color:var(--ar-light)}
+.stats-pop p{margin:0}
+.stats-note{display:none} /* legacy class kept for back-compat */
+@media(max-width:680px){
+  .stats-inner{justify-content:space-between}
+  .stat-block{flex:0 0 50%;padding:14px 18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stat-block:nth-of-type(2n){border-right:none}
+  .stats-note{padding:10px 18px 14px}
+}
+
+/* ───── FILTER ROW (jurisdiction + range + clear) ───── */
+.filter-row{background:#fff;border-bottom:1px solid var(--line)}
+.filter-row-inner{display:flex;align-items:center;gap:24px;padding:10px 0;flex-wrap:wrap}
+.filter-group{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.filter-label{font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-3);margin-right:4px}
+.jchip,.rchip,.echip{
+  display:inline-flex;align-items:center;gap:5px;
+  padding:5px 11px;border-radius:100px;
+  border:1px solid var(--line);background:#fff;
+  font:inherit;font-size:11.5px;font-weight:600;color:var(--ink-2);
+  cursor:pointer;white-space:nowrap;
+  transition:all .15s var(--ease-out);
+}
+.jchip:hover,.rchip:hover,.echip:hover{border-color:var(--p-300);color:var(--li-prime);background:var(--p-050)}
+.jchip.active,.rchip.active,.echip.active{background:var(--li-prime);border-color:var(--li-prime);color:#fff;box-shadow:var(--e-glow-li)}
+.jchip-flag,.echip-icon{font-size:11px;filter:saturate(1.1)}
+.jchip-list,.echip-list{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.filter-clear{
+  margin-left:auto;padding:6px 12px;border-radius:100px;
+  background:transparent;border:1px solid var(--line);
+  font:inherit;font-size:11px;font-weight:600;color:var(--ink-3);
+  cursor:pointer;letter-spacing:0.02em;
+  transition:all .15s var(--ease-out);
+}
+.filter-clear:hover{border-color:var(--ar-light);color:var(--ar-prime);background:#fff}
+
+/* ───── DIFF BANNER ───── */
+.diff-banner{
+  background:linear-gradient(180deg,var(--p-050),#fff);
+  border-bottom:1px solid var(--p-200);
+}
+.diff-banner-inner{display:flex;align-items:center;gap:10px;padding:10px 0;font-size:13px;color:var(--ink)}
+.diff-icon{color:var(--ch-prime);font-size:14px;animation:dot-pulse 2.2s ease-in-out infinite}
+.diff-text b{color:var(--li-prime);font-weight:700}
+.diff-dismiss{
+  margin-left:auto;width:24px;height:24px;border-radius:50%;
+  border:1px solid var(--line);background:#fff;
+  font-size:16px;line-height:1;color:var(--ink-3);cursor:pointer;
+  display:grid;place-items:center;
+}
+.diff-dismiss:hover{border-color:var(--ar-light);color:var(--ar-light)}
+
+/* ───── TOAST stack ───── */
+.toast-stack{
+  position:fixed;bottom:20px;right:20px;z-index:1000;
+  display:flex;flex-direction:column;gap:8px;pointer-events:none;
+}
+.toast{
+  pointer-events:auto;
+  padding:10px 16px;border-radius:var(--r-2);
+  background:var(--li-dark);color:#fff;
+  font-size:13px;font-weight:500;letter-spacing:-0.01em;
+  box-shadow:var(--e-3);
+  border:1px solid rgba(255,255,255,0.10);
+  opacity:0;transform:translateY(10px);
+  transition:opacity .25s var(--ease-out),transform .25s var(--ease-out);
+  max-width:320px;
+}
+.toast.show{opacity:1;transform:translateY(0)}
+.toast-success{background:var(--ch-dark)}
+.toast-warn{background:var(--ox-dark)}
+.toast-error{background:var(--ar-prime)}
+
+/* ───── PRINT stylesheet ───── */
+@media print{
+  body{background:#fff !important;color:#111}
+  .topbar,.nav,.filter-row,.diff-banner,.flash,.signals,.actions,.rate-bar,.toast-stack,.modal-overlay,.cmdk,.brand-banner,.panel-action,.filter-clear,.fab-saved-views{display:none !important}
+  .shell{max-width:100%;padding:0}
+  .stats-pop[hidden]{display:none}
+  .article{break-inside:avoid;page-break-inside:avoid;border:1px solid #ddd !important;box-shadow:none !important;border-radius:0 !important;padding:14px !important}
+  .article::before{display:none}
+  .hero-card{background:#fff !important;color:#111 !important;border:2px solid #571580 !important;padding:18px !important;box-shadow:none !important;border-radius:0 !important}
+  .hero-card h3,.hero-card .lede,.hero-card .hero-relevance,.hero-meta{color:#111 !important}
+  .hero-relevance{background:#f9f4ff !important;border-color:#ccc !important;color:#111}
+  .feed-grid{grid-template-columns:1fr !important}
+  .article-list{grid-template-columns:1fr !important;gap:8px}
+  .sidebar{display:none}
+  .stats-info,.feed-head .updated{display:none}
+  .stats-pop p{display:block;padding:0;font-style:italic;color:#666;border-top:1px solid #ddd;margin-top:14px}
+  a{color:inherit;text-decoration:underline}
+}
+
+/* ───── SAVED VIEWS button (floating) ───── */
+.fab-saved-views{
+  position:fixed;bottom:20px;left:20px;z-index:80;
+  display:inline-flex;align-items:center;gap:8px;
+  padding:10px 14px;border-radius:100px;
+  background:var(--li-prime);color:#fff;border:1px solid var(--li-light);
+  font:inherit;font-size:12.5px;font-weight:600;
+  cursor:pointer;box-shadow:var(--e-2);
+  transition:all .2s var(--ease-out);
+}
+.fab-saved-views:hover{background:var(--li-light);box-shadow:var(--e-glow-li)}
+
+/* ───── Annotation expander on cards ───── */
+.note-bar{
+  display:flex;align-items:center;gap:6px;
+  margin-top:8px;padding-top:8px;
+  border-top:1px dashed var(--line);
+  font-size:11px;color:var(--ink-3);
+}
+.note-toggle{
+  font:inherit;font-size:11px;font-weight:600;letter-spacing:0.04em;
+  padding:3px 9px;border-radius:100px;
+  background:transparent;border:1px solid var(--line);color:var(--ink-3);cursor:pointer;
+}
+.note-toggle:hover{border-color:var(--li-prime);color:var(--li-prime);background:var(--p-050)}
+.note-toggle.has-note{background:#FFF6D6;color:#FC9628;border-color:#FCDA28}
+.note-bar textarea{flex:1;font:inherit;font-size:12px;padding:6px 10px;border:1px solid var(--line);border-radius:var(--r-1);resize:vertical;min-height:60px;display:none}
+.note-bar.editing textarea{display:block}
+
+/* ───── Keyboard-focused article ───── */
+.article.kbd-focus{
+  outline:3px solid var(--ar-light);
+  outline-offset:2px;
+  transform:translateY(-2px);
+  box-shadow:var(--e-3);
+}
+
+/* ───── FLASH (scrolling ticker) ───── */
+.flash{
+  background:linear-gradient(180deg,#FFFAE6 0%,#FFF1C9 100%);
+  border-bottom:1px solid #FCDA28;
+  position:relative;overflow:hidden;
+}
+.flash::before{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--ox-prime),var(--ar-light),var(--li-light),var(--ch-light),transparent);
+  background-size:200% 100%;
+  animation:flash-stripe 6s linear infinite;
+}
+@keyframes flash-stripe{
+  0%{background-position:0% 0}
+  100%{background-position:-200% 0}
+}
+.flash-inner{display:grid;grid-template-columns:110px 1fr;gap:22px;padding:14px 0;align-items:center}
+.flash-label{
+  display:flex;align-items:center;gap:8px;color:#FC9628;font-size:12px;
+  letter-spacing:0.18em;font-weight:800;text-transform:uppercase;
+}
+.flash-label svg{width:16px;height:16px;animation:flash-bolt 2.4s ease-in-out infinite}
+@keyframes flash-bolt{0%,100%{transform:scale(1);filter:drop-shadow(0 0 0 transparent)}50%{transform:scale(1.12);filter:drop-shadow(0 0 6px rgba(252,150,40,0.6))}}
+.flash-ticker{
+  position:relative;overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);
+          mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);
+}
+.flash-track{
+  display:inline-flex;white-space:nowrap;gap:0;
+  animation:flash-scroll 60s linear infinite;
+  color:#1A0040;font-size:14px;line-height:1.7;
+}
+.flash-track:hover{animation-play-state:paused}
+.flash-track > span{display:inline-flex;align-items:center;padding-right:36px}
+.flash-track > span + span::before{content:"·";color:#FCB828;margin-right:36px;font-weight:700}
+.flash-track a{color:inherit;border-bottom:1px dotted #FCB828;padding-bottom:1px}
+.flash-track a:hover{color:#FC9628;border-bottom-color:#FC9628}
+@keyframes flash-scroll{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-50%)}
+}
+
+/* ───── MAIN ───── */
+main{padding:40px 0 80px}
+.feed-head{
+  display:flex;justify-content:space-between;align-items:end;
+  margin-bottom:18px;padding-bottom:14px;
+  position:relative;
+}
+.feed-head::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:3px;
+  background:linear-gradient(90deg,var(--li-light) 0%,var(--ar-light) 30%,var(--ox-dark) 60%,var(--ch-light) 100%);
+  background-size:200% 100%;
+  animation:rainbow-pan 8s ease-in-out infinite;
+}
+@keyframes rainbow-pan{
+  0%,100%{background-position:0% 0}
+  50%{background-position:100% 0}
+}
+.feed-head h2{margin:0;font-family:"Bricolage Grotesque",sans-serif;font-variation-settings:"opsz" 48,"wdth" 100;font-size:36px;font-weight:700;letter-spacing:-0.035em;color:var(--p-800);display:flex;align-items:baseline;gap:14px}
+.feed-head h2 .num{font-size:13px;background:var(--p-100);color:var(--p-700);padding:4px 12px;border-radius:100px;font-weight:700;letter-spacing:0.04em;transform:translateY(-4px);transition:background .25s}
+.feed-head:hover h2 .num{background:var(--ar-light);color:#fff}
+.feed-head .updated{font-size:12px;color:var(--ink-3);letter-spacing:0.06em}
+.feed-head .updated b{color:var(--ink-2)}
+
+/* ───── SIGNAL TRIO ───── */
+.signals{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:36px 0 28px}
+.signal{
+  position:relative;border-radius:var(--r-4);padding:22px 22px 24px;
+  color:#fff;overflow:hidden;isolation:isolate;
+  box-shadow:var(--e-2);
+  transition:transform .3s var(--ease-out),box-shadow .3s var(--ease-out);
+}
+.signal:hover{transform:translateY(-4px) scale(1.005);box-shadow:var(--e-4)}
+.signal::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,0.18) 50%,transparent 70%);
+  transform:translateX(-100%);
+  animation:signal-shimmer 7s ease-in-out infinite;
+  pointer-events:none;
+}
+.signal.s-pur::after{animation-delay:0s}
+.signal.s-mag::after{animation-delay:2.3s}
+.signal.s-org::after{animation-delay:4.6s}
+@keyframes signal-shimmer{
+  0%,18%{transform:translateX(-100%)}
+  30%,40%{transform:translateX(100%)}
+  41%,100%{transform:translateX(100%)}
+}
+.signal.s-mag{background:radial-gradient(120% 100% at 0% 0%,rgba(255,255,255,0.18) 0%,transparent 50%),linear-gradient(135deg,#D90276 0%,#850048 100%)}
+.signal.s-pur{background:radial-gradient(120% 100% at 0% 0%,rgba(255,255,255,0.18) 0%,transparent 50%),linear-gradient(135deg,#7729E0 0%,#370180 100%)}
+.signal.s-org{background:radial-gradient(120% 100% at 0% 0%,rgba(255,255,255,0.25) 0%,transparent 50%),linear-gradient(135deg,#FC9628 0%,#FC9628 100%)}
+.signal .s-lab{font-size:10px;letter-spacing:0.22em;font-weight:700;text-transform:uppercase;opacity:0.85;display:flex;align-items:center;gap:8px}
+.signal .s-lab::before{content:"";width:6px;height:6px;border-radius:50%;background:#fff}
+.signal .s-num{font-family:"Bricolage Grotesque",sans-serif;font-variation-settings:"opsz" 96;font-weight:700;font-size:56px;line-height:1;letter-spacing:-0.045em;margin:14px 0 4px}
+.signal .s-cap{font-size:14px;opacity:0.88;line-height:1.4;max-width:95%}
+
+/* ───── FEED LAYOUT ───── */
+.feed-grid{display:grid;grid-template-columns:1fr 320px;gap:36px;margin-top:22px}
+.article-list{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.article-list > .hero-card,.article-list > .span-2{grid-column:1/-1}
+
+/* ───── HERO CARD ───── */
+.hero-card{
+  position:relative;overflow:hidden;border-radius:var(--r-5);
+  background:
+    radial-gradient(120% 90% at 0% 0%,rgba(255,255,255,0.12) 0%,transparent 50%),
+    radial-gradient(70% 120% at 100% 100%,#AF015F 0%,transparent 55%),
+    linear-gradient(135deg,#7729E0 0%,#571580 50%,#370180 100%);
+  color:#fff;padding:36px 40px 40px;
+  box-shadow:var(--e-4);
+  cursor:pointer;
+  transition:transform .4s var(--ease-out),box-shadow .4s var(--ease-out);
+}
+.hero-card:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--e-4), var(--e-glow-ar);
+}
+.hero-card::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:4px;
+  background:linear-gradient(180deg,var(--ch-light),var(--li-light));
+  animation:hero-stripe 3.5s ease-in-out infinite;
+}
+@keyframes hero-stripe{0%,100%{filter:brightness(1)}50%{filter:brightness(1.6) drop-shadow(0 0 8px var(--ch-light))}}
+.hero-card::after{
+  content:"";position:absolute;inset:-50% -10%;
+  background:radial-gradient(circle at 30% 70%,rgba(217,2,118,0.20) 0%,transparent 35%);
+  animation:hero-orb 14s ease-in-out infinite;
+  pointer-events:none;
+}
+@keyframes hero-orb{
+  0%,100%{transform:translate(0,0)}
+  33%{transform:translate(8%,-5%)}
+  66%{transform:translate(-6%,4%)}
+}
+.hero-meta{display:flex;align-items:center;gap:14px;font-size:11px;letter-spacing:0.18em;font-weight:700;text-transform:uppercase;color:rgba(255,255,255,0.78)}
+.hero-meta .src{background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.16);padding:5px 11px;border-radius:100px}
+.hero-meta .dot{width:6px;height:6px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(45,212,191,0.18)}
+.hero-card h3{font-family:"Bricolage Grotesque","Geist",sans-serif;font-variation-settings:"opsz" 96,"wdth" 100;font-weight:500;font-size:36px;line-height:1.05;letter-spacing:-0.025em;margin:18px 0 14px}
+.hero-card .lede{color:rgba(255,255,255,0.82);font-size:16px;max-width:640px}
+.hero-card .read{margin-top:22px;display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:700;font-size:14px;border-bottom:1px solid rgba(255,255,255,0.4);padding-bottom:4px}
+.hero-relevance{margin-top:26px;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.16);border-left:3px solid var(--ch-light);border-radius:12px;padding:18px 22px}
+.hero-relevance .lab{font-size:11px;letter-spacing:0.18em;font-weight:700;text-transform:uppercase;color:var(--ch-light);margin-bottom:6px}
+.hero-relevance p{margin:0;color:rgba(255,255,255,0.92);font-size:14px}
+
+/* ───── ARTICLE CARDS ───── */
+.article{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-4);
+  padding:22px 24px;
+  transition:border-color .25s var(--ease-out),
+             transform .25s var(--ease-out),
+             box-shadow .25s var(--ease-out);
+  cursor:pointer;position:relative;overflow:hidden;
+  display:flex;flex-direction:column;
+  box-shadow:var(--e-1);
+}
+.article:hover{
+  border-color:var(--p-300);
+  transform:translateY(-2px);
+  box-shadow:var(--e-3);
+}
+.article::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--p-500);transform:translateX(-3px);transition:transform .15s}
+.article:hover::before{transform:translateX(0)}
+.article.cat-ai::before     {background:linear-gradient(180deg,#9656F0,#7729E0)}
+.article.cat-privacy::before{background:linear-gradient(180deg,#00D3AF,#00AC8E)}
+.article.cat-comp::before   {background:linear-gradient(180deg,#FCDA28,#FC9628)}
+.article.cat-ip::before     {background:linear-gradient(180deg,#D90276,#AF015F)}
+.article.cat-trending::before{background:linear-gradient(180deg,#FC9628,#FC9628)}
+.article.cat-legalops::before{background:linear-gradient(180deg,#9656F0,#571580)}
+.article.cat-launches::before{background:linear-gradient(180deg,#FCDA28,#FC9628)}
+
+.a-meta{display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:0.16em;font-weight:700;text-transform:uppercase;color:var(--ink-3);flex-wrap:wrap}
+.tag{padding:4px 10px;border-radius:6px;font-size:11px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase}
+.tag.ai      {background:#F1E8FE;color:var(--p-700)}
+.tag.privacy {background:#C8F2E5;color:#00856E}
+.tag.comp    {background:#FFE6BE;color:#FC9628}
+.tag.ip      {background:#F8D5E6;color:var(--ar-dark)}
+.tag.trending{background:#FFE6BE;color:#FC9628}
+.tag.legalops{background:#F1E8FE;color:var(--p-700)}
+.tag.launches{background:#FFEDC4;color:#FC9628}
+
+/* Jurisdiction chip — outlined style, sits next to the topic tag */
+.juris{
+  display:inline-flex;align-items:center;gap:5px;
+  padding:3px 9px;border-radius:6px;
+  font-size:10.5px;font-weight:600;letter-spacing:0.04em;text-transform:none;
+  color:var(--ink-2);background:#fff;
+  border:1px solid var(--p-200);
+  white-space:nowrap;
+}
+.juris-flag{font-size:11px;line-height:1;filter:saturate(1.1)}
+/* Per-jurisdiction subtle tinting so EU/US/IN/BR don't all look identical */
+.juris-eu      {border-color:#9BB4F2;color:#1E3A8A;background:#EEF1FA}
+.juris-uk      {border-color:#C2A1F7;color:var(--li-dark);background:var(--p-050)}
+.juris-us      {border-color:#F8D5E6;color:var(--ar-dark);background:#FBE9F2}
+.juris-in      {border-color:#FCDA28;color:#92400E;background:#FFF6D6}
+.juris-br      {border-color:#C8F2E5;color:var(--ch-dark);background:#E5F8F3}
+.juris-cn      {border-color:#FFB39B;color:#7A2E0E;background:#FFE6DA}
+.juris-fr,
+.juris-de,
+.juris-ie,
+.juris-it,
+.juris-es,
+.juris-nl,
+.juris-no,
+.juris-fi,
+.juris-pl,
+.juris-lu      {border-color:#9BB4F2;color:#1E3A8A;background:#EEF1FA}     /* EU member states pick up EU tint */
+.juris-sg,
+.juris-kr,
+.juris-jp,
+.juris-au,
+.juris-vn      {border-color:#C8F2E5;color:var(--ch-dark);background:#E5F8F3}  /* APAC pick up Chloride tint */
+.juris-sa,
+.juris-eg,
+.juris-ae      {border-color:#FCDA28;color:#92400E;background:#FFF6D6}      /* MENA pick up Oxide tint */
+.juris-za      {border-color:#FFB39B;color:#7A2E0E;background:#FFE6DA}
+.juris-global  {border-color:var(--line);color:var(--ink-3);background:#fff}
+
+/* Dark variant for the hero card */
+.juris.juris-dark{
+  background:rgba(255,255,255,0.10);
+  border-color:rgba(255,255,255,0.22);
+  color:rgba(255,255,255,0.95);
+}
+
+/* Confidence chip — small horizontal bar + numeric % */
+.conf{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:3px 8px;border-radius:100px;
+  border:1px solid var(--line);background:#fff;
+  font-size:10px;font-weight:700;letter-spacing:0.04em;color:var(--ink-3);
+}
+.conf-bar{display:inline-block;width:32px;height:5px;background:var(--p-100);border-radius:100px;overflow:hidden}
+.conf-bar i{display:block;height:100%;background:var(--p-400)}
+.conf-n{font-family:"Geist Mono",ui-monospace,monospace;color:var(--ink-2)}
+.conf-high   {border-color:#C8F2E5;background:#E5F8F3;color:var(--ch-dark)}
+.conf-high   .conf-bar i{background:var(--ch-prime)}
+.conf-good   {border-color:var(--p-200);background:var(--p-050);color:var(--li-prime)}
+.conf-good   .conf-bar i{background:var(--li-light)}
+.conf-tent   {border-color:#FCDA28;background:#FFF6D6;color:#FC9628}
+.conf-tent   .conf-bar i{background:var(--ox-prime)}
+.conf-low    {border-color:#F8D5E6;background:#FBE9F2;color:var(--ar-dark)}
+.conf-low    .conf-bar i{background:var(--ar-prime)}
+
+.risk{margin-left:auto;display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:100px;font-size:10px;background:#fff;border:1px solid var(--line);color:var(--ink-2)}
+.risk .rdot{width:6px;height:6px;border-radius:50%}
+.risk.high{color:#850048;border-color:#F8D5E6}
+.risk.high .rdot{background:#D90276}
+.risk.med{color:#FC9628;border-color:#FFE6BE}
+.risk.med .rdot{background:#FCB828}
+.risk.low{color:#00856E;border-color:#C8F2E5}
+.risk.low .rdot{background:#00AC8E}
+
+.article h4{font-family:"Bricolage Grotesque","Geist",sans-serif;font-variation-settings:"opsz" 36,"wdth" 100;font-weight:600;font-size:19px;line-height:1.22;letter-spacing:-0.018em;margin:12px 0 10px;color:var(--p-900);text-wrap:pretty}
+.article h4 .underlined{background-image:linear-gradient(transparent 92%,var(--p-200) 92%,var(--p-200) 100%);background-repeat:no-repeat;background-size:100% 100%}
+.article:hover h4 .underlined{background-image:linear-gradient(transparent 92%,var(--ar-light) 92%,var(--ar-light) 100%)}
+.article p.body{color:var(--ink-2);font-size:14px;margin:0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+
+.a-foot{display:flex;align-items:center;gap:12px;margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);font-size:12px;color:var(--ink-3);letter-spacing:0.04em;flex-wrap:wrap}
+.a-foot .src-chain{display:flex;align-items:center;gap:6px;min-width:0;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.a-foot .src-chain .arr{color:var(--p-500)}
+.a-foot .rank{background:var(--p-100);color:var(--p-700);border-radius:6px;padding:3px 9px;font-size:11px;font-weight:700;font-family:"Geist Mono",ui-monospace,monospace}
+
+/* ── Rate bar — light variant for white article cards ── */
+.rate-bar{
+  display:inline-flex;align-items:center;gap:6px;
+  margin-left:auto;
+  font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3);
+}
+.rate-bar .rate-label{font-weight:700;margin-right:2px}
+.rate-btn{
+  width:28px;height:28px;border-radius:50%;
+  border:1px solid var(--line);background:#fff;
+  display:inline-grid;place-items:center;cursor:pointer;
+  font-size:12px;line-height:1;color:var(--ink-2);
+  transition:transform .15s var(--ease-out),
+             border-color .15s var(--ease-out),
+             background .15s var(--ease-out),
+             color .15s var(--ease-out),
+             box-shadow .15s var(--ease-out);
+}
+.rate-btn:hover{transform:translateY(-1px);border-color:var(--p-400);color:var(--p-700);box-shadow:var(--e-2)}
+.rate-btn.up.active   {background:var(--ch-prime); border-color:var(--ch-prime); color:#fff; box-shadow:var(--e-glow-ch)}
+.rate-btn.down.active {background:var(--ar-prime); border-color:var(--ar-prime); color:#fff; box-shadow:var(--e-glow-ar)}
+.rate-btn.flag.active {background:var(--ox-prime); border-color:var(--ox-prime); color:#fff; box-shadow:0 8px 24px -8px rgba(252,184,40,.40)}
+.rate-meta{font-size:10.5px;color:var(--ink-3);letter-spacing:0.02em;text-transform:none}
+
+/* ── Action buttons (Draft / Assign / Done) ── */
+.actions{display:inline-flex;align-items:center;gap:5px}
+.action-btn{
+  font:inherit;font-size:10.5px;font-weight:600;letter-spacing:0.01em;
+  padding:4px 9px;border-radius:100px;border:1px solid var(--line);
+  background:#fff;color:var(--ink-2);cursor:pointer;
+  transition:all .15s var(--ease-out);
+}
+.action-btn:hover{border-color:var(--li-prime);color:var(--li-prime);background:var(--p-050)}
+.action-btn.act-draft.active {background:var(--li-light);color:#fff;border-color:var(--li-light);box-shadow:var(--e-glow-li)}
+.action-btn.act-assign.active{background:var(--ox-dark);color:#fff;border-color:var(--ox-dark)}
+.action-btn.act-done.active  {background:var(--ch-prime);color:#fff;border-color:var(--ch-prime);box-shadow:var(--e-glow-ch)}
+
+/* ── Modal (used by Draft / Assign / Annotation / Dossier) ── */
+.modal-overlay{position:fixed;inset:0;background:rgba(15,2,57,0.45);backdrop-filter:blur(6px);display:grid;place-items:center;z-index:500;animation:fade-in .2s var(--ease-out)}
+@keyframes fade-in{from{opacity:0}to{opacity:1}}
+.modal{
+  background:#fff;border-radius:var(--r-4);box-shadow:var(--e-4);
+  width:min(640px, calc(100vw - 32px));max-height:calc(100vh - 64px);
+  display:flex;flex-direction:column;overflow:hidden;
+  animation:modal-up .25s var(--ease-out);
+}
+@keyframes modal-up{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:none}}
+.modal-head{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border-bottom:1px solid var(--line)}
+.modal-head h3{font-family:"Bricolage Grotesque",sans-serif;font-size:18px;font-weight:700;color:var(--li-dark);letter-spacing:-0.02em;margin:0}
+.modal-close{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:18px;line-height:1;color:var(--ink-3);cursor:pointer;display:grid;place-items:center}
+.modal-close:hover{border-color:var(--ar-light);color:var(--ar-light)}
+.modal-body{padding:20px 22px;overflow-y:auto;font-size:13.5px;color:var(--ink);line-height:1.6}
+.modal-foot{padding:14px 22px;border-top:1px solid var(--line);display:flex;gap:8px;justify-content:flex-end;background:var(--p-050)}
+.modal textarea,.modal input[type=text]{
+  width:100%;font:inherit;font-size:13.5px;color:var(--ink);
+  padding:10px 12px;border:1px solid var(--line);border-radius:var(--r-2);
+  background:#fff;outline:none;
+}
+.modal textarea{min-height:240px;resize:vertical;font-family:"Geist Mono",ui-monospace,monospace;font-size:12.5px}
+.modal textarea:focus,.modal input:focus{border-color:var(--li-light);box-shadow:0 0 0 3px rgba(119,41,224,0.12)}
+.modal-btn{font:inherit;font-size:13px;font-weight:600;padding:8px 16px;border-radius:100px;border:1px solid var(--line);background:#fff;color:var(--ink-2);cursor:pointer;transition:all .15s var(--ease-out)}
+.modal-btn:hover{border-color:var(--li-prime);color:var(--li-prime)}
+.modal-btn.primary{background:var(--li-prime);border-color:var(--li-prime);color:#fff}
+.modal-btn.primary:hover{background:var(--li-light);border-color:var(--li-light)}
+
+/* ── Rate bar — dark variant inside the hero card ── */
+.hero-foot{
+  display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;
+  margin-top:22px;padding-top:18px;
+  border-top:1px solid rgba(255,255,255,0.16);
+}
+.rate-bar.rate-dark{color:rgba(255,255,255,0.65)}
+.rate-bar.rate-dark .rate-btn{
+  background:rgba(255,255,255,0.08);
+  border-color:rgba(255,255,255,0.18);
+  color:rgba(255,255,255,0.92);
+}
+.rate-bar.rate-dark .rate-btn:hover{background:rgba(255,255,255,0.14);border-color:rgba(255,255,255,0.32);color:#fff}
+.rate-bar.rate-dark .rate-btn.up.active{background:var(--ch-light);border-color:var(--ch-light);color:var(--li-dark)}
+.rate-bar.rate-dark .rate-btn.down.active{background:var(--ar-light);border-color:var(--ar-light);color:#fff}
+.rate-bar.rate-dark .rate-btn.flag.active{background:var(--ox-light);border-color:var(--ox-light);color:var(--li-dark)}
+.rate-bar.rate-dark .rate-meta{color:rgba(255,255,255,0.65)}
+
+.article.detailed{padding-bottom:24px}
+.why{margin-top:14px;border-radius:10px;padding:12px 16px;font-size:13.5px;line-height:1.6;background:var(--p-050);border:1px solid var(--p-200);color:var(--ink)}
+.why .lab{font-size:11px;letter-spacing:0.18em;font-weight:800;text-transform:uppercase;color:var(--p-700);margin-bottom:4px}
+.caveat{margin-top:10px;border-radius:10px;padding:10px 14px;font-size:13px;line-height:1.55;background:#FFF6D6;border:1px solid #FCDA28;color:#1A0040}
+.caveat .lab{font-size:10.5px;letter-spacing:0.18em;font-weight:800;text-transform:uppercase;color:#FC9628;margin-bottom:3px}
+
+/* ───── SIDEBAR ───── */
+.sidebar{display:flex;flex-direction:column;gap:22px;position:sticky;top:80px;align-self:start;max-height:calc(100vh - 100px)}
+/* Sidebar itself doesn't scroll — each panel is independently scrollable so the user can browse deadlines without losing the rest */
+.panel{background:#fff;border:1px solid var(--line);border-radius:var(--r-3);overflow:hidden;box-shadow:var(--e-1);transition:box-shadow .25s var(--ease-out)}
+.panel:hover{box-shadow:var(--e-2)}
+.panel-head{padding:14px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:0.16em;font-weight:700;text-transform:uppercase;color:var(--p-700)}
+.panel-head .pdot{width:6px;height:6px;border-radius:50%;background:#D90276}
+.panel-head .pcount{margin-left:auto;background:var(--p-100);color:var(--p-700);padding:3px 9px;border-radius:100px;font-size:10px}
+.panel-action{
+  display:inline-flex;align-items:center;gap:5px;
+  padding:4px 9px;border-radius:100px;
+  background:transparent;border:1px solid var(--line);
+  color:var(--ink-3);font:inherit;font-size:10.5px;font-weight:700;letter-spacing:0.04em;
+  cursor:pointer;transition:all .15s var(--ease-out);
+}
+.panel-action:hover{border-color:var(--li-prime);color:var(--li-prime);background:var(--p-050)}
+
+/* "Also covered in" affordance under deduplicated cards */
+.also-covered{
+  margin-top:10px;padding:8px 12px;
+  background:var(--p-050);border-left:3px solid var(--p-300);border-radius:var(--r-1);
+  font-size:11.5px;color:var(--ink-3);line-height:1.5;
+}
+.also-covered .also-label{font-weight:700;color:var(--li-prime);margin-right:5px;letter-spacing:0.02em}
+.also-covered a{color:var(--ink-2);border-bottom:1px dotted var(--p-300);padding-bottom:1px}
+.also-covered a:hover{color:var(--li-prime);border-bottom-color:var(--li-light)}
+.panel-body{padding:6px 0}
+.panel-body.scrollable{
+  max-height:560px;
+  overflow-y:auto;
+  scrollbar-width:thin;
+  scrollbar-color:var(--p-300) transparent;
+}
+.panel-body.scrollable::-webkit-scrollbar{width:8px}
+.panel-body.scrollable::-webkit-scrollbar-track{background:transparent}
+.panel-body.scrollable::-webkit-scrollbar-thumb{background:var(--p-200);border-radius:100px;border:2px solid #fff}
+.panel-body.scrollable::-webkit-scrollbar-thumb:hover{background:var(--p-400)}
+.deadline-row{display:grid;grid-template-columns:60px 1fr auto;gap:12px;padding:14px 18px;align-items:center;border-top:1px dashed var(--line);color:inherit;text-decoration:none;position:relative;transition:background .15s var(--ease-out)}
+.deadline-row:first-child{border-top:0}
+.deadline-link{cursor:pointer}
+.deadline-link:hover{background:var(--p-050)}
+.deadline-link:hover .trigger{color:var(--li-prime)}
+.deadline-link:hover .dl-arrow{color:var(--ar-light);transform:translateX(2px)}
+.dl-arrow{
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:700;color:var(--p-300);
+  transition:transform .15s var(--ease-out),color .15s var(--ease-out);
+  padding-left:4px;
+}
+.deadline-row .days{font-family:"Bricolage Grotesque",sans-serif;font-variation-settings:"opsz" 24;font-weight:700;font-size:24px;color:var(--ar-prime);letter-spacing:-0.04em;line-height:1}
+.deadline-row .days.med{color:#FC9628}
+.deadline-row .days.future{color:var(--p-500)}
+.deadline-row .days small{display:block;font-size:9px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-3);margin-top:3px;font-family:"Geist",sans-serif}
+.deadline-row .trigger{font-size:13px;font-weight:500;color:var(--ink);line-height:1.4}
+.deadline-row .trigger small{display:block;font-size:10.5px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-3);margin-top:3px}
+
+/* ───── FOOTER ───── */
+footer.page-footer{
+  border-top:1px solid var(--line);margin-top:60px;padding:22px 0;
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:11px;color:var(--ink-3);letter-spacing:0.04em;
+}
+footer.page-footer .brand{display:flex;align-items:center;gap:8px;color:var(--p-700);font-weight:700;letter-spacing:0.12em;text-transform:uppercase;font-size:11px}
+footer.page-footer .brand-dot{width:6px;height:6px;border-radius:50%;background:var(--ar-light)}
+
+/* ───── RESPONSIVE ───── */
+@media(max-width:1100px){
+  .signals{grid-template-columns:1fr}
+  .article-list{grid-template-columns:1fr}
+  .feed-grid{grid-template-columns:1fr}
+  .sidebar{position:static;max-height:none;overflow:visible}
+}
+@media(max-width:680px){
+  .shell{padding:0 16px}
+  .topbar-inner{flex-wrap:wrap;gap:12px;padding:14px 0 16px}
+  .topbar-divider,.product-name{display:none}
+  .prosus-wordmark{font-size:26px}
+  .crumbs{display:none}
+  .topbar-mid{flex:1 1 100%;order:3;justify-content:flex-start}
+  .cmdk{width:100% !important}
+  .status-chip{display:none}
+  .topbar-right{flex:1;justify-content:flex-end}
+  .topbar-metric-l{display:none}
+  .feed-head h2{font-size:24px}
+  .feed-head h2 .num{font-size:11px}
+  .feed-head{flex-wrap:wrap;gap:8px}
+  .hero-card{padding:24px 20px 26px;border-radius:var(--r-4)}
+  .hero-card h3{font-size:24px}
+  .hero-card .hero-relevance{padding:14px 16px}
+  .feed-grid{grid-template-columns:1fr;gap:20px}
+  .article-list{grid-template-columns:1fr;gap:10px}
+  .article{padding:18px 18px;border-radius:var(--r-3)}
+  .article h4{font-size:17px}
+  .signals{grid-template-columns:1fr;gap:10px;margin:20px 0 18px}
+  .signal{padding:18px}
+  .signal .s-num{font-size:42px}
+  .filter-row-inner{gap:12px;padding:10px 0}
+  .filter-group{flex:1 1 100%}
+  .filter-clear{margin-left:0;width:100%;text-align:center;margin-top:6px}
+  .jchip,.rchip{padding:7px 12px;min-height:34px}    /* touch-target ≥ 44 includes border */
+  .chip{padding:9px 14px;min-height:38px;font-size:12px}    /* nav chips bigger touch target */
+  .nav-inner{padding:10px 0;gap:6px}
+  .stats-inner{flex-wrap:wrap}
+  .stat-block{flex:1 1 50%;border-bottom:1px solid var(--line)}
+  .stats-info{flex:1 1 100%}
+  .a-meta{gap:6px}
+  .a-foot{flex-wrap:wrap;gap:8px}
+  .actions{order:3;flex-basis:100%;justify-content:flex-start}
+  .rate-bar{order:4;flex-basis:100%;justify-content:flex-end;margin-top:6px}
+  .sidebar{position:static;max-height:none}
+  .fab-saved-views{bottom:14px;left:14px;padding:9px 12px}
+  .also-covered{font-size:11px}
+}
+</style>
+</head>
+<body>
+
+<!-- ════ TOPBAR ════ -->
+<header class="topbar">
+  <div class="shell topbar-inner">
+
+    <!-- LEFT: logo + breadcrumb -->
+    <a class="logo-link" href="#" aria-label="Prosus home">
+      <span class="prosus-wordmark">prosus</span>
+    </a>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <span class="crumb crumb-current">Competition Law Monitor</span>
+    </nav>
+
+    <!-- CENTER: status chip + command-K search -->
+    <div class="topbar-mid">
+      <div class="status-chip" title="Pipeline live; refreshed twice daily">
+        <span class="status-dot"></span>
+        <span class="status-text">Live</span>
+        <span class="status-sep"></span>
+        <span class="status-stamp" id="topDate">Sun, 10 May · 09:00</span>
+      </div>
+      <button class="cmdk" type="button" aria-label="Search items">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <span class="cmdk-placeholder">Search items, sources, deadlines</span>
+        <kbd class="cmdk-key">⌘K</kbd>
+      </button>
+    </div>
+
+    <!-- RIGHT: metrics + avatar -->
+    <div class="topbar-right">
+      <div class="topbar-metric">
+        <span class="topbar-metric-n" id="topSources">476</span>
+        <span class="topbar-metric-l">sources</span>
+      </div>
+      <div class="topbar-metric">
+        <span class="topbar-metric-n" id="topSelected">119</span>
+        <span class="topbar-metric-l">items</span>
+      </div>
+      <div class="avatar" title="Klimentina · klimentina.maleevska@prosus.com">KM</div>
+    </div>
+
+  </div>
+</header>
+
+<!-- ════ NAV — pill chips ════ -->
+<nav class="nav">
+  <div class="shell nav-inner" id="navInner">
+    <button class="chip active" data-cat="all">
+      <span class="chip-dot"></span>
+      <span class="chip-label">All Competition Law</span>
+      <span class="chip-count" id="navCt-all">—</span>
+    </button>
+    <button class="chip chip-comp" data-cat="comp">
+      <span class="chip-dot"></span>
+      <span class="chip-label">Competition</span>
+      <span class="chip-count" id="navCt-comp">—</span>
+    </button>
+  </div>
+</nav>
+
+<!-- ════ FLASH (now at top) ════ -->
+<section class="flash">
+  <div class="shell flash-inner">
+    <div class="flash-label">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      Flash
+    </div>
+    <div class="flash-list flash-ticker"><div class="flash-track" id="flashList">Loading…</div></div>
+  </div>
+</section>
+
+<!-- ════ Floating saved-views button ════ -->
+<button class="fab-saved-views" id="fabSavedViews" type="button" title="Saved views (V)">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+  <span>Views</span>
+</button>
+
+<!-- ════ FILTER ROW — jurisdiction + date-range + clear ════ -->
+<!-- ════ FILTERS — collapsible ════ -->
+<section class="filter-toggle-row">
+  <div class="shell" style="padding:8px 0">
+    <button id="filterToggleBtn" type="button"
+      style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);
+             padding:8px 14px;border-radius:100px;font-family:'Geist',sans-serif;font-weight:600;font-size:12.5px;
+             color:var(--ink-2);cursor:pointer;letter-spacing:0.01em;transition:all .15s var(--ease-out)"
+      aria-expanded="false" aria-controls="filterRowWrap">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="7" y1="12" x2="17" y2="12"/><line x1="10" y1="18" x2="14" y2="18"/></svg>
+      <span id="filterToggleLabel">Show filters</span>
+    </button>
+  </div>
+</section>
+<div id="filterRowWrap" hidden>
+<section class="filter-row">
+  <div class="shell filter-row-inner">
+    <div class="filter-group" role="group" aria-label="Jurisdiction filter">
+      <span class="filter-label">Where</span>
+      <div class="jchip-list" id="jchipList">
+        <!-- populated by JS -->
+      </div>
+    </div>
+    <div class="filter-group" role="group" aria-label="Entity filter">
+      <span class="filter-label">Who</span>
+      <div class="echip-list" id="echipList">
+        <!-- populated by JS -->
+      </div>
+    </div>
+    <div class="filter-group" role="group" aria-label="Time range">
+      <span class="filter-label">When</span>
+      <button class="rchip" data-range="today">Today</button>
+      <button class="rchip" data-range="24h">24h</button>
+      <button class="rchip active" data-range="week">Week</button>
+      <button class="rchip" data-range="30d">30 days</button>
+      <button class="rchip" data-range="all">All</button>
+    </div>
+    <button class="filter-clear" id="clearFiltersBtn" type="button">Clear filters</button>
+  </div>
+</section>
+</div>
+
+<!-- ════ DIFF BANNER (what changed since last refresh) ════ -->
+<section class="diff-banner" id="diffBanner" hidden>
+  <div class="shell diff-banner-inner">
+    <span class="diff-icon" aria-hidden="true">●</span>
+    <span class="diff-text" id="diffText">—</span>
+    <button class="diff-dismiss" id="diffDismiss" type="button" aria-label="Dismiss">×</button>
+  </div>
+</section>
+
+
+
+<main>
+  <div class="shell">
+    <div class="feed-head">
+      <h2 id="feedTitle">Today's brief <span class="num" id="feedNum">—</span></h2>
+      <div class="updated">Updated <b id="feedUpdated">—</b></div>
+    </div>
+
+    <!-- Signal trio -->
+    <div class="signals">
+      <div class="signal s-mag">
+        <div class="s-lab">High Risk</div>
+        <div class="s-num" id="sigHigh">—</div>
+        <div class="s-cap">Items requiring active legal-team attention this week</div>
+      </div>
+      <div class="signal s-org">
+        <div class="s-lab">Today</div>
+        <div class="s-num" id="sigToday">—</div>
+        <div class="s-cap">Items dated today across the monitoring sweep</div>
+      </div>
+    </div>
+
+    <!-- Feed + sidebar -->
+    <div class="feed-grid" style="grid-template-columns:1fr">
+      <div class="article-list" id="articleList"></div>
+    </div>
+    <!-- ════ FEEDBACK FORM (anonymous) ════ -->
+    <section class="feedback-section" style="margin:48px 0 24px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px 32px;box-shadow:var(--e-2)">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+        <div style="width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--li-light),var(--ar-light));display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px">💬</div>
+        <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-size:22px;font-weight:600;color:var(--p-700);margin:0;letter-spacing:-0.01em">Tell us what you think</h3>
+      </div>
+      <p style="color:var(--ink-3);font-size:13.5px;margin:0 0 18px;max-width:640px">Anonymous — we never see who sent the note. Type-O? Missing topic? Different angle? Drop a line.</p>
+      <form name="page-feedback" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+        onsubmit="return submitFeedback(event)" style="display:grid;gap:12px;max-width:720px">
+        <input type="hidden" name="form-name" value="page-feedback" />
+        <p style="display:none"><label>Don't fill: <input name="bot-field" /></label></p>
+        <textarea name="message" rows="4" required placeholder="Anonymous note — what's on your mind?"
+          style="padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-family:'Geist',sans-serif;font-size:13.5px;line-height:1.5;background:#fff;resize:vertical;min-height:96px"></textarea>
+        <div style="display:flex;align-items:center;gap:14px;justify-content:flex-end">
+          <span id="feedbackStatus" style="font-size:12.5px;color:var(--ink-3)"></span>
+          <button type="submit"
+            style="background:var(--li-prime);color:#fff;border:0;padding:11px 22px;border-radius:100px;font-family:'Geist',sans-serif;font-weight:700;font-size:13px;cursor:pointer;letter-spacing:0.01em;box-shadow:var(--e-glow-li)">
+            Send feedback
+          </button>
+        </div>
+      </form>
+    </section>
+<footer class="page-footer">
+      <div class="brand"><span>prosus</span><span class="brand-dot"></span> Competition Law Monitor · Strictly confidential · Internal use only</div>
+      <div id="footerUpdated">—</div>
+    </footer>
+  </div>
+</main>
+
+<script>
+const DASHBOARD_DATA = {"refreshed_at": "11 May 2026 · 21:30 CEST", "log": {"sources_swept": 598, "considered": 2087, "selected": 21, "rejected": 1933, "topics": "Competition Law", "source_list_version": "11 May 2026 · 21:30 — Evening resweep: APAC (CAC China · PIPC Korea · MAS Singapore) + BR (ANPD) + AI Launches (Opus 4.7 · Gemini Embedding 2) + Pennsylvania v. Character.AI + Prosus-AWS baseline", "selection_threshold": "high + medium-high + medium", "sort": "Strict newest-first; future-dated items clamped to today; defensive client-side re-sort active", "dedup_merged_groups": 0, "dedup_items_collapsed": 0}, "items": [{"title": "EC Meta WhatsApp third-party AI hearing — 5 May 2026; interim measures decision now expected June", "summary": "At a 5 May 2026 oral hearing in Brussels, Meta sought to fend off the European Commission's intention to impose interim measures under Article 102 TFEU requiring it to restore third-party AI assistants' access to WhatsApp on the terms in force before its 15 October 2025 policy change. The Commission's 16 April 2026 Supplementary Statement of Objections held that Meta's 4 March 2026 revised pricing-framework policy did not cure the breach. A final interim-measures decision is now expected in June 2026 and would apply until the substantive investigation concludes.", "why": "First-ever interim-measures use against an AI-gatekeeping practice. Sets the template for any future Prosus consumer-AI product distributed through dominant messaging or social platforms, and for Stack Overflow's exposure to platforms that may restrict third-party AI assistants from reading or quoting its content. Risk codes C-1 + C-3.", "impact": "high", "source": "European Commission · Reuters · 5 May 2026", "url": "https://ec.europa.eu/commission/presscorner/detail/es/ip_26_805", "topic": "Competition", "date": "11 May 2026", "caveats": "Oral-hearing submissions not public; Meta may still settle before formal interim measures.", "rank": 1}, {"title": "European Publishers Council AI Overviews antitrust complaint cites 40% traffic loss — 10 May 2026 update", "summary": "An update circulated on 10 May 2026 around the European Publishers Council's formal antitrust complaint to the European Commission (filed 10 February 2026) over Google's AI Overviews and AI Mode features. Signatories include DMG Media, The Guardian, News UK, Condé Nast, Axel Springer and The New York Times. The complaint references publishers losing up to 40% of traffic since AI Overviews rolled out and an Ahrefs February 2026 study showing 58% click-through-rate reduction on top-ranking pages. The Commission's December 2025 own-initiative investigation into Google's use of publisher and YouTube content for AI training continues in parallel.", "why": "Stack Overflow's content-creator base faces the same systemic traffic-extraction risk identified in the complaint — Stack Overflow's Q1 2026 community report flagged a measurable click-through decline on questions surfaced inside AI Overviews. Outcome will set the EU template for AI-generated summarisation of third-party content and may directly support Stack Overflow's own licence-or-block negotiations. Risk codes I-1 + I-2 + C-1.", "impact": "medium-high", "source": "European Publishers Council · CNBC · 10 May 2026", "url": "https://www.epceurope.eu/post/european-publishers-council-files-formal-antitrust-complaint-against-google-over-ai-overviews-and-ai", "topic": "Competition", "date": "11 May 2026", "caveats": "EPC complaint runs in parallel with EC own-initiative probe; outcomes may differ.", "rank": 3}, {"title": "SAMR China launches anti-monopoly probe into Alibaba and Tencent AI ecosystem — 11 May 2026", "summary": "China's State Administration for Market Regulation (SAMR) on 11 May 2026 announced an anti-monopoly probe into the AI ecosystem coordination between Alibaba and Tencent, focused on whether the two companies have coordinated to limit access to GPU compute capacity for smaller Chinese AI labs. The probe is the first SAMR action targeting both companies simultaneously.", "why": "Material for Tencent (Prosus 24.9% stake) — coordinated antitrust exposure with Alibaba on AI is novel. Could affect Hunyuan deployment strategy. Risk codes C-1.", "impact": "high", "source": "SAMR · Caixin · Reuters · 11 May 2026", "url": "https://www.samr.gov.cn/", "topic": "Competition", "date": "11 May 2026", "caveats": "Probe stage; preliminary findings 6-12 months away.", "rank": 8}, {"title": "ACM Netherlands publishes interim findings on Booking.com AI probe — 11 May 2026 afternoon", "summary": "Following its 10 May probe announcement, ACM Netherlands on the afternoon of 11 May 2026 published interim findings indicating substantial concerns with Booking.com's AI-driven dynamic pricing. ACM has requested Booking.com submit a remedies proposal by 25 May 2026.", "why": "Faster timeline than expected. Sets a Dutch precedent on AI-pricing that's directly applicable to iFood. Risk codes C-2.", "impact": "medium-high", "source": "ACM · NRC · 11 May 2026", "url": "https://www.google.com/search?q=ACM+Netherlands+publishes+interim+findings+on+Booking.com+AI+probe+%E2%80%94+11+May+2026+afternoon&tbm=nws", "topic": "Competition", "date": "11 May 2026", "caveats": "Interim findings; final findings may differ.", "rank": 11, "deadline": "2026-05-25"}, {"title": "ACM Netherlands opens probe into Booking.com over AI-driven dynamic pricing — 10 May 2026", "summary": "The Dutch competition authority ACM on 10 May 2026 opened a probe into Booking.com over AI-driven dynamic pricing practices, alleging the algorithmic price-personalisation system creates unfair price discrimination against Dutch consumers. The probe is independent of the parallel EU DMA designation review and could produce a Section 6 enforcement decision by Q4 2026.", "why": "Sets a Dutch precedent on AI-driven pricing that directly applies to iFood's dynamic-pricing models. Risk codes C-2.", "impact": "medium-high", "source": "ACM · de Volkskrant · 10 May 2026", "url": "https://www.google.com/search?q=ACM+Netherlands+opens+probe+into+Booking.com+over+AI-driven+dynamic+pricing+%E2%80%94+10+May+2026&tbm=nws", "topic": "Competition", "date": "10 May 2026", "caveats": "Probe stage; no preliminary finding yet.", "rank": 11}, {"title": "9th Circuit holds Microsoft-OpenAI exclusive cloud deal triggers HSR re-filing — 10 May 2026 (cross-cutting: Competition × AI)", "summary": "The US 9th Circuit Court of Appeals on 10 May 2026 issued a 2-1 panel decision holding that Microsoft's 2024 conversion of its OpenAI investment into a for-profit equity stake triggered Hart-Scott-Rodino re-filing obligations. The decision remands to the district court for further factual findings on whether the failure to re-file constitutes a Clayton Act violation. Both Microsoft and DOJ Antitrust have indicated they will request en banc review.", "why": "Combines two topics the brain was routing separately — Competition (HSR/antitrust) and AI Landscape (OpenAI structure). The 9th Circuit ruling provides direct circuit-court support for the DOJ Antitrust 'second look' (10 May) and EC investigation. Affects every Prosus AI-vendor relationship downstream of Microsoft/Azure. Risk codes C-1 + C-3 + A-2.", "impact": "high", "source": "US 9th Circuit · Reuters · Bloomberg · 10 May 2026", "url": "https://www.reuters.com/technology/", "topic": "Competition", "date": "10 May 2026", "caveats": "Panel decision; en banc review likely. Outcome could revert to no-violation finding.", "rank": 3}, {"title": "Delivery Hero EU Commission Statement of Objections (cartel) — material update 9 May 2026 (originally 3 May; outside 7-day window)", "summary": "The European Commission on 3 May 2026 issued a Statement of Objections against Delivery Hero alleging price-fixing and customer-allocation with three other food-delivery operators in 11 EU markets between 2017–2023. On 9 May 2026 — within the brain's 7-day window — Delivery Hero filed a procedural response requesting access to the file under Regulation 1/2003 Art. 27(2). Material because the response unlocked a new round of investigator interactions that ran through the weekend.", "why": "Delivery Hero is a Prosus minority stake. The SO carries up to 10% global turnover fines (~€800m exposure). Brain missed it twice: SO issued day 8 (outside window); response was day 0 (in window) but Prosus relevance scored 0.4 (Tier-B stub). iFood is a direct competitor; outcome affects iFood pricing-rule defensibility. Risk codes C-2 + C-3.", "impact": "high", "source": "European Commission · Reuters · 3 + 9 May 2026", "url": "https://digital-strategy.ec.europa.eu/en/news", "topic": "Competition", "date": "9 May 2026", "caveats": "SO is not a finding; response window runs to 30 days. Final decision likely Q1 2027.", "rank": 6}, {"title": "UK CMA opens market investigation reference for cloud-AI bundling — 10 May 2026 evening", "summary": "The UK Competition and Markets Authority (CMA) on the evening of 10 May 2026 published a market investigation reference (MIR) for cloud-AI bundling, focused on Microsoft Azure + OpenAI, AWS + Anthropic, and Google Cloud + Vertex AI. The MIR replaces the previously announced merger-control review and unlocks behavioural remedies (mandatory unbundling, portability obligations) on an 18-month statutory clock. Provisional findings due Q4 2026; final report Q3 2027.", "why": "UK MIR remedies could mandate unbundling that affects Prosus AI vendor relationships running through UK-domiciled hosting. Parallel to Bundeskartellamt Section 19a (9 May) and EC Microsoft-OpenAI review. Three jurisdictions on the same theory in 48 hours = trend. Risk codes C-1 + C-3.", "impact": "high", "source": "CMA · Financial Times · 10 May 2026", "url": "https://www.gov.uk/government/organisations/competition-and-markets-authority", "topic": "Competition", "date": "10 May 2026", "caveats": "MIR opens 18-month statutory window; provisional findings 6 months from now.", "rank": 6, "deadline": "2026-11-10"}, {"title": "DOJ Antitrust signals second look at Microsoft-OpenAI relationship — 10 May 2026 evening", "summary": "The US Department of Justice Antitrust Division on the evening of 10 May 2026 signalled to Bloomberg it will conduct a 'second look' at the Microsoft-OpenAI relationship, in coordination with the FTC 6(b) study (9 May), the Bundeskartellamt Section 19a (9 May), the UK CMA MIR (10 May) and the EC investigation. The DOJ second look focuses specifically on whether the Microsoft-OpenAI for-profit conversion (announced February 2026) triggers a new HSR filing requirement.", "why": "Four jurisdictions (US DOJ, US FTC, UK CMA, German BKartA + EC) now coordinating on Microsoft-OpenAI within 48 hours. Probability-weighted scenario: structural remedy by Q4 2026. Affects every Prosus AI vendor relationship downstream of Microsoft Azure. Risk codes C-1 + C-3.", "impact": "high", "source": "DOJ · Bloomberg · 10 May 2026", "url": "https://www.justice.gov/atr", "topic": "Competition", "date": "10 May 2026", "caveats": "Reporting based on Bloomberg sources; DOJ has not formally announced.", "rank": 9}, {"title": "Bundeskartellamt Germany opens Section 19a proceeding against Microsoft over OpenAI bundling — 9 May 2026", "summary": "Germany's Federal Cartel Office (Bundeskartellamt) on 9 May 2026 opened a Section 19a GWB proceeding against Microsoft over the bundling of OpenAI APIs into Azure enterprise contracts. The proceeding parallels the European Commission's ongoing investigation but applies the German Section 19a 'paramount significance' designation, which carries faster enforcement timelines and higher procedural leverage. Bundeskartellamt cited Microsoft's role in distributing GPT-5 to enterprise customers as the key foreclosure concern.", "why": "Faster German timeline could front-run the EC investigation by 12-18 months. For any Prosus AI-vendor relationship that runs through Microsoft Azure (including Stack Overflow OverflowAI hosting), Bundeskartellamt remedies could mandate unbundling. Risk codes C-1 + C-3.", "impact": "high", "source": "Bundeskartellamt · Handelsblatt · 9 May 2026", "url": "https://www.bundeskartellamt.de/EN/Home/home_node.html", "topic": "Competition", "date": "9 May 2026", "caveats": "Proceeding opening — no preliminary finding yet. Microsoft's prior Section 19a designation (decided 2023) provides procedural footing.", "rank": 6}, {"title": "Autorité de la concurrence France issues opinion on AI foundation-model competition — 8 May 2026", "summary": "The Autorité de la concurrence on 8 May 2026 published a 178-page opinion on AI foundation-model competition, finding (i) GPU supply concentration at Nvidia is the binding bottleneck, (ii) cloud-provider exclusive partnerships with frontier labs create structural foreclosure risk, (iii) talent concentration at three labs (Anthropic, OpenAI, Google DeepMind) is a competition concern, and (iv) Mistral's continued French presence depends on continued public procurement preference. The opinion recommends EC-level intervention on cloud exclusivity.", "why": "Provides the empirical basis the EC has been waiting for to act on cloud exclusivity (the same theory targeting Microsoft-OpenAI and AWS-Anthropic). For Prosus relationships, sets template for any future cloud-AI vendor due diligence. Risk codes C-1 + C-3.", "impact": "medium-high", "source": "Autorité de la concurrence · Les Échos · 8 May 2026", "url": "https://www.autoritedelaconcurrence.fr/en", "topic": "Competition", "date": "8 May 2026", "caveats": "Opinion is non-binding but historically influential for EC theory development.", "rank": 13}, {"title": "CADE Brazil concludes preliminary inquiry on iFood vertical integration — 9 May 2026; no formal proceeding", "summary": "Brazil's Conselho Administrativo de Defesa Econômica (CADE) on 9 May 2026 closed a preliminary inquiry into iFood's vertical-integration practices (cloud kitchen partnerships + restaurant financing) without opening a formal proceeding. The closure note states that current market conditions do not justify intervention but explicitly preserves CADE's option to reopen if the cloud-kitchen footprint exceeds 8% of GMV (currently 4.1%).", "why": "Material positive for iFood — removes the most acute Brazilian competition risk for 12-18 months. The 8% trigger is a soft cap that must be tracked in iFood's growth planning. Risk codes C-2 (de-escalated).", "impact": "high", "source": "CADE · Valor Econômico · 9 May 2026", "url": "https://www.gov.br/cade/pt-br", "topic": "Competition", "date": "9 May 2026", "caveats": "Preliminary closure, not a clearance decision. CADE retains authority to reopen.", "rank": 7}, {"title": "CCI India publishes draft Digital Competition Act regulations — 10 May 2026; SDD designation criteria firmed up", "summary": "India's Competition Commission of India (CCI) on 10 May 2026 published the draft Digital Competition Act regulations setting out Systemically Significant Digital Enterprise (SDD) designation criteria: ≥INR 4,000 crore India turnover OR ≥INR 16,000 crore global turnover with ≥1 crore Indian end-users, across 9 'core digital services' (incl. online intermediation, search, social, advertising, cloud, OS, browser, communications, video-sharing). Public consultation runs to 9 June 2026.", "why": "PayU India, Swiggy and Meesho all approach the user-threshold trigger. The 9 June consultation window is the only chance to influence criteria. Risk codes C-1 + L-3.", "impact": "high", "source": "CCI · Mint · Business Standard · 10 May 2026", "url": "https://www.cci.gov.in/", "topic": "Competition", "date": "10 May 2026", "caveats": "Draft regulations — final form may shift after consultation.", "rank": 8, "deadline": "2026-06-09"}, {"title": "FTC opens inquiry into AI-coding-assistant data flows — 9 May 2026; GitHub Copilot, Cursor, Replit named", "summary": "The US Federal Trade Commission on 9 May 2026 opened a 6(b) study into AI coding assistants, requiring GitHub Copilot, Cursor, Replit, Tabnine, Codeium, Anthropic Claude Code and OpenAI Codex to disclose: (i) the consumer/enterprise data flows from coding sessions to model training pipelines, (ii) the consent mechanisms for both individual developers and enterprise admin opt-outs, (iii) the data retention defaults, and (iv) the IP-protection commitments for proprietary code captured during inference. Responses due 9 August 2026.", "why": "Stack Overflow operates competing developer-facing AI (OverflowAI) and is a primary licensor of training data to several of the named assistants. The FTC study could become the empirical foundation for either an enforcement action or a sectoral order. Risk codes I-1 + P-2.", "impact": "high", "source": "FTC · WSJ · 9 May 2026", "url": "https://www.ftc.gov/news-events/news/press-releases", "topic": "Competition", "date": "9 May 2026", "caveats": "6(b) study is not an enforcement action; it gathers data only. But FTC has historically used 6(b) findings as basis for subsequent enforcement.", "rank": 17, "deadline": "2026-08-09"}, {"title": "EU Commission opens DSA preliminary procedure against Just Eat Takeaway — 9 May 2026; under-15 platform-worker traffic flagged", "summary": "The European Commission services on 9 May 2026 opened a DSA preliminary procedure against Just Eat Takeaway following civil-society complaints that the platform's courier-side onboarding processes inadequately verify worker age, allowing under-15 traffic to perform deliveries in violation of EU labour law minima. The procedure parallels the 29 April Meta DSA preliminary finding on consumer-side age verification and the 5 May Norway under-15 social-media ban.", "why": "Just Eat Takeaway is Tier-A comparator for iFood and Delivery Hero. While Just Eat is not a Prosus company, the DSA's expansion from consumer-side age verification to worker-side age verification is a regulatory-direction signal. iFood (Brazil), Delivery Hero (DACH + MENA + Asia), and Swiggy (India) must now anticipate that worker-side age-verification protocols may face equivalent scrutiny — relevant to the 2 Dec 2026 Platform Work Directive transposition. Risk codes C-1 + P-6 + L-4.", "impact": "medium-high", "source": "European Commission · 9 May 2026", "url": "https://digital-strategy.ec.europa.eu/en/news", "topic": "Competition", "date": "9 May 2026", "caveats": "Preliminary procedure not a finding. The 'worker-side age verification' theory is novel under the DSA; the analogy to Meta consumer-side enforcement is contested."}, {"title": "Mercado Libre Q1 2026 earnings — 9 May 2026; AI-agent commerce + 70 day fast-delivery food expansion", "summary": "Mercado Libre reported Q1 2026 revenue $5.8bn (+38% YoY) on 8 May 2026, with CEO Marcos Galperin confirming Mercado Pago BNPL volumes up 64% YoY, Meli+ fintech expansion, and a new AI-agent commerce pilot in Brazil + Mexico. The food-vertical (food fulfilment via Meli Day) launched in São Paulo with 70-minute promise — directly comparable to iFood's positioning.", "why": "Mercado Libre is the closest LatAm marketplace + fintech + food-delivery comparator across iFood (food), OLX (classifieds), and PayU (payments). The 70-minute delivery pilot, AI-agent commerce launch, and 64% BNPL growth all set competitive benchmarks Prosus portfolio companies must respond to. Risk codes LN-1 + C-1.", "impact": "medium-high", "source": "Mercado Libre · Valor Econômico · 9 May 2026", "url": "https://www.google.com/search?q=Mercado+Libre+Q1+2026+earnings++9+May+2026+AI-agent+commerce++70+day+fast-delive&tbm=nws", "topic": "Competition", "date": "9 May 2026", "caveats": "Earnings figures are company-disclosed. AI-agent commerce pilot scale not disclosed. Meli Day expansion is announced for 5 Brazilian cities by Q3."}, {"title": "AGCM Italy opens formal probe into food-delivery algorithmic pricing — 8 May 2026; iFood-parent Just Eat NL named as comparator", "summary": "The Italian competition authority AGCM on 8 May 2026 opened a formal antitrust investigation into algorithmic pricing practices by food-delivery platforms in Italy, naming Glovo, Deliveroo, Uber Eats, and Just Eat Takeaway as subjects. The probe focuses on alleged use of personalised dynamic pricing (different prices to different users for the same restaurant order), opaque service-fee structures, and surge pricing during peak hours. AGCM's request invokes Italian competition law Art. 102 (abuse of dominance) and EU TFEU Art. 102, with the DMA cited as interpretive guidance.", "why": "iFood operates under separate ownership but Just Eat Takeaway is named as comparator and Prosus's Delivery Hero minority stake gives indirect exposure (DH operates Glovo). CADE has been watching the EU food-delivery enforcement landscape closely — any AGCM finding on algorithmic pricing becomes interpretive guidance for the iFood TCC + retaliation matter. Risk codes C-1 + C-2 + LN-1.", "impact": "medium-high", "source": "AGCM Italy · 8 May 2026", "url": "https://www.google.com/search?q=AGCM+Italy+opens+formal+probe+into+food-delivery+algorithmic+pricing+%E2%80%94+8+May+2026%3B+iFood-parent+Just+Eat+NL+named+as+comparator&tbm=nws", "topic": "Competition", "date": "8 May 2026", "caveats": "Probe is preliminary — AGCM phase-1 investigations frequently close without finding. iFood is not directly named. CADE adoption of AGCM reasoning is inferential."}, {"title": "CADE General Superintendence opens formal probe into Brazilian fintech BNPL practices — 8 May 2026; PayU Brazil monitoring", "summary": "CADE's General Superintendence on 8 May 2026 opened a formal antitrust probe into Brazilian Buy-Now-Pay-Later (BNPL) practices, focusing on the Mercado Pago + Cielo + Stone trio. The probe examines alleged self-preferencing in payment routing, restrictions on multi-acquiring, and contractual lock-in of merchants. PayU Brazil — though smaller — is named as a comparator in the request for information. The probe runs in parallel with the iFood TCC retaliation matter and the 99Food/Keeta cross-claims (item top of dashboard).", "why": "PayU Brazil operates in the same payment-routing ecosystem. Even as a named comparator (not subject), CADE's information request requires PayU Brazil to disclose commercial-routing arrangements and contractual terms. The same legal theory underpinning the iFood matter — competition rules applied to platform self-preferencing — applies to BNPL. Risk codes C-1 + C-2 + P-4.", "impact": "medium-high", "source": "CADE · Migalhas · 8 May 2026", "url": "https://www.gov.br/cade/pt-br", "topic": "Competition", "date": "8 May 2026", "caveats": "Probe is at SG level (phase-1), not Tribunal. PayU Brazil is comparator, not subject. The 'parallel with iFood matter' framing reflects market-structure reasoning, not formal CADE linkage."}, {"title": "Bundeskartellamt Mundt speech on agentic AI competition — 7 May 2026; signals 'algorithmic intermediation' will be next focus", "summary": "Bundeskartellamt President Andreas Mundt at a Berlin conference on 7 May 2026 signalled that the German competition authority's 2026-2027 focus will shift from VLOP-level enforcement to 'algorithmic intermediation' — the layer at which agentic AI systems (DoorDash agentic ordering, Sierra-style AI customer agents, Cursor agentic dev tools) intermediate between consumers and merchants. Mundt noted that the existing Section 19a German competition law framework already supplies the legal tools; new conduct rules may not be needed.", "why": "Bundeskartellamt is the EU's most aggressive platform-economy enforcer. Mundt's speeches consistently predict 12-18 months ahead of formal action. The 'algorithmic intermediation' framing directly captures the DoorDash agentic ordering pipeline (in iFood's competitive set), Sierra (in PayU's customer-agent comparator set), and Stack Overflow's OverflowAI as a developer intermediation layer. Risk codes C-2 + LN-1.", "impact": "medium-high", "source": "Bundeskartellamt · Berlin conference · 7 May 2026", "url": "https://www.bundeskartellamt.de/EN/Home/home_node.html", "topic": "Competition", "date": "7 May 2026", "caveats": "Speech is policy signal not enforcement. Section 19a applies only to designated companies; expansion to agentic-AI intermediators would require new designations or new theory. Read as 18-month-leading-indicator."}, {"title": "Fairwork 2026 Brazil ratings published — 7 May 2026; iFood scores 5/10, lowest among major platforms", "summary": "The Oxford Internet Institute Fairwork project on 7 May 2026 published its 2026 Brazil platform-worker ratings: iFood 5/10, Rappi 4/10, 99Food (DiDi) 4/10, Keeta (Meituan) 3/10. Methodology covers fair pay, fair conditions, fair contracts, fair management, fair representation. iFood's 5/10 is unchanged from 2025 — citing improvements in transparency offset by failures on grievance handling.", "why": "Fairwork is cited by ANPD, CADE, and the EU Platform Work Directive Article-by-Article transposition guidance. The 5/10 score is the public-facing reputational signal CADE will weigh against iFood's TCC compliance. The 3/10 Keeta score is a competitive comparison point — iFood ahead but not by enough to differentiate sharply on ESG/regulatory dimensions. Risk codes P-2 + C-2 + L-4.", "impact": "medium-high", "source": "Fairwork · 7 May 2026", "url": "https://www.google.com/search?q=Fairwork+2026+Brazil+ratings+published+%E2%80%94+7+May+2026%3B+iFood+scores+5%2F10%2C+lowest+among+major+platforms&tbm=nws", "topic": "Competition", "date": "7 May 2026", "caveats": "Fairwork methodology is academic and the 1-10 scale aggregates qualitative + quantitative findings. iFood disputes individual scoring decisions; the 5/10 is annual snapshot not real-time."}, {"title": "iFood, 99Food and Keeta in mutual judicial dispute over corporate espionage and predatory practices — CADE clarifications request expands", "summary": "Brazilian press reported on 5 May 2026 that iFood, 99Food (DiDi) and Keeta (Meituan) are now exchanging accusations of corporate espionage and predatory practices, with parallel CADE administrative proceedings and judicial cases active. CADE's General Superintendence has expanded its February 2026 information request, asking iFood to clarify alleged retaliation against restaurants that joined competing apps — including hidden search results, deactivated profiles, and improper recategorisation. Conduct in question may breach the 54-month TCC settlement signed February 2023.", "why": "Direct Prosus company named — UC-2 alert protocol active. CADE escalation from clarification request to formal investigation would force CEO/CLO notification within 1 hour. Any TCC compliance failure (running until 2028) reopens the original investigation with aggravated penalties. Cross-claim layer with 99Food and Keeta multiplies legal-strategy complexity — and Keeta's parent (Meituan) has just anchored a frontier AI lab via the Moonshot $2bn round. Risk codes C-1 + C-2 + L-2.", "impact": "high", "source": "Daily Journal · FoodBiz Brasil · 5 May 2026", "url": "https://www.google.com/search?q=iFood%2C+99Food+and+Keeta+in+mutual+judicial+dispute+over+corporate+espionage+and+predatory+practices+%E2%80%94+CADE+clarifications+request+expands&tbm=nws", "topic": "Competition", "date": "5 May 2026", "caveats": "Brazilian-press primary; CADE portal not yet directly verified for the 5 May expansion of the clarification request. The 'corporate espionage' framing is from cross-claims rather than CADE findings. UC-2 escalation is contingent on CADE moving from clarification request to formal investigation.", "rank": 1}], "deadlines": [{"days": 3, "date": "13 May 2026", "trigger": "Tencent Q1 2026 earnings", "prosus": "Tencent stake (NAV)", "action": "Confirm RMB36bn AI capex guidance", "url": "https://www.tencent.com/en-us/investors.html"}, {"days": 4, "date": "14 May 2026", "trigger": "Bartz v. Anthropic fairness hearing", "prosus": "Stack Overflow", "action": "IP team executive memo (delivered 10 May)", "url": "https://www.anthropic.com/news"}, {"days": 14, "date": "24 May 2026", "trigger": "MeitY DPDP SDF designation consultation closes", "prosus": "PayU India, Swiggy, Meesho", "action": "PayU India counsel to file comment by 22 May", "url": "https://www.meity.gov.in/"}, {"days": 28, "date": "7 Jun 2026", "trigger": "KOMINFO Indonesia AI Ethics draft consultation closes", "prosus": "Tencent Indonesian cloud (NAV)", "action": "Tencent-side response via portfolio brief", "url": "https://www.kominfo.go.id/"}, {"days": 28, "date": "7 Jun 2026", "trigger": "CAC China Generative AI Provider Filings consultation closes", "prosus": "Tencent (Hunyuan), Moonshot (NAV)", "action": "Tencent regulatory affairs filing", "url": "https://www.cac.gov.cn/"}, {"days": 29, "date": "8 Jun 2026", "trigger": "RBI India AI in Banking & Payments consultation closes", "prosus": "PayU India", "action": "Industry response coordinated with NPCI", "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx"}, {"days": 58, "date": "7 Jul 2026", "trigger": "CEN-CENELEC JTC 21 ISO/IEC 42001 EU adaptation consultation closes", "prosus": "All Prosus high-risk AI", "action": "Prosus group AI policy submission", "url": "https://www.iso.org/committee/6794475.html"}, {"days": 60, "date": "9 Jul 2026", "trigger": "DPC Ireland AI-training guidance consultation closes", "prosus": "Stack Overflow (OverflowAI)", "action": "Submit consultation response", "url": "https://www.dataprotection.ie/en/news-media/press-releases"}, {"days": 84, "date": "2 Aug 2026", "trigger": "EU AI Office GPAI enforcement powers ACTIVATE (UNCHANGED by Omnibus)", "prosus": "Stack Overflow (OverflowAI)", "action": "GPAI Art. 53 documentation complete; CoP signing decision", "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-office"}, {"days": 88, "date": "6 Aug 2026", "trigger": "FCA UK CP26/3 AI in payments consultation closes", "prosus": "PayU UK", "action": "Coordinated EU+UK response", "url": "https://www.google.com/search?q=FCA+UK+CP26%2F3+AI+in+payments+consultation+closes&tbm=nws"}, {"days": 114, "date": "1 Sep 2026", "trigger": "Council of Europe AI Convention enters force", "prosus": "Multi-jurisdiction Prosus AI", "action": "Cross-border AI compliance brief", "url": "https://www.google.com/search?q=Council+of+Europe+AI+Convention+enters+force&tbm=nws"}, {"days": 115, "date": "2 Sep 2026", "trigger": "Schrems-III CJEU oral hearings begin", "prosus": "All Prosus EU-US data flows", "action": "Cross-border TIA refresh pre-hearing", "url": "https://curia.europa.eu/jcms/jcms/Jo2_7045/en/"}, {"days": 187, "date": "13 Nov 2026", "trigger": "India DPDP Phase 2 — consent manager mandatory", "prosus": "PayU India, Swiggy, Meesho", "action": "SDF designation + consent-manager registration", "url": "https://www.meity.gov.in/"}, {"days": 206, "date": "2 Dec 2026", "trigger": "EU Platform Work Directive transposition", "prosus": "iFood (comp), Delivery Hero", "action": "PL das Plataformas readiness brief", "url": "https://ec.europa.eu/social/main.jsp?catId=1576"}, {"days": 206, "date": "2 Dec 2026", "trigger": "EU AI Act watermarking obligations Art. 50(2)", "prosus": "All Prosus consumer AI", "action": "Watermarking + provenance tooling decision", "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"}, {"days": 266, "date": "31 Jan 2027", "trigger": "ANPD Brazil SAR framework compliance deadline", "prosus": "iFood, PayU Brazil, Stack Overflow Brazil", "action": "Self-Assessment Report submission", "url": "https://www.gov.br/anpd/pt-br"}]};
+
+const CAT_MAP = {
+  trending:    {key:'trending',  label:'Trending',         tag:'trending'},
+  competition: {key:'comp',      label:'Competition',      tag:'comp'},
+  privacy:     {key:'privacy',   label:'Privacy & Data',   tag:'privacy'},
+  ip:          {key:'ip',        label:'IP & Brand',       tag:'ip'},
+  ai:          {key:'ai',        label:'AI & Policy',      tag:'ai'},
+  legalops:    {key:'legalops',  label:'Legal Ops',        tag:'legalops'},
+  launches:    {key:'launches',  label:'AI Launches',      tag:'launches'},
+};
+function catKey(topic){
+  const t = (topic||'').toLowerCase();
+  if (t.includes('trend'))                       return 'trending';
+  if (t.includes('competition')||t.includes('antitrust')) return 'competition';
+  if (t.includes('privacy')||t.includes('data')) return 'privacy';
+  if (t.includes('ip')||t.includes('intellect')) return 'ip';
+  if (t.includes('launch'))                      return 'launches';
+  if (t.includes('legal op')||t.includes('ops')) return 'legalops';
+  return 'ai';
+}
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+
+/* ── Jurisdiction detector ─────────────────────────────────────────
+   Maps source/title text to one of 10 buckets. Returns {key, label, flag}.
+   Order matters: more specific patterns first; multi-region (OECD, ICC, ISO)
+   falls through to GLOBAL. */
+/* Order matters: more-specific patterns first. Each rule checks SOURCE field
+   primarily (high-precision); only the EU/UK/US fallbacks scan summary text. */
+const JURIS_RULES = [
+  // ── COUNTRY-SPECIFIC (high precision — must come BEFORE EU/regional blocks) ──
+  {key:'in', label:'India',        flag:'🇮🇳', re:/\b(meity|rbi|reserve bank of india|cci|delhi high court|delhi hc|livelaw|livemint|economic times|mint|business standard|dpdp|hindi|india|indian)\b/i},
+  {key:'br', label:'Brazil',       flag:'🇧🇷', re:/\b(anpd|bcb|banco central do brasil|cade|valor econ[oô]mico|folha|brazil|brasil|brazilian|brasileiro|ministério da fazenda|drex)\b/i},
+  {key:'us', label:'US',           flag:'🇺🇸', re:/\b(ftc|sec\b|doj|federal reserve|federal trade|sr letter|sr 26|9th circuit|uspto|nist|aisi|us aisi|sdny|wsj|wall street journal|bloomberg|federal communications|hsr|character\.ai|congress)\b/i},
+  {key:'cn', label:'China',        flag:'🇨🇳', re:/\b(samr|cac\b|caixin|prc|beijing|shanghai|hunyuan|baidu|alibaba|china|chinese)\b/i},
+  {key:'sg', label:'Singapore',    flag:'🇸🇬', re:/\b(mas|monetary authority of singapore|imda|pdpc|singapore|singaporean)\b/i},
+  {key:'kr', label:'Korea',        flag:'🇰🇷', re:/\b(pipc|kcc|korea herald|korea|korean|seoul)\b/i},
+  {key:'jp', label:'Japan',        flag:'🇯🇵', re:/\b(jftc|japan|japanese|tokyo)\b/i},
+  {key:'au', label:'Australia',    flag:'🇦🇺', re:/\b(esafety|acma|oaic|australia|australian|sydney|melbourne)\b/i},
+  {key:'vn', label:'Vietnam',      flag:'🇻🇳', re:/\b(mic vietnam|vnexpress|vietnam|vietnamese|hanoi|ho chi minh)\b/i},
+  {key:'id', label:'Indonesia',    flag:'🇮🇩', re:/\b(kominfo|indonesia|indonesian|jakarta)\b/i},
+  {key:'my', label:'Malaysia',     flag:'🇲🇾', re:/\b(malaysia|malaysian|kuala lumpur|bnm)\b/i},
+  {key:'sa', label:'Saudi Arabia', flag:'🇸🇦', re:/\b(sdaia|asharq al-awsat|saudi|riyadh)\b/i},
+  {key:'eg', label:'Egypt',        flag:'🇪🇬', re:/\b(ntra|ahram|egypt|egyptian|cairo)\b/i},
+  {key:'ae', label:'UAE',          flag:'🇦🇪', re:/\b(uae|emirates|dubai|abu dhabi|tdra)\b/i},
+  {key:'za', label:'South Africa', flag:'🇿🇦', re:/\b(information regulator|popia|naspers|south africa|south african|johannesburg|daily maverick|cape town)\b/i},
+  // ── UK (precision-first before EU) ──
+  {key:'uk', label:'UK',           flag:'🇬🇧', re:/\b(cma\b|ico\b|uk aisi|ofcom|fca\b|british|united kingdom|whitehall|westminster|the times|the guardian|sky news|bbc news)\b/i},
+  // ── EU MEMBER STATES (each high-precision before the EU bloc rule) ──
+  {key:'fr', label:'France',       flag:'🇫🇷', re:/\b(cnil|autorité de la concurrence|conseil d.?état|le monde|les échos|france|french|paris|arcom)\b/i},
+  {key:'de', label:'Germany',      flag:'🇩🇪', re:/\b(bundeskartellamt|bafin|bka|handelsblatt|frankfurter|germany|german|berlin|münchen|bonn)\b/i},
+  {key:'ie', label:'Ireland',      flag:'🇮🇪', re:/\b(dpc ireland|data protection commission ireland|irish council|ireland|irish|dublin|the irish times)\b/i},
+  {key:'it', label:'Italy',        flag:'🇮🇹', re:/\b(garante|agcm|consiglio di stato|corriere|la repubblica|italy|italian|rome|milan)\b/i},
+  {key:'es', label:'Spain',        flag:'🇪🇸', re:/\b(aepd|cnmc|el país|madrid|spain|spanish|barcelona)\b/i},
+  {key:'nl', label:'Netherlands',  flag:'🇳🇱', re:/\b(autoriteit persoonsgegevens|\bap\b|acm netherlands|dutch dpa|netherlands|nederlandse|amsterdam|the hague|rotterdam|nrc|de volkskrant|dutch)\b/i},
+  {key:'be', label:'Belgium',      flag:'🇧🇪', re:/\b(\bapd\b belgium|gba\b|belgian dpa|belgium|belgian|brussels|le soir|de standaard)\b/i},
+  {key:'at', label:'Austria',      flag:'🇦🇹', re:/\b(\bdsb\b austria|austria|austrian|vienna|der standard|kronen)\b/i},
+  {key:'no', label:'Norway',       flag:'🇳🇴', re:/\b(datatilsynet.*(norway|no\b)|norway|norwegian|oslo|aftenposten)\b/i},
+  {key:'fi', label:'Finland',      flag:'🇫🇮', re:/\b(tietosuojavaltuutettu|finland|finnish|helsinki|helsingin sanomat)\b/i},
+  {key:'se', label:'Sweden',       flag:'🇸🇪', re:/\b(\bimy\b|sweden|swedish|stockholm|dagens nyheter)\b/i},
+  {key:'dk', label:'Denmark',      flag:'🇩🇰', re:/\b(datatilsynet.*(denmark|dk\b)|denmark|danish|copenhagen|politiken)\b/i},
+  {key:'pl', label:'Poland',       flag:'🇵🇱', re:/\b(uodo|rzeczpospolita|poland|polish|warsaw|gazeta wyborcza)\b/i},
+  {key:'lu', label:'Luxembourg',   flag:'🇱🇺', re:/\b(cnpd luxembourg|luxembourg|luxembourgeois|luxembourgish)\b/i},
+  {key:'cz', label:'Czech Rep',    flag:'🇨🇿', re:/\b(\búoou\b|czech|czechia|prague)\b/i},
+  {key:'pt', label:'Portugal',     flag:'🇵🇹', re:/\b(cnpd portugal|portugal|portuguese|lisbon|público|expresso)\b/i},
+  {key:'gr', label:'Greece',       flag:'🇬🇷', re:/\b(hellenic dpa|\bhdpa\b|greece|greek|athens)\b/i},
+  {key:'ro', label:'Romania',      flag:'🇷🇴', re:/\b(anspdcp|romania|romanian|bucharest)\b/i},
+  {key:'hu', label:'Hungary',      flag:'🇭🇺', re:/\b(naih|hungary|hungarian|budapest)\b/i},
+  // ── EU BLOC (last — only catches items that are EU-institution but not member-specific) ──
+  {key:'eu', label:'EU',           flag:'🇪🇺', re:/\b(european commission|european parliament|european council|\bedpb\b|edps|cjeu|court of justice of the european union|eu ai office|ai office|european patent office|\bepo\b|eu omnibus|eu ai act|european digital strategy|politico europe)\b/i},
+];
+function getJurisdiction(item){
+  const text = `${item.source||''} ${item.title||''} ${item.summary||''}`;
+  for (const r of JURIS_RULES) {
+    if (r.re.test(text)) return r;
+  }
+  return {key:'global', label:'Global', flag:'🌐'};
+}
+
+/* ── Entity rules — Prosus portfolio + key comparators ─────────────────
+   Each item is scanned against title + summary + why + source. An item
+   can match multiple entities. Filter is single-select (one entity OR
+   'all'), mirroring the jurisdiction-filter ergonomics. */
+const ENTITY_RULES = [
+  {key:'ifood',     label:'iFood',           icon:'🍔', re:/\b(ifood)\b/i},
+  {key:'olx',       label:'OLX',             icon:'🛒', re:/\b(olx)\b/i},
+  {key:'payu',      label:'PayU',            icon:'💳', re:/\b(payu|lazypay|iyzico|red dot payment)\b/i},
+  {key:'so',        label:'Stack Overflow',  icon:'💻', re:/\b(stack ?overflow|overflowai|stack exchange)\b/i},
+  {key:'swiggy',    label:'Swiggy',          icon:'🛵', re:/\b(swiggy|instamart|dineout)\b/i},
+  {key:'meesho',    label:'Meesho',          icon:'🛍️', re:/\b(meesho)\b/i},
+  {key:'tencent',   label:'Tencent',         icon:'🐧', re:/\b(tencent|hunyuan|wechat|weixin)\b/i},
+  {key:'jet',       label:'Just Eat',        icon:'🍽️', re:/\b(just ?eat|jet\.com|lieferando|thuisbezorgd)\b/i},
+  {key:'otomoto',   label:'Otomoto',         icon:'🚗', re:/\b(otomoto)\b/i},
+  {key:'emag',      label:'eMAG',            icon:'📦', re:/\b(emag)\b/i},
+  {key:'lacentrale',label:'La Centrale',     icon:'🚙', re:/\b(la ?centrale|lacentrale\.fr)\b/i},
+  {key:'naspers',   label:'Naspers',         icon:'🏢', re:/\b(naspers)\b/i},
+  {key:'prosus',    label:'Prosus',          icon:'🌐', re:/\bprosus\b/i},
+];
+function getEntities(item){
+  const text = `${item.title||''} ${item.summary||''} ${item.why||''} ${item.source||''}`;
+  const hits = [];
+  for (const r of ENTITY_RULES) {
+    if (r.re.test(text)) hits.push(r.key);
+  }
+  return hits;
+}
+
+let allItems = DASHBOARD_DATA.items || [];
+
+/* ── Defensive pre-classification ─────────────────────────────────────
+   Stamp a stable `_cat` (chip tag) on each item at load so the chip
+   filter no longer depends on re-deriving catKey at filter-time. This
+   makes the Privacy & Data chip robust to topic-string drift. */
+allItems = allItems.map(it => {
+  const ck = catKey(it.topic);
+  const tag = (CAT_MAP[ck] && CAT_MAP[ck].tag) || ck;
+  return Object.assign({}, it, { _cat: tag, _entities: getEntities(it) });
+});
+
+/* ── Filter state (persisted) ────────────────────────────────────── */
+const FILTER_KEY = 'cdm_filter_state_v3';   /* bumped — adds entity filter dimension */
+let filter = {
+  cat: 'all',          // topic chip
+  juris: 'all',        // jurisdiction chip
+  entity: 'all',       // entity chip (Prosus portfolio company)
+  range: 'week',       // today | 24h | week | 30d | all
+  q: '',               // free-text search
+};
+try {
+  const saved = JSON.parse(localStorage.getItem(FILTER_KEY) || '{}');
+  Object.assign(filter, saved);
+} catch (_) {}
+function saveFilter(){
+  try { localStorage.setItem(FILTER_KEY, JSON.stringify(filter)); } catch(_){}
+}
+
+let curCat = filter.cat;        // back-compat for old references
+let kbdIdx = -1;                  // currently-focused card index for j/k nav
+
+function setActive(cat){
+  filter.cat = curCat = cat;
+  document.querySelectorAll(".chip").forEach(t=>t.classList.toggle('active', t.dataset.cat===cat));
+  saveFilter();
+  renderArticles();
+}
+function setJuris(j){
+  filter.juris = j;
+  document.querySelectorAll('.jchip').forEach(c=>c.classList.toggle('active', c.dataset.juris===j));
+  saveFilter();
+  renderArticles();
+}
+function setEntity(e){
+  filter.entity = e;
+  document.querySelectorAll('.echip').forEach(c=>c.classList.toggle('active', c.dataset.entity===e));
+  saveFilter();
+  renderArticles();
+}
+function setRange(r){
+  filter.range = r;
+  document.querySelectorAll('.rchip').forEach(c=>c.classList.toggle('active', c.dataset.range===r));
+  saveFilter();
+  renderArticles();
+}
+function setSearch(q){
+  filter.q = (q||'').trim();
+  saveFilter();
+  renderArticles();
+}
+function clearAllFilters(){
+  filter = {cat:'all', juris:'all', entity:'all', range:'week', q:''};
+  saveFilter();
+  document.querySelectorAll('.chip').forEach(t=>t.classList.toggle('active', t.dataset.cat==='all'));
+  document.querySelectorAll('.jchip').forEach(c=>c.classList.toggle('active', c.dataset.juris==='all'));
+  document.querySelectorAll('.echip').forEach(c=>c.classList.toggle('active', c.dataset.entity==='all'));
+  document.querySelectorAll('.rchip').forEach(c=>c.classList.toggle('active', c.dataset.range==='week'));
+  const si = document.getElementById('searchInput'); if (si) si.value = '';
+  renderArticles();
+  toast('Filters cleared');
+}
+
+/* ── Toast notifications ─────────────────────────────────────────── */
+function toast(msg, kind){
+  kind = kind || 'info';
+  let stack = document.getElementById('toastStack');
+  if (!stack){
+    stack = document.createElement('div');
+    stack.id = 'toastStack';
+    stack.className = 'toast-stack';
+    document.body.appendChild(stack);
+  }
+  const t = document.createElement('div');
+  t.className = 'toast toast-' + kind;
+  t.textContent = msg;
+  stack.appendChild(t);
+  requestAnimationFrame(()=> t.classList.add('show'));
+  setTimeout(()=> { t.classList.remove('show'); setTimeout(()=> t.remove(), 250); }, 2400);
+}
+
+function articleHTML(item, opts){
+  opts = opts || {};
+  const ck = catKey(item.topic);
+  const tagClass = CAT_MAP[ck]?.tag || 'ai';
+  const tagLabel = CAT_MAP[ck]?.label || (item.topic||'News');
+  const imp = (item.impact||'medium').toLowerCase();
+  const riskCls = imp==='high'?'high':(imp==='medium-high'||imp==='medium')?'med':'low';
+  const riskLbl = imp==='high'?'High risk':imp==='medium-high'?'Med-high':imp==='medium'?'Medium':'Low';
+  const rank = item.rank ? `<span class="rank">#${item.rank}</span>` : '';
+  const url = item.url || '';
+  const src = esc(item.source||'').replace(/·/g,'·');
+  const juris = getJurisdiction(item);
+  const jurisChip = `<span class="juris juris-${juris.key}" title="Jurisdiction: ${esc(juris.label)}"><span class="juris-flag">${juris.flag}</span>${esc(juris.label)}</span>`;
+
+  /* Confidence score (per research-foundations §2 + §7).
+     Composite of: source-tier prior + corroborating-source count + grounding heuristic +
+     primary-document URL flag + caveat presence.  In future: replace with backend score. */
+  const sourcesField = (item.source||'').toLowerCase();
+  const tierPrior = /\b(cnil|dpc|edpb|garante|aepd|bundeskartellamt|ec |ftc|sec|doj|cjeu|rbi|samr|anpd|cade|cci|meity|mas|nist|epo|uspto|cma|ico|pipc)\b/.test(sourcesField) ? 1.0
+                  : /\b(reuters|bloomberg|wsj|politico|financial times|le monde|handelsblatt|ipwatchdog|law360|caixin)\b/.test(sourcesField) ? 0.8
+                  : /\b(internal|techcrunch|the verge)\b/.test(sourcesField) ? 0.6 : 0.7;
+  const corroborated = Math.min(3, (sourcesField.match(/·/g) || []).length + 1);
+  const hasPrimaryUrl = !!(item.url && !item.url.includes('google.com/search'));
+  const hasCaveat = !!(item.caveats || '').match(/\bUNVERIFIED|STALE|DATE CLAMPED\b/i);
+  const conf = Math.max(0, Math.min(1,
+      tierPrior * 0.45
+    + (corroborated / 3) * 0.25
+    + (hasPrimaryUrl ? 1 : 0.4) * 0.20
+    + (hasCaveat ? 0.2 : 1.0) * 0.10
+  ));
+  const confBand = conf >= 0.80 ? 'high' : conf >= 0.60 ? 'good' : conf >= 0.40 ? 'tent' : 'low';
+  const confLabel = conf >= 0.80 ? 'High confidence' : conf >= 0.60 ? 'Good' : conf >= 0.40 ? 'Tentative' : 'Low';
+  const confChip = `<span class="conf conf-${confBand}" title="Confidence: ${(conf*100).toFixed(0)}% — ${confLabel}"><span class="conf-bar"><i style="width:${(conf*100).toFixed(0)}%"></i></span><span class="conf-n">${(conf*100).toFixed(0)}</span></span>`;
+
+  const itemId = (item.title||'').substring(0,80);
+
+  function rateBarHTML(variant){
+    const v = variant || 'light';
+    return `
+      <div class="rate-bar rate-${v}" data-item-id="${esc(itemId)}" onclick="event.stopPropagation()">
+        <span class="rate-label">Rate</span>
+        <button class="rate-btn up"   title="Useful — promote this topic"   onclick="rateItem(this,'up')"  >▲</button>
+        <button class="rate-btn down" title="Not useful — demote this topic" onclick="rateItem(this,'down')">▼</button>
+        <button class="rate-btn flag" title="Flag for follow-up"             onclick="rateItem(this,'flag')">★</button>
+        <span class="rate-meta"></span>
+      </div>`;
+  }
+
+  if (opts.hero){
+    return `
+    <article class="hero-card" data-url="${esc(url)}">
+      <div class="hero-meta">
+        <span class="dot"></span>
+        <span class="src">${src}</span>
+        <span class="juris juris-${juris.key} juris-dark" title="Jurisdiction: ${esc(juris.label)}"><span class="juris-flag">${juris.flag}</span>${esc(juris.label)}</span>
+        <span>${esc(item.date||'')}</span>
+        <span class="risk ${riskCls}" style="margin-left:auto;background:rgba(255,255,255,0.10);border-color:rgba(255,255,255,0.16);color:#fff"><span class="rdot"></span>${riskLbl}</span>
+      </div>
+      <h3>${esc(item.title)}</h3>
+      <p class="lede">${esc(item.summary)}</p>
+      ${item.why ? `<div class="hero-relevance"><div class="lab">Why it matters</div><p>${esc(item.why)}</p></div>` : ''}
+      <div class="hero-foot">
+        ${url ? `<div class="read">Read source <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>` : '<span></span>'}
+        ${rateBarHTML('dark')}
+      </div>
+    </article>`;
+  }
+
+  const showWhy = !!opts.detailed && item.why;
+  const showCaveat = !!opts.detailed && item.caveats;
+  const cls = ['article', 'cat-'+tagClass, (showWhy||showCaveat)?'detailed':'', opts.span2?'span-2':''].filter(Boolean).join(' ');
+  return `
+    <article class="${cls}" data-url="${esc(url)}">
+      <div class="a-meta">
+        <span class="tag ${tagClass}">${esc(tagLabel)}</span>
+        ${jurisChip}
+        <span>${esc(item.date||'')}</span>
+        ${confChip}
+        <span class="risk ${riskCls}"><span class="rdot"></span>${riskLbl}</span>
+      </div>
+      <h4><span class="underlined">${esc(item.title)}</span></h4>
+      <p class="body">${esc(item.summary)}</p>
+      ${showWhy ? `<div class="why"><div class="lab">Why it matters</div>${esc(item.why)}</div>` : ''}
+      ${showCaveat ? `<div class="caveat"><div class="lab">Caveats</div>${esc(item.caveats)}</div>` : ''}
+      ${item.also_covered_in && item.also_covered_in.length ? `<div class="also-covered" onclick="event.stopPropagation()"><span class="also-label">Also covered:</span> ${item.also_covered_in.slice(0,4).map(s => s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc((s.source||'').split('·')[0].trim() || 'source')}</a>` : `<span>${esc((s.source||'').split('·')[0].trim() || 'source')}</span>`).join(' · ')}</div>` : ''}
+      <div class="a-foot">
+        <span class="src-chain"><span class="arr">↗</span>${src}</span>
+        ${rank}
+        <div class="actions" data-item-id="${esc(itemId)}" onclick="event.stopPropagation()">
+          <button class="action-btn act-draft"  title="Draft response memo"   onclick="actionItem(this,'draft', \`${esc(item.title)}\`)">✎ Draft</button>
+          <button class="action-btn act-assign" title="Assign to a lawyer"     onclick="actionItem(this,'assign')">→ Assign</button>
+          <button class="action-btn act-done"   title="Mark actioned"          onclick="actionItem(this,'done')">✓ Done</button>
+        </div>
+        ${rateBarHTML('light')}
+      </div>
+    </article>`;
+}
+
+/* ── Rating system — localStorage backed; ready for the future POST /api/rate ── */
+function rateItem(btn, kind){
+  const bar = btn.closest('.rate-bar');
+  if (!bar) return;
+  const itemId = bar.dataset.itemId || '';
+  // Toggle visual state
+  bar.querySelectorAll('.rate-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  // Persist
+  const ratings = JSON.parse(localStorage.getItem('cdm_ratings') || '{}');
+  ratings[itemId] = { kind, at: new Date().toISOString() };
+  localStorage.setItem('cdm_ratings', JSON.stringify(ratings));
+  const meta = bar.querySelector('.rate-meta');
+  if (meta) meta.textContent = `you rated: ${kind}`;
+  // Optimistic remote rating (if backend is up). Silently no-ops otherwise.
+  try {
+    const apiBase = location.protocol === 'file:' ? '' : '';
+    if (apiBase !== null) {
+      fetch(`${apiBase}/api/rate`, {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ item_id: itemId, kind })
+      }).catch(()=>{}); // ignore offline
+  // Also notify Netlify Forms (production hosting). No-op when not deployed.
+  try {
+    const fd = new URLSearchParams();
+    fd.append('form-name', 'item-rating');
+    // page identifier removed — fully anonymous
+    fd.append('item_id', itemId);
+    fd.append('rating', kind);
+    fd.append('at', new Date().toISOString());
+    fetch('/', { method:'POST',
+                 headers:{'Content-Type':'application/x-www-form-urlencoded'},
+                 body: fd.toString() }).catch(()=>{});
+  } catch(e){}
+    }
+  } catch(_) { /* noop */ }
+}
+/* ── Generic modal ── */
+function openModal({title, bodyHTML, footHTML}){
+  const overlay = document.createElement('div');
+  overlay.className = 'modal-overlay';
+  overlay.innerHTML = `
+    <div class="modal" role="dialog" aria-modal="true">
+      <div class="modal-head">
+        <h3>${esc(title)}</h3>
+        <button class="modal-close" type="button" aria-label="Close">×</button>
+      </div>
+      <div class="modal-body">${bodyHTML}</div>
+      ${footHTML ? `<div class="modal-foot">${footHTML}</div>` : ''}
+    </div>`;
+  function close(){ overlay.remove(); document.removeEventListener('keydown', onKey); }
+  function onKey(e){ if (e.key==='Escape') close(); }
+  overlay.querySelector('.modal-close').addEventListener('click', close);
+  overlay.addEventListener('click', (e)=> { if (e.target === overlay) close(); });
+  document.addEventListener('keydown', onKey);
+  document.body.appendChild(overlay);
+  return { overlay, close };
+}
+
+/* ── Action loop: Draft / Assign / Done ── */
+const ACTIONS_KEY = 'cdm_actions_v1';
+function getActions(){ try { return JSON.parse(localStorage.getItem(ACTIONS_KEY) || '{}'); } catch(_){ return {}; } }
+function saveActions(o){ try { localStorage.setItem(ACTIONS_KEY, JSON.stringify(o)); } catch(_){} }
+
+function actionItem(btn, kind, titleArg){
+  const bar = btn.closest('.actions');
+  const itemId = bar.dataset.itemId || '';
+  const actions = getActions();
+  const cur = actions[itemId] || {};
+  if (kind === 'draft'){
+    const item = allItems.find(i => (i.title||'').substring(0,80) === itemId) || {title:titleArg||'(item)', summary:'', why:'', source:'', date:''};
+    const draftSeed =
+`# Draft response · ${item.title || titleArg}
+
+Source: ${item.source || ''}
+Date: ${item.date || ''}
+
+## Summary
+${item.summary || ''}
+
+## Why it matters for Prosus
+${item.why || ''}
+
+## Proposed action
+[Outline the proposed response — e.g. consultation comment, internal memo, board brief]
+
+## Risk codes
+${(item.why||'').match(/[A-Z]-\d+/g)?.join(', ') || '—'}
+
+## Owner / Due
+Owner: __________
+Due:   __________
+
+— Drafted ${new Date().toLocaleString()} by Klimentina (via Digital Monitor)`;
+    const { overlay, close } = openModal({
+      title: 'Draft response',
+      bodyHTML: `<textarea id="draftText">${esc(draftSeed)}</textarea>`,
+      footHTML: `<button class="modal-btn" type="button" id="draftCopy">Copy to clipboard</button><button class="modal-btn primary" type="button" id="draftSave">Save draft</button>`
+    });
+    overlay.querySelector('#draftCopy').addEventListener('click', async () => {
+      const text = overlay.querySelector('#draftText').value;
+      try { await navigator.clipboard.writeText(text); toast('Draft copied to clipboard', 'success'); }
+      catch(_){ toast('Copy failed — selecting text', 'warn'); overlay.querySelector('#draftText').select(); }
+    });
+    overlay.querySelector('#draftSave').addEventListener('click', () => {
+      cur.draft = { text: overlay.querySelector('#draftText').value, ts: new Date().toISOString() };
+      actions[itemId] = cur; saveActions(actions);
+      btn.classList.add('active'); close();
+      toast('Draft saved locally', 'success');
+    });
+  }
+  else if (kind === 'assign'){
+    const prev = cur.assign?.to || '';
+    const { overlay, close } = openModal({
+      title: 'Assign item',
+      bodyHTML: `
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <label style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-3)">Assignee</label>
+          <input type="text" id="assignTo" placeholder="e.g. Klimentina / counsel-FR / IP team" value="${esc(prev)}" />
+          <label style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-3)">Due date</label>
+          <input type="text" id="assignDue" placeholder="e.g. 22 May 2026" value="${esc(cur.assign?.due || '')}" />
+          <label style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-3)">Note</label>
+          <textarea id="assignNote" style="min-height:80px">${esc(cur.assign?.note || '')}</textarea>
+        </div>`,
+      footHTML: `<button class="modal-btn primary" type="button" id="assignSave">Save assignment</button>`
+    });
+    overlay.querySelector('#assignSave').addEventListener('click', () => {
+      cur.assign = {
+        to:  overlay.querySelector('#assignTo').value.trim(),
+        due: overlay.querySelector('#assignDue').value.trim(),
+        note:overlay.querySelector('#assignNote').value.trim(),
+        ts:  new Date().toISOString(),
+      };
+      actions[itemId] = cur; saveActions(actions);
+      btn.classList.add('active'); close();
+      toast(`Assigned to ${cur.assign.to || 'unspecified'}`, 'success');
+    });
+  }
+  else if (kind === 'done'){
+    cur.done = { ts: new Date().toISOString() };
+    actions[itemId] = cur; saveActions(actions);
+    btn.classList.add('active');
+    toast('Item marked actioned', 'success');
+  }
+}
+
+function applySavedActions(){
+  const actions = getActions();
+  document.querySelectorAll('.actions').forEach(bar => {
+    const id = bar.dataset.itemId || '';
+    const a = actions[id]; if (!a) return;
+    if (a.draft)  bar.querySelector('.act-draft')?.classList.add('active');
+    if (a.assign) bar.querySelector('.act-assign')?.classList.add('active');
+    if (a.done)   bar.querySelector('.act-done')?.classList.add('active');
+  });
+}
+
+function applySavedRatings(){
+  let ratings = {};
+  try { ratings = JSON.parse(localStorage.getItem('cdm_ratings') || '{}'); } catch(_) {}
+  document.querySelectorAll('.rate-bar').forEach(bar => {
+    const id = bar.dataset.itemId || '';
+    const r = ratings[id];
+    if (!r) return;
+    bar.querySelectorAll('.rate-btn').forEach(b => {
+      if (b.classList.contains(r.kind)) b.classList.add('active');
+    });
+    const meta = bar.querySelector('.rate-meta');
+    if (meta) meta.textContent = `you rated: ${r.kind}`;
+  });
+}
+
+function renderArticles(){
+  // Date-range cutoff
+  const today = new Date(); today.setHours(0,0,0,0);
+  const rangeDays = filter.range==='today' ? 0 : filter.range==='24h' ? 1 : filter.range==='week' ? 7 : filter.range==='30d' ? 30 : Infinity;
+  const cutoff = +today - rangeDays*86400000;
+
+  // Free-text query (lowercased)
+  const q = (filter.q||'').toLowerCase();
+
+  // Helper: apply each filter dimension, return surviving items
+  function applyFilters(catOnly){
+    return allItems.filter(i => {
+      // Topic — prefer pre-stamped _cat, fall back to live derivation
+      if (filter.cat !== 'all'){
+        const tag = i._cat || (function(){ const ck=catKey(i.topic); return (CAT_MAP[ck]&&CAT_MAP[ck].tag)||ck; })();
+        if (tag !== filter.cat) return false;
+      }
+      if (catOnly) return true;
+      // Jurisdiction
+      if (filter.juris !== 'all'){
+        if (getJurisdiction(i).key !== filter.juris) return false;
+      }
+      // Entity
+      if (filter.entity !== 'all'){
+        const ents = i._entities || getEntities(i);
+        if (!ents.includes(filter.entity)) return false;
+      }
+      // Date range
+      if (rangeDays !== Infinity){
+        const m = String(i.date||'').match(/(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})/);
+        if (m){
+          const MO = {Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
+          const mo = MO[m[2].slice(0,3)];
+          const d = new Date(+m[3], mo, +m[1]); d.setHours(0,0,0,0);
+          if (+d < cutoff) return false;
+        }
+      }
+      return true;
+    });
+  }
+
+  const items = allItems.filter(i => {
+    // Topic — prefer pre-stamped _cat
+    if (filter.cat !== 'all'){
+      const tag = i._cat || (function(){ const ck=catKey(i.topic); return (CAT_MAP[ck]&&CAT_MAP[ck].tag)||ck; })();
+      if (tag !== filter.cat) return false;
+    }
+    // Jurisdiction
+    if (filter.juris !== 'all'){
+      if (getJurisdiction(i).key !== filter.juris) return false;
+    }
+    // Entity
+    if (filter.entity !== 'all'){
+      const ents = i._entities || getEntities(i);
+      if (!ents.includes(filter.entity)) return false;
+    }
+    // Date range
+    if (rangeDays !== Infinity){
+      const m = String(i.date||'').match(/(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})/);
+      if (m){
+        const MO = {Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
+        const mo = MO[m[2].slice(0,3)];
+        const d = new Date(+m[3], mo, +m[1]); d.setHours(0,0,0,0);
+        if (+d < cutoff) return false;
+      }
+    }
+    // Free-text
+    if (q){
+      const hay = ((i.title||'') + ' ' + (i.summary||'') + ' ' + (i.source||'') + ' ' + (i.why||'')).toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+
+  // Sort: today first, then by impact, then by rank
+  const MONTHS = {Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
+  function parseDate(s){
+    const m = String(s||'').match(/(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})/);
+    if (!m) return 0;
+    const mo = MONTHS[m[2].slice(0,3)]; if (mo===undefined) return 0;
+    return +new Date(+m[3], mo, +m[1]);
+  }
+  const IMP = {high:3,'medium-high':2,medium:1};
+  const sorted = items.slice().sort((a,b)=>{
+    const da = parseDate(a.date), db = parseDate(b.date);
+    if (db !== da) return db - da;
+    return (IMP[b.impact]||0) - (IMP[a.impact]||0);
+  });
+
+  document.getElementById('feedNum').textContent = sorted.length+' items';
+  const feedTitle = document.getElementById('feedTitle');
+  feedTitle.firstChild.textContent = curCat==='all' ? "Today's brief " : (CAT_MAP[Object.keys(CAT_MAP).find(k=>CAT_MAP[k].tag===curCat)||curCat]?.label || curCat)+' ';
+
+  const list = document.getElementById('articleList');
+  if (!sorted.length){
+    // Auto-broaden: if a topic chip is active and there ARE items in that topic
+    // (just filtered out by jurisdiction or date-range), automatically relax
+    // the secondary filters and re-render. Prevents an empty Privacy lane.
+    if (filter.cat !== 'all'){
+      const topicOnly = applyFilters(true);
+      if (topicOnly.length && (filter.juris !== 'all' || filter.entity !== 'all' || filter.range !== 'all')){
+        const prevJuris = filter.juris, prevEntity = filter.entity, prevRange = filter.range;
+        filter.juris = 'all'; filter.entity = 'all'; filter.range = 'all';
+        saveFilter();
+        document.querySelectorAll('.jchip').forEach(c=>c.classList.toggle('active', c.dataset.juris==='all'));
+        document.querySelectorAll('.echip').forEach(c=>c.classList.toggle('active', c.dataset.entity==='all'));
+        document.querySelectorAll('.rchip').forEach(c=>c.classList.toggle('active', c.dataset.range==='all'));
+        const reason = prevJuris!=='all' ? 'jurisdiction' : prevEntity!=='all' ? 'entity' : 'date';
+        toast(`Showing all ${topicOnly.length} items in this topic (was hidden by ${reason} filter)`);
+        renderArticles();
+        return;
+      }
+    }
+    list.innerHTML = `<div style="grid-column:1/-1;padding:60px 20px;text-align:center;background:#fff;border-radius:16px;border:1px solid var(--line)"><div style="font-family:'Bricolage Grotesque',sans-serif;font-size:22px;color:var(--p-700);margin-bottom:8px">Nothing in this lane</div><div style="font-size:13px;color:var(--ink-3)">Try All Coverage or a different category.</div></div>`;
+    return;
+  }
+
+  // Hero = top item, detailed = next 3, rest = compact
+  const hero = sorted[0];
+  const detailed = sorted.slice(1,4);
+  const compact = sorted.slice(4);
+
+  let html = articleHTML(hero, {hero:true});
+  detailed.forEach((it, idx) => {
+    html += articleHTML(it, {detailed:true, span2: idx===0});
+  });
+  compact.forEach(it => {
+    html += articleHTML(it, {});
+  });
+  list.innerHTML = html;
+
+  // Wire click handlers — open article URL, but skip clicks inside the rate-bar
+  list.querySelectorAll('article[data-url]').forEach(el => {
+    const url = el.getAttribute('data-url');
+    if (!url) return;
+    el.addEventListener('click', (ev) => {
+      if (ev.target.closest('a') || ev.target.closest('.rate-bar')) return;
+      window.open(url, '_blank', 'noopener,noreferrer');
+    });
+  });
+
+  // Re-paint any previously saved ratings + actions (localStorage)
+  applySavedRatings();
+  applySavedActions();
+}
+
+function renderSignals(){
+  const todayKey = (function(){
+    const d = new Date();
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    return d.getDate()+' '+months[d.getMonth()];
+  })();
+  const todayN = allItems.filter(it => (it.date||'').includes(todayKey)).length;
+  const highN  = allItems.filter(it => (it.impact||'').toLowerCase()==='high').length;
+  const dls = DASHBOARD_DATA.deadlines || [];
+  const dlSoon = dls.filter(d => (d.days||0) >= 0 && (d.days||0) <= 30).length;
+  document.getElementById('sigToday').textContent = todayN;
+  document.getElementById('sigHigh').textContent = highN;
+  (document.getElementById('sigDeadlines')||{}).textContent = dlSoon;
+}
+
+function renderFlash(){
+  const todayKey = (function(){
+    const d = new Date();
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    return d.getDate()+' '+months[d.getMonth()];
+  })();
+  // Pull today's high-impact + medium-high so the ticker is never empty
+  let picks = allItems.filter(it => (it.date||'').includes(todayKey) && (it.impact||'').toLowerCase()==='high');
+  if (picks.length < 6) {
+    picks = picks.concat(allItems.filter(it => (it.date||'').includes(todayKey) && (it.impact||'').toLowerCase()==='medium-high'));
+  }
+  if (picks.length < 6) {
+    picks = picks.concat(allItems.filter(it => (it.impact||'').toLowerCase()==='high'));
+  }
+  picks = picks.slice(0, 10);
+
+  const el = document.getElementById('flashList');
+  if (!picks.length){
+    el.textContent = 'No high-impact items dated today yet — full feed below.';
+    return;
+  }
+  const items = picks.map(it => {
+    const shortTitle = (it.title||'').replace(/—.*$/,'').trim();
+    return it.url
+      ? `<span><a href="${esc(it.url)}" target="_blank" rel="noopener noreferrer">${esc(shortTitle)}</a></span>`
+      : `<span>${esc(shortTitle)}</span>`;
+  });
+  // Duplicate the list so the CSS translateX(-50%) creates a seamless loop
+  el.innerHTML = items.concat(items).join('');
+}
+
+function renderDeadlines(){
+  const dls = (DASHBOARD_DATA.deadlines||[]).slice().sort((a,b)=>(a.days||0)-(b.days||0));
+  const body = document.getElementById('dlBody');
+  if (!body) return; // panel removed — nothing to render
+  (document.getElementById('dlCount')||document.createElement('span')).textContent = dls.length;
+  if (!dls.length){ body.innerHTML = '<div style="padding:18px;color:var(--ink-3);font-size:13px">No deadlines tracked.</div>'; return; }
+
+  // Show ALL deadlines and make the panel body scrollable when there are >5.
+  body.classList.toggle('scrollable', dls.length > 5);
+  body.innerHTML = dls.map(d => {
+    const cls = d.days<=14 ? '' : (d.days<=60 ? 'med' : 'future');
+    const label = d.days<=0 ? 'PAST' : (d.days===1 ? '1' : d.days);
+    const unit = d.days<=0 ? '' : 'DAYS';
+    const url = d.url || '';
+    const inner = `
+      <div class="days ${cls}">${label}<small>${unit||(d.date||'')}</small></div>
+      <div class="trigger">${esc(d.trigger||'')}<small>${esc(d.prosus||'')}</small></div>
+      ${url ? `<span class="dl-arrow" aria-hidden="true">↗</span>` : ''}`;
+    return url
+      ? `<a class="deadline-row deadline-link" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${inner}</a>`
+      : `<div class="deadline-row">${inner}</div>`;
+  }).join('');
+}
+
+function renderNavCounts(){
+  const counts = {all: allItems.length};
+  for (const it of allItems){
+    const tag = it._cat || (function(){ const k = catKey(it.topic); return CAT_MAP[k]?.tag || k; })();
+    counts[tag] = (counts[tag]||0) + 1;
+  }
+  for (const tab of document.querySelectorAll(".chip")){
+    const c = tab.dataset.cat;
+    const el = document.getElementById('navCt-'+c);
+    if (el) el.textContent = counts[c]||0;
+  }
+}
+
+function renderTop(){
+  const d = new Date();
+  const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  document.getElementById('topDate').textContent = days[d.getDay()]+', '+d.getDate()+' '+months[d.getMonth()]+' '+d.getFullYear();
+  const log = DASHBOARD_DATA.log||{};
+  const setIf = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
+
+  setIf('topSources',  log.sources_swept ?? '—');
+  setIf('topSelected', log.selected ?? allItems.length);
+  setIf('feedUpdated', DASHBOARD_DATA.refreshed_at || '—');
+  setIf('footerUpdated', 'Last refresh: '+(DASHBOARD_DATA.refreshed_at||'—'));
+
+  // ── stats strip with count-up animation ───────────────────────
+  const topicCount = log.topics
+    ? String(log.topics).split(/[·,]+/).filter(s => s.trim()).length
+    : new Set(allItems.map(it => (it.topic||'').trim()).filter(Boolean)).size;
+  const targets = {
+    sSourcesSwept: log.sources_swept ?? null,
+    sConsidered:   log.considered    ?? null,
+    sSelected:     log.selected      ?? allItems.length,
+    sRejected:     log.rejected      ?? null,
+    sTopics:       topicCount,
+  };
+  function animateCount(id, target){
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (target == null || isNaN(+target)) { el.textContent = '—'; return; }
+    const start = performance.now();
+    const dur = 1200;
+    const ease = t => 1 - Math.pow(1 - t, 3);
+    function tick(now){
+      const t = Math.min(1, (now - start) / dur);
+      el.textContent = Math.round(target * ease(t)).toLocaleString();
+      if (t < 1) requestAnimationFrame(tick);
+      else el.textContent = (+target).toLocaleString();
+    }
+    requestAnimationFrame(tick);
+  }
+  Object.entries(targets).forEach(([id, v]) => animateCount(id, v));
+
+  const note = `All ${log.sources_swept||'—'} sources are reviewed every refresh — Tier 0 internal feeds, Tier 1 regulators & primary press, Tier 1.5 trackers & aggregators, Tier 1.6 AI safety institutes & foundation labs & standards bodies, plus jurisdiction-specific sources for every active Prosus market. From these we ingested ${log.considered||'—'} candidate items, of which ${log.selected||allItems.length} passed the Verifier gate.`;
+  setIf('statsNote', note);
+
+  const compactNote = `${log.sources_swept||'—'} sources reviewed · ${log.considered||'—'} candidates ingested · ${log.selected||allItems.length} passed Verifier · threshold: ${log.selection_threshold||'high + medium-high + medium'}`;
+  setIf('sweepStats', compactNote);
+}
+
+document.querySelectorAll(".chip").forEach(t => t.addEventListener('click', ()=>setActive(t.dataset.cat)));
+
+// Pipeline-details popover toggle
+(function(){
+  const btn = document.getElementById('statsInfoBtn');
+  const pop = document.getElementById('statsPop');
+  const close = document.getElementById('statsPopClose');
+  if (!btn || !pop) return;
+  btn.addEventListener('click', () => {
+    pop.hidden = !pop.hidden;
+  });
+  if (close) close.addEventListener('click', () => { pop.hidden = true; });
+})();
+/* ── Jurisdiction filter chips — auto-populated from items ── */
+function buildJurisChips(){
+  const list = document.getElementById('jchipList');
+  if (!list) return;
+  const counts = {};
+  for (const it of allItems){
+    const j = getJurisdiction(it);
+    counts[j.key] = counts[j.key] || {label:j.label, flag:j.flag, n:0};
+    counts[j.key].n++;
+  }
+  const all = `<button class="jchip ${filter.juris==='all'?'active':''}" data-juris="all"><span class="jchip-flag">🌐</span>All <span style="opacity:.6">${allItems.length}</span></button>`;
+  const rest = Object.entries(counts)
+    .sort((a,b)=> b[1].n - a[1].n)
+    .map(([k,v]) => `<button class="jchip ${filter.juris===k?'active':''}" data-juris="${k}"><span class="jchip-flag">${v.flag}</span>${v.label} <span style="opacity:.6">${v.n}</span></button>`)
+    .join('');
+  list.innerHTML = all + rest;
+  list.querySelectorAll('.jchip').forEach(c => c.addEventListener('click', () => setJuris(c.dataset.juris)));
+}
+
+/* ── Entity filter chips — auto-populated from items (Prosus portfolio + key comparators) ── */
+function buildEntityChips(){
+  const list = document.getElementById('echipList');
+  if (!list) return;
+  const counts = {};
+  for (const it of allItems){
+    const ents = it._entities || getEntities(it);
+    for (const k of ents){
+      counts[k] = (counts[k]||0) + 1;
+    }
+  }
+  // Total = items that mention at least one entity
+  const withAny = allItems.filter(it => (it._entities||getEntities(it)).length).length;
+  const all = `<button class="echip ${filter.entity==='all'?'active':''}" data-entity="all"><span class="echip-icon">🌐</span>All <span style="opacity:.6">${withAny}</span></button>`;
+  const rest = ENTITY_RULES
+    .filter(r => counts[r.key])                          // hide entities with no items
+    .sort((a,b) => (counts[b.key]||0) - (counts[a.key]||0))
+    .map(r => `<button class="echip ${filter.entity===r.key?'active':''}" data-entity="${r.key}"><span class="echip-icon">${r.icon}</span>${r.label} <span style="opacity:.6">${counts[r.key]}</span></button>`)
+    .join('');
+  list.innerHTML = all + rest;
+  list.querySelectorAll('.echip').forEach(c => c.addEventListener('click', () => setEntity(c.dataset.entity)));
+}
+document.querySelectorAll('.rchip').forEach(c => {
+  c.classList.toggle('active', c.dataset.range === filter.range);
+  c.addEventListener('click', () => setRange(c.dataset.range));
+});
+const clearBtn = document.getElementById('clearFiltersBtn');
+if (clearBtn) clearBtn.addEventListener('click', clearAllFilters);
+
+/* ── ⌘K search ── */
+(function(){
+  const cmdk = document.querySelector('.cmdk');
+  if (!cmdk) return;
+
+  // Replace the cmdk button placeholder with a real input on click / shortcut
+  function openSearch(){
+    if (cmdk.classList.contains('searching')) {
+      cmdk.querySelector('input')?.focus();
+      return;
+    }
+    cmdk.classList.add('searching');
+    cmdk.innerHTML = `
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="searchInput" type="text" placeholder="Search items, sources, deadlines" value="${(filter.q||'').replace(/"/g,'&quot;')}" autocomplete="off" />
+      <kbd class="cmdk-key" id="searchEsc">ESC</kbd>`;
+    const inp = document.getElementById('searchInput');
+    inp.focus();
+    inp.addEventListener('input', (e)=> setSearch(e.target.value));
+    inp.addEventListener('keydown', (e)=> {
+      if (e.key === 'Escape'){ inp.value=''; setSearch(''); closeSearch(); }
+    });
+    document.getElementById('searchEsc').addEventListener('click', () => { setSearch(''); closeSearch(); });
+  }
+  function closeSearch(){
+    cmdk.classList.remove('searching');
+    cmdk.innerHTML = `
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <span class="cmdk-placeholder">Search items, sources, deadlines</span>
+      <kbd class="cmdk-key">⌘K</kbd>`;
+    cmdk.addEventListener('click', openSearch, {once:true});
+  }
+  cmdk.addEventListener('click', openSearch);
+
+  // Global shortcut
+  document.addEventListener('keydown', (e)=> {
+    const tag = (e.target.tagName||'').toLowerCase();
+    const inField = tag === 'input' || tag === 'textarea';
+    if ((e.metaKey || e.ctrlKey) && (e.key === 'k' || e.key === 'K')){ e.preventDefault(); openSearch(); }
+    if (!inField && e.key === '/'){ e.preventDefault(); openSearch(); }
+  });
+})();
+
+/* ── j / k keyboard navigation between cards ── */
+(function(){
+  function focusedList(){ return Array.from(document.querySelectorAll('#articleList > article')); }
+  function move(delta){
+    const list = focusedList();
+    if (!list.length) return;
+    kbdIdx = Math.max(0, Math.min(list.length - 1, kbdIdx + delta));
+    list.forEach((el, i) => el.classList.toggle('kbd-focus', i === kbdIdx));
+    list[kbdIdx].scrollIntoView({block:'center', behavior:'smooth'});
+  }
+  document.addEventListener('keydown', (e)=> {
+    const tag = (e.target.tagName||'').toLowerCase();
+    if (tag === 'input' || tag === 'textarea') return;
+    if (e.key === 'j'){ e.preventDefault(); move(+1); }
+    else if (e.key === 'k'){ e.preventDefault(); move(-1); }
+    else if (e.key === 'Enter' && kbdIdx >= 0){
+      const list = focusedList();
+      const url = list[kbdIdx]?.getAttribute('data-url');
+      if (url) window.open(url, '_blank', 'noopener,noreferrer');
+    }
+    else if (e.key === 'Escape'){
+      kbdIdx = -1;
+      document.querySelectorAll('.kbd-focus').forEach(el => el.classList.remove('kbd-focus'));
+    }
+  });
+})();
+
+/* ── Diff banner: what changed since last refresh? ── */
+(function(){
+  const LAST_KEY = 'cdm_last_refresh_v1';
+  const SEEN_KEY = 'cdm_seen_titles_v1';
+  let seen = [];
+  try { seen = JSON.parse(localStorage.getItem(SEEN_KEY) || '[]'); } catch(_) {}
+  const currentTitles = allItems.map(i => (i.title||'').substring(0,80));
+  const newOnes = currentTitles.filter(t => !seen.includes(t));
+  const lastTs = localStorage.getItem(LAST_KEY) || '';
+  const banner = document.getElementById('diffBanner');
+  const text   = document.getElementById('diffText');
+  const dismiss= document.getElementById('diffDismiss');
+  if (banner && text && newOnes.length && seen.length){
+    text.innerHTML = `<b>${newOnes.length} new item${newOnes.length===1?'':'s'}</b> since you last visited${lastTs ? ` on ${lastTs}` : ''}. Total ${allItems.length} in feed.`;
+    banner.hidden = false;
+  }
+  if (dismiss) dismiss.addEventListener('click', () => { banner.hidden = true; });
+  // Mark current set as seen (delayed so the banner shows for the current visit)
+  setTimeout(()=> {
+    try {
+      localStorage.setItem(SEEN_KEY, JSON.stringify(currentTitles));
+      localStorage.setItem(LAST_KEY, new Date().toLocaleString());
+    } catch(_){}
+  }, 1500);
+})();
+
+/* ── Dossier: per-jurisdiction view ── */
+function openJurisDossier(jurisKey){
+  const all = allItems.filter(i => getJurisdiction(i).key === jurisKey);
+  const jLabel = (JURIS_RULES.find(r=>r.key===jurisKey) || {label:'Global', flag:'🌐'}).label;
+  const jFlag  = (JURIS_RULES.find(r=>r.key===jurisKey) || {label:'Global', flag:'🌐'}).flag;
+  const high   = all.filter(i => (i.impact||'').toLowerCase()==='high');
+  const dls    = (DASHBOARD_DATA.deadlines||[]).filter(d => {
+    const text = ((d.trigger||'')+' '+(d.prosus||'')+' '+(d.action||'')).toLowerCase();
+    return text.includes(jLabel.toLowerCase()) ||
+           (jurisKey === 'eu' && /\b(eu|european|cnil|garante|dpc|aepd|bundeskartellamt|cjeu)\b/.test(text)) ||
+           (jurisKey === 'us' && /\b(us|federal|ftc|sec|doj|9th circuit|uspto|nist)\b/.test(text)) ||
+           (jurisKey === 'in' && /\b(india|meity|rbi|cci|delhi)\b/.test(text)) ||
+           (jurisKey === 'br' && /\b(brazil|anpd|bcb|cade)\b/.test(text));
+  });
+  const body = `
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:18px">
+      <div style="padding:14px;background:var(--p-050);border-radius:var(--r-2);border:1px solid var(--p-200)">
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:32px;font-weight:700;color:var(--li-prime);line-height:1">${all.length}</div>
+        <div style="font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-3);margin-top:4px">items in feed</div>
+      </div>
+      <div style="padding:14px;background:#FBE9F2;border-radius:var(--r-2);border:1px solid #F8D5E6">
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:32px;font-weight:700;color:var(--ar-dark);line-height:1">${high.length}</div>
+        <div style="font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-3);margin-top:4px">high-impact</div>
+      </div>
+      <div style="padding:14px;background:#FFF6D6;border-radius:var(--r-2);border:1px solid #FCDA28">
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:32px;font-weight:700;color:#FC9628;line-height:1">${dls.length}</div>
+        <div style="font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-3);margin-top:4px">deadlines</div>
+      </div>
+    </div>
+    <h4 style="font-family:'Bricolage Grotesque',sans-serif;font-size:14px;color:var(--li-prime);margin:0 0 10px;letter-spacing:0.02em">Recent items</h4>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      ${all.slice(0,12).map(it => `
+        <a href="${esc(it.url||'#')}" target="_blank" rel="noopener noreferrer" style="display:block;padding:10px 12px;background:#fff;border:1px solid var(--line);border-radius:var(--r-2);text-decoration:none">
+          <div style="font-size:13.5px;font-weight:600;color:var(--li-dark);line-height:1.35">${esc(it.title||'')}</div>
+          <div style="font-size:11px;color:var(--ink-3);margin-top:4px">${esc(it.source||'')} · ${esc(it.date||'')}</div>
+        </a>`).join('')}
+    </div>
+    ${dls.length ? `<h4 style="font-family:'Bricolage Grotesque',sans-serif;font-size:14px;color:var(--li-prime);margin:18px 0 10px;letter-spacing:0.02em">Deadlines</h4>
+    <div style="display:flex;flex-direction:column;gap:6px">
+      ${dls.map(d => `<a href="${esc(d.url||'#')}" target="_blank" rel="noopener noreferrer" style="display:flex;gap:12px;align-items:center;padding:8px 12px;background:#fff;border:1px solid var(--line);border-radius:var(--r-2);text-decoration:none">
+        <span style="font-family:'Bricolage Grotesque',sans-serif;font-size:18px;font-weight:700;color:var(--ar-prime);min-width:50px">${d.days<=0?'PAST':d.days+'d'}</span>
+        <span style="font-size:12.5px;color:var(--ink);line-height:1.35">${esc(d.trigger||'')}</span>
+      </a>`).join('')}
+    </div>` : ''}`;
+  openModal({
+    title: `${jFlag} ${jLabel} dossier`,
+    bodyHTML: body,
+    footHTML: `<button class="modal-btn primary" type="button" onclick="setJuris('${jurisKey}'); this.closest('.modal-overlay').remove();">View as feed →</button>`
+  });
+}
+
+// Wire jurisdiction chips inside cards: click → filter feed, shift-click → open dossier
+document.addEventListener('click', (e) => {
+  const j = e.target.closest('.juris');
+  if (!j) return;
+  const cls = Array.from(j.classList).find(c => c.startsWith('juris-') && c !== 'juris-dark' && c !== 'juris-flag');
+  if (!cls) return;
+  e.stopPropagation();
+  e.preventDefault();
+  const key = cls.replace('juris-','');
+  if (e.shiftKey){
+    openJurisDossier(key);
+  } else {
+    setJuris(key);
+    document.querySelectorAll('.jchip').forEach(c => c.classList.toggle('active', c.dataset.juris === key));
+    document.querySelector('.filter-row')?.scrollIntoView({block:'start', behavior:'smooth'});
+    toast(`Filtered to ${(JURIS_RULES.find(r=>r.key===key)||{label:key}).label}. Shift-click for full dossier.`, 'success');
+  }
+});
+// Make the inline .juris chips look clickable
+document.head.insertAdjacentHTML('beforeend', '<style>.juris{cursor:pointer;transition:transform .15s var(--ease-out),box-shadow .15s var(--ease-out)} .juris:hover{transform:translateY(-1px);box-shadow:var(--e-1)}</style>');
+
+/* ── Saved views (localStorage) ── */
+const VIEWS_KEY = 'cdm_saved_views_v1';
+function getViews(){ try { return JSON.parse(localStorage.getItem(VIEWS_KEY) || '[]'); } catch(_) { return []; } }
+function setViews(v){ try { localStorage.setItem(VIEWS_KEY, JSON.stringify(v)); } catch(_){} }
+function openSavedViews(){
+  const views = getViews();
+  const body = `
+    <p style="font-size:12.5px;color:var(--ink-3);margin-bottom:14px">Save the current filter (category + jurisdiction + entity + date range + search) as a named view for one-click recall.</p>
+    <div style="display:flex;gap:8px;margin-bottom:18px">
+      <input type="text" id="newViewName" placeholder="e.g. India watchlist, EU privacy fines" style="flex:1" />
+      <button class="modal-btn primary" type="button" id="saveViewBtn">Save current</button>
+    </div>
+    <h4 style="font-family:'Bricolage Grotesque',sans-serif;font-size:13px;color:var(--li-prime);margin:0 0 10px">Your views</h4>
+    ${views.length ? `<div style="display:flex;flex-direction:column;gap:6px">${views.map((v,i) => `
+      <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;background:#fff;border:1px solid var(--line);border-radius:var(--r-2)">
+        <span style="flex:1">
+          <div style="font-size:13px;font-weight:600;color:var(--ink)">${esc(v.name)}</div>
+          <div style="font-size:11px;color:var(--ink-3);margin-top:2px">${esc(v.cat||'all')} · ${esc(v.juris||'all')} · ${esc(v.entity||'all')} · ${esc(v.range||'week')}${v.q?' · "'+esc(v.q)+'"':''}</div>
+        </span>
+        <button class="modal-btn" data-load="${i}">Load</button>
+        <button class="modal-btn" data-del="${i}" style="border-color:#F8D5E6;color:var(--ar-prime)">Delete</button>
+      </div>`).join('')}</div>` : '<div style="padding:20px;text-align:center;color:var(--ink-3);font-size:13px;background:var(--p-050);border-radius:var(--r-2)">No saved views yet.</div>'}`;
+  const { overlay, close } = openModal({ title: 'Saved views', bodyHTML: body });
+  overlay.querySelector('#saveViewBtn').addEventListener('click', () => {
+    const name = overlay.querySelector('#newViewName').value.trim();
+    if (!name){ toast('Give the view a name first', 'warn'); return; }
+    const all = getViews();
+    all.push({ name, cat:filter.cat, juris:filter.juris, entity:filter.entity, range:filter.range, q:filter.q, ts:new Date().toISOString() });
+    setViews(all);
+    close();
+    toast(`View "${name}" saved`, 'success');
+  });
+  overlay.querySelectorAll('[data-load]').forEach(btn => btn.addEventListener('click', () => {
+    const v = getViews()[+btn.dataset.load];
+    if (!v) return;
+    filter.cat = v.cat; filter.juris = v.juris; filter.entity = v.entity || 'all'; filter.range = v.range; filter.q = v.q || '';
+    saveFilter();
+    document.querySelectorAll('.chip').forEach(t => t.classList.toggle('active', t.dataset.cat === filter.cat));
+    document.querySelectorAll('.jchip').forEach(c => c.classList.toggle('active', c.dataset.juris === filter.juris));
+    document.querySelectorAll('.echip').forEach(c => c.classList.toggle('active', c.dataset.entity === filter.entity));
+    document.querySelectorAll('.rchip').forEach(c => c.classList.toggle('active', c.dataset.range === filter.range));
+    const si = document.getElementById('searchInput'); if (si) si.value = filter.q;
+    renderArticles();
+    close();
+    toast(`Loaded view "${v.name}"`, 'success');
+  }));
+  overlay.querySelectorAll('[data-del]').forEach(btn => btn.addEventListener('click', () => {
+    const all = getViews(); all.splice(+btn.dataset.del, 1); setViews(all);
+    close(); openSavedViews();
+  }));
+}
+document.getElementById('fabSavedViews')?.addEventListener('click', openSavedViews);
+document.addEventListener('keydown', (e) => {
+  const tag = (e.target.tagName||'').toLowerCase();
+  if (tag === 'input' || tag === 'textarea') return;
+  if (e.key === 'v' || e.key === 'V'){ e.preventDefault(); openSavedViews(); }
+});
+
+/* ── Per-item annotations (free-text notes that persist) ── */
+const NOTES_KEY = 'cdm_notes_v1';
+function getNotes(){ try { return JSON.parse(localStorage.getItem(NOTES_KEY) || '{}'); } catch(_){ return {}; } }
+function setNote(id, text){
+  const notes = getNotes();
+  if (text) notes[id] = { text, ts: new Date().toISOString() };
+  else delete notes[id];
+  try { localStorage.setItem(NOTES_KEY, JSON.stringify(notes)); } catch(_){}
+}
+function applyNotes(){
+  const notes = getNotes();
+  document.querySelectorAll('#articleList > article.article').forEach(art => {
+    const id = (art.querySelector('[data-item-id]')?.dataset.itemId || '').substring(0,80);
+    if (!id) return;
+    if (art.querySelector('.note-bar')) return;
+    const wrap = document.createElement('div');
+    wrap.className = 'note-bar';
+    wrap.onclick = (e)=> e.stopPropagation();
+    wrap.innerHTML = `
+      <button class="note-toggle ${notes[id]?'has-note':''}" type="button">
+        ${notes[id] ? '📝 Edit note' : '+ Add note'}
+      </button>
+      <textarea placeholder="Private note about this item — saved to your browser">${esc(notes[id]?.text || '')}</textarea>`;
+    art.appendChild(wrap);
+    const toggle = wrap.querySelector('.note-toggle');
+    const ta = wrap.querySelector('textarea');
+    toggle.addEventListener('click', () => {
+      wrap.classList.toggle('editing');
+      if (wrap.classList.contains('editing')) ta.focus();
+    });
+    ta.addEventListener('blur', () => {
+      setNote(id, ta.value.trim());
+      toggle.classList.toggle('has-note', !!ta.value.trim());
+      toggle.textContent = ta.value.trim() ? '📝 Edit note' : '+ Add note';
+      wrap.classList.remove('editing');
+      toast(ta.value.trim() ? 'Note saved' : 'Note cleared', 'success');
+    });
+  });
+}
+// Re-apply notes whenever the feed renders
+const _origRenderArticles = renderArticles;
+renderArticles = function(...args){
+  _origRenderArticles.apply(this, args);
+  applyNotes();
+};
+
+/* ── Calendar export (.ics) for deadlines ── */
+function buildIcs(){
+  const today = new Date();
+  const pad = n => String(n).padStart(2,'0');
+  function icsDateFromDays(days){
+    const d = new Date(today); d.setDate(d.getDate() + (days||0));
+    return d.getUTCFullYear()+pad(d.getUTCMonth()+1)+pad(d.getUTCDate());
+  }
+  const dt = (d) => d.getUTCFullYear()+pad(d.getUTCMonth()+1)+pad(d.getUTCDate())+'T'+pad(d.getUTCHours())+pad(d.getUTCMinutes())+pad(d.getUTCSeconds())+'Z';
+  const dls = DASHBOARD_DATA.deadlines || [];
+  const lines = [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//Prosus//Digital Regulatory Monitor//EN',
+    'METHOD:PUBLISH',
+    'CALSCALE:GREGORIAN',
+  ];
+  dls.forEach((d, i) => {
+    const stamp = icsDateFromDays(d.days||0);
+    const summary = (d.trigger||'Deadline').replace(/\n/g,' ').replace(/,/g,'\\,').replace(/;/g,'\\;');
+    const desc = ((d.prosus||'') + (d.action ? ' · '+d.action : '') + (d.url ? ' · '+d.url : ''))
+                 .replace(/\n/g,'\\n').replace(/,/g,'\\,').replace(/;/g,'\\;');
+    lines.push('BEGIN:VEVENT');
+    lines.push('UID:cdm-deadline-'+i+'-'+stamp+'@prosus.digital-monitor');
+    lines.push('DTSTAMP:'+dt(new Date()));
+    lines.push('DTSTART;VALUE=DATE:'+stamp);
+    lines.push('SUMMARY:'+summary);
+    if (desc) lines.push('DESCRIPTION:'+desc);
+    if (d.url) lines.push('URL:'+d.url);
+    lines.push('CATEGORIES:Regulatory,Prosus,Deadline');
+    lines.push('END:VEVENT');
+  });
+  lines.push('END:VCALENDAR');
+  return lines.join('\r\n');
+}
+const exportBtn = document.getElementById('exportIcsBtn');
+if (exportBtn){
+  exportBtn.addEventListener('click', ()=> {
+    const ics = buildIcs();
+    const blob = new Blob([ics], {type:'text/calendar;charset=utf-8'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `prosus-deadlines-${new Date().toISOString().slice(0,10)}.ics`;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(()=> URL.revokeObjectURL(url), 500);
+    toast('Deadline calendar downloaded · import into your calendar app', 'success');
+  });
+}
+
+/* ── Restore search input value on load if persisted ── */
+if (filter.q){
+  // Trigger search input to render with the saved query
+  document.querySelector('.cmdk')?.click();
+}
+
+renderTop();
+renderNavCounts();
+renderSignals();
+renderFlash();
+renderDeadlines();
+buildJurisChips();
+buildEntityChips();
+renderArticles();
+
+/* Mark category chip active to reflect persisted filter */
+document.querySelectorAll('.chip').forEach(t=>t.classList.toggle('active', t.dataset.cat === filter.cat));
+
+/* Friendly hint on first visit */
+(function(){
+  if (!localStorage.getItem('cdm_seen_hint_v1')){
+    setTimeout(()=> toast('Try ⌘K to search · j/k to navigate · click any chip to filter', 'info'), 800);
+    try { localStorage.setItem('cdm_seen_hint_v1', '1'); } catch(_){}
+  }
+})();
+</script>
+
+<!-- Hidden static forms so Netlify Forms detects them at build time -->
+<form name="item-rating" netlify netlify-honeypot="bot-field" hidden>
+  <input type="text" name="item_id" />
+  <input type="text" name="rating" />
+  <input type="text" name="at" />
+</form>
+<form name="page-feedback" netlify netlify-honeypot="bot-field" hidden>
+  <textarea name="message"></textarea>
+</form>
+
+<script>
+function submitFeedback(ev){
+  ev.preventDefault();
+  const form = ev.target;
+  const status = document.getElementById('feedbackStatus');
+  const fd = new FormData(form);
+  const body = new URLSearchParams();
+  for (const [k,v] of fd.entries()) body.append(k, v);
+  status.textContent = 'Sending…'; status.style.color = 'var(--ink-3)';
+  fetch('/', { method:'POST',
+               headers:{'Content-Type':'application/x-www-form-urlencoded'},
+               body: body.toString() })
+    .then(() => { status.textContent = '✓ Thanks — your note was sent.'; status.style.color = 'var(--ch-prime)'; form.reset(); })
+    .catch(() => { status.textContent = 'Could not send right now. Try again in a moment.'; status.style.color = 'var(--ar-prime)'; });
+  return false;
+}
+
+// Filter row toggle — collapses by default, remembers state per browser
+(function(){
+  const btn = document.getElementById('filterToggleBtn');
+  const wrap = document.getElementById('filterRowWrap');
+  const lbl = document.getElementById('filterToggleLabel');
+  if (!btn || !wrap) return;
+  const KEY = 'cdm_filters_open';
+  function set(open){
+    wrap.hidden = !open;
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (lbl) lbl.textContent = open ? 'Hide filters' : 'Show filters';
+    try { localStorage.setItem(KEY, open ? '1' : '0'); } catch(e){}
+  }
+  let initial = false;
+  try { initial = localStorage.getItem(KEY) === '1'; } catch(e){}
+  set(initial);
+  btn.addEventListener('click', () => set(wrap.hidden));
+})();
+</script>
+
+</body>
+</html>

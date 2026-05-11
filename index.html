@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prosus · Monitors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Geist:wght@300..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --li-dark:#370180;  --li-prime:#571580;  --li-light:#7729E0;
+  --ar-dark:#850048;  --ar-prime:#AF015F;  --ar-light:#D90276;
+  --ch-dark:#00856E;  --ch-prime:#00AC8E;  --ch-light:#00D3AF;
+  --ox-prime:#FCB828;
+  --p-700:var(--li-dark); --p-600:var(--li-prime); --p-500:var(--li-light);
+  --ink:#1A0040; --ink-3:#7B6BA0;
+  --line:#ECE3F7; --bg:#F9F4FF;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:"Geist",system-ui,-apple-system,sans-serif;
+  background:
+    radial-gradient(70% 60% at 80% 0%, rgba(119,41,224,0.10) 0%, transparent 60%),
+    radial-gradient(60% 50% at 0% 100%, rgba(217,2,118,0.08) 0%, transparent 55%),
+    var(--bg);
+  color:var(--ink);
+  min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+  padding:32px;-webkit-font-smoothing:antialiased;line-height:1.55;
+}
+.shell{max-width:720px;width:100%;text-align:center}
+.wordmark{font-family:"Outfit",sans-serif;font-weight:900;font-size:14px;letter-spacing:0.20em;text-transform:uppercase;color:var(--li-prime);margin-bottom:10px}
+h1{
+  font-family:"Bricolage Grotesque",sans-serif;
+  font-variation-settings:"opsz" 96;
+  font-weight:500;font-size:44px;line-height:1.05;letter-spacing:-0.025em;
+  color:var(--p-700);margin-bottom:14px;
+}
+.sub{color:var(--ink-3);font-size:15px;margin-bottom:36px;max-width:540px;margin-inline:auto}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:8px}
+@media (max-width:640px){ .cards{grid-template-columns:1fr} }
+.card{
+  display:flex;flex-direction:column;align-items:flex-start;gap:14px;
+  padding:28px 26px;border-radius:18px;background:#fff;border:1px solid var(--line);
+  text-decoration:none;color:inherit;text-align:left;
+  transition:transform .18s cubic-bezier(0.16,1,0.3,1), box-shadow .18s cubic-bezier(0.16,1,0.3,1), border-color .18s;
+  position:relative;overflow:hidden;
+}
+.card::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:4px;
+}
+.card.digital::before{background:linear-gradient(180deg,var(--li-light),var(--ar-light))}
+.card.competition::before{background:linear-gradient(180deg,#FCDA28,#FC9628)}
+.card:hover{transform:translateY(-3px);box-shadow:0 16px 32px -12px rgba(55,1,128,0.18);border-color:var(--p-500)}
+.card .badge{font-size:10px;letter-spacing:0.20em;font-weight:700;text-transform:uppercase;color:var(--ink-3)}
+.card h2{font-family:"Bricolage Grotesque",sans-serif;font-size:22px;font-weight:600;color:var(--p-700);letter-spacing:-0.01em}
+.card p{font-size:13.5px;color:var(--ink-3);margin:-4px 0 8px}
+.card .go{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:13px;color:var(--li-prime);margin-top:auto}
+.card .go svg{transition:transform .18s}
+.card:hover .go svg{transform:translateX(3px)}
+.footer{margin-top:48px;color:var(--ink-3);font-size:12px}
+</style>
+</head>
+<body>
+<div class="shell">
+  <div class="wordmark">prosus</div>
+  <h1>Choose a monitor</h1>
+  <p class="sub">Two live feeds, refreshed twice daily. Pick the one that matches what you're tracking.</p>
+
+  <div class="cards">
+    <a class="card digital" href="dashboard.html">
+      <span class="badge">Digital &amp; Regulatory</span>
+      <h2>Digital Monitor</h2>
+      <p>AI policy, privacy, IP, AI launches, legal ops and trending stories across our priority jurisdictions.</p>
+      <span class="go">Open
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </span>
+    </a>
+    <a class="card competition" href="competition-law-monitor.html">
+      <span class="badge">Competition Law</span>
+      <h2>Competition Law Monitor</h2>
+      <p>Antitrust, merger control and competition probes across the EU, US, UK and key APAC jurisdictions.</p>
+      <span class="go">Open
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </span>
+    </a>
+  </div>
+
+  <div class="footer">Curated by Prosus Legal · Strictly confidential · Internal use only</div>
+</div>
+</body>
+</html>
