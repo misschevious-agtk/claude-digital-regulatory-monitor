@@ -184,6 +184,11 @@ html{scroll-behavior:smooth}
 }
 
 
+/* Hide source on item cards — source only appears inside the modal on click */
+.a-foot .src-chain,
+.hero-card .hero-meta .src,
+.hero-card .hero-foot .read{display:none !important}
+
 /* ───── COMPETITION FILTERS — stage / agency / industry chips ───── */
 .schip,.achip,.ichip{
   font:600 11.5px/1 "Geist",sans-serif;letter-spacing:0.01em;color:var(--ink-2);
@@ -1239,13 +1244,6 @@ footer.page-footer .brand-dot{width:6px;height:6px;border-radius:50%;background:
       <div class="top-stories-track" id="topStoriesTrack"></div>
     </div>
 
-      <div class="signal s-org">
-        <div class="s-lab">Today</div>
-        <div class="s-num" id="sigToday">—</div>
-        <div class="s-cap">Items dated today across the monitoring sweep</div>
-      </div>
-    </div>
-
     <!-- Feed + sidebar -->
     <div class="feed-grid" style="grid-template-columns:1fr">
       <div class="article-sections" id="articleSections"></div>
@@ -1905,8 +1903,8 @@ function renderSignals(){
   const highN  = allItems.filter(it => (it.impact||'').toLowerCase()==='high').length;
   const dls = DASHBOARD_DATA.deadlines || [];
   const dlSoon = dls.filter(d => (d.days||0) >= 0 && (d.days||0) <= 30).length;
-  document.getElementById('sigToday').textContent = todayN;
-  document.getElementById('sigHigh').textContent = highN;
+  (document.getElementById('sigToday')||{}).textContent = todayN;
+  (document.getElementById('sigHigh')||{}).textContent = highN;
   (document.getElementById('sigDeadlines')||{}).textContent = dlSoon;
 }
 
