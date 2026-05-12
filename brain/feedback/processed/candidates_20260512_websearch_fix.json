@@ -1,0 +1,15 @@
+{
+  "_source": "WebSearch follow-up — fixing the two items previously rejected for date issues",
+  "submissions": [
+    {
+      "title": "CADE Brazil settles with Intelprice / Aprix pricing software in fuel retail — algorithmic collusion TCC sets transparency standard, 10 April 2026",
+      "summary": "Brazil's CADE approved a Cease and Desist Agreement (TCC) with Intelprice Soluções de Precificação Ltda., developer of the Aprix pricing software, in an investigation into whether the tool facilitated price coordination among gas stations. The TCC requires Intelprice to ensure transparency and explainability of its pricing model to SG/CADE, notify CADE when its or group market share reaches 20% in any municipality, and grant CADE access to facilities and software.",
+      "why": "First TCC where transparency and explainability of the algorithm itself are conditions — direct read-across to any pricing or matching algorithm operated by portfolio entities in Brazil (iFood pricing, OLX listing-pricing, PayU dynamic fees). Risk codes C-2 + A-3.",
+      "impact": "high",
+      "source": "CADE · gov.br",
+      "url": "https://www.gov.br/cade/en/matters/news/cade-reaches-settlement-in-investigation-into-the-use-of-pricing-algorithms",
+      "topic": "Competition",
+      "date": "10 April 2026"
+    }
+  ]
+}

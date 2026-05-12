@@ -1,0 +1,136 @@
+{
+  "_source": "WebSearch-driven scan, May 12 2026",
+  "_note": "Items sourced via WebSearch since the sandbox can't reach RSS. URLs are direct primary-source links from regulators (ec.europa.eu, digital-markets-act.ec.europa.eu, digital-strategy.ec.europa.eu, ftc.gov, gov.uk).",
+  "submissions": [
+    {
+      "title": "EU Commission DMA Review Report 2026 — first full assessment of gatekeeper compliance and interoperability, 28 April 2026",
+      "summary": "The Commission published COM(2026) 178 on 28 April 2026 — the first formal DMA Review Report covering all designated gatekeepers (Alphabet, Amazon, Apple, ByteDance, Meta, Microsoft, Booking). The report assesses two years of enforcement, including specification proceedings against Google, non-compliance findings against Apple and Meta, and the cross-OS data-transfer solution Apple and Google jointly developed.",
+      "why": "Sets the enforcement baseline for the next DMA cycle. Touches every gatekeeper our portfolio competes against and provides the EC's own scorecard of what enforcement priorities are live for 2026-2027. Risk codes C-1 + C-3.",
+      "impact": "high",
+      "source": "European Commission · digital-markets-act.ec.europa.eu",
+      "url": "https://digital-markets-act.ec.europa.eu/system/files/2026-04/DMA%20Review%20Report_COM_2026_178_1_EN.pdf",
+      "topic": "Competition",
+      "date": "28 April 2026"
+    },
+    {
+      "title": "EU Commission DMA interoperability factsheet — Apple's 1 June 2026 rollout deadline for notifications, proximity pairing, audio switching",
+      "summary": "Factsheet dated 11 May 2026 confirms Apple must roll out new interoperability solutions by 1 June 2026 for several iOS features including notifications, proximity pairing, and parts of audio switching. The factsheet also documents the Apple-Google cross-OS data transfer solution allowing users to move data when switching between iPhone and Android.",
+      "why": "Direct interoperability mandate on iOS impacts how third-party apps (including our portfolio apps that ship on iOS) can integrate with system features. The cross-OS data transfer story is the model the Commission will replicate for other gatekeepers. Risk code C-1.",
+      "impact": "high",
+      "source": "European Commission · digital-markets-act.ec.europa.eu",
+      "url": "https://digital-markets-act.ec.europa.eu/factsheet-how-dma-making-smartphones-better-interoperability-and-data-portability-case-studies-2026-05-11_en",
+      "topic": "Competition",
+      "date": "11 May 2026"
+    },
+    {
+      "title": "EU Commission decides Apple Ads and Apple Maps will NOT be designated under the DMA — 5 February 2026",
+      "summary": "Following Apple's 27 November 2025 notification, the Commission decided on 5 February 2026 that Apple Ads and Apple Maps should not be designated under the DMA. Reasoning: Apple Maps has relatively low overall usage rate in the EU and Apple Ads has very limited scale in the EU online advertising sector. Decision narrows the perimeter of Apple's DMA obligations.",
+      "why": "Comparator data point — establishes the de minimis threshold the Commission will apply to designation challenges. Useful precedent for any non-gatekeeper portfolio entity facing future designation notifications.",
+      "impact": "medium-high",
+      "source": "European Commission · digital-markets-act.ec.europa.eu",
+      "url": "https://digital-markets-act.ec.europa.eu/commission-finds-apple-ads-and-apple-maps-should-not-be-designated-under-digital-markets-act-2026-02-05_en",
+      "topic": "Competition",
+      "date": "5 February 2026"
+    },
+    {
+      "title": "EU AI Office — first meeting of GPAI Code of Practice Signatory Taskforce, 30 January 2026",
+      "summary": "Signatories to the General-Purpose AI (GPAI) Code of Practice held their first constitutive meeting on 30 January 2026, formally establishing the Signatory Taskforce chaired by the AI Office. The Code, published 10 July 2025, is a voluntary tool helping providers comply with AI Act obligations for general-purpose AI models. Microsoft, Anthropic and Mistral confirmed; OpenAI, Meta and Google reportedly still in discussions.",
+      "why": "Defines which frontier labs Stack Overflow's OverflowAI (and any other Prosus AI vendor) can rely on for inherited compliance posture. The signatory list determines downstream regulatory exposure when our products embed third-party models. Risk codes A-1 + A-2.",
+      "impact": "high",
+      "source": "EU AI Office · digital-strategy.ec.europa.eu",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/first-meeting-signatory-taskforce-general-purpose-ai-code-practice",
+      "topic": "AI Landscape",
+      "date": "30 January 2026"
+    },
+    {
+      "title": "EU AI Office invites GPAI model providers to sign the Code of Practice — open invitation through 2026",
+      "summary": "The AI Office published a formal invitation for GPAI model providers to sign the Code of Practice. Providers complete the Signatory Form and submit to EU-AIOFFICE-CODE-SIGNATURES@ec.europa.eu. Non-signatory labs deploying GPAI in the EU face direct Commission enforcement under AI Act Art. 53.",
+      "why": "The signatory list is the safe-harbour map for AI compliance in the EU. Vendors we depend on either sign (inheritable comfort) or don't (we carry the compliance burden ourselves). Risk codes A-1 + A-2.",
+      "impact": "high",
+      "source": "EU AI Office · digital-strategy.ec.europa.eu",
+      "url": "https://digital-strategy.ec.europa.eu/en/library/ai-office-invites-providers-sign-gpai-code-practice",
+      "topic": "AI Landscape",
+      "date": "1 March 2026"
+    },
+    {
+      "title": "CMA UK Google search SMS designation final + conduct requirements consultation launched 28 January 2026",
+      "summary": "CMA confirmed Strategic Market Status (SMS) designation for Google in general search and search advertising on 10 October 2025. On 28 January 2026, the CMA launched a consultation on conduct requirements (CRs) targeting choice screens, publisher controls and rivals' access. The CMA's full mobile platforms programme for 2026 includes an update on Apple digital wallets in H1 2026.",
+      "why": "First operational SMS designation under the UK's Digital Markets, Competition and Consumers Act. The conduct-requirements model sets a UK parallel template to the EU DMA — relevant for portfolio entities active in UK markets.",
+      "impact": "high",
+      "source": "Competition and Markets Authority · gov.uk",
+      "url": "https://www.gov.uk/cma-cases/googles-general-search-and-search-advertising-services",
+      "topic": "Competition",
+      "date": "28 January 2026"
+    },
+    {
+      "title": "CMA UK launches SMS investigation into Microsoft business software ecosystem — including cloud licensing — May 2026",
+      "summary": "The CMA confirmed it will launch a Strategic Market Status investigation into Microsoft's business software ecosystem in May 2026. The investigation explicitly includes Microsoft's cloud licensing practices — extending CMA jurisdiction over Azure, M365 and Teams. Follows the CMA's existing market investigation into AWS and Microsoft cloud services.",
+      "why": "Second SMS investigation in the UK after Google search. Establishes the pace and scope at which the UK regime will move. Cloud licensing scrutiny may benefit portfolio entities procuring from Microsoft.",
+      "impact": "high",
+      "source": "Competition and Markets Authority · gov.uk",
+      "url": "https://www.gov.uk/government/news/cma-draft-annual-plan-launches-the-first-phase-of-its-new-strategy-for-2026-to-2029",
+      "topic": "Competition",
+      "date": "11 May 2026"
+    },
+    {
+      "title": "FTC v. WPP / Publicis / Dentsu — digital advertising 'brand safety' collusion case — April 2026",
+      "summary": "The FTC, joined by a coalition of state AGs, sued the three largest US ad-buying agencies (WPP, Publicis, Dentsu) alleging they unlawfully colluded starting in 2018 to impose common 'brand safety' standards across the digital advertising industry — effectively foreclosing platforms and publishers that didn't meet the agencies' criteria. First major FTC action targeting demand-side advertising coordination.",
+      "why": "Theory-of-harm benchmark for buy-side coordination in advertising. Read-across for any portfolio entity that monetises through programmatic ads — establishes that brand-safety standards can become an antitrust liability when coordinated.",
+      "impact": "high",
+      "source": "Federal Trade Commission · ftc.gov",
+      "url": "https://www.ftc.gov/news-events/news/press-releases/2026/04/ftc-takes-action-restore-competition-digital-advertising-ecosystem",
+      "topic": "Competition",
+      "date": "16 April 2026"
+    },
+    {
+      "title": "FTC v. Rollins / large noncompete enforcement actions across labor markets — April 2026",
+      "summary": "The FTC ordered Rollins Inc., one of the largest US pest-control companies, to stop enforcing noncompete agreements against more than 18,000 employees. Part of a wider Trump-Vance FTC campaign also targeting the nation's largest pet cremation business (~1,800 workers) and Adamas Amenity Services LLC for no-hire agreements.",
+      "why": "Continuity of the FTC noncompete enforcement track even after the broader rule fell. Relevant for any portfolio entity with US workforce — non-litigation enforcement against individual employers signals a 'one-by-one' strategy.",
+      "impact": "medium-high",
+      "source": "Federal Trade Commission · ftc.gov",
+      "url": "https://www.ftc.gov/news-events/news/press-releases/2026/04/ftc-takes-action-against-noncompete-agreements-securing-protections-workers",
+      "topic": "Competition",
+      "date": "22 April 2026"
+    },
+    {
+      "title": "FTC appeals district court ruling in Meta monopolization case — January 2026",
+      "summary": "The FTC filed its appeal in the Meta Platforms monopolization case after the trial court ruled against the FTC's structural-remedy theory. Appeal targets the court's narrow market definition (personal social networking services) and the rejection of remedy options including Instagram and WhatsApp divestitures.",
+      "why": "Direct test of whether courts will accept the FTC's revived structural-remedy doctrine. Outcome shapes future US merger and monopolization enforcement against any platform in our comparator set.",
+      "impact": "high",
+      "source": "Federal Trade Commission · ftc.gov",
+      "url": "https://www.ftc.gov/news-events/news/press-releases/2026/01/ftc-appeals-ruling-meta-monopolization-case",
+      "topic": "Competition",
+      "date": "30 January 2026"
+    },
+    {
+      "title": "EDPB launches CEF 2026 — coordinated enforcement on GDPR transparency and information obligations",
+      "summary": "The European Data Protection Board launched its 2026 Coordinated Enforcement Framework action focused on compliance with transparency and information obligations under Articles 12-14 GDPR. Selected as the fifth annual CEF topic, the action runs across all EEA supervisory authorities through 2026, with a final report due Q1 2027.",
+      "why": "Pan-European GDPR sweep — every EEA-active portfolio entity will face audit pressure on privacy notices, layered information, and information at collection. Risk code P-1.",
+      "impact": "high",
+      "source": "European Data Protection Board · edpb.europa.eu",
+      "url": "https://www.edpb.europa.eu/news/news/2026/cef-2026-edpb-launches-coordinated-enforcement-action-transparency-and-information_en",
+      "topic": "Privacy & Data",
+      "date": "10 March 2026"
+    },
+    {
+      "title": "EDPB marks 10 years of GDPR — evolution and outlook report, 2026",
+      "summary": "The EDPB published its 10-year retrospective on GDPR, charting the evolution of the European data protection landscape since 25 May 2016. Notable themes: cross-border enforcement cooperation, the rise of large-scale Schrems-style data-transfer challenges, AI-Act/GDPR interplay, and the operational lessons from €1.2bn Meta fine and €530m TikTok fine on EEA-to-China transfers.",
+      "why": "Strategic context — EDPB's own characterisation of where enforcement is heading sets the tone for our 2026-2027 privacy roadmap.",
+      "impact": "medium-high",
+      "source": "European Data Protection Board · edpb.europa.eu",
+      "url": "https://www.edpb.europa.eu/news/news/2026/marking-10-years-gdpr-evolution-european-data-protection-landscape_en",
+      "topic": "Privacy & Data",
+      "date": "25 May 2026"
+    },
+    {
+      "title": "CADE Brazil settles with Intelprice / Aprix pricing software in fuel retail — algorithmic collusion TCC sets transparency standard",
+      "summary": "Brazil's CADE approved a Cease and Desist Agreement (TCC) with Intelprice Soluções de Precificação Ltda., developer of the Aprix pricing software, in an investigation into whether the tool facilitated price coordination among gas stations. The TCC requires Intelprice to ensure transparency and explainability of its pricing model to SG/CADE, notify CADE when its or group market share reaches 20% in any municipality, and grant CADE access to facilities and software.",
+      "why": "First TCC where transparency and explainability of the algorithm itself are conditions — direct read-across to any pricing or matching algorithm operated by portfolio entities in Brazil (iFood pricing, OLX listing-pricing, PayU dynamic fees). Risk codes C-2 + A-3.",
+      "impact": "high",
+      "source": "CADE · gov.br",
+      "url": "https://www.gov.br/cade/en/matters/news/cade-reaches-settlement-in-investigation-into-the-use-of-pricing-algorithms",
+      "topic": "Competition",
+      "date": "April 2026"
+    }
+  ]
+}

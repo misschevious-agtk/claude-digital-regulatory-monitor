@@ -1,0 +1,2641 @@
+{
+  "form_name": "candidates",
+  "generated_at": "2026-05-12T07:47:33.469034Z",
+  "max_age_days": 30,
+  "submissions": [
+    {
+      "form_name": "candidates",
+      "title": "Keynote address by President von der Leyen at the European Summit on Artificial Intelligence and Children",
+      "summary": "European Commission Speech Copenhagen, 12 May 2026 “Check against delivery”\n \nYour Royal Highness,\nExcellencies, \nLadies and Gentlemen,\nThank you for putting the spotlight on this topic, protecting children in t...",
+      "source": "European Commission — DG COMP · competition-policy.ec.europa.eu",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1060",
+      "topic": "Ai Policy",
+      "date": "Mon, 11 May 2026 22:00:00 GMT",
+      "impact": "medium",
+      "_authority": "European Commission — DG COMP",
+      "_jurisdiction": "EU",
+      "_tier": 0,
+      "_keyword_hits": {
+        "ai_policy": [
+          "artificial intelligence"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Commission welcomes political agreement on Critical Medicines Act",
+      "summary": "European Commission Press release Brussels, 12 May 2026 The European Commission welcomes the landmark political agreement on the Critical Medicines Act (CMA), last night by the Council and the European Parliament. This marks an important milestone in strengthening the resilience of Europe's health sector by preventing medicine shortages and improving the security of supply of critical medicines across the EU.",
+      "source": "European Commission — DG COMP · competition-policy.ec.europa.eu",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1017",
+      "topic": "Competition",
+      "date": "Mon, 11 May 2026 22:00:00 GMT",
+      "impact": "medium",
+      "_authority": "European Commission — DG COMP",
+      "_jurisdiction": "EU",
+      "_tier": 0,
+      "_keyword_hits": {
+        "competition": [
+          "DMA"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "GXO / Wincanton merger inquiry",
+      "summary": "The Competition and Markets Authority (CMA) is investigating the completed acquisition by GXO Logistics, Inc. of Wincanton Plc.",
+      "source": "Competition and Markets Authority — UK · www.gov.uk",
+      "url": "https://www.gov.uk/cma-cases/gxo-slash-wincanton-merger-inquiry",
+      "topic": "Competition",
+      "date": "2026-05-08T10:00:50Z",
+      "impact": "medium",
+      "_authority": "Competition and Markets Authority — UK",
+      "_jurisdiction": "UK",
+      "_tier": 0,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "merger"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Spreadex / Sporting Index merger inquiry",
+      "summary": "The Competition and Markets Authority (CMA) is investigating the completed acquisition by Spreadex Limited of the B2C business of Sporting Index Limited.",
+      "source": "Competition and Markets Authority — UK · www.gov.uk",
+      "url": "https://www.gov.uk/cma-cases/spreadex-slash-sporting-index-merger-inquiry",
+      "topic": "Competition",
+      "date": "2026-05-08T10:00:45Z",
+      "impact": "medium",
+      "_authority": "Competition and Markets Authority — UK",
+      "_jurisdiction": "UK",
+      "_tier": 0,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "merger"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Welltower / multiple care homes merger inquiries",
+      "summary": "The Competition and Markets Authority (CMA) is investigating four completed acquisitions by Welltower Inc. (Welltower) of care homes managed by Barchester Healthcare, HC-One, Aria Care (including Asprey) and Danforth Care.",
+      "source": "Competition and Markets Authority — UK · www.gov.uk",
+      "url": "https://www.gov.uk/cma-cases/welltower-slash-multiple-care-homes-merger-inquiries",
+      "topic": "Competition",
+      "date": "2026-05-07T10:07:02Z",
+      "impact": "medium",
+      "_authority": "Competition and Markets Authority — UK",
+      "_jurisdiction": "UK",
+      "_tier": 0,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "merger"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Transparency data: Merger investigation outcomes",
+      "summary": "Outcomes of merger investigations carried out by the CMA under the Enterprise Act 2002.",
+      "source": "Competition and Markets Authority — UK · www.gov.uk",
+      "url": "https://www.gov.uk/government/publications/merger-investigation-outcomes",
+      "topic": "Competition",
+      "date": "2026-05-07T09:49:36Z",
+      "impact": "medium",
+      "_authority": "Competition and Markets Authority — UK",
+      "_jurisdiction": "UK",
+      "_tier": 0,
+      "_keyword_hits": {
+        "competition": [
+          "merger"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Transparency data: CMA board: register of interests",
+      "summary": "The register of interests of the members of the Competition and Markets Authority board.",
+      "source": "Competition and Markets Authority — UK · www.gov.uk",
+      "url": "https://www.gov.uk/government/publications/cma-register-of-interests",
+      "topic": "Competition",
+      "date": "2026-05-06T10:30:21Z",
+      "impact": "medium",
+      "_authority": "Competition and Markets Authority — UK",
+      "_jurisdiction": "UK",
+      "_tier": 0,
+      "_keyword_hits": {
+        "competition": [
+          "competition"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Correspondence: CMA advice to Defra on reform of the Veterinary Surgeons Act 1966",
+      "summary": "The Competition and Markets Authority (CMA) has published its advice to Department for Environment, Food & Rural Affairs (Defra) on the reform of veterinary sector regulation.",
+      "source": "Competition and Markets Authority — UK · www.gov.uk",
+      "url": "https://www.gov.uk/government/publications/cma-advice-to-defra-on-reform-of-the-veterinary-surgeons-act-1966",
+      "topic": "Competition",
+      "date": "2026-05-06T10:30:06Z",
+      "impact": "medium",
+      "_authority": "Competition and Markets Authority — UK",
+      "_jurisdiction": "UK",
+      "_tier": 0,
+      "_keyword_hits": {
+        "competition": [
+          "competition"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "ABF / Hovis merger inquiry",
+      "summary": "The Competition and Markets Authority (CMA) is investigating the anticipated acquisition by Associated British Foods plc (through ABF Grain Products Limited) of Hovis Group Limited.",
+      "source": "Competition and Markets Authority — UK · www.gov.uk",
+      "url": "https://www.gov.uk/cma-cases/abf-slash-hovis-merger-inquiry",
+      "topic": "Competition",
+      "date": "2026-05-06T10:00:25Z",
+      "impact": "medium",
+      "_authority": "Competition and Markets Authority — UK",
+      "_jurisdiction": "UK",
+      "_tier": 0,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "merger"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Automobile Association Developments Limited: consumer protection enforcement case",
+      "summary": "The Competition and Markets Authority (CMA) investigated suspected infringements of consumer law in relation to the presentation of mandatory booking fees by Automobile Association Developments Limited in the UK and gave a Final Infringement Notice reflecting the settlement of the case.",
+      "source": "Competition and Markets Authority — UK · www.gov.uk",
+      "url": "https://www.gov.uk/cma-cases/automobile-association-developments-limited-consumer-protection-enforcement-case",
+      "topic": "Competition",
+      "date": "2026-05-05T10:00:12Z",
+      "impact": "medium",
+      "_authority": "Competition and Markets Authority — UK",
+      "_jurisdiction": "UK",
+      "_tier": 0,
+      "_keyword_hits": {
+        "competition": [
+          "competition"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Corporate report: Mergers orders and undertakings register",
+      "summary": "Register of orders and undertakings that are currently in force, have lapsed and have been released.",
+      "source": "Competition and Markets Authority — UK · www.gov.uk",
+      "url": "https://www.gov.uk/government/publications/mergers-orders-and-undertakings-register",
+      "topic": "Competition",
+      "date": "2026-05-01T11:35:57Z",
+      "impact": "medium",
+      "_authority": "Competition and Markets Authority — UK",
+      "_jurisdiction": "UK",
+      "_tier": 0,
+      "_keyword_hits": {
+        "competition": [
+          "merger"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Aramark / Entier merger inquiry",
+      "summary": "The Competition and Markets Authority (CMA) is investigating the completed acquisition by Aramark Limited of Entier Limited.",
+      "source": "Competition and Markets Authority — UK · www.gov.uk",
+      "url": "https://www.gov.uk/cma-cases/aramark-slash-entier-merger-inquiry",
+      "topic": "Competition",
+      "date": "2026-05-01T10:00:06Z",
+      "impact": "medium",
+      "_authority": "Competition and Markets Authority — UK",
+      "_jurisdiction": "UK",
+      "_tier": 0,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "merger"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Transparency data: CMA structure",
+      "summary": "Structure of the Competition and Markets Authority (CMA).",
+      "source": "Competition and Markets Authority — UK · www.gov.uk",
+      "url": "https://www.gov.uk/government/publications/cma-structure",
+      "topic": "Competition",
+      "date": "2026-05-01T09:30:38Z",
+      "impact": "medium",
+      "_authority": "Competition and Markets Authority — UK",
+      "_jurisdiction": "UK",
+      "_tier": 0,
+      "_keyword_hits": {
+        "competition": [
+          "competition"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Convicted money launderer sentenced to extra prison time",
+      "summary": "A convicted money launderer has been sentenced to an additional 499 daysin prison for failing to fully pay the money owed under a Confiscation Order.\n\nIn 2021,RichardFaithfull,now36,wassentenced to5 years and 10 monthsin prisonfor laundering £2.5 million, following a prosecution brought by the Financial Conduct Authority (FCA).He was part of a trans-national organised crime group which laundered the proceeds of at least 7 overseas investment frauds.Mr Faithfullis required topay back £529,961,based on the Court’s findings on his available assets. However, he has only paid£349,214.37.When he was",
+      "source": "Financial Conduct Authority — UK · www.fca.org.uk",
+      "url": "https://www.fca.org.uk/news/press-releases/convicted-money-launderer-sentenced-extra-prison-time",
+      "topic": "Competition",
+      "date": "Friday, May 8, 2026 - 17:24",
+      "impact": "medium",
+      "_authority": "Financial Conduct Authority — UK",
+      "_jurisdiction": "UK",
+      "_tier": 0,
+      "_keyword_hits": {
+        "competition": [
+          "DMA"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Competition Act 1998 investigations",
+      "summary": "Following the publication of financial reporting by PayPal Holdings Inc, we can confirm we are investigating Mastercard, PayPal and Visa under Chapter I in the Competition Act 1998, and Mastercard and Visa under Chapter II in the Competition Act 1998, for suspected anti-competitive conduct linked to thefunding and usage of PayPal’s digital wallet.The FCA has reached no conclusions nor made any findings with regard to competition law having been broken.Notes to editorsThe Competition Act 1998 prohibits agreements, practices and conduct that may damage competition in the UK.The Chapter I prohibi",
+      "source": "Financial Conduct Authority — UK · www.fca.org.uk",
+      "url": "https://www.fca.org.uk/news/press-releases/competition-act-1998-investigations",
+      "topic": "Competition",
+      "date": "Wednesday, May 6, 2026 - 14:20",
+      "impact": "medium",
+      "_authority": "Financial Conduct Authority — UK",
+      "_jurisdiction": "UK",
+      "_tier": 0,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "Chapter I",
+          "Chapter II",
+          "Statement of Objections"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "FCA to review claims management practices",
+      "summary": "We are launching a review of the claims management market, following concerns that consumers are being failed by some claims management companies (CMCs) and law firms.\n\nThe review will look at the root causes of poor practices across the market, like aggressive marketing, misleading advertising and unfair exit fees. Other concerns include consumers being signed up without their consent - without clear, upfront explanations of the implications of signing up or ticking a box, for example on social media adverts - or by multiple representatives, potentially causing confusion and delaying compensa",
+      "source": "Financial Conduct Authority — UK · www.fca.org.uk",
+      "url": "https://www.fca.org.uk/news/statements/fca-review-claims-management-practices",
+      "topic": "Competition",
+      "date": "Wednesday, May 6, 2026 - 08:02",
+      "impact": "medium",
+      "_authority": "Financial Conduct Authority — UK",
+      "_jurisdiction": "UK",
+      "_tier": 0,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "SMS"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "FCA sets out guidance to support innovation in fund tokenisation",
+      "summary": "Asset managers will find it easier to unlock the benefits of fund tokenisation, following the publication of new guidance by the FCA.\n\nThe guidance sets out how firms can use distributed ledger technology (DLT) within the regulator’s existing rules.New rules will also make fund dealing more efficient, including an optional Direct to Fund (D2F) model. This enables investors to deal directly with the fund, whether traditional or tokenised.Tokenisation is a way of representing an asset, or ownership of an asset, using distributed ledger technology. Tokenisation has the potential to lower costs an",
+      "source": "Financial Conduct Authority — UK · www.fca.org.uk",
+      "url": "https://www.fca.org.uk/news/press-releases/fca-sets-out-guidance-support-innovation-fund-tokenisation",
+      "topic": "Competition",
+      "date": "Thursday, April 30, 2026 - 13:02",
+      "impact": "medium",
+      "_authority": "Financial Conduct Authority — UK",
+      "_jurisdiction": "UK",
+      "_tier": 0,
+      "_keyword_hits": {
+        "competition": [
+          "DMA"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Trust, tradition and the future of mutual growth",
+      "summary": "Speech by Sarah Pritchard, FCA deputy chief executive, at the BSA Annual Conference, Edinburgh.\n\nAs a history lover, it’s thrilling to be in a city like Edinburgh – called a ‘hot-bed of genius’ during the Scottish Enlightenment.What defined the Enlightenment spirit was the refusal to settle, and a determination to make things better for the future.It’s the kind of approach I’m taking to this moment of regulatory reform.Working with others to solve difficult problems, protecting trust and good outcomes, and modernising where we can – so the framework supports growth and innovation.Both now, and",
+      "source": "Financial Conduct Authority — UK · www.fca.org.uk",
+      "url": "https://www.fca.org.uk/news/speeches/trust-tradition-and-future-mutual-growth",
+      "topic": "Competition",
+      "date": "Tuesday, April 28, 2026 - 17:47",
+      "impact": "medium",
+      "_authority": "Financial Conduct Authority — UK",
+      "_jurisdiction": "UK",
+      "_tier": 0,
+      "_keyword_hits": {
+        "competition": [
+          "competition"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "From promise to practice: shaping open finance policy with our Smart Data Accelerator",
+      "summary": "Open finance has vast potential. It promises to transform financial services for millions of people through firms using customers’ data in bigger and better ways. But to make that promise a reality, we need to look at how it works in practice. How does sharing data solve real problems for people and businesses?That’s the question we want to answer with our Smart Data Accelerator, which enables firms to showcase open finance solutions in a digital testing environment to help shape policy making.Between November 2025 and February 2026, we ran 2 TechSprints. We worked with 17 firms to develop tec",
+      "source": "Financial Conduct Authority — UK · www.fca.org.uk",
+      "url": "https://www.fca.org.uk/news/blogs/promise-practice-shaping-open-finance-policy-our-smart-data-accelerator",
+      "topic": "Competition",
+      "date": "Tuesday, April 28, 2026 - 06:03",
+      "impact": "medium",
+      "_authority": "Financial Conduct Authority — UK",
+      "_jurisdiction": "UK",
+      "_tier": 0,
+      "_keyword_hits": {
+        "competition": [
+          "DMA"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "FTC Finalizes Consent Order in Valvoline-Greenbriar Deal",
+      "summary": "<p>The Federal Trade Commission finalized a consent order resolving antitrust concerns related to a deal between Valvoline Inc. and private equity firm Greenbriar Equity Fund V., L.P. (Greenbriar).</p><a href=\"https://www.ftc.gov/news-events/news/press-releases/2026/05/ftc-finalizes-consent-order-valvoline-greenbriar-deal\">View Press Release</a>",
+      "source": "US Federal Trade Commission · www.ftc.gov",
+      "url": "https://www.ftc.gov/news-events/news/press-releases/2026/05/ftc-finalizes-consent-order-valvoline-greenbriar-deal",
+      "topic": "Competition",
+      "date": "Thu, 07 May 2026 08:00:00 -0400",
+      "impact": "medium",
+      "_authority": "US Federal Trade Commission",
+      "_jurisdiction": "US",
+      "_tier": 0,
+      "_keyword_hits": {
+        "competition": [
+          "antitrust"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "FTC to Host Workshop on “Litigate the Fix” Merger Remedy Proposals",
+      "summary": "WHAT:<p>The FTC will host a workshop titled “Eleventh-Hour Antitrust Remedy Proposals and Litigating the Fix.” It will discuss the rise in litigate-the-fix cases and how federal enforcers and the courts should respond.</p><a href=\"https://www.ftc.gov/news-events/news/press-releases/2026/05/ftc-host-workshop-litigate-fix-merger-remedy-proposals\">View Press Release</a>",
+      "source": "US Federal Trade Commission · www.ftc.gov",
+      "url": "https://www.ftc.gov/news-events/news/press-releases/2026/05/ftc-host-workshop-litigate-fix-merger-remedy-proposals",
+      "topic": "Competition",
+      "date": "Fri, 01 May 2026 08:00:00 -0400",
+      "impact": "medium",
+      "_authority": "US Federal Trade Commission",
+      "_jurisdiction": "US",
+      "_tier": 0,
+      "_keyword_hits": {
+        "competition": [
+          "antitrust",
+          "merger"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "FTC Urges Tennessee Supreme Court to  Oppose the ABA’s Law School Accreditation Monopoly",
+      "summary": "<p>Federal Trade Commission staff urged the Tennessee Supreme Court yesterday to open law school accreditation to competition by reducing its reliance on the American Bar Association (ABA) in determining which law schools provide sufficient education for their graduates to take the Tennessee bar examination. The letter was joined by the U.S.<a href=\"https://www.ftc.gov/news-events/news/press-releases/2026/05/ftc-urges-tennessee-supreme-court-oppose-abas-law-school-accreditation-monopoly\">View Press Release</a>\n</p>",
+      "source": "US Federal Trade Commission · www.ftc.gov",
+      "url": "https://www.ftc.gov/news-events/news/press-releases/2026/05/ftc-urges-tennessee-supreme-court-oppose-abas-law-school-accreditation-monopoly",
+      "topic": "Competition",
+      "date": "Fri, 01 May 2026 08:00:00 -0400",
+      "impact": "medium",
+      "_authority": "US Federal Trade Commission",
+      "_jurisdiction": "US",
+      "_tier": 0,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "monopoly"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "White House presses tech companies for support on AI-driven cyberattacks",
+      "summary": "Tech and cyber companies were sent questions about artificial intelligence-led cybersecurity threats, including those posed by Anthropic’s advanced AI model, Mythos.",
+      "source": "Politico US · www.politico.com",
+      "url": "https://www.politico.com/news/2026/04/30/white-house-ai-cyber-threats-mythos-00902045",
+      "topic": "Ai Policy",
+      "date": "Thu, 30 Apr 2026 17:30:00 EST",
+      "impact": "medium",
+      "_authority": "Politico US",
+      "_jurisdiction": "",
+      "_tier": 1,
+      "_keyword_hits": {
+        "ai_policy": [
+          "artificial intelligence"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "How the U.S. Is Trying to Ensure the Dollar’s Dominance During Economic Turmoil",
+      "summary": "As the government has been devising plans to keep the dollar dominant, China has been making its own moves to increase global influence of the renminbi.",
+      "source": "New York Times · www.nytimes.com",
+      "url": "https://www.nytimes.com/2026/05/11/business/dollar-dominance-renminbi-china.html",
+      "topic": "Competition",
+      "date": "Mon, 11 May 2026 18:24:59 +0000",
+      "impact": "medium",
+      "_authority": "New York Times",
+      "_jurisdiction": "",
+      "_tier": 1,
+      "_keyword_hits": {
+        "competition": [
+          "dominance"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The UK is set for a staycation summer - and there are plenty of hidden gems",
+      "summary": "Seasoned staycationers share their favourite spots as Airbnb and Booking.com say interest in UK stays are up on last year.",
+      "source": "BBC News · www.bbc.com",
+      "url": "https://www.bbc.com/news/articles/cgjpv9pdnpwo?at_medium=RSS&at_campaign=rss",
+      "topic": "Prosus Portfolio",
+      "date": "Fri, 08 May 2026 23:30:12 GMT",
+      "impact": "medium",
+      "_authority": "BBC News",
+      "_jurisdiction": "",
+      "_tier": 1,
+      "_keyword_hits": {
+        "prosus_portfolio": [
+          "Booking.com"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Over 72,000 Hongkongers hit as HKUST, PolyU among institutions in global Canvas hack",
+      "summary": "A global data leak involving learning platform Canvas has exposed the personal information of more than 72,000 students and staff across Hong Kong educational institutions, with authorities warning of further threats targeting those affected.\nAs of Tuesday, seven local educational institutions had reported data breaches to the Privacy Commissioner for Personal Data, including major universities such as the Hong Kong University of Science and Technology (HKUST), Polytechnic University and City...",
+      "source": "South China Morning Post · www.scmp.com",
+      "url": "https://www.scmp.com/news/hong-kong/law-and-crime/article/3353233/over-72000-hongkongers-hit-hkust-polyu-among-institutions-global-canvas-hack?utm_source=rss_feed",
+      "topic": "Privacy",
+      "date": "Tue, 12 May 2026 06:11:34 +0000",
+      "impact": "medium",
+      "_authority": "South China Morning Post",
+      "_jurisdiction": "",
+      "_tier": 1,
+      "_keyword_hits": {
+        "privacy": [
+          "personal data"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "AI disinformation? Singapore accused in pro-China videos of being ‘ungrateful’",
+      "summary": "Chinese-language videos suspected to be AI deepfakes with different narrators berating Singapore for its treatment of China and sidling up to the United States have caused a stir online and sparked discussion on their source.\nThe clips, each featuring an individual in a different setting and circulating on Chinese platforms such as Douyin and WeChat, were most likely generated by artificial intelligence, according to digital experts, pointing to clues such as identical scripts.\nA check by This...",
+      "source": "South China Morning Post · www.scmp.com",
+      "url": "https://www.scmp.com/week-asia/politics/article/3353210/ai-disinformation-singapore-accused-pro-china-videos-being-ungrateful?utm_source=rss_feed",
+      "topic": "Ai Policy",
+      "date": "Tue, 12 May 2026 02:06:40 +0000",
+      "impact": "medium",
+      "_authority": "South China Morning Post",
+      "_jurisdiction": "",
+      "_tier": 1,
+      "_keyword_hits": {
+        "ai_policy": [
+          "artificial intelligence"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Oregon AG seeks to triple antitrust team",
+      "summary": "Oregon’s top law enforcer has called on the state legislature to pass an emergency resolution adding 16 new antitrust staffers to fill a “void” left by the federal government.",
+      "source": "Global Competition Review · globalcompetitionreview.com",
+      "url": "https://globalcompetitionreview.com/gcr-usa/article/oregon-ag-seeks-triple-antitrust-team",
+      "topic": "Competition",
+      "date": "Mon, 11 May 2026 22:44:23 +0100",
+      "impact": "medium",
+      "_authority": "Global Competition Review",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "antitrust"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "In the shade: The Tipline for 11 May 2026",
+      "summary": "Requiring New York City solar panel contractors to hire workers through union-approved channels harms competition, according to a new lawsuit. The New York Solar Authority sued the city government on Friday, alleging that these labour requirements misuse the city’s power and restrict market entry. Also in Tipline, a checkers champion seeks to be crowned the victor in his antitrust suit against the...",
+      "source": "Global Competition Review · globalcompetitionreview.com",
+      "url": "https://globalcompetitionreview.com/gcr-usa/article/in-the-shade-the-tipline-11-may-2026",
+      "topic": "Competition",
+      "date": "Mon, 11 May 2026 21:50:32 +0100",
+      "impact": "medium",
+      "_authority": "Global Competition Review",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "antitrust"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "OhioHealth rebuffs DOJ allegation that 35% share is dominant",
+      "summary": "The Department of Justice and Ohio failed to plausibly allege that OhioHealth violated antitrust law by blocking insurers from offering cheaper plans, the health system has argued.&nbsp;",
+      "source": "Global Competition Review · globalcompetitionreview.com",
+      "url": "https://globalcompetitionreview.com/gcr-usa/article/ohiohealth-rebuffs-doj-allegation-35-share-dominant",
+      "topic": "Competition",
+      "date": "Mon, 11 May 2026 20:36:35 +0100",
+      "impact": "medium",
+      "_authority": "Global Competition Review",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "antitrust"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Pernod Ricard targeted in Indian exclusive dealing probe",
+      "summary": "The Competition Commission of India is investigating major alcohol company Pernod Ricard over suspicions that it “artificially” drove out rivals by pushing retailers to adopt unlawful exclusivity deals.",
+      "source": "Global Competition Review · globalcompetitionreview.com",
+      "url": "https://globalcompetitionreview.com/article/pernod-ricard-targeted-in-indian-exclusive-dealing-probe",
+      "topic": "Competition",
+      "date": "Mon, 11 May 2026 15:12:20 +0100",
+      "impact": "medium",
+      "_authority": "Global Competition Review",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Pulp fiction: The Briefing for 11 May 2026",
+      "summary": "Suzano, the world’s largest pulp maker, has secured unconditional clearance in the EU for its €2.9 billion joint venture with Kleenex’s parent company Kimberly-Clark. The European Commission said today that the deal posed no competition concerns in the supply of kraft pulp used for tissue paper, pointing to a market that is “large, diverse and well-supplied”. Also in The Briefing, Portugal launche...",
+      "source": "Global Competition Review · globalcompetitionreview.com",
+      "url": "https://globalcompetitionreview.com/article/pulp-fiction-the-briefing-11-may-2026",
+      "topic": "Competition",
+      "date": "Mon, 11 May 2026 08:21:24 +0100",
+      "impact": "medium",
+      "_authority": "Global Competition Review",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The road ahead: The Tipline for 8 May 2026",
+      "summary": "The remedies imposed on Google for its search monopoly still have a long way to go before they will cause irreparable harm, Judge Amit Mehta has said. The court rejected Google’s request for a stay of the injunction on the grounds that data syndication is not imminent. “Though the court is loath to kick the proverbial can down the road, it is what the high bar of irreparable harm presently demands...",
+      "source": "Global Competition Review · globalcompetitionreview.com",
+      "url": "https://globalcompetitionreview.com/gcr-usa/article/the-road-ahead-the-tipline-8-may-2026",
+      "topic": "Competition",
+      "date": "Fri, 08 May 2026 21:11:36 +0100",
+      "impact": "medium",
+      "_authority": "Global Competition Review",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "monopoly",
+          "remedies"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Ace Hardware “cartelized” cooperative structure, consumers say",
+      "summary": "Ace Hardware used its cooperative model as a “sophisticated tool” to fix prices and divide local markets in the market for convenience hardware stores, a new complaint has alleged.",
+      "source": "Global Competition Review · globalcompetitionreview.com",
+      "url": "https://globalcompetitionreview.com/gcr-usa/article/ace-hardware-cartelized-cooperative-structure-consumers-say",
+      "topic": "Competition",
+      "date": "Fri, 08 May 2026 20:50:54 +0100",
+      "impact": "medium",
+      "_authority": "Global Competition Review",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "cartel"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "UK appellate court overturns CAT ruling in standalone RPM case",
+      "summary": "The UK’s Competition Appeal Tribunal applied the incorrect legal test when deciding that a major footwear supplier’s online sales policy amounted to a by object infringement, an appellate court has ruled.&nbsp;",
+      "source": "Global Competition Review · globalcompetitionreview.com",
+      "url": "https://globalcompetitionreview.com/article/uk-appellate-court-overturns-cat-ruling-in-standalone-rpm-case",
+      "topic": "Competition",
+      "date": "Fri, 08 May 2026 15:25:38 +0100",
+      "impact": "medium",
+      "_authority": "Global Competition Review",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Rave files Apple antitrust allegations in five jurisdictions",
+      "summary": "A social entertainment app has filed antitrust complaints and private litigation against Apple in the US, Canada, Brazil, the Netherlands and Russia, seeking damages and fines in excess of $1 billion, following its removal from the App Store.",
+      "source": "Global Competition Review · globalcompetitionreview.com",
+      "url": "https://globalcompetitionreview.com/article/rave-files-apple-antitrust-allegations-in-five-jurisdictions",
+      "topic": "Competition",
+      "date": "Fri, 08 May 2026 15:05:32 +0100",
+      "impact": "medium",
+      "_authority": "Global Competition Review",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "antitrust"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Chain reaction: The Briefing for 8 May 2026",
+      "summary": "The total value of damages claims targeting the EU’s ethylene purchasing cartel has surpassed €10 billion, co-conspirator Westlake Chemical has revealed. ExxonMobil, Shell and BASF are among the major companies that have filed claims against the cartelists. Also in The Briefing, Visa and Mastercard settle a Turkish antitrust probe.",
+      "source": "Global Competition Review · globalcompetitionreview.com",
+      "url": "https://globalcompetitionreview.com/article/chain-reaction-the-briefing-8-may-2026",
+      "topic": "Competition",
+      "date": "Fri, 08 May 2026 08:12:51 +0100",
+      "impact": "medium",
+      "_authority": "Global Competition Review",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "antitrust",
+          "cartel"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "States rebuff settlement talks with Live Nation",
+      "summary": "New York’s top antitrust prosecutor has said settlement talks between Live Nation and the states suing to break it up cannot continue without discovery for the remedies phase.",
+      "source": "Global Competition Review · globalcompetitionreview.com",
+      "url": "https://globalcompetitionreview.com/gcr-usa/article/states-rebuff-settlement-talks-live-nation",
+      "topic": "Competition",
+      "date": "Thu, 07 May 2026 21:02:07 +0100",
+      "impact": "medium",
+      "_authority": "Global Competition Review",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "antitrust",
+          "remedies"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Shaken, not stirred: The Tipline for 7 May 2026",
+      "summary": "Antitrust and alcohol do not mix, according to Omeed Assefi. The acting head of the Department of Justice’s antitrust division said on Thursday that the notion of negotiating merger settlements over martinis “belies the seriousness of our work and the substantive negotiations our Division requires for settlement discussions to be fruitful”. “Which is why I stick to Shirley Temples,” he said. Also ...",
+      "source": "Global Competition Review · globalcompetitionreview.com",
+      "url": "https://globalcompetitionreview.com/gcr-usa/article/shaken-not-stirred-the-tipline-7-may-2026",
+      "topic": "Competition",
+      "date": "Thu, 07 May 2026 17:29:39 +0100",
+      "impact": "medium",
+      "_authority": "Global Competition Review",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "antitrust",
+          "merger"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "PayPoint damages claim cut by more than 99%&nbsp;",
+      "summary": "A UK smart energy payment provider has been awarded merely 0.15% of its £113.2 million standalone abuse of dominance claim against a larger rival, as it failed to prove its product was capable of competing to win business from larger suppliers.",
+      "source": "Global Competition Review · globalcompetitionreview.com",
+      "url": "https://globalcompetitionreview.com/article/paypoint-damages-claim-cut-more-99",
+      "topic": "Competition",
+      "date": "Thu, 07 May 2026 15:47:12 +0100",
+      "impact": "medium",
+      "_authority": "Global Competition Review",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "abuse of dominance",
+          "dominance"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Sacked chief economist mulls legal action against Hungarian watchdog",
+      "summary": "The former chief economist at the Hungarian Competition Authority is considering taking the agency to an employment tribunal for his firing as he believes it lacked adequate justification for his removal.",
+      "source": "Global Competition Review · globalcompetitionreview.com",
+      "url": "https://globalcompetitionreview.com/article/sacked-chief-economist-mulls-legal-action-against-hungarian-watchdog",
+      "topic": "Competition",
+      "date": "Thu, 07 May 2026 15:43:38 +0100",
+      "impact": "medium",
+      "_authority": "Global Competition Review",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "King &amp; Spalding expands to London",
+      "summary": "King &amp; Spalding has hired its first antitrust partner in London in over a decade, as the US firm looks to grow its European and global antitrust offering.",
+      "source": "Global Competition Review · globalcompetitionreview.com",
+      "url": "https://globalcompetitionreview.com/article/king-spalding-expands-london",
+      "topic": "Competition",
+      "date": "Thu, 07 May 2026 15:39:45 +0100",
+      "impact": "medium",
+      "_authority": "Global Competition Review",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "antitrust"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Iossa: Italian enforcer prepared to act with speed in quantum computing sector",
+      "summary": "Italy’s Competition Authority is closely studying the quantum computing market so that it can react with speed to any future concerns that arise from the sector, the agency’s acting head has said.",
+      "source": "Global Competition Review · globalcompetitionreview.com",
+      "url": "https://globalcompetitionreview.com/article/iossa-italian-enforcer-prepared-act-speed-in-quantum-computing-sector",
+      "topic": "Competition",
+      "date": "Thu, 07 May 2026 14:42:25 +0100",
+      "impact": "medium",
+      "_authority": "Global Competition Review",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Loriot: EU exclusionary abuse guidelines will be released “as soon as possible”",
+      "summary": "The European Commission’s recent focus on its new draft merger guidelines does not overshadow upcoming guidance on exclusionary abuses of dominance nor signal that the agency is prioritising one area of enforcement over the other, Guillaume Loriot has said.",
+      "source": "Global Competition Review · globalcompetitionreview.com",
+      "url": "https://globalcompetitionreview.com/article/loriot-eu-exclusionary-abuse-guidelines-will-be-released-soon-possible",
+      "topic": "Competition",
+      "date": "Thu, 07 May 2026 14:37:17 +0100",
+      "impact": "medium",
+      "_authority": "Global Competition Review",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "merger",
+          "dominance"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "On display: The Briefing for 7 May 2026",
+      "summary": "Google’s adtech conduct is the target of a new £3 billion mass lawsuit in the UK, with a former Eversheds Sutherland partner seeking to represent advertisers that paid for the company’s display advertising services. The standalone claim was filed before the UK’s Competition Appeal Tribunal yesterday. Also in The Briefing, Thomson Geer hires from Clifford Chance in Australia, and Romania’s antitrus...",
+      "source": "Global Competition Review · globalcompetitionreview.com",
+      "url": "https://globalcompetitionreview.com/article/display-the-briefing-7-may-2026",
+      "topic": "Competition",
+      "date": "Thu, 07 May 2026 14:00:31 +0100",
+      "impact": "medium",
+      "_authority": "Global Competition Review",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Canadian watchdog seeks to compel US witnesses in adtech case",
+      "summary": "Canada’s Competition Bureau is urging the country’s Competition Tribunal to compel witness evidence from former Google employees based in the US after none of the agency’s targets agreed to testify voluntarily.&nbsp;",
+      "source": "Global Competition Review · globalcompetitionreview.com",
+      "url": "https://globalcompetitionreview.com/article/canadian-watchdog-seeks-compel-us-witnesses-in-adtech-case",
+      "topic": "Competition",
+      "date": "Thu, 07 May 2026 12:49:47 +0100",
+      "impact": "medium",
+      "_authority": "Global Competition Review",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "ICN urged to help protect smaller agencies from “intimidation” during deal reviews",
+      "summary": "The world’s leading competition authorities should do more to ensure that enforcers from smaller economies are included in remedy discussions during reviews of global mergers, a senior official has said.",
+      "source": "Global Competition Review · globalcompetitionreview.com",
+      "url": "https://globalcompetitionreview.com/article/icn-urged-help-protect-smaller-agencies-intimidation-during-deal-reviews",
+      "topic": "Competition",
+      "date": "Thu, 07 May 2026 00:35:33 +0100",
+      "impact": "medium",
+      "_authority": "Global Competition Review",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "merger"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Forbidden fruit: The Tipline for 6 May 2026",
+      "summary": "The Supreme Court has shown little appetite for antitrust matters in recent years and Epic Games v Apple has proven no different. Justice Elena Kagan denied Apple’s emergency bid to pause a civil contempt order on Wednesday before the iPhone maker had filed a reply. Also in Tipline, the Federal Communications Commission seeks to fend off a challenge to its approval of Nexstar/Tegna.&nbsp;",
+      "source": "Global Competition Review · globalcompetitionreview.com",
+      "url": "https://globalcompetitionreview.com/gcr-usa/article/forbidden-fruit-the-tipline-6-may-2026",
+      "topic": "Competition",
+      "date": "Wed, 06 May 2026 20:57:37 +0100",
+      "impact": "medium",
+      "_authority": "Global Competition Review",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "antitrust"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Paramount and WBD spend big on K Street amid merger headwinds",
+      "summary": "Paramount and Warner Bros Discovery spent almost half a million dollars on lobbying at the start of the year whilst battling opposition from states, lawmakers and Hollywood icons lining up to fight the $110 billion merger.",
+      "source": "Global Competition Review · globalcompetitionreview.com",
+      "url": "https://globalcompetitionreview.com/gcr-usa/article/paramount-and-wbd-spend-big-k-street-amid-merger-headwinds",
+      "topic": "Competition",
+      "date": "Wed, 06 May 2026 19:56:22 +0100",
+      "impact": "medium",
+      "_authority": "Global Competition Review",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "merger"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The UK Competition Appeal Tribunal dismisses an appeal to the Competition Authority's counterfactual assessment in the completed acquisition of an online sports spread betting business, upholding the finding of a substantial lessening of competition (Spreadex / Sporting Index)",
+      "summary": "Introduction On 19 March 2026, the UK Competition Appeal Tribunal (CAT) unanimously dismissed Spreadex Limited's application for judicial review of the Competition and Markets Authority's (CMA) remittal final report concerning Spreadex's completed acquisition of the business-to-consumer (B2C) spread betting arm of Sporting Index. The CAT rejected all three grounds of challenge — two irrationality attacks on specific evidential findings and a broader rationality challenge to the CMA's (…) \n\n-\n<a href=\"https://www.concurrences.com/en/bulletin/news-issues/preview/\" rel=\"directory\">Preview</a>\n\n/ ",
+      "source": "Concurrences · www.concurrences.com",
+      "url": "https://www.concurrences.com/en/bulletin/news-issues/preview/new-article-no134742",
+      "topic": "Competition",
+      "date": "2026-05-11T16:22:44Z",
+      "impact": "medium",
+      "_authority": "Concurrences",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "merger"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The UK Competition Authority orders the divestiture of an offshore catering business and issues a final order following the failure to agree on undertakings (Aramark / Entier)",
+      "summary": "Introduction The Competition and Markets Authority (CMA) has issued a final order requiring Aramark Limited to divest the entirety of its acquired Entier business — a supplier of offshore catering services (OCS) in the UK Continental Shelf — following a Phase II investigation that found the completed merger would result in a substantial lessening of competition (SLC) in the Offshore Infrastructure Market. The order, made under section 84 of the Enterprise Act 2002 and entering into force (…) \n\n-\n<a href=\"https://www.concurrences.com/en/bulletin/news-issues/preview/\" rel=\"directory\">Preview</a>",
+      "source": "Concurrences · www.concurrences.com",
+      "url": "https://www.concurrences.com/en/bulletin/news-issues/preview/new-article-no134740",
+      "topic": "Competition",
+      "date": "2026-05-11T16:02:37Z",
+      "impact": "medium",
+      "_authority": "Concurrences",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "merger",
+          "phase ii",
+          "remedies",
+          "divestiture"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The Dutch Competition Authority fines a consumer electronics manufacturer €39M for resale price maintenance through disguised price recommendations in the online television retail market (Samsung)",
+      "summary": "Introduction The Netherlands Authority for Consumers and Markets (ACM) has imposed a fine of over €39 million on Samsung Electronics Benelux B.V. for unlawfully coordinating online retail prices of television sets with seven Dutch retailers over a period of nearly six years. The decision exposes a sophisticated system of vertical price management conducted under the guise of non-binding recommendations, and is accompanied by an ACM awareness campaign on prohibited vertical price restraints — (…) \n\n-\n<a href=\"https://www.concurrences.com/en/bulletin/news-issues/september-2021/\" rel=\"directory\">",
+      "source": "Concurrences · www.concurrences.com",
+      "url": "https://www.concurrences.com/en/bulletin/news-issues/september-2021/the-dutch-competition-authority-fines-a-consumer-electronics-manufacturer",
+      "topic": "Competition",
+      "date": "2026-05-11T15:47:41Z",
+      "impact": "medium",
+      "_authority": "Concurrences",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "cartel"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The US District Court for the District of New Jersey denies a motion to dismiss price-fixing and monopolisation claims brought by a distiller against a wholesalers' association for collectively coercing uniform wholesale profit margins in the liquor distribution sector (Schenley / N.J. Wine & Spirit Wholesalers Association)",
+      "summary": "Introduction In Schenley Industries, Inc. v. N.J. Wine & Spirit Wholesalers Association, the United States District Court for the District of New Jersey denied defendants' motion to dismiss Sherman and Clayton Act claims brought by distiller Schenley Industries against a trade association of New Jersey liquor wholesalers and its members. The court held that collective coercion of individual wholesalers to maintain uniform and inflated profit margins was not shielded from antitrust (…) \n\n-\n<a href=\"https://www.concurrences.com/en/bulletin/news-issues/1967/\" rel=\"directory\">1967</a>\n\n/ \n<a href=",
+      "source": "Concurrences · www.concurrences.com",
+      "url": "https://www.concurrences.com/en/bulletin/news-issues/1967/the-us-district-court-for-the-district-of-new-jersey-denies-a-motion-to-dismiss",
+      "topic": "Competition",
+      "date": "2026-05-11T15:35:40Z",
+      "impact": "medium",
+      "_authority": "Concurrences",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "antitrust",
+          "cartel",
+          "monopolisation"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The UK Competition Authority refers a completed acquisition in the bakery products sector to a Phase 2 investigation after the parties fail to satisfy the upfront buyer condition for the proposed undertakings in lieu of reference (Vandemoortele / Délifrance)",
+      "summary": "Introduction The UK Competition and Markets Authority (CMA) has referred the completed acquisition by Vandemoortele Group of Délifrance S.A. to a Phase 2 investigation after the parties failed to satisfy the upfront buyer condition attached to their proposed undertakings in lieu of reference (UILs). The referral, made on 22 April 2026, underscores the CMA's strict approach to UIL acceptance: where an upfront buyer condition is imposed, the absence of a signed sale agreement and approved (…) \n\n-\n<a href=\"https://www.concurrences.com/en/bulletin/news-issues/preview/\" rel=\"directory\">Preview</a>\n",
+      "source": "Concurrences · www.concurrences.com",
+      "url": "https://www.concurrences.com/en/bulletin/news-issues/preview/new-article-no134738",
+      "topic": "Competition",
+      "date": "2026-05-11T15:21:35Z",
+      "impact": "medium",
+      "_authority": "Concurrences",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "merger",
+          "remedies"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The German Federal Court of Justice overturns the Düsseldorf Court of Appeal's annulment of a merger prohibition and remands the case on geographic market definition and dominance assessment in the pharmaceutical wholesale sector (Sanacorp / ANZAG)",
+      "summary": "The German Federal Court of Justice (Bundesgerichtshof, BGH) has upheld the Bundeskartellamt's appeal on points of law (Rechtsbeschwerde) in the Sanacorp/ANZAG merger case, quashing the Düsseldorf Higher Regional Court of Appeal's ruling that had annulled the authority's prohibition decision. The BGH found that the Court of Appeal had erred in its geographic market definition methodology — specifically in applying a uniform 150 km radius around each warehouse branch — and had applied the (…) \n\n-\n<a href=\"https://www.concurrences.com/en/bulletin/news-issues/july-2004/\" rel=\"directory\">July 2004",
+      "source": "Concurrences · www.concurrences.com",
+      "url": "https://www.concurrences.com/en/bulletin/news-issues/july-2004/the-german-federal-court-of-justice-overturns-the-dusseldorf-court-of-appeal-s",
+      "topic": "Competition",
+      "date": "2026-05-11T14:48:28Z",
+      "impact": "medium",
+      "_authority": "Concurrences",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "merger",
+          "dominance"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The US Supreme Court holds that a blanket ban on attorney price advertising for routine legal services violates the First Amendment and upholds the Parker v. Brown state-action exemption to the Sherman Act (Bates / State Bar of Arizona)",
+      "summary": "Introduction In a landmark decision delivered on 27 June 1977, the US Supreme Court held in Bates v. State Bar of Arizona, No. 76-316, that the blanket suppression of truthful price advertising for routine legal services by licensed attorneys violates the First Amendment to the US Constitution. Writing for a 5-4 majority, Justice Blackmun affirmed that commercial speech — including price advertising for legal services — enjoys constitutional protection, and that the justifications advanced (…) \n\n-\n<a href=\"https://www.concurrences.com/en/bulletin/news-issues/june-1977/\" rel=\"directory\">June 19",
+      "source": "Concurrences · www.concurrences.com",
+      "url": "https://www.concurrences.com/en/bulletin/news-issues/june-1977/the-us-supreme-court-holds-that-a-blanket-ban-on-attorney-price-advertising-for",
+      "topic": "Competition",
+      "date": "2026-05-11T13:28:22Z",
+      "impact": "medium",
+      "_authority": "Concurrences",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "DMA"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The UK Competition Authority finds that competition in cloud services markets is not working well and recommends Strategic Market Status investigations into the 2 leading providers (Microsoft / Amazon)",
+      "summary": "Introduction On 31 July 2025, the UK Competition and Markets Authority (CMA) published its final decision in its market investigation into public cloud infrastructure services, concluding that competition is not working well and identifying three adverse effects on competition (AECs). The CMA recommends that its Board use its powers under the Digital Markets, Competition and Consumers (DMCC) Act to prioritise commencing Strategic Market Status (SMS) investigations into Microsoft and AWS, (…) \n\n-\n<a href=\"https://www.concurrences.com/en/bulletin/news-issues/may-2025/\" rel=\"directory\">May 2025</",
+      "source": "Concurrences · www.concurrences.com",
+      "url": "https://www.concurrences.com/en/bulletin/news-issues/may-2025/the-uk-competition-authority-finds-that-competition-in-cloud-services-markets",
+      "topic": "Competition",
+      "date": "2026-05-11T13:26:30Z",
+      "impact": "medium",
+      "_authority": "Concurrences",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "antitrust",
+          "SMS",
+          "Strategic Market Status"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The US Supreme Court holds that a State qualifies as a \"person\" entitled to sue for treble damages under the Sherman Act as a purchaser injured by a price-fixing cartel in the asphalt market (Georgia / Evans)",
+      "summary": "Introduction In a short but consequential ruling, the US Supreme Court reversed the Fifth Circuit and held that the State of Georgia is a \"person\" within the meaning of § 7 of the Sherman Antitrust Act, and is therefore entitled to bring a civil action for treble damages when it suffers injury as a purchaser of commodities in interstate commerce as a result of a price-fixing conspiracy. The decision resolved a significant gap in Sherman Act enforcement standing and confirmed that States, no (…) \n\n-\n<a href=\"https://www.concurrences.com/en/bulletin/news-issues/1940s/\" rel=\"directory\">1940s</a>\n",
+      "source": "Concurrences · www.concurrences.com",
+      "url": "https://www.concurrences.com/en/bulletin/news-issues/1940s/the-us-supreme-court-holds-that-a-state-qualifies-as-a-person-entitled-to-sue",
+      "topic": "Competition",
+      "date": "2026-05-11T12:35:27Z",
+      "impact": "medium",
+      "_authority": "Concurrences",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "antitrust",
+          "cartel"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The England & Wales Court of Appeal dismisses a class action appeal and confirms that the market mitigation rule caps damages for holders of a delisted cryptocurrency at the value at which they became aware of anticompetitive conduct (BSV Claims / Bittylicious / Binance)",
+      "summary": "Introduction The England & Wales Court of Appeal has dismissed an appeal by BSV Claims Limited, the class representative in opt-out collective proceedings before the UK Competition Appeal Tribunal (CAT), confirming that the market mitigation rule strictly limits the damages recoverable by a sub-class of approximately 75,000 long-term holders of the cryptocurrency Bitcoin Satoshi Vision (BSV). The judgment, delivered by Sir Geoffrey Vos, Master of the Rolls, forecloses claims worth up (…) \n\n-\n<a href=\"https://www.concurrences.com/en/bulletin/news-issues/may-2025/\" rel=\"directory\">May 2025</a>\n\n",
+      "source": "Concurrences · www.concurrences.com",
+      "url": "https://www.concurrences.com/en/bulletin/news-issues/may-2025/the-england-wales-court-of-appeal-dismisses-a-class-action-appeal-and-confirms",
+      "topic": "Competition",
+      "date": "2026-05-11T12:16:00Z",
+      "impact": "medium",
+      "_authority": "Concurrences",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The US Supreme Court holds that a home rule municipality's cable television moratorium ordinance is not exempt from federal antitrust scrutiny under the state action doctrine (Community Communications / City of Boulder)",
+      "summary": "Introduction In Community Communications Co., Inc. v. City of Boulder, the US Supreme Court reversed a Tenth Circuit ruling and held that the City of Boulder's emergency ordinance imposing a three-month moratorium on a cable television operator's planned expansion did not qualify for antitrust immunity under the Parker v. Brown state action doctrine. The decision clarified that municipalities, unlike States, are not sovereign actors for the purposes of the Parker exemption, and that a (…) \n\n-\n<a href=\"https://www.concurrences.com/en/bulletin/news-issues/january-1982/\" rel=\"directory\">January 1",
+      "source": "Concurrences · www.concurrences.com",
+      "url": "https://www.concurrences.com/en/bulletin/news-issues/january-1982/the-us-supreme-court-holds-that-a-home-rule-municipality-s-cable-television",
+      "topic": "Competition",
+      "date": "2026-05-11T12:08:40Z",
+      "impact": "medium",
+      "_authority": "Concurrences",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "antitrust"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The Dutch Competition Authority publishes the final report of its market investigation into veterinary services for pets",
+      "summary": "Introduction On 30 April 2026, the Netherlands Authority for Consumers and Markets (ACM) published the final report of its market investigation into veterinary services for pets, confirming and sharpening the findings set out in its December 2025 draft. The report concludes that increasing commercialisation of the veterinary sector creates material risks of higher prices and overtreatment of pets, and calls for legislative and sector-level safeguards analogous to those applicable to human (…) \n\n-\n<a href=\"https://www.concurrences.com/en/bulletin/news-issues/preview/\" rel=\"directory\">Preview</a",
+      "source": "Concurrences · www.concurrences.com",
+      "url": "https://www.concurrences.com/en/bulletin/news-issues/preview/the-dutch-competition-authority-publishes-the-final-report-of-its-market",
+      "topic": "Competition",
+      "date": "2026-05-11T11:55:38Z",
+      "impact": "medium",
+      "_authority": "Concurrences",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "antitrust"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The South African Competition Authority launches a cross-sector review of regulatory barriers to competition and SME participation",
+      "summary": "Regulation as a Barrier to Entry: The Competition Commission's Review of Regulatory Impediments to Competition and SME Participation* On 22 April 2026, the South African Competition Commission (“the Commission”) launched a review of regulations that may act as barriers to competition and the entry and expansion of firms with particular focus on small and medium enterprises (“SMEs”) across all Markets in South Africa (the “Review”). The Review forms part of a broader national policy effort (…) \n\n-\n<a href=\"https://www.concurrences.com/en/bulletin/news-issues/preview/\" rel=\"directory\">Preview</a",
+      "source": "Concurrences · www.concurrences.com",
+      "url": "https://www.concurrences.com/en/bulletin/news-issues/preview/regulation-as-a-barrier-to-entry-the-competition-commission-s-review-of",
+      "topic": "Competition",
+      "date": "2026-05-11T11:49:35Z",
+      "impact": "medium",
+      "_authority": "Concurrences",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The EU Commission publishes its new draft merger guidelines signalling increased openness to the procompetitive arguments of mergers",
+      "summary": "What dealmakers need to know about the EU Commission's new draft merger guidelines On 30 April 2026 the EU Commission published its long-awaited draft revised EU merger guidelines (Draft Guidelines) for consultation. The Draft Guidelines have been in the making for some years now and represent the first update since the original guidelines were adopted more than two decades ago. They will replace both the horizontal and non-horizontal merger guidelines, now consolidated into one document. (…) \n\n-\n<a href=\"https://www.concurrences.com/en/bulletin/news-issues/preview/\" rel=\"directory\">Preview</a",
+      "source": "Concurrences · www.concurrences.com",
+      "url": "https://www.concurrences.com/en/bulletin/news-issues/preview/a-new-era-for-eu-merger-control-efficiencies-geopolitics-resilience-innovation",
+      "topic": "Competition",
+      "date": "2026-05-11T11:43:15Z",
+      "impact": "medium",
+      "_authority": "Concurrences",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "merger"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The Irish Competition Authority monitors commitments agreed by a farm plastics recycling scheme operator to address competition concerns in the farm plastics waste collection sector (IFFPG)",
+      "summary": "The Irish Competition Authority (CCPC) has announced that the Irish Farm Film Producers' Group (IFFPG) — the operator of Ireland's sole national farm plastics recycling scheme — has agreed to a series of changes to its scheme following engagement with the European Commission's Directorate-General for Competition (DG COMP). The changes are designed to enhance transparency, promote competition, and improve choice for farmers, and address concerns raised under Articles 101 and 102 TFEU. The (…) \n\n-\n<a href=\"https://www.concurrences.com/en/bulletin/news-issues/preview/\" rel=\"directory\">Preview</a>",
+      "source": "Concurrences · www.concurrences.com",
+      "url": "https://www.concurrences.com/en/bulletin/news-issues/preview/the-irish-competition-authority-monitors-commitments-agreed-by-a-farm-plastics",
+      "topic": "Competition",
+      "date": "2026-05-11T11:40:40Z",
+      "impact": "medium",
+      "_authority": "Concurrences",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "antitrust",
+          "remedies",
+          "TFEU"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The US Court of Appeals for the Fourth Circuit dismisses for lack of jurisdiction an interlocutory appeal by a state dental board challenging the denial of state action antitrust immunity by the US FTC (South Carolina State Board of Dentistry)",
+      "summary": "Introduction The US Court of Appeals for the Fourth Circuit dismissed for lack of appellate jurisdiction an interlocutory appeal by the South Carolina State Board of Dentistry (the \"Board\"), which sought to challenge the US FTC's refusal to extend Parker v. Brown state action antitrust immunity to the Board. The court held that a denial of Parker protection does not satisfy the requirements of the collateral order doctrine and therefore cannot be immediately appealed. In so doing, the Fourth (…) \n\n-\n<a href=\"https://www.concurrences.com/en/bulletin/news-issues/may-2006/\" rel=\"directory\">May 20",
+      "source": "Concurrences · www.concurrences.com",
+      "url": "https://www.concurrences.com/en/bulletin/news-issues/may-2006/the-us-court-of-appeals-for-the-fourth-circuit-dismisses-for-lack-of",
+      "topic": "Competition",
+      "date": "2026-05-11T11:33:20Z",
+      "impact": "medium",
+      "_authority": "Concurrences",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "antitrust"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The Swedish Parliament adopts 3 major competition law reforms strengthening market investigations, public sector competition oversight and merger control",
+      "summary": "Today, the Swedish Parliament adopted a significant package of competition law reforms aimed at strengthening competition in both the private and public sectors. The new rules, which will enter into force already on 1 August 2026, introduce three major changes to Swedish competition law: a new competition tool for market investigations, a new act governing public commercial activities, and revised merger control rules. Together, the reforms represent one of the most substantial overhauls (…) \n\n-\n<a href=\"https://www.concurrences.com/en/bulletin/news-issues/preview/\" rel=\"directory\">Preview</a>",
+      "source": "Concurrences · www.concurrences.com",
+      "url": "https://www.concurrences.com/en/bulletin/news-issues/preview/the-swedish-parliament-adopts-3-major-competition-law-reforms-strengthening",
+      "topic": "Competition",
+      "date": "2026-05-11T11:03:12Z",
+      "impact": "medium",
+      "_authority": "Concurrences",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "merger"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The Dutch Competition Authority closes its investigation into an international software company for suspected abuse of dominance in the business software market due to insufficient evidence",
+      "summary": "Introduction On 1 May 2026, the Netherlands Authority for Consumers and Markets (ACM) announced the closure of its investigation into a large, internationally operating software company active in the business market, finding insufficient evidence to establish an infringement of competition rules. The investigation, which had been opened in September 2025 and was accompanied by a dawn raid, focused on alleged abuse of dominance through unreasonable pricing and unfair contractual conditions (…) \n\n-\n<a href=\"https://www.concurrences.com/en/bulletin/news-issues/preview/\" rel=\"directory\">Preview</a",
+      "source": "Concurrences · www.concurrences.com",
+      "url": "https://www.concurrences.com/en/bulletin/news-issues/preview/the-dutch-competition-authority-closes-its-investigation-into-an-international",
+      "topic": "Competition",
+      "date": "2026-05-11T10:27:05Z",
+      "impact": "medium",
+      "_authority": "Concurrences",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "abuse of dominance",
+          "dominance"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The UK Competition Appeal Tribunal rejects a procedural application by a Big Tech company to narrow the scope of a damages trial concerning alleged abuse of dominance in the online comparison shopping market (Foundem / Kelkoo / Google...)",
+      "summary": "Introduction This ruling concerns a procedural application by Google in four sets of follow-on damages proceedings before the Competition Appeal Tribunal (CAT), brought respectively by Foundem, Kelkoo, Ciao, and Connexity. All four claimants operate, or have operated, comparison shopping services (CSSs) and seek damages from Google for abuse of a dominant position in breach of Article 102 TFEU, flowing from the European Commission's Google Shopping Decision of 27 June 2017. In that (…) \n\n-\n<a href=\"https://www.concurrences.com/en/bulletin/news-issues/january-2026/\" rel=\"directory\">January 2026",
+      "source": "Concurrences · www.concurrences.com",
+      "url": "https://www.concurrences.com/en/bulletin/news-issues/january-2026/the-uk-competition-appeal-tribunal-rejects-a-procedural-application-by-a-big",
+      "topic": "Competition",
+      "date": "2026-05-11T10:02:02Z",
+      "impact": "medium",
+      "_authority": "Concurrences",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "antitrust",
+          "abuse of dominance",
+          "dominance",
+          "remedies",
+          "Article 102",
+          "TFEU"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The US Court of Appeals for the Eleventh Circuit holds that an airport authority is immune from antitrust scrutiny under the state action doctrine and rules that the denial of immunity is immediately appealable as a collateral order (Commuter Transportation Systems / Hillsborough County Aviation Authority)",
+      "summary": "Introduction The US Court of Appeals for the Eleventh Circuit reversed the district court's denial of summary judgment and held that Hillsborough County Aviation Authority was immune from federal antitrust scrutiny under the Parker v. Brown state action doctrine. The court further held that the denial of summary judgment on immunity grounds constituted an immediately appealable collateral order, and that Commuter Transportation Systems had failed to produce any evidence of an illicit (…) \n\n-\n<a href=\"https://www.concurrences.com/en/bulletin/news-issues/october-1986/\" rel=\"directory\">October 19",
+      "source": "Concurrences · www.concurrences.com",
+      "url": "https://www.concurrences.com/en/bulletin/news-issues/october-1986/the-us-court-of-appeals-for-the-eleventh-circuit-holds-that-an-airport",
+      "topic": "Competition",
+      "date": "2026-05-11T09:16:45Z",
+      "impact": "medium",
+      "_authority": "Concurrences",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "antitrust"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The Rotterdam District Court upholds the Dutch Competition Authority's €50M fine against a Big Tech company for abusing its dominant position by imposing unfair payment conditions on dating app providers in the iOS App Store (Apple)",
+      "summary": "Introduction On 16 June 2025, the Rotterdam District Court upheld the 2021 decision by the Dutch Authority for Consumers and Markets (ACM), finding that Apple held monopoly power in the EEA-wide market for app store services on the iOS mobile operating system for dating app providers and had imposed unfair conditions on those providers. The ACM had originally imposed its order for incremental penalty payments on Apple on 24 August 2021, for breaching Article 24 of the Dutch Competition Act (…) \n\n-\n<a href=\"https://www.concurrences.com/en/bulletin/news-issues/june-2025/\" rel=\"directory\">June 20",
+      "source": "Concurrences · www.concurrences.com",
+      "url": "https://www.concurrences.com/en/bulletin/news-issues/june-2025/the-rotterdam-district-court-upholds-the-dutch-competition-authority-s-eur50m",
+      "topic": "Competition",
+      "date": "2026-05-11T09:08:37Z",
+      "impact": "medium",
+      "_authority": "Concurrences",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "dominance",
+          "monopoly"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The German Federal Court of Justice upholds fines against 4 grey cement manufacturers for a decades-long nationwide quota cartel (Holcim / HeidelbergCement / Lafarge / Schwenk)",
+      "summary": "Introduction In a landmark decision of 26 February 2013, the Cartel Senate of the German Federal Court of Justice (Bundesgerichtshof, BGH) dismissed the appeals in cassation (Rechtsbeschwerde) lodged by four major cement manufacturers against the fines upheld by the Düsseldorf Higher Regional Court (Oberlandesgericht) in 2009, bringing to a close the public enforcement phase of the longest-running and most financially significant cartel case in German competition law history. Beyond (…) \n\n-\n<a href=\"https://www.concurrences.com/en/bulletin/news-issues/february-2013/\" rel=\"directory\">February 2",
+      "source": "Concurrences · www.concurrences.com",
+      "url": "https://www.concurrences.com/en/bulletin/news-issues/february-2013/the-german-federal-court-of-justice-upholds-fines-against-4-grey-cement",
+      "topic": "Competition",
+      "date": "2026-05-11T08:31:35Z",
+      "impact": "medium",
+      "_authority": "Concurrences",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "cartel",
+          "DMA"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Innovation Suffers When Governments Can Alter Their Contracts",
+      "summary": "<a href=\"https://www.promarket.org/2026/05/11/innovation-suffers-when-governments-can-alter-their-contracts/\"><img align=\"left\" alt=\"Innovation Suffers When Governments Can Alter Their Contracts\" height=\"169\" src=\"https://www.promarket.org/wp-content/uploads/2026/05/GettyImages-2241160334-e1777892656887-300x169.jpg\" style=\"margin: 0 20px 20px 0;\" width=\"300\" /></a><p>In new research, Michele Fioretti and Alessandro Iaria discuss how a landmark Norwegian court ruling shows how constitutional constraints on the government’s ability to retroactively change contracts can encourage private innovati",
+      "source": "ProMarket (Stigler Center) · www.promarket.org",
+      "url": "https://www.promarket.org/2026/05/11/innovation-suffers-when-governments-can-alter-their-contracts/",
+      "topic": "Competition",
+      "date": "Mon, 11 May 2026 10:00:00 +0000",
+      "impact": "medium",
+      "_authority": "ProMarket (Stigler Center)",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "DMA"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The TikTok Ban Was a Model for Digital Competition Policy",
+      "summary": "<a href=\"https://www.promarket.org/2026/05/07/the-tiktok-ban-was-a-model-for-digital-competition-policy/\"><img align=\"left\" alt=\"The TikTok Ban Was a Model for Digital Competition Policy\" height=\"188\" src=\"https://www.promarket.org/wp-content/uploads/2026/04/Zhang-300x188.jpg\" style=\"margin: 0 20px 20px 0;\" width=\"300\" /></a><p>Victor Jiawei Zhang revisits the 2025 United States ban on TikTok and explores how it represented a case study of how the government led users to act collectively to override network effects and introduce competition to the digital market. The case study highlights rese",
+      "source": "ProMarket (Stigler Center) · www.promarket.org",
+      "url": "https://www.promarket.org/2026/05/07/the-tiktok-ban-was-a-model-for-digital-competition-policy/",
+      "topic": "Competition",
+      "date": "Thu, 07 May 2026 10:00:00 +0000",
+      "impact": "medium",
+      "_authority": "ProMarket (Stigler Center)",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "antitrust"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Consumers Prefer AI Music Until They’re Told It’s AI",
+      "summary": "<a href=\"https://www.promarket.org/2026/05/04/consumers-prefer-ai-music-until-theyre-told-its-ai/\"><img align=\"left\" alt=\"Consumers Prefer AI Music Until They’re Told It’s AI\" height=\"169\" src=\"https://www.promarket.org/wp-content/uploads/2026/04/Friedrichsen-et-al-300x169.jpg\" style=\"margin: 0 20px 20px 0;\" width=\"300\" /></a><p>Across three studies, Jana Friedrichsen, Julia Schwarz, and Michel Clement explore how generative AI will change the music industry. They find that while consumers enjoy and even prefer AI-generated music, preferences shift upon learning that the song was AI-generated.",
+      "source": "ProMarket (Stigler Center) · www.promarket.org",
+      "url": "https://www.promarket.org/2026/05/04/consumers-prefer-ai-music-until-theyre-told-its-ai/",
+      "topic": "Ai Policy",
+      "date": "Mon, 04 May 2026 10:00:00 +0000",
+      "impact": "medium",
+      "_authority": "ProMarket (Stigler Center)",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "ai_policy": [
+          "generative"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "AI Is Coming for the Economic Consulting Industry",
+      "summary": "<a href=\"https://www.promarket.org/2026/04/29/ai-is-coming-for-the-economic-consulting-industry/\"><img align=\"left\" alt=\"AI Is Coming for the Economic Consulting Industry\" height=\"169\" src=\"https://www.promarket.org/wp-content/uploads/2026/04/Birjandi-and-Zadeh-300x169.jpg\" style=\"margin: 0 20px 20px 0;\" width=\"300\" /></a><p>Artificial intelligence will change the market for economic consultants, likely reducing overall demand and shifting workers to current clients’ in-house units. However, both consulting firms and clients are still studying how to deploy AI, and there may yet be new opportu",
+      "source": "ProMarket (Stigler Center) · www.promarket.org",
+      "url": "https://www.promarket.org/2026/04/29/ai-is-coming-for-the-economic-consulting-industry/",
+      "topic": "Ai Policy",
+      "date": "Wed, 29 Apr 2026 10:00:00 +0000",
+      "impact": "medium",
+      "_authority": "ProMarket (Stigler Center)",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "ai_policy": [
+          "artificial intelligence"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "A Merger Between United and American Airlines Is Likely To Substantially Lessen Competition",
+      "summary": "<a href=\"https://www.promarket.org/2026/04/28/a-merger-between-united-and-american-airlines-is-likely-to-substantially-lessen-competition/\"><img align=\"left\" alt=\"A Merger Between United and American Airlines Is Likely To Substantially Lessen Competition\" height=\"169\" src=\"https://www.promarket.org/wp-content/uploads/2026/04/Ali-300x169.jpg\" style=\"margin: 0 20px 20px 0;\" width=\"300\" /></a><p>Ratib Ali analyzes whether a merger between United and American Airlines would pass merger review according to the 2023 Merger Guidelines and finds that under multiple market definitions, it would substan",
+      "source": "ProMarket (Stigler Center) · www.promarket.org",
+      "url": "https://www.promarket.org/2026/04/28/a-merger-between-united-and-american-airlines-is-likely-to-substantially-lessen-competition/",
+      "topic": "Competition",
+      "date": "Tue, 28 Apr 2026 10:00:00 +0000",
+      "impact": "medium",
+      "_authority": "ProMarket (Stigler Center)",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "merger"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Announcing the Summit “Fight for Us, not for Them”: A public interest vision for EU tech policy",
+      "summary": "<p>Europe’s approach to governance for advancing technology in the digital age is under pressure, with “simplification” proposals hitting the heart of core digital protections. At the same time, civil society is uniquely positioned to co-develop the EU’s vision for public-interest tech laws, policies and practices. Today, civil society organisations announce a strategic convening between European lawmakers, regulators, journalists and key civil society voices for a vision for tech laws and practices that center public interest, data protection and other rights. </p>\n<p>The post <a href=\"https:",
+      "source": "EDRi · edri.org",
+      "url": "https://edri.org/our-work/announcing-the-summit-fight-for-us-not-for-them-a-public-interest-vision-for-eu-tech-policy/",
+      "topic": "Privacy",
+      "date": "Thu, 30 Apr 2026 12:35:57 +0000",
+      "impact": "medium",
+      "_authority": "EDRi",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "privacy": [
+          "data protection"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "If the DMA is fit for purpose why are the gatekeepers winning?",
+      "summary": "<p>The European Commission says the Digital Markets Act (DMA) was “fit for purpose” and had “positive impact.” But while it certainly has that potential, laissez-faire enforcement and political interference by the Commission undermine its effectiveness and allow gatekeepers to continue to dominate European digital markets.</p>\n<p>The post <a href=\"https://edri.org/our-work/if-the-dma-is-fit-for-purpose-why-are-the-gatekeepers-winning/\">If the DMA is fit for purpose why are the gatekeepers winning?</a> appeared first on <a href=\"https://edri.org\">European Digital Rights (EDRi)</a>.</p>",
+      "source": "EDRi · edri.org",
+      "url": "https://edri.org/our-work/if-the-dma-is-fit-for-purpose-why-are-the-gatekeepers-winning/",
+      "topic": "Competition",
+      "date": "Thu, 30 Apr 2026 11:38:13 +0000",
+      "impact": "medium",
+      "_authority": "EDRi",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "DMA",
+          "Digital Markets Act",
+          "gatekeeper"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Greece’s AI Smart Policing system ruled unlawful after €4 million public spending\\",
+      "summary": "<p>A 4 million EUR “Smart Policing” programme enabling the use of AI technologies, including facial recognition software, which was deployed by the Hellenic Police has been ruled unlawful by Greece’s data protection authority. The decision confirmed long-standing concerns raised by EDRi member Homo Digitalis about facial recognition and data protection violations. </p>\n<p>The post <a href=\"https://edri.org/our-work/greeces-ai-smart-policing-system-ruled-unlawful-after-e4-million-public-spending/\">Greece’s AI Smart Policing system ruled unlawful after €4 million public spending\\</a> appeared fi",
+      "source": "EDRi · edri.org",
+      "url": "https://edri.org/our-work/greeces-ai-smart-policing-system-ruled-unlawful-after-e4-million-public-spending/",
+      "topic": "Privacy",
+      "date": "Wed, 29 Apr 2026 08:20:13 +0000",
+      "impact": "medium",
+      "_authority": "EDRi",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "privacy": [
+          "data protection"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The EU AI Office must prioritise setting up the Advisory Forum",
+      "summary": "<p>35 organisations and researchers call on the EU AI Office to provide clear information on the timeline and process of the establishment of the Advisory Forum, the only formal mechanism ensuring civil society voices are part of AI Act implementation. </p>\n<p>The post <a href=\"https://edri.org/our-work/the-eu-ai-office-must-prioritise-setting-up-the-advisory-forum/\">The EU AI Office must prioritise setting up the Advisory Forum</a> appeared first on <a href=\"https://edri.org\">European Digital Rights (EDRi)</a>.</p>",
+      "source": "EDRi · edri.org",
+      "url": "https://edri.org/our-work/the-eu-ai-office-must-prioritise-setting-up-the-advisory-forum/",
+      "topic": "Ai Policy",
+      "date": "Wed, 29 Apr 2026 08:01:19 +0000",
+      "impact": "medium",
+      "_authority": "EDRi",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "ai_policy": [
+          "AI Act",
+          "AI Office"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Europe shouldn’t “move fast and break things” with fundamental rights",
+      "summary": "<p>The Digital Omnibus proposals, presented as “simplification,” risk weakening essential safeguards in the GDPR, the ePrivacy Directive, and the AI Act. By reducing protections and delaying obligations for high-risk systems, they introduce a logic reminiscent of the tech industry’s “move fast and break things” approach. In digital infrastructures built on large-scale data processing and automated decision-making, however, mistakes do not simply disappear. They become part of the system. This is why regulation is essential to protect people’s rights.</p>\n<p>The post <a href=\"https://edri.org/o",
+      "source": "EDRi · edri.org",
+      "url": "https://edri.org/our-work/europe-shouldnt-move-fast-and-break-things-with-fundamental-rights/",
+      "topic": "Ai Policy",
+      "date": "Wed, 15 Apr 2026 07:30:26 +0000",
+      "impact": "medium",
+      "_authority": "EDRi",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "ai_policy": [
+          "AI Act"
+        ],
+        "privacy": [
+          "GDPR"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Open Letter: EU lawmakers must safeguard the AI Act",
+      "summary": "<p>41 organisations and experts are calling on the European Commission, the European Parliament, and the Council to reject the AI Omnibus, and honour their responsibility in upholding and safeguarding the integrity of the AI Act and its implementation without delay.</p>\n<p>The post <a href=\"https://edri.org/our-work/open-letter-eu-lawmakers-must-safeguard-the-ai-act/\">Open Letter: EU lawmakers must safeguard the AI Act</a> appeared first on <a href=\"https://edri.org\">European Digital Rights (EDRi)</a>.</p>",
+      "source": "EDRi · edri.org",
+      "url": "https://edri.org/our-work/open-letter-eu-lawmakers-must-safeguard-the-ai-act/",
+      "topic": "Ai Policy",
+      "date": "Wed, 15 Apr 2026 07:30:23 +0000",
+      "impact": "medium",
+      "_authority": "EDRi",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "ai_policy": [
+          "AI Act"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The Digital Omnibus reopens the EU data acquis before it has even been tested",
+      "summary": "<p>The Digital Omnibus  not only targets the GDPR, ePrivacy and AI rules, but  also rewrites the EU’s data acquis by merging recent laws into the Data Act. These changes risk weakening safeguards, concentrating power, and creating uncertainty before the framework has even been implemented in practice.</p>\n<p>The post <a href=\"https://edri.org/our-work/the-digital-omnibus-reopens-the-eu-data-acquis-before-it-has-even-been-tested/\">The Digital Omnibus reopens the EU data acquis before it has even been tested</a> appeared first on <a href=\"https://edri.org\">European Digital Rights (EDRi)</a>.</p>",
+      "source": "EDRi · edri.org",
+      "url": "https://edri.org/our-work/the-digital-omnibus-reopens-the-eu-data-acquis-before-it-has-even-been-tested/",
+      "topic": "Privacy",
+      "date": "Wed, 15 Apr 2026 07:30:14 +0000",
+      "impact": "medium",
+      "_authority": "EDRi",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "privacy": [
+          "GDPR"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "LinkedIn locks your GDPR rights behind a paywall",
+      "summary": "<p>Data Subject Rights </p>\n<strong><p><span lang=\"EN-GB\"><strong>LinkedIn tracks the visits to profile pages. However, if you want to see who has visited your own profile, you have to pay. The Microsoft subsidiary uses these and other ‘insights’ as an incentive for people to sign up for its paid Premium membership. It is unclear whether this tracking of visitors is legal. What is clear, however, is that if this data is displayed as part of a premium membership, it should also be accessible in response to an access request under Article 15 GDPR. But LinkedIn refuses to comply – and suddenly ci",
+      "source": "noyb · noyb.eu",
+      "url": "https://noyb.eu/en/linkedin-locks-your-gdpr-rights-behind-paywall",
+      "topic": "Privacy",
+      "date": "Tue, 05 May 2026 05:00:00 +0000",
+      "impact": "medium",
+      "_authority": "noyb",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "privacy": [
+          "GDPR",
+          "data protection",
+          "personal data"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "No action taken against PimEyes: noyb lawsuit against Hamburg DPA",
+      "summary": "<p>National Administrative Procedures and DPA inactivity </p>\n<strong><p><span lang=\"EN-GB\"><strong>Today, </strong></span><em><span lang=\"EN-GB\"><strong>noyb</strong></span></em><span lang=\"EN-GB\"><strong> has filed a lawsuit against the Hamburg data protection authority (DPA). While the authority considers the practices of the facial recognition search engine PimEyes to be illegal, it refuses to take effective action because the company seems to be based in Dubai. PimEyes systematically extracts biometric data from images on the internet and uses it to build up a database. Users can upload p",
+      "source": "noyb · noyb.eu",
+      "url": "https://noyb.eu/en/no-action-taken-against-pimeyes-noyb-lawsuit-against-hamburg-dpa",
+      "topic": "Privacy",
+      "date": "Thu, 30 Apr 2026 07:00:00 +0000",
+      "impact": "medium",
+      "_authority": "noyb",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "privacy": [
+          "GDPR",
+          "data protection",
+          "Schrems"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Digital Omnibus reality check: 83.5% of access requests not properly answered",
+      "summary": "<p>Data Subject Rights </p>\n<strong><p><span lang=\"EN-US\"><strong>The most commonly exercised right under the GDPR is the right of access to one’s personal data that is being processed by companies. After all, it’s often the prerequisite to know if there is inaccurate or unlawful personal data that needs to be corrected or deleted. However, a new</strong>&nbsp;</span><span lang=\"EN-GB\"><strong>analysis of </strong></span><em><span lang=\"EN-GB\"><strong>noyb</strong></span></em><span lang=\"EN-GB\"><strong> cases shows: Only 16.5% of all access requests </strong></span><em><span lang=\"EN-GB\"><stro",
+      "source": "noyb · noyb.eu",
+      "url": "https://noyb.eu/en/digital-omnibus-reality-check-835-access-requests-not-properly-answered",
+      "topic": "Privacy",
+      "date": "Thu, 16 Apr 2026 09:52:01 +0000",
+      "impact": "medium",
+      "_authority": "noyb",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "privacy": [
+          "GDPR",
+          "data protection",
+          "personal data",
+          "Schrems"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "10 questions to ask when using AI models to find vulnerabilities",
+      "summary": "Using Artificial Intelligence to find vulnerabilities can bring added security considerations.",
+      "source": "NCSC UK · ncsc.gov.uk",
+      "url": "https://www.ncsc.gov.uk/blogs/10-questions-ask-using-ai-models-find-vulnerabilities",
+      "topic": "Ai Policy",
+      "date": "Mon, 11 May 2026 12:00:00 +0000",
+      "impact": "medium",
+      "_authority": "NCSC UK",
+      "_jurisdiction": "UK",
+      "_tier": 0,
+      "_keyword_hits": {
+        "ai_policy": [
+          "artificial intelligence"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Retaining defensive advantage in the age of frontier AI cyber capabilities",
+      "summary": "As AI accelerates vulnerability discovery, organisations must raise their security baselines to safeguard their cyber security.",
+      "source": "NCSC UK · ncsc.gov.uk",
+      "url": "https://www.ncsc.gov.uk/blogs/retaining-defensive-advantage-in-the-age-of-frontier-ai-cyber-capabilities",
+      "topic": "Ai Policy",
+      "date": "Wed, 15 Apr 2026 12:00:00 +0000",
+      "impact": "medium",
+      "_authority": "NCSC UK",
+      "_jurisdiction": "UK",
+      "_tier": 0,
+      "_keyword_hits": {
+        "ai_policy": [
+          "frontier"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Monopoly Round-Up: What Challenging a Bowling Monopoly Says About America",
+      "summary": "Lots of monopoly news, as usual.",
+      "source": "Matt Stoller — The Big Newsletter · thebignewsletter.com",
+      "url": "https://www.thebignewsletter.com/p/monopoly-round-up-what-challenging",
+      "topic": "Competition",
+      "date": "Mon, 11 May 2026 05:11:23 GMT",
+      "impact": "medium",
+      "_authority": "Matt Stoller — The Big Newsletter",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "monopoly"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Fine Print: How Uniform Rental Contracts Explain the U.S. Economy",
+      "summary": "The inequality of the legal system is on full display. If you're big, you have rights. If you're small, you don't. And the Cintas-Unifirst merger reveals how this system enables bad behavior.",
+      "source": "Matt Stoller — The Big Newsletter · thebignewsletter.com",
+      "url": "https://www.thebignewsletter.com/p/fine-print-how-uniform-rental-contracts",
+      "topic": "Competition",
+      "date": "Fri, 08 May 2026 18:47:13 GMT",
+      "impact": "medium",
+      "_authority": "Matt Stoller — The Big Newsletter",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "merger"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Monopoly Round-Up: How Big Tech Earnings Show the Stock Market Is Being Manipulated",
+      "summary": "This week, the four biggest spenders on AI released their earnings within two minutes of each other. There's an unsettling reason for that. Plus, Michigan goes after private equity in youth sports...",
+      "source": "Matt Stoller — The Big Newsletter · thebignewsletter.com",
+      "url": "https://www.thebignewsletter.com/p/monopoly-round-up-how-big-tech-earnings",
+      "topic": "Competition",
+      "date": "Mon, 04 May 2026 03:31:04 GMT",
+      "impact": "medium",
+      "_authority": "Matt Stoller — The Big Newsletter",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "monopoly"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Who Killed Spirit Airlines?",
+      "summary": "It wasn't Biden antitrust enforcers. It was Donald Trump's Iran War, JetBlue, the big four trunk airlines, and behind all of that, deregulation. And this story has happened hundreds of times.",
+      "source": "Matt Stoller — The Big Newsletter · thebignewsletter.com",
+      "url": "https://www.thebignewsletter.com/p/who-killed-spirit-airlines",
+      "topic": "Competition",
+      "date": "Sat, 02 May 2026 20:59:27 GMT",
+      "impact": "medium",
+      "_authority": "Matt Stoller — The Big Newsletter",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "antitrust"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Monopoly Round-Up: How a Chinese Finger Trap Explains America's Political Dilemma",
+      "summary": "To get out of our malaise, we must do things that will make the stock market go down. But to preserve our institutions, we can't let the stock market go down. Plus, Amazon gets caught fixing prices...",
+      "source": "Matt Stoller — The Big Newsletter · thebignewsletter.com",
+      "url": "https://www.thebignewsletter.com/p/monopoly-round-up-the-stock-market",
+      "topic": "Competition",
+      "date": "Mon, 27 Apr 2026 02:01:04 GMT",
+      "impact": "medium",
+      "_authority": "Matt Stoller — The Big Newsletter",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "monopoly"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "How Hollywood Rediscovered Its Anti-Monopoly Roots",
+      "summary": "As Paramount CEO David Ellison hosts a D.C. dinner honoring Trump, major actors and industry stakeholders publicly oppose the Paramount-Warner deal. This conflict has been a long time coming.",
+      "source": "Matt Stoller — The Big Newsletter · thebignewsletter.com",
+      "url": "https://www.thebignewsletter.com/p/how-hollywood-rediscovered-its-anti",
+      "topic": "Competition",
+      "date": "Fri, 24 Apr 2026 17:33:09 GMT",
+      "impact": "medium",
+      "_authority": "Matt Stoller — The Big Newsletter",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "monopoly"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Monopoly Round-Up: Some Surprising Setbacks for Trump-Aligned Corporate America",
+      "summary": "With losses in cases involving Ticketmaster, Nexstar-TEGNA, and Amazon this week, plus a data center ban in Maine and taxes on $5M+ apartments in NYC, the superrich are starting to face obstacles.",
+      "source": "Matt Stoller — The Big Newsletter · thebignewsletter.com",
+      "url": "https://www.thebignewsletter.com/p/monopoly-round-up-the-week-the-oligarchs",
+      "topic": "Competition",
+      "date": "Mon, 20 Apr 2026 03:48:54 GMT",
+      "impact": "medium",
+      "_authority": "Matt Stoller — The Big Newsletter",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "monopoly"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Monopoly Round-Up: Ticketmaster Verdict Imminent",
+      "summary": "The Ticketmaster trial ends, and a jury decides. Plus, the Feds look into the NFL on antitrust law, fights over the Strait of Hormuz, and New York City has plans to open its first city grocery store.",
+      "source": "Matt Stoller — The Big Newsletter · thebignewsletter.com",
+      "url": "https://www.thebignewsletter.com/p/monopoly-round-up-the-ticketmaster",
+      "topic": "Competition",
+      "date": "Mon, 13 Apr 2026 04:15:00 GMT",
+      "impact": "medium",
+      "_authority": "Matt Stoller — The Big Newsletter",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "antitrust",
+          "monopoly"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Pluralistic: A fascist paradigm (12 May 2026)",
+      "summary": "Today's links A fascist paradigm: The change that changed everything. Hey look at this: Delights to delectate. Object permanence: Openstreetmap x Isle of Wight; Found grocery lists; Mayor wants to pray away potholes; Designing a D120; \"Too Like the Lightning.\" Upcoming appearances: Barcelona, Berlin, Hay-on-Wye, London, NYC, Edinburgh. Recent appearances: Where I've been. Latest books: You keep readin' em, I'll keep writin' 'em. Upcoming books: Like I said, I'll keep writin' 'em. Colophon: All the rest. A fascist paradigm (permalink) Yesterday, I attended a workshop on systems thinking and pol",
+      "source": "Pluralistic (Cory Doctorow) · pluralistic.net",
+      "url": "https://pluralistic.net/2026/05/12/donella-meadows/",
+      "topic": "Competition",
+      "date": "Tue, 12 May 2026 07:22:17 +0000",
+      "impact": "medium",
+      "_authority": "Pluralistic (Cory Doctorow)",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "merger",
+          "monopoly"
+        ],
+        "ai_policy": [
+          "artificial intelligence"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Pluralistic: 2024 (apart from the obvious) (11 May 2026)",
+      "summary": "Today's links 2024 (apart from the obvious): Some unforced errors. Hey look at this: Delights to delectate. Object permanence: Denmark legalizing music trading; Babysuit; Patent Office invites \"peer review\"; DRM protest at the Bastille; Scientology's \"super powers\"; Banana Dalek; Florida v pediatricians' gun safety advice; Copyright filters and wage theft; \"Who Broke the Internet?\" Vatican astronomer v Creationism; Teens, privacy and Facebook; Čapek's graveside robot; Save iTunes; NZ laundered money for Latinamerica's looters; Memex Method. Upcoming appearances: Barcelona, Berlin, Hay-on-Wye, ",
+      "source": "Pluralistic (Cory Doctorow) · pluralistic.net",
+      "url": "https://pluralistic.net/2026/05/11/postmortem/",
+      "topic": "Competition",
+      "date": "Mon, 11 May 2026 09:43:59 +0000",
+      "impact": "medium",
+      "_authority": "Pluralistic (Cory Doctorow)",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "antitrust",
+          "merger"
+        ],
+        "ai_policy": [
+          "artificial intelligence"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Pluralistic: Trump's fruitless search for a goreable ox (09 May 2026)",
+      "summary": "Today's links Trump's fruitless search for a goreable ox: You can keep billionaires happy, or you can fight the cost of living crisis, but not both. Hey look at this: Delights to delectate. Object permanence: Typewriter bust; Phrack's new issue; Panama Papers whistleblower speaks; The PRO Act; Zuck's new mind-control ray. Upcoming appearances: Barcelona, Berlin, Hay-on-Wye, London, NYC, Edinburgh. Recent appearances: Where I've been. Latest books: You keep readin' em, I'll keep writin' 'em. Upcoming books: Like I said, I'll keep writin' 'em. Colophon: All the rest. Trump's fruitless search for",
+      "source": "Pluralistic (Cory Doctorow) · pluralistic.net",
+      "url": "https://pluralistic.net/2026/05/09/cossie-livvie-crissie/",
+      "topic": "Competition",
+      "date": "Sat, 09 May 2026 12:51:02 +0000",
+      "impact": "medium",
+      "_authority": "Pluralistic (Cory Doctorow)",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "antitrust",
+          "cartel"
+        ],
+        "ai_policy": [
+          "artificial intelligence"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Pluralistic: Lee Lai's \"Cannon\" (08 May 2026)",
+      "summary": "Today's links Lee Lai's \"Cannon\": A beautiful, subtle, long-lingering tale of duty, sex, and working for a shitty restaurant boss. Hey look at this: Delights to delectate. Object permanence: Ebay paying to run newspaper classifieds; Chuck Tingle v Sad Puppies; FBI v TOR; Daycare v Goldman Sachs; Scammers re-used covid nose-swabs; \"The Adventures of Mary Darling.\" Upcoming appearances: Guelph, Barcelona, Berlin, Hay-on-Wye, London, NYC, Edinburgh. Recent appearances: Where I've been. Latest books: You keep readin' em, I'll keep writin' 'em. Upcoming books: Like I said, I'll keep writin' 'em. Co",
+      "source": "Pluralistic (Cory Doctorow) · pluralistic.net",
+      "url": "https://pluralistic.net/2026/05/08/gung-gung/",
+      "topic": "Competition",
+      "date": "Fri, 08 May 2026 12:19:36 +0000",
+      "impact": "medium",
+      "_authority": "Pluralistic (Cory Doctorow)",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "DMA"
+        ],
+        "ai_policy": [
+          "artificial intelligence"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Pluralistic: Bubbles are REALLY evil (07 May 2026)",
+      "summary": "Today's links Bubbles are REALLY evil: Bernie Ebbers got what was coming to him. Hey look at this: Delights to delectate. Object permanence: Mozilla v DHS wiretaps; Judge v FCC's internet wiretaps; Foxconn workers must promise not to kill themselves; \"Shannon's Law\"; How to password; Stimmies killed the McJob; \"Little Bosses Everywhere.\" Upcoming appearances: Guelph, Barcelona, Berlin, Hay-on-Wye, London, NYC, Edinburgh. Recent appearances: Where I've been. Latest books: You keep readin' em, I'll keep writin' 'em. Upcoming books: Like I said, I'll keep writin' 'em. Colophon: All the rest. Bubb",
+      "source": "Pluralistic (Cory Doctorow) · pluralistic.net",
+      "url": "https://pluralistic.net/2026/05/07/dump-the-pumpers/",
+      "topic": "Competition",
+      "date": "Thu, 07 May 2026 08:08:49 +0000",
+      "impact": "medium",
+      "_authority": "Pluralistic (Cory Doctorow)",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "SMS"
+        ],
+        "ai_policy": [
+          "artificial intelligence"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Pluralistic: In praise of vultures (06 May 2026)",
+      "summary": "Today's links In praise of vultures: They screw you because they can. Hey look at this: Delights to delectate. Object permanence: Linus v MSFT; Argentina v MSFT; Danny Hillis on theme parks v games; Smartfilter v Distributed Boing Boing; Rental laptops filled with spyware; Torture didn't help capture bin Laden; Massively parallel Apple //e; Stephen Harper v election law; John Deere v Iowa cartoonist; Qualia. Upcoming appearances: Guelph, Barcelona, Berlin, Hay-on-Wye, London, NYC, Edinburgh. Recent appearances: Where I've been. Latest books: You keep readin' em, I'll keep writin' 'em. Upcoming",
+      "source": "Pluralistic (Cory Doctorow) · pluralistic.net",
+      "url": "https://pluralistic.net/2026/05/06/champerty-loves-company/",
+      "topic": "Competition",
+      "date": "Wed, 06 May 2026 10:15:36 +0000",
+      "impact": "medium",
+      "_authority": "Pluralistic (Cory Doctorow)",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition",
+          "monopoly",
+          "DMA"
+        ],
+        "ai_policy": [
+          "artificial intelligence"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Pluralistic: The three armies fighting for the post-American world (05 May 2026)",
+      "summary": "Today's links The three armies fighting for the post-American world: Hippies, investors and hawks. Hey look at this: Delights to delectate. Object permanence: NK dictator's son v Tokyo Disneyland; Mainstream press and Bushies v Colbert; Taliban v Pakistan's first McDonald's; Norwegian sovereign wealth fund v exec compensation; Copyright v cheerleader uniforms; Dishwashers are Iphones. Upcoming appearances: Guelph, Barcelona, Berlin, Hay-on-Wye, London, NYC, Edinburgh. Recent appearances: Where I've been. Latest books: You keep readin' em, I'll keep writin' 'em. Upcoming books: Like I said, I'l",
+      "source": "Pluralistic (Cory Doctorow) · pluralistic.net",
+      "url": "https://pluralistic.net/2026/05/05/three-is-a-magic-number/",
+      "topic": "Ai Policy",
+      "date": "Tue, 05 May 2026 12:31:41 +0000",
+      "impact": "medium",
+      "_authority": "Pluralistic (Cory Doctorow)",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "ai_policy": [
+          "artificial intelligence"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Pluralistic: Demand destruction vs fuel-superseding infrastructure (04 May 2026)",
+      "summary": "Today's links Demand destruction vs fuel-superceding infrastructure: Will Trump hormuz us into the full Gretacene? Hey look at this: Delights to delectate. Object permanence: Beck, Scientologist; Citizen journalism; Podcast-killing treaty; US x Kiwi copyright; Apple did a crime; DeCSS v civilian aviation; Navy x SF's queering; Micosoft v FLOSS; Sony-BMG needs a new DRM czar; Lossy copying sculpture; AI and the fatfinger economy. Upcoming appearances: Guelph, Barcelona, Berlin, Hay-on-Wye, London, NYC, Edinburgh. Recent appearances: Where I've been. Latest books: You keep readin' em, I'll keep ",
+      "source": "Pluralistic (Cory Doctorow) · pluralistic.net",
+      "url": "https://pluralistic.net/2026/05/04/hope-in-the-dark/",
+      "topic": "Competition",
+      "date": "Mon, 04 May 2026 09:39:28 +0000",
+      "impact": "medium",
+      "_authority": "Pluralistic (Cory Doctorow)",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "antitrust",
+          "DMA"
+        ],
+        "ai_policy": [
+          "artificial intelligence"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Pluralistic: The prehistory of the Democratic Nuremberg Caucus (02 May 2026)",
+      "summary": "Today's links The prehistory of the Democratic Nuremberg Caucus: Do bounties for ICE whistleblowers next! Hey look at this: Delights to delectate. Object permanence: Colbert v GWB; Wallaby milk; Jay Rosen's journalism precepts; Radical Media(TM); What is carried interest? TCP over pigeon; BNL v copyright; RIP Joanna Russ; GOP forcing students to repay scam loans. Upcoming appearances: Berlin, NYC, Barcelona, Hay-on-Wye, London, NYC. Recent appearances: Where I've been. Latest books: You keep readin' em, I'll keep writin' 'em. Upcoming books: Like I said, I'll keep writin' 'em. Colophon: All th",
+      "source": "Pluralistic (Cory Doctorow) · pluralistic.net",
+      "url": "https://pluralistic.net/2026/05/02/denazification/",
+      "topic": "Competition",
+      "date": "Sat, 02 May 2026 11:22:11 +0000",
+      "impact": "medium",
+      "_authority": "Pluralistic (Cory Doctorow)",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "antitrust",
+          "merger"
+        ],
+        "ai_policy": [
+          "artificial intelligence"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Pluralistic: How not to ban surveillance pricing (30 Apr 2026)",
+      "summary": "Today's links How not to ban surveillance pricing: Maryland's new consumer protection law is all loophole. Hey look at this: Delights to delectate. Object permanence: Google's 8,000 Linux servers; Battleshoe; Knitted potholes; Unpack the court; \"Robot Artists and Black Swans\"; Enshittifying tech jobs. Upcoming appearances: Berlin, NYC, Barcelona, Hay-on-Wye, London, NYC. Recent appearances: Where I've been. Latest books: You keep readin' em, I'll keep writin' 'em. Upcoming books: Like I said, I'll keep writin' 'em. Colophon: All the rest. How not to ban surveillance pricing (permalink) If you ",
+      "source": "Pluralistic (Cory Doctorow) · pluralistic.net",
+      "url": "https://pluralistic.net/2026/04/30/something-must-be-done/",
+      "topic": "Ai Policy",
+      "date": "Thu, 30 Apr 2026 14:38:35 +0000",
+      "impact": "medium",
+      "_authority": "Pluralistic (Cory Doctorow)",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "ai_policy": [
+          "artificial intelligence"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The new playbook for AI leadership: The case of the United Arab Emirates",
+      "summary": "<p>This report is the first in a series by the Atlantic Council’s GeoTech Center assessing emerging artificial intelligence (AI) powers around the world according to a novel five-pillar framework. </p>\n<p>The post <a href=\"https://www.atlanticcouncil.org/in-depth-research-reports/issue-brief/the-new-playbook-for-ai-leadership-the-case-of-the-united-arab-emirates/\">The new playbook for AI leadership: The case of the United Arab Emirates</a> appeared first on <a href=\"https://www.atlanticcouncil.org\">Atlantic Council</a>.</p>",
+      "source": "Atlantic Council · atlanticcouncil.org",
+      "url": "https://www.atlanticcouncil.org/in-depth-research-reports/issue-brief/the-new-playbook-for-ai-leadership-the-case-of-the-united-arab-emirates/",
+      "topic": "Ai Policy",
+      "date": "Thu, 07 May 2026 19:30:00 +0000",
+      "impact": "medium",
+      "_authority": "Atlantic Council",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "ai_policy": [
+          "artificial intelligence"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Thousands of Vibe-Coded Apps Expose Corporate and Personal Data on the Open Web",
+      "summary": "Companies like Lovable, Base44, Replit, and Netlify use AI to let anyone build a web app in seconds—and in thousands of cases, spill highly sensitive data onto the public internet.",
+      "source": "Wired · wired.com",
+      "url": "https://www.wired.com/story/thousands-of-vibe-coded-apps-expose-corporate-and-personal-data-on-the-open-web/",
+      "topic": "Privacy",
+      "date": "Thu, 07 May 2026 11:00:00 +0000",
+      "impact": "medium",
+      "_authority": "Wired",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "privacy": [
+          "personal data"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Google DeepMind Workers Vote to Unionize Over Military AI Deals",
+      "summary": "UK staff of Google’s AI research lab hope to block the use of the company’s artificial intelligence models in military settings.",
+      "source": "Wired · wired.com",
+      "url": "https://www.wired.com/story/google-deepmind-workers-vote-to-unionize-over-military-ai-deals/",
+      "topic": "Ai Policy",
+      "date": "Tue, 05 May 2026 11:59:20 +0000",
+      "impact": "medium",
+      "_authority": "Wired",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "ai_policy": [
+          "artificial intelligence"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Tahoe’s UI Issues Have Nothing to Do With Display Technology, and Maybe, Just Maybe, We Should Stop Assuming Gurman Knows Anything About Apple’s Vision Hardware Roadmap",
+      "summary": "<p>Mark Gurman, in his Power On newsletter for Bloomberg over the weekend:</p>\n\n<blockquote>\n  <p>Though the Mac software introduced the same Liquid Glass\ninterface seen in iOS 26, the design language hasn’t translated\nas smoothly to the larger displays and different input methods of\ndesktops and laptops. Part of the reason is that Liquid Glass was\ncreated with more modern hardware in mind: the crisp OLED\ndisplays that are used on iPhones, some iPads and Apple Watches.\nThe software also will be well-suited to the more glass-centric\niPhone 20 coming in 2027.</p>\n\n<p>Most Macs, in contrast, stil",
+      "source": "Daring Fireball (John Gruber) · daringfireball.net",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-05-10/apple-plans-macos-27-design-changes-latest-on-ios-27-visionos-safari-wwdc-26-mozuaz9m?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc3ODQyMTgwOSwiZXhwIjoxNzc5MDI2NjA5LCJhcnRpY2xlSWQiOiJURVRRVzFLR0NURkwwMCIsImJjb25uZWN0SWQiOiJDNEVEQ0FFMUZBMDU0MEJFQTI0QTlGMjExQzFFOTA4MCJ9.VPDmd_jJhdzOBKvj1AUZTernGpGdF1zR9kGgFIF-9Hw&leadSource=uverify%20wall",
+      "topic": "Competition",
+      "date": "2026-05-11T17:55:47Z",
+      "impact": "medium",
+      "_authority": "Daring Fireball (John Gruber)",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "DMA",
+          "SMS"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Meta to Start Capturing Employee Mouse Movements, Keystrokes for AI Training Data",
+      "summary": "<p>Katie Paul and Jeff Horwitz, reporting for Reuters in late April:</p>\n\n<blockquote>\n  <p>Meta is installing new tracking software on U.S.-based employees’\ncomputers to capture mouse movements, clicks and ​keystrokes for\nuse in training its artificial intelligence models, part of a\nbroad initiative to build AI agents that can perform work tasks\nautonomously, the company told staffers in internal memos seen by\nReuters.</p>\n\n<p>The tool, called Model Capability Initiative (MCI), will run on\nwork-related apps and websites and will also take occasional\nsnapshots of the content on employees’ scre",
+      "source": "Daring Fireball (John Gruber) · daringfireball.net",
+      "url": "https://www.reuters.com/sustainability/boards-policy-regulation/meta-start-capturing-employee-mouse-movements-keystrokes-ai-training-data-2026-04-21/",
+      "topic": "Ai Policy",
+      "date": "2026-05-10T14:04:19Z",
+      "impact": "medium",
+      "_authority": "Daring Fireball (John Gruber)",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "ai_policy": [
+          "artificial intelligence"
+        ],
+        "privacy": [
+          "AI training"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Google Owns a Big Chunk of Anthropic",
+      "summary": "<p>The New York Times, back in March last year (gift link):</p>\n\n<blockquote>\n  <p>To win the artificial intelligence race, Google not only has\n<a href=\"https://www.nytimes.com/2024/12/11/technology/google-ai-agent-gemini.html\">developed its own technologies</a>, but has also <a href=\"https://www.nytimes.com/2024/02/20/technology/anthropic-funding-ai.html\">pumped\nmoney into prominent A.I. start-ups</a>. And to preserve its\ncompetitive edge, Google has kept its ownership stakes in those\nstart-ups a secret.</p>\n\n<p>Court documents recently obtained by The New York Times reveal\nGoogle’s stake in ",
+      "source": "Daring Fireball (John Gruber) · daringfireball.net",
+      "url": "https://www.nytimes.com/2025/03/11/technology/google-investment-anthropic.html?unlocked_article_code=1.f1A.eSTf.D5ECvk6f4DZ7",
+      "topic": "Competition",
+      "date": "2026-05-04T21:40:32Z",
+      "impact": "medium",
+      "_authority": "Daring Fireball (John Gruber)",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "antitrust"
+        ],
+        "ai_policy": [
+          "artificial intelligence"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "AI Omnibus: EU Negotiators Miss Opportunities as They Seal Deal",
+      "summary": "<p><img src=\"https://ccianet.org/wp-content/uploads/2026/05/Champris-AI_Omnibus_final_deal-April_2026-A.png\" style=\"display: block; margin: 1em auto;\" /></p>\n<p>Brussels, BELGIUM – Early this morning, EU negotiators agreed on the final text of the AI Omnibus. The deal sets out measures to simplify the AI Act, including delays to [&#8230;]</p>",
+      "source": "CCIA — Computer & Communications Industry Assn. · ccianet.org",
+      "url": "https://ccianet.org/news/2026/05/ai-omnibus-eu-negotiators-miss-opportunities-as-they-seal-deal/",
+      "topic": "Ai Policy",
+      "date": "Thu, 07 May 2026 04:31:59 +0000",
+      "impact": "medium",
+      "_authority": "CCIA — Computer & Communications Industry Assn.",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "ai_policy": [
+          "AI Act"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Commission’s First DMA Evaluation Presents Unbalanced Picture, Overlooking Negative Impacts on Consumers and Innovation",
+      "summary": "<p><img src=\"https://ccianet.org/wp-content/uploads/2026/04/Friedlaender-DMA_review_report-April_2026.png\" style=\"display: block; margin: 1em auto;\" /></p>\n<p>Brussels, BELGIUM – The European Commission’s first statutory evaluation of the Digital Markets Act (DMA), published today, presents an unbalanced picture of enforcement to date.&#160; The Computer &#38; Communications Industry [&#8230;]</p>",
+      "source": "CCIA — Computer & Communications Industry Assn. · ccianet.org",
+      "url": "https://ccianet.org/news/2026/04/commissions-first-dma-evaluation-presents-unbalanced-picture-overlooking-negative-impacts-on-consumers-and-innovation/",
+      "topic": "Competition",
+      "date": "Tue, 28 Apr 2026 15:07:34 +0000",
+      "impact": "medium",
+      "_authority": "CCIA — Computer & Communications Industry Assn.",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "DMA",
+          "Digital Markets Act"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "CCIA Urges Court to Affirm Fair Use Protections for Generative AI Training",
+      "summary": "<p><img src=\"https://ccianet.org/wp-content/uploads/2026/04/Schruers.Anthropic.04282026.png\" style=\"display: block; margin: 1em auto;\" /></p>\n<p>Washington — The Computer &#38; Communications Industry Association today filed an amicus brief urging the Northern District of California court to confirm that training generative artificial intelligence models on copyrighted [&#8230;]</p>",
+      "source": "CCIA — Computer & Communications Industry Assn. · ccianet.org",
+      "url": "https://ccianet.org/news/2026/04/ccia-urges-court-to-affirm-fair-use-protections-for-generative-ai-training/",
+      "topic": "Ai Policy",
+      "date": "Tue, 28 Apr 2026 13:43:19 +0000",
+      "impact": "medium",
+      "_authority": "CCIA — Computer & Communications Industry Assn.",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "ai_policy": [
+          "artificial intelligence",
+          "generative"
+        ],
+        "privacy": [
+          "AI training"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Meet AlterEcho: The winner of the EU-Startups Summit 2026 Pitch Competition!",
+      "summary": "<p>And that’s a wrap! The 2026 edition of the EU-Startups Summit has officially come to a close. Over two action-packed days in Malta, and about 2,400 founders, investors, and startup enthusiasts came together to exchange ideas, find inspiration, and make meaningful connections. A huge thank you to everyone who joined us in sunny Malta – [&#8230;]</p>\n<p>The post <a href=\"https://www.eu-startups.com/2026/05/meet-alterecho-the-winner-of-the-eu-startups-summit-2026-pitch-competition/\">Meet AlterEcho: The winner of the EU-Startups Summit 2026 Pitch Competition!</a> appeared first on <a href=\"http",
+      "source": "EU Startups · eu-startups.com",
+      "url": "https://www.eu-startups.com/2026/05/meet-alterecho-the-winner-of-the-eu-startups-summit-2026-pitch-competition/",
+      "topic": "Competition",
+      "date": "Mon, 11 May 2026 13:10:38 +0000",
+      "impact": "medium",
+      "_authority": "EU Startups",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "competition"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Musk v. Altman week 2: OpenAI fires back, and Shivon Zilis reveals that Musk tried to poach Sam Altman",
+      "summary": "In the second week of the landmark trial between Elon Musk and OpenAI, Musk’s motivations for bringing the suit were under scrutiny. Last week, Musk took the stand, alleging that OpenAI CEO Sam Altman and president Greg Brockman had deceived him into donating $38 million to the company. He claimed that they’d promised to maintain&#8230;",
+      "source": "MIT Technology Review · technologyreview.com",
+      "url": "https://www.technologyreview.com/2026/05/08/1137008/musk-v-altman-week-2-openai-fires-back-and-shivon-zilis-reveals-that-musk-tried-to-poach-sam-altman/",
+      "topic": "Competition",
+      "date": "Fri, 08 May 2026 23:59:19 +0000",
+      "impact": "medium",
+      "_authority": "MIT Technology Review",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "DMA"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "UK water company allowed hackers to lurk undetected for nearly two years, regulator finds",
+      "summary": "The Information Commissioner's Office (ICO) fined South Staffordshire Water £963,900 ($1.3 million) on Monday over an attack by the Cl0p ransomware group that led to the personal data of 633,887 customers and employees being published in August 2022.",
+      "source": "The Record (Recorded Future) · therecord.media",
+      "url": "https://therecord.media/uk-water-company-had-hackers-lurking-for-years",
+      "topic": "Privacy",
+      "date": "Mon, 11 May 2026 12:51:00 GMT",
+      "impact": "medium",
+      "_authority": "The Record (Recorded Future)",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "privacy": [
+          "personal data"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Canada’s Bill C-22 Is a Repackaged Version of Last Year’s Surveillance Nightmare",
+      "summary": "<div class=\"field field--name-body field--type-text-with-summary field--label-hidden\"><div class=\"field__items\"><div class=\"field__item even\"><p><span>Last year, the </span><a href=\"https://www.eff.org/deeplinks/2025/07/canadas-bill-c-2-opens-floodgates-us-surveillance\"><span>Canadian government pushed Bill C-2</span></a><span>, which would erode Canadian digital rights in the name of “border security.” The bill was so bad it didn’t even make it to committee because of the backlash from the privacy community. Now, the spring’s worst sequel, </span><a href=\"https://www.parl.ca/DocumentViewer/en",
+      "source": "Electronic Frontier Foundation · eff.org",
+      "url": "https://www.eff.org/deeplinks/2026/05/canadas-bill-c-22-repackaged-version-last-years-surveillance-nightmare",
+      "topic": "Competition",
+      "date": "Mon, 11 May 2026 20:18:14 +0000",
+      "impact": "medium",
+      "_authority": "Electronic Frontier Foundation",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "SMS"
+        ],
+        "privacy": [
+          "data protection"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "EFF to Fourth Circuit: Electronic Device Searches at the Border Require a Warrant",
+      "summary": "<div class=\"field field--name-body field--type-text-with-summary field--label-hidden\"><div class=\"field__items\"><div class=\"field__item even\"><p>EFF, along with the national ACLU, the ACLU affiliates in Maryland, North Carolina, South Carolina, and Virginia, and the National Association of Criminal Defense Lawyers (NACDL) filed an <a href=\"https://www.eff.org/document/2025-10-28-belmonte-cardozo-4th-cir-amicus-brief\">amicus brief</a> in the U.S. Court of Appeals for the Fourth Circuit urging the court to require a warrant for border searches of electronic devices under the Fourth Amendment, an",
+      "source": "Electronic Frontier Foundation · eff.org",
+      "url": "https://www.eff.org/deeplinks/2026/05/eff-fourth-circuit-electronic-device-searches-border-require-warrant",
+      "topic": "Privacy",
+      "date": "Mon, 11 May 2026 20:12:50 +0000",
+      "impact": "medium",
+      "_authority": "Electronic Frontier Foundation",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "privacy": [
+          "personal data"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The SECURE Data Act is Not a Serious Piece of Privacy Legislation",
+      "summary": "<div class=\"field field--name-body field--type-text-with-summary field--label-hidden\"><div class=\"field__items\"><div class=\"field__item even\"><p>The federal <a href=\"https://d1dth6e84htgma.cloudfront.net/SECURE_Data_Act_for_introduction_7c80a347ac.pdf\">SECURE Data Act</a> is not a serious consumer privacy bill, and its provisions—if enacted—would be a retreat from already insufficient state protections.</p>\n<p>Republicans on the <a href=\"https://energycommerce.house.gov/posts/committees-on-energy-and-commerce-and-financial-services-introduce-pair-of-privacy-bills-to-establish-comprehensive-dat",
+      "source": "Electronic Frontier Foundation · eff.org",
+      "url": "https://www.eff.org/deeplinks/2026/05/secure-data-act-not-serious-piece-privacy-legislation",
+      "topic": "Privacy",
+      "date": "Wed, 06 May 2026 14:38:02 +0000",
+      "impact": "medium",
+      "_authority": "Electronic Frontier Foundation",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "privacy": [
+          "personal data"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "EFF and 18 Organizations Urge UK Policymakers to Prioritize Addressing the Roots of Online Harm",
+      "summary": "<div class=\"field field--name-body field--type-text-with-summary field--label-hidden\"><div class=\"field__items\"><div class=\"field__item even\"><p><span>EFF joins 18 organizations in writing a letter to UK policymakers urging them to address the root causes of online harm—rather than undermining the open web through blunt restrictions.</span></p>\n<p><span>The coalition, which includes Mozilla, Tor Project, and Open Rights Group, warns that proposed measures following the passage of the Children’s Wellbeing and Schools Bill risk fundamentally reshaping the internet in harmful ways. Chief among th",
+      "source": "Electronic Frontier Foundation · eff.org",
+      "url": "https://www.eff.org/deeplinks/2026/05/eff-and-18-organizations-urge-uk-policymakers-prioritize-addressing-roots-online",
+      "topic": "Competition",
+      "date": "Tue, 05 May 2026 10:41:15 +0000",
+      "impact": "medium",
+      "_authority": "Electronic Frontier Foundation",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "dominance",
+          "gatekeeper"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Getting Digital Fairness Right: EFF's Recommendations for the EU's Digital Fairness Act",
+      "summary": "<div class=\"field field--name-body field--type-text-with-summary field--label-hidden\"><div class=\"field__items\"><div class=\"field__item even\"><h3><b><span>Digital Fairness in the EU</span></b></h3>\n<p><span>The next few years will be decisive for EU digital policymaking. With major laws like the Digital Services Act, the Digital Markets Act, and the AI Act now in place, the EU is entering an enforcement era that will show whether these rules are rights-respecting or drift toward overreach and corporate control. With the proposed <a href=\"https://commission.europa.eu/law/law-topic/consumer-prot",
+      "source": "Electronic Frontier Foundation · eff.org",
+      "url": "https://www.eff.org/deeplinks/2026/04/dos-and-donts-eus-digital-fairness-act-effs-recommendation-regulating-digital",
+      "topic": "Competition",
+      "date": "Mon, 04 May 2026 15:33:51 +0000",
+      "impact": "medium",
+      "_authority": "Electronic Frontier Foundation",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "Digital Markets Act",
+          "SMS"
+        ],
+        "ai_policy": [
+          "AI Act"
+        ],
+        "privacy": [
+          "GDPR",
+          "personal data"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Utah’s New Law Targeting VPNs Goes Into Effect May 6th",
+      "summary": "<div class=\"field field--name-body field--type-text-with-summary field--label-hidden\"><div class=\"field__items\"><div class=\"field__item even\"><p><em><strong>Update, May 11, 2026: </strong>Utah has agreed to not enforce the VPN law until Sept. 3, 2026 after Aylo, the parent company of Pornub.com, challenged the law in court.</em></p>\n<p><span>For the last couple of years, we’ve watched the same predictable cycle play out across the globe: a state (or country) passes a clunky age-verification mandate, and, without fail, </span><a href=\"https://www.eff.org/pages/vpns-are-not-solution-age-gating-m",
+      "source": "Electronic Frontier Foundation · eff.org",
+      "url": "https://www.eff.org/deeplinks/2026/04/utahs-new-law-regulating-vpns-goes-effect-next-week",
+      "topic": "Ai Policy",
+      "date": "Thu, 30 Apr 2026 23:33:38 +0000",
+      "impact": "medium",
+      "_authority": "Electronic Frontier Foundation",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "ai_policy": [
+          "artificial intelligence"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Act Now to Stop California’s Paternalistic and Privacy-Destroying Social Media Ban",
+      "summary": "<div class=\"field field--name-body field--type-text-with-summary field--label-hidden\"><div class=\"field__items\"><div class=\"field__item even\"><p>California lawmakers are fast-tracking A.B. 1709—a sweeping bill that would ban anyone under 16 from using social media <em>and</em> force every user, regardless of age, to submit sensitive personal information before accessing social platforms.</p>\n<p>That means that under A.B. 1709, social media companies will have to enact age gates to prohibit minors from accessing their services. The services may decide that complying with this bill means that Ca",
+      "source": "Electronic Frontier Foundation · eff.org",
+      "url": "https://www.eff.org/deeplinks/2026/04/act-now-stop-californias-paternalistic-and-privacy-destroying-social-media-ban",
+      "topic": "Privacy",
+      "date": "Fri, 24 Apr 2026 23:11:32 +0000",
+      "impact": "medium",
+      "_authority": "Electronic Frontier Foundation",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "privacy": [
+          "personal data"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The New(ish) Architecture of Consumer Health and Artificial Intelligence",
+      "summary": "The rise of AI-powered health tools is prompting new thinking about how, where, and when sensitive health information receives legal protection. According to media reports, consumers are now using general-purpose AI tools to upload or query health information, including medical records, and several companies have recently released large language model (LLM)-based tools customized for consumer [&#8230;]",
+      "source": "Future of Privacy Forum · fpf.org",
+      "url": "https://fpf.org/blog/the-newish-architecture-of-consumer-health-and-artificial-intelligence/",
+      "topic": "Ai Policy",
+      "date": "Thu, 30 Apr 2026 11:06:00 +0000",
+      "impact": "medium",
+      "_authority": "Future of Privacy Forum",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "ai_policy": [
+          "artificial intelligence"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "More Parties, More Risks, More Opportunity? Evolving Governance to Support Cyber Resilience Amidst Evolving Policy and Technological Change",
+      "summary": "*Special thanks to Jim Siegl and Jocelyn Aqua for their advice and expertise. Summary: Artificial Intelligence (AI) presents fundamental opportunities and challenges for defense of increasingly complex digital ecosystems amid rising attack costs, fragmented regulation, and evolving industry practices. A coordinated response across the public and private sectors, including smart deployment of AI tools for [&#8230;]",
+      "source": "Future of Privacy Forum · fpf.org",
+      "url": "https://fpf.org/blog/more-parties-more-risks-more-opportunity-evolving-governance-to-support-cyber-resilience-amidst-evolving-policy-and-technological-change/",
+      "topic": "Ai Policy",
+      "date": "Fri, 24 Apr 2026 13:09:00 +0000",
+      "impact": "medium",
+      "_authority": "Future of Privacy Forum",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "ai_policy": [
+          "artificial intelligence"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The Alabama Personal Data Protection Act Brings Consumer Privacy to the Heart of Dixie",
+      "summary": "We had to wait almost two years between when the 19th and 20th state comprehensive privacy laws were enacted, but the gap between the 20th and 21st proved to be a mere month. Governor Ivey signed HB 351, the Alabama Personal Data Protection Act (APDPA) into law on April 16. While this law is based [&#8230;]",
+      "source": "Future of Privacy Forum · fpf.org",
+      "url": "https://fpf.org/blog/the-alabama-personal-data-protection-act-brings-consumer-privacy-to-the-heart-of-dixie/",
+      "topic": "Privacy",
+      "date": "Fri, 17 Apr 2026 16:03:44 +0000",
+      "impact": "medium",
+      "_authority": "Future of Privacy Forum",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "privacy": [
+          "data protection",
+          "personal data"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "CDT and EPIC Submit Comments Regarding the Department of Housing and Urban Development’s Attempt to Expand Data Collection and AI Use in Key Departmental System",
+      "summary": "<p>The Center for Democracy &#38; Technology (CDT) and the Electronic Privacy Information Center (EPIC) submitted comments objecting to the Department of Housing and Urban Development’s (HUD) recent System of Records Notice (SORN) that would collect new categories of personal data and expand the usage of AI within the HUD’s customer relationship management system. Despite the [&#8230;]</p>\n<p>The post <a href=\"https://cdt.org/insights/cdt-and-epic-submit-comments-regarding-the-department-of-housing-and-urban-developments-attempt-to-expand-data-collection-and-ai-use-in-key-departmental-system/\"",
+      "source": "Center for Democracy & Technology · cdt.org",
+      "url": "https://cdt.org/insights/cdt-and-epic-submit-comments-regarding-the-department-of-housing-and-urban-developments-attempt-to-expand-data-collection-and-ai-use-in-key-departmental-system/",
+      "topic": "Privacy",
+      "date": "Thu, 07 May 2026 15:05:10 +0000",
+      "impact": "medium",
+      "_authority": "Center for Democracy & Technology",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "privacy": [
+          "personal data"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "CDT Joined a Letter to Representative Ted Lieu Urging Him to Ensure his Recent, Bipartisan American Leadership in AI Act is Not Tied to Broader Attempts to Preempt State AI Laws",
+      "summary": "<p>CDT joined a coalition of organizations in a letter to Rep. Ted Lieu (D-CA) urging him to ensure his bipartisan American Leadership in AI Act is not packaged with or used as cover for broader efforts to preempt state artificial intelligence laws. While the coalition expressed support for Rep. Lieu&#8217;s goal of advancing bipartisan AI [&#8230;]</p>\n<p>The post <a href=\"https://cdt.org/insights/cdt-joined-a-letter-to-representative-ted-lieu-urging-him-to-ensure-his-recent-bipartisan-american-leadership-in-ai-act-is-not-tied-to-broader-attempts-to-preempt-state-ai-laws/\">CDT Joined a Letter",
+      "source": "Center for Democracy & Technology · cdt.org",
+      "url": "https://cdt.org/insights/cdt-joined-a-letter-to-representative-ted-lieu-urging-him-to-ensure-his-recent-bipartisan-american-leadership-in-ai-act-is-not-tied-to-broader-attempts-to-preempt-state-ai-laws/",
+      "topic": "Ai Policy",
+      "date": "Wed, 06 May 2026 15:56:49 +0000",
+      "impact": "medium",
+      "_authority": "Center for Democracy & Technology",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "ai_policy": [
+          "AI Act",
+          "artificial intelligence"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Out of Tune: Fine-Tuning Foundation Models Leads to Unpredictable Safety Drift",
+      "summary": "<p>In addition to CDT, this report was authored by Emaan Bilal&#160;and Dylan Hadfield-Menell of the Algorithmic Alignment Group at the Massachusetts Institute of Technology (MIT). [ Read full report ] General-purpose AI models are increasingly adapted by downstream developers for specialized uses — from medical transcription to legal contract analysis. This raises critical governance questions [&#8230;]</p>\n<p>The post <a href=\"https://cdt.org/insights/out-of-tune-fine-tuning-foundation-models-leads-to-unpredictable-safety-drift/\">Out of Tune: Fine-Tuning Foundation Models Leads to Unpredicta",
+      "source": "Center for Democracy & Technology · cdt.org",
+      "url": "https://cdt.org/insights/out-of-tune-fine-tuning-foundation-models-leads-to-unpredictable-safety-drift/",
+      "topic": "Ai Policy",
+      "date": "Thu, 30 Apr 2026 04:01:00 +0000",
+      "impact": "medium",
+      "_authority": "Center for Democracy & Technology",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "ai_policy": [
+          "foundation model"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "The zero-days are numbered",
+      "summary": "<p>Since February, the Firefox team has been working around the clock using frontier AI models to find and fix latent security vulnerabilities in the browser. We wrote previously about our collaboration with Anthropic to scan Firefox with Opus 4.6, which led to fixes for 22 security-sensitive bugs in Firefox 148. As part of our continued [&#8230;]</p>\n<p>The post <a href=\"https://blog.mozilla.org/en/privacy-security/ai-security-zero-day-vulnerabilities/\">The zero-days are numbered </a> appeared first on <a href=\"https://blog.mozilla.org/en/\">The Mozilla Blog</a>.</p>",
+      "source": "Mozilla · mozilla.org",
+      "url": "https://blog.mozilla.org/en/privacy-security/ai-security-zero-day-vulnerabilities/",
+      "topic": "Ai Policy",
+      "date": "Tue, 21 Apr 2026 18:29:17 +0000",
+      "impact": "medium",
+      "_authority": "Mozilla",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "ai_policy": [
+          "frontier"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "OpenAI Launches Daybreak for AI-Powered Vulnerability Detection and Patch Validation",
+      "summary": "OpenAI has launched Daybreak, a new cybersecurity initiative that brings together frontier artificial intelligence (AI) model capabilities and Codex Security to help organizations identify and patch vulnerabilities before attackers find a way in using the same issues.\n\"Daybreak combines the intelligence of OpenAI models, the extensibility of Codex as an agentic harness, and our partners across",
+      "source": "The Hacker News · thehackernews.com",
+      "url": "https://thehackernews.com/2026/05/openai-launches-daybreak-for-ai-powered.html",
+      "topic": "Ai Policy",
+      "date": "Tue, 12 May 2026 12:25:00 +0530",
+      "impact": "medium",
+      "_authority": "The Hacker News",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "ai_policy": [
+          "artificial intelligence",
+          "frontier"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "iOS 26.5 Brings Default End-to-End Encrypted RCS Messaging Between iPhone and Android",
+      "summary": "Apple on Monday officially released iOS 26.5 with support for end-to-end encryption (E2EE) to Rich Communication Services (RCS) in beta as part of a \"cross-industry effort\" to replace traditional SMS with a more secure alternative.\nTo that end, E2EE RCS messaging is rolling out to iPhone users running iOS 26.5 with supported carriers and Android users on the latest version of Google Messages.",
+      "source": "The Hacker News · thehackernews.com",
+      "url": "https://thehackernews.com/2026/05/ios-265-brings-default-end-to-end.html",
+      "topic": "Competition",
+      "date": "Tue, 12 May 2026 10:48:00 +0530",
+      "impact": "medium",
+      "_authority": "The Hacker News",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "SMS"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Hackers Used AI to Develop First Known Zero-Day 2FA Bypass for Mass Exploitation",
+      "summary": "Google on Monday disclosed that it identified an unknown threat actor using a zero-day exploit that it said was likely developed with an artificial intelligence (AI) system, marking the first time the technology has been put to use in the wild in a malicious context for vulnerability discovery and exploit generation.\nThe activity is said to be the work of cybercrime threat actors who appear to",
+      "source": "The Hacker News · thehackernews.com",
+      "url": "https://thehackernews.com/2026/05/hackers-used-ai-to-develop-first-known.html",
+      "topic": "Ai Policy",
+      "date": "Mon, 11 May 2026 21:15:00 +0530",
+      "impact": "medium",
+      "_authority": "The Hacker News",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "ai_policy": [
+          "artificial intelligence"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Poor security left hackers inside water company network for nearly two years",
+      "summary": "<p>The UK’s data protection regulator, the Information Commissioner’s Office (ICO), fined South Staffordshire Water’s parent company £963,900 over security failures linked to a cyberattack that exposed the personal data of 633,887 people. According to the ICO, the South Staffordshire breach began in September 2020 with a phishing email that tricked an employee into opening an attachment, allowing attackers to install malicious software inside the company’s network. The intrusion remained undetected for 20 months. “The breach &#8230; <a href=\"https://www.helpnetsecurity.com/2026/05/11/ico-south",
+      "source": "Help Net Security · helpnetsecurity.com",
+      "url": "https://www.helpnetsecurity.com/2026/05/11/ico-south-staffordshire-cyberattack-fine/",
+      "topic": "Privacy",
+      "date": "Mon, 11 May 2026 15:18:37 +0000",
+      "impact": "medium",
+      "_authority": "Help Net Security",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "privacy": [
+          "data protection",
+          "personal data"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Claude Mythos Has Found 271 Zero-Days in Firefox",
+      "summary": "<p>That&#8217;s <a href=\"https://blog.mozilla.org/en/firefox/ai-security-zero-day-vulnerabilities/\">a lot</a>. No, it&#8217;s an extraordinary number:</p>\n<blockquote><p>Since February, the Firefox team has been working around the clock using frontier AI models to find and fix latent security vulnerabilities in the browser. We wrote previously about our collaboration with Anthropic to scan Firefox with Opus 4.6, which led to fixes for 22 security-sensitive bugs in Firefox 148.</p>\n<p>As part of our continued collaboration with Anthropic, we had the opportunity to apply an early version of Clau",
+      "source": "Schneier on Security · schneier.com",
+      "url": "https://www.schneier.com/blog/archives/2026/04/claude-mythos-has-found-271-zero-days-in-firefox.html",
+      "topic": "Ai Policy",
+      "date": "2026-04-29T10:12:17Z",
+      "impact": "medium",
+      "_authority": "Schneier on Security",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "ai_policy": [
+          "frontier"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Connecticut Senate Approves More Towing Reforms, Expanding on Landmark 2025 Legislation",
+      "summary": "<p>The post <a href=\"https://www.propublica.org/article/connecticut-towing-reforms\">Connecticut Senate Approves More Towing Reforms, Expanding on Landmark 2025 Legislation</a> appeared first on <a href=\"https://www.propublica.org\">ProPublica</a>.</p>",
+      "source": "ProPublica · propublica.org",
+      "url": "https://www.propublica.org/article/connecticut-towing-reforms",
+      "topic": "Competition",
+      "date": "Thu, 30 Apr 2026 20:30:00 +0000",
+      "impact": "medium",
+      "_authority": "ProPublica",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "competition": [
+          "DMA"
+        ]
+      }
+    },
+    {
+      "form_name": "candidates",
+      "title": "Penske Media Illuminates Dark Traffic To Find New Revenue",
+      "summary": "<p>Publishers are losing search traffic as consumers flock to generative AI answer engines. The trend is forcing pubs to get the most out of the traffic that still comes to their sites.  But publishers are also losing visibility into the traffic they still have as users take measures to protect themselves from being tracked online. [&#8230;]</p>\n<p>The post <a href=\"https://www.adexchanger.com/publishers/penske-media-illuminates-dark-traffic-to-find-new-revenue/\">Penske Media Illuminates Dark Traffic To Find New Revenue</a> appeared first on <a href=\"https://www.adexchanger.com\">AdExchanger</a",
+      "source": "AdExchanger · adexchanger.com",
+      "url": "https://www.adexchanger.com/publishers/penske-media-illuminates-dark-traffic-to-find-new-revenue/",
+      "topic": "Ai Policy",
+      "date": "Mon, 11 May 2026 05:00:20 +0000",
+      "impact": "medium",
+      "_authority": "AdExchanger",
+      "_jurisdiction": "",
+      "_tier": 2,
+      "_keyword_hits": {
+        "ai_policy": [
+          "generative"
+        ]
+      }
+    }
+  ]
+}
